@@ -1,13 +1,57 @@
 ---
-title: "Welcome To My Blog"
-author: "Tristan O'Malley"
-date: "2023-04-14"
+title: "Bye, Bye Hugo, Welcome Quarto!"
+description: This is my first entry in a new blog powered by Quarto. After continuously struggling with the complex machinery (blogdown, Hugo, Wowchemy), I feel like coming home  from a trip abroad! 
+image: New_Found_Glory_Coming_Home-min.png
+author: "Peter Baumgartner"
+date: "2023-04-17"
 categories: [news]
 ---
 
-This is the first post in a Quarto blog. Welcome!
+This is my first entry in a new [blog powered by
+Quarto](https://quarto.org/ "Welcome to Quarto – An open-source scientific and technical publishing system").
+After continuously struggling with the complex machinery
+[blogdown](https://bookdown.org/yihui/blogdown/ "first page of the online blogdown book") -
+[Hugo](https://gohugo.io/ "The world’s fastest framework for building websites") -
+[Wowchemy](https://wowchemy.com/ "The site you need to grow as a creator — without the bloat"),
+I feel like coming home from a trip abroad!
 
-![](thumbnail.jpg)
+Following the Quarto guide [Creating a
+Blog](https://quarto.org/docs/websites/website-blog.html "Quarto websites include integrated support for blogging."),
+it took me only 2 (!) minutes to render the provided blog template
+locally. After just one hour, I had my blog using Quarto, GitHub, and
+Netlify online. And half of this time, I spent thinking about a name for
+my blog and what to do with my older and outdated other blogdown web
+presences. (To put this quick access into perspective: I already had a
+[GitHub
+account](https://github.com/petzi53 "The complete developer platform to build, scale, and deliver secure software"),
+GitHub credential, and a
+[Netlify](https://www.netlify.com/ "Bring it all together The fastest way to combine your favorite tools and APIs to build the fastest sites, stores, and apps for the web")
+account.)
 
-Since this post doesn't specify an explicit `image`, the first image in
-the post will be used in the listing page of posts.
+I never was happy with the rapid development of Hugo that brought with
+it many changes and a considerable learning overhead. The same problem
+happened with the Academic theme by Wowchemy. The end product looked
+nice and ran fast, but I had already forgotten some of the many details
+after two weeks. As a result, I spent more time learning the blog
+machinery than I had time to write about substantive subjects.
+
+It was helpful when Yihui Xie introduced \`blogdown::checksite()\` and
+the possibility of freezing the used Hugo version. But the work in this
+environment was never intuitive and satisfying. I think it's
+self-explanatory that the introductory message to the blogdown book for
+over two years now states as a note from the authors: "Some of the
+information and instructions in this book are now out of date because of
+changes to Hugo and the blogdown package."
+
+[![Screenshot from the introductory note by the authors of "blogdown:
+Creating Websites with R
+Markdown"](intro-note-blogdown-book-min.png){fig-alt="A note from the authors: Some of the information and instructions in this book are now out of date because of changes to Hugo and the blogdown package. If you have suggestions for improving this book, please file an issue in our GitHub repository. Thanks for your patience while we work to update the book, and please stay tuned for the revised version! In the meantime, you can find an introduction to the changes and new features in the v1.0 release blog post and this \"Up & running with blogdown in 2021\" blog post. Yihui, Amber, & Alison"}](https://bookdown.org/yihui/blogdown/)
+
+I am sure there will also be some intricacies I have to learn and
+overcome, but this will conform with all my other R knowledge. At the
+moment, my feeling is enthusiastic: It is easy and intuitive to write on
+this platform. I hope to finally overcome technical barriers and
+concentrate on thematic topics. Since English is not my mother tongue,
+it is already difficult enough to express yourself nuancedly about
+complex content-related questions. I really don't need any additional
+technical difficulty.
