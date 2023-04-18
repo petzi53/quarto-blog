@@ -4,8 +4,21 @@ description: This is my first entry in a new blog powered by Quarto. After conti
 image: New_Found_Glory_Coming_Home-min.png
 author: "Peter Baumgartner"
 date: "2023-04-17"
-categories: [news]
+date-modified: "2023-04-18"
+categories: 
+    - news
+    - blog
 ---
+
+[![This is the front cover for the CD Coming Home by the artist New
+Found Glory via
+<a href = "https://en.wikipedia.org/wiki/Coming_Home_(New_Found_Glory_album)">Wikipedia</a>
+(Fair
+Use)](New_Found_Glory_Coming_Home-min.png){fig-alt="A photo of lead vocalist Jordan Pundik walking out of a restaurant holding a suitcase that reads the words \"NEW FOUND GLORY\". The words \"COMING HOME\" appear in the bottom-left of the image."
+fig-align="center"
+width="400"}](https://en.wikipedia.org/wiki/Coming_Home_(New_Found_Glory_album))
+
+## My first blog entry with Quarto
 
 This is my first entry in a new [blog powered by
 Quarto](https://quarto.org/ "Welcome to Quarto – An open-source scientific and technical publishing system").
@@ -30,28 +43,52 @@ account.)
 
 I never was happy with the rapid development of Hugo that brought with
 it many changes and a considerable learning overhead. The same problem
-happened with the Academic theme by Wowchemy. The end product looked
-nice and ran fast, but I had already forgotten some of the many details
-after two weeks. As a result, I spent more time learning the blog
-machinery than I had time to write about substantive subjects.
+happened with the Academic theme by [Wowchemy](https://wowchemy.com/).
+The end product looked nice and ran fast, but I had already forgotten
+some of the many details after two weeks. As a result, I spent more time
+learning the blog machinery than I had time to write about substantive
+subjects.
 
 It was helpful when Yihui Xie introduced \`blogdown::checksite()\` and
-the possibility of freezing the used Hugo version. But the work in this
-environment was never intuitive and satisfying. I think it's
+the possibility of freezing to a specific Hugo version. But the work in
+this environment was never intuitive and satisfying. I think it's
 self-explanatory that the introductory message to the blogdown book for
 over two years now states as a note from the authors: "Some of the
 information and instructions in this book are now out of date because of
 changes to Hugo and the blogdown package."
 
-[![Screenshot from the introductory note by the authors of "blogdown:
-Creating Websites with R
-Markdown"](intro-note-blogdown-book-min.png){fig-alt="A note from the authors: Some of the information and instructions in this book are now out of date because of changes to Hugo and the blogdown package. If you have suggestions for improving this book, please file an issue in our GitHub repository. Thanks for your patience while we work to update the book, and please stay tuned for the revised version! In the meantime, you can find an introduction to the changes and new features in the v1.0 release blog post and this \"Up & running with blogdown in 2021\" blog post. Yihui, Amber, & Alison"}](https://bookdown.org/yihui/blogdown/)
+[![Screenshot from the introductory note by the authors of
+<a href="https://bookdown.org/yihui/blogdown/">blogdown: Creating
+Websites with R
+Markdown</a>](intro-note-blogdown-book-min.png){fig-alt="A note from the authors: Some of the information and instructions in this book are now out of date because of changes to Hugo and the blogdown package. If you have suggestions for improving this book, please file an issue in our GitHub repository. Thanks for your patience while we work to update the book, and please stay tuned for the revised version! In the meantime, you can find an introduction to the changes and new features in the v1.0 release blog post and this \"Up & running with blogdown in 2021\" blog post. Yihui, Amber, & Alison"}](https://bookdown.org/yihui/blogdown/)
 
-I am sure there will also be some intricacies I have to learn and
-overcome, but this will conform with all my other R knowledge. At the
-moment, my feeling is enthusiastic: It is easy and intuitive to write on
-this platform. I hope to finally overcome technical barriers and
-concentrate on thematic topics. Since English is not my mother tongue,
-it is already difficult enough to express yourself nuancedly about
-complex content-related questions. I really don't need any additional
-technical difficulty.
+## Future plans
+
+I am sure there will also be some intricacies I must learn and overcome,
+but this will conform with all my other R knowledge. At the moment, my
+feeling is enthusiastic: It is easy and intuitive to write on this
+platform. I hope to finally overcome technical barriers and concentrate
+on thematic topics. Since English is not my mother tongue, it is already
+difficult enough to express myself precisely about complex
+content-related questions. I really don't need any additional technical
+difficulty.
+
+I am sure there will also be some intricacies I must learn and overcome,
+but this will conform with all my other R knowledge. At the moment, my
+feeling is enthusiastic: It is easy and intuitive to write on this
+platform. I hope to finally overcome technical barriers and concentrate
+on thematic topics. Since English is not my mother tongue, it is already
+difficult enough to express myself precisely about complex
+content-related questions. I really don't need any additional technical
+difficulty.
+
+In contrast to my previous website projects, I am planning two different
+strategies: 
+
+-   I will not go into the details of the website design immediately but
+    will work on these issues from time to time.
+
+-   I will not announce the website until I am sure I will use it
+    regularly and long-term. I think that about 10 articles -- written
+    in two months -- should give me the trust that I will use it
+    sustainably.
