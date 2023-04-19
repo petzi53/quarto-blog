@@ -10,10 +10,14 @@ website:
         href: https://github.com/
       - icon: twitter
         href: https://twitter.com
+  comments:
+    hypothesis:
+      theme: classic
+      openSidebar: true
+
 format:
   html:
     theme: cosmo
     css: styles.css
 
 editor: visual
-
