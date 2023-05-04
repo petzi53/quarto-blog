@@ -1,0 +1,14 @@
+{
+  "hash": "ce7e13dc0fa93cce07c8ebd2f6156eb6",
+  "result": {
+    "markdown": "---\ntitle: \"Post without description\"\nsubtitle: \"\"\ndescription: \"\"\nauthor: \"Peter Baumgartner\"\ndate: \"2023-04-26\"\ndate-modified: \"\"\ndraft: true\n---\n\n::: {.cell}\n\n```{.r .cell-code}\n# Where I am in the path structure?\nhere::i_am(\"posts/test/index.qmd\")\n```\n\n::: {.cell-output .cell-output-stderr}\n```\nhere() starts at /Users/petzi/Documents/Meine-Repos/quarto-blog\n```\n:::\n\n```{.r .cell-code}\n# find all \"*.qmd\" files under folder \"posts\"\nfp <- fs::dir_ls(path = here::here(\"posts\"), recurse = TRUE, glob = \"*.qmd\")\n\n# read file content into variable\nf1 <- readr::read_file(fp[1]) |> # yaml categories with square bracket\n    stringr::str_extract(stringr::regex(\"^---[\\\\s\\\\S]*^---\", multiline = TRUE))\n\nf3 <- readr::read_file(fp[3]) |> # yaml categories with newline and intended dashes\n    stringr::str_extract(stringr::regex(\"^---[\\\\s\\\\S]*^---\", multiline = TRUE))\n```\n:::\n\n## Detect if categories with square brackets or new line with dashes\n\n\n::: {.cell}\n\n```{.r .cell-code}\nstringr::str_detect(f1, \"categories:\\\\s*\\\\[\")\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] TRUE\n```\n:::\n\n```{.r .cell-code}\nstringr::str_detect(f3, \"categories:\\\\s*\\\\[\")\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] FALSE\n```\n:::\n:::\n\n\n\n\n## Extract categories in square bracktes into a string\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# categories with square brackets\n# look for \"categories:\" AND followed by zero or more white-space characters AND\n# \"[\" AND followed by zero or more character class of white-space and nonwhite characters AND\n# finally followed by the closing bracket \"]\"\ns1 <- stringr::str_extract(f1, \"categories:\\\\s*\\\\[[\\\\s\\\\S]*\\\\]\") |> \n    stringr::str_remove(\"categories:\\\\s*\\\\[\") |> \n    stringr::str_remove(\"\\\\]\") |> \n    stringr::str_split_1(\",\") |>\n    stringr::str_remove_all('\\\"') |>\n    stringr::str_trim()\ns1\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] \"API\"    \"httr2\"  \"R News\" \"rstats\"\n```\n:::\n:::\n\n\n## Extract categories in new line dashes into a string\n\n\n::: {.cell}\n\n```{.r .cell-code}\ns3 <- stringr::str_remove(f3, '^[\\\\s\\\\S]*categories:\\\\s') |> \n    stringr::str_remove('\\\\n[:alpha:].*\\\\n(.*)\\\\n---') |> \n    stringr::str_split_1('\\\\n\\\\s*-') |> \n    stringr::str_remove_all('\\\"') |>\n    stringr::str_trim() |> \n    stringi::stri_omit_empty('')\n    \n    \ns3\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] \"news\"   \"blog\"   \"R blog\" \"rstats\"\n```\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

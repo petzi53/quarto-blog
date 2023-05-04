@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Peter Baumgartner">
+<meta name="dcterms.date" content="2023-04-19">
 
-<title>Life Long Learning Lab - Peter Baumgartner</title>
+<title>Life Long Learning Lab - Hiding a secret API token</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +25,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./favicon.ico" rel="icon">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -75,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
 <script async="" src="https://hypothes.is/embed.js"></script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -85,7 +88,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Life Long Learning Lab</span>
     </a>
   </div>
@@ -96,7 +99,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -122,37 +125,104 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-trestles">
-  <div class="about-entity">
-    <img src="portrait-peter.png" class="about-image
-  rounded " style="width: 20em;">
+<main class="content" id="quarto-document-content">
+
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Peter Baumgartner</h1>
-</div>
+<h1 class="title">Hiding a secret API token</h1>
+<p class="subtitle lead">An article that explains something.</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">API</div>
+    <div class="quarto-category">httr2</div>
+    <div class="quarto-category">R News</div>
+    <div class="quarto-category">rstats</div>
+  </div>
+  </div>
+
+
+
 <div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Peter Baumgartner </p>
+          </div>
   </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 19, 2023</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">April 20, 2023</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
 </header>
-    <div class="about-links">
-  <a href="https://twitter.com/pbaumgartner" class="about-link" rel="" target="">
-    <i class="bi bi-twitter"></i>
-     <span class="about-link-text">Twitter</span>
-  </a>
-  <a href="https://github.com/petzi53" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
+
+<p>I plan to write an R Package. I will call it <code>hypo2md</code>, and it should search and import annotations from <a href="https://web.hypothes.is/" title="is a open-source software for web annotations">Hypothes.is</a> into R markdown files. I need this functionality to process my highlights and comments generated during reading in my note-taking app <a href="https://obsidian.md/" title="Obsidian is a note-taking app">Obsidian</a>.&nbsp;</p>
+<p>But writing about my package plans is not the goal of this post. Here I want to describe one of the learnings I had during my first experiments with the&nbsp;<a href="https://h.readthedocs.io/en/latest/api-reference/">Hypothes.is API</a>.</p>
+<p>Reading the two articles by Hadley Wickham about <a href="R package">httr2 R package</a> (<a href="https://httr2.r-lib.org/articles/httr2.html">get started</a>&nbsp;and&nbsp;<a href="https://httr2.r-lib.org/articles/wrapping-apis.html">wrapping APIs</a>), I learned the basics of how to interface with APIs. As Hypothes.is requires an API user token, one particular problem I would need to overcome is&nbsp;<a href="https://httr2.r-lib.org/articles/wrapping-apis.html#secret-management">secret management</a>.</p>
+<p>Even after reading the detailed instructions multiple times, the code described in “Wrapping APIs” didn’t work for me. As I finally solved the problem, I thought my errors could be interesting for other Newbies as well.</p>
+<section id="steps-to-hide-your-secrets" class="level2">
+<h2 class="anchored" data-anchor-id="steps-to-hide-your-secrets">5 steps to hide your secrets</h2>
+<p>I am not going to use executable R program code for the explanation. It is difficult to show the functionality in a blog post and it may be even more difficult to prevent misunderstanding as it happened with me, when I followed the code.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-  </div>
-  <div class="about-contents"><main class="content" id="quarto-document-content">
-<p>I am a retired professor of Education Technology. As head of the&nbsp;<a href="https://www.donau-uni.ac.at/en/university/faculties/education-arts-architecture/departments/continuing-education-research-educational-technologies.html">Department of Interactive Media and Educational Technologies</a>&nbsp;at the&nbsp;<a href="https://www.donau-uni.ac.at/en">University for Continuing Education Krems (UWK)</a>&nbsp;(Austria), I researched how to apply technology in settings of Life Long Learning.&nbsp;</p>
-<p>I had held positions as a professor at several universities in Austria and Germany (Klagenfurt, Münster, Innsbruck, Hagen) before I accepted the nomination to Krems. I published 25 books (10 monographs and 15 edited volumes) and&nbsp;<a href="https://portfolio.peter-baumgartner.net/publication/">over 200 articles</a>.</p>
-<p>With my retirement, I became a Life Long Learner myself. I am interested in studying workflows for Open Science research, focusing on note-taking apps like <a href="https://obsidian.md/" title="A note-taking app as extensible knowledge base">Obsidian</a>, <a href="https://web.hypothes.is/" title="Annotate anything online">Hypothes.is</a>, etc., and the <a href="https://www.r-project.org/" title="Free software environment for statistical computing and graphics">R programming language</a> for statistical computing and data science.</p>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Note that there are five types of callouts, including: <code>note</code>, <code>warning</code>, <code>important</code>, <code>tip</code>, and <code>caution</code>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip with Title
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is an example of a callout with a title.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Expand To Learn About Collapse
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This is an example of a ‘folded’ caution callout that can be expanded by the user. You can use <code>collapse="true"</code> to collapse it by default or <code>collapse="false"</code> to make a collapsible callout that is expanded by default.</p>
+</div>
+</div>
+</div>
 
 
-</main></div>
-</div>
- <!-- /main -->
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -173,6 +243,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
@@ -392,13 +469,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="./about.html">About</a>
+    <a class="nav-link" href="../../about.html">About</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./privacy.html">Privacy</a>
+    <a class="nav-link" href="../../privacy.html">Privacy</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./disclaimer.html">Disclaimer</a>
+    <a class="nav-link" href="../../disclaimer.html">Disclaimer</a>
   </li>  
 </ul>
     </div>

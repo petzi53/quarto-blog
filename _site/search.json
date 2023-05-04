@@ -1,44 +1,44 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "quarto-blog",
+    "objectID": "posts/2023-04-23-welcome-quarto/index.html",
+    "href": "posts/2023-04-23-welcome-quarto/index.html",
+    "title": "Bye, Bye Hugo, Welcome Quarto!",
     "section": "",
-    "text": "Bye, Bye Hugo, Welcome Quarto!\n\n\n\n\n\n\n\nnews\n\n\nblog\n\n\n\n\nThis is my first entry in a new blog powered by Quarto. After continuously struggling with the complex machinery (blogdown, Hugo, Wowchemy), I feel like coming home from a trip abroad!\n\n\n\n\n\n\nApr 17, 2023\n\n\nPeter Baumgartner\n\n\n\n\n\n\nNo matching items"
+    "text": "This is the front cover for the CD “Coming Home” by the artist “New Found Glory” via Wikipedia (Fair Use)"
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "objectID": "posts/2023-04-23-welcome-quarto/index.html#my-first-blog-entry-with-quarto",
+    "href": "posts/2023-04-23-welcome-quarto/index.html#my-first-blog-entry-with-quarto",
+    "title": "Bye, Bye Hugo, Welcome Quarto!",
+    "section": "My first blog entry with Quarto",
+    "text": "My first blog entry with Quarto\nThis is my first entry in a new blog powered by Quarto. After continuously struggling with the complex machinery blogdown - Hugo - Wowchemy, I feel like coming home from a trip abroad!\nFollowing the Quarto guide Creating a Blog, it took me only 2 (!) minutes to render the provided blog template locally. After just one hour, I had my blog using Quarto, GitHub, and Netlify online. And half of this time, I spent thinking about a name for my blog and what to do with my older and outdated other blogdown web presences. (To put this quick access into perspective: I already had a GitHub account, GitHub credential, and a Netlify account. And I didn’t work on the content of a blog entry but used just the installed test pages.)\nI never was happy with the rapid development of Hugo that brought with it many changes and a considerable learning overhead. The same problem happened with the Academic theme by Wowchemy. The end product looked nice and ran fast, but I had already forgotten some of the many details for a good-looking blog post after two weeks. As a result, I spent more time learning the blog machinery than I had time to write about substantive subjects.\nIt was helpful when Yihui Xie introduced `blogdown::checksite()` and the possibility of freezing to a specific Hugo version. But the work in the blogdown-Hugo environment was never intuitive and satisfying. I think it’s self-explanatory that the introductory message to the blogdown book for over two years now states as a note from the authors: “Some of the information and instructions in this book are now out of date because of changes to Hugo and the blogdown package.”\n\n\n\nScreenshot from the introductory note by the authors of blogdown: Creating Websites with R Markdown"
+  },
+  {
+    "objectID": "posts/2023-04-23-welcome-quarto/index.html#future-plans",
+    "href": "posts/2023-04-23-welcome-quarto/index.html#future-plans",
+    "title": "Bye, Bye Hugo, Welcome Quarto!",
+    "section": "Future plans",
+    "text": "Future plans\nI am sure there will also be some intricacies I must learn and overcome with Quarto, but this will conform with all my other R knowledge. At the moment, my feeling is enthusiastic: It is easy and intuitive to write on this platform. I hope to overcome technical barriers and concentrate on thematic topics finally. Since English is not my mother tongue, it is already difficult enough to express myself precisely about complex content-related questions. I don’t need any additional technical difficulty in writing blog posts.\nIn contrast to my previous website projects, I am planning two different strategies: \n\nI will not go into the details of the website design immediately but will work on these issues from time to time.\nI will not announce the website until I am sure I will use it regularly and long-term. I think that about 10 articles – written in two months – should give me the trust that I will use it sustainably."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "L3Lab",
     "section": "",
-    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
+    "text": "Bye, Bye Hugo, Welcome Quarto!\n\n\nMy first blogging impressions with Quarto\n\n\n\n\nblog\n\n\nquarto\n\n\n\n\nThis is my first entry in a new blog powered by Quarto. After continuously struggling with the complex machinery (blogdown, Hugo, Wowchemy), I feel like coming home from a trip abroad!\n\n\n\n\n\n\n2023-04-23\n\n\nPeter Baumgartner\n\n\n2023-05-04\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "Peter Baumgartner",
     "section": "",
-    "text": "About this blog"
+    "text": "I am a retired professor of Education Technology. As head of the Department of Interactive Media and Educational Technologies at the University for Continuing Education Krems (UWK) (Austria), I researched how to apply technology in settings of Life Long Learning. \nI had held positions as a professor at several universities in Austria and Germany (Klagenfurt, Münster, Innsbruck, Hagen) before I accepted the nomination to Krems. I published 25 books (10 monographs and 15 edited volumes) and over 200 articles.\nWith my retirement, I became a Life Long Learner myself. I am interested in studying workflows for Open Science research, focusing on note-taking apps like Obsidian, Hypothes.is, etc., and the R programming language for statistical computing and data science."
   },
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Bye, Bye Hugo, Welcome Quarto!",
+    "objectID": "presence.html",
+    "href": "presence.html",
+    "title": "Life Long Learning Lab",
     "section": "",
-    "text": "This is the front cover for the CD Coming Home by the artist New Found Glory via Wikipedia (Fair Use)"
-  },
-  {
-    "objectID": "posts/welcome/index.html#future-plans",
-    "href": "posts/welcome/index.html#future-plans",
-    "title": "Bye, Bye Hugo, Welcome Quarto!",
-    "section": "Future plans",
-    "text": "Future plans\nI am sure there will also be some intricacies I must learn and overcome, but this will conform with all my other R knowledge. At the moment, my feeling is enthusiastic: It is easy and intuitive to write on this platform. I hope to finally overcome technical barriers and concentrate on thematic topics. Since English is not my mother tongue, it is already difficult enough to express myself precisely about complex content-related questions. I really don’t need any additional technical difficulty.\nI am sure there will also be some intricacies I must learn and overcome, but this will conform with all my other R knowledge. At the moment, my feeling is enthusiastic: It is easy and intuitive to write on this platform. I hope to finally overcome technical barriers and concentrate on thematic topics. Since English is not my mother tongue, it is already difficult enough to express myself precisely about complex content-related questions. I really don’t need any additional technical difficulty.\nIn contrast to my previous website projects, I am planning two different strategies: \n\nI will not go into the details of the website design immediately but will work on these issues from time to time.\nI will not announce the website until I am sure I will use it regularly and long-term. I think that about 10 articles – written in two months – should give me the trust that I will use it sustainably."
-  },
-  {
-    "objectID": "posts/welcome/index.html#my-first-blog-entry-with-quarto",
-    "href": "posts/welcome/index.html#my-first-blog-entry-with-quarto",
-    "title": "Bye, Bye Hugo, Welcome Quarto!",
-    "section": "My first blog entry with Quarto",
-    "text": "My first blog entry with Quarto\nThis is my first entry in a new blog powered by Quarto. After continuously struggling with the complex machinery blogdown - Hugo - Wowchemy, I feel like coming home from a trip abroad!\nFollowing the Quarto guide Creating a Blog, it took me only 2 (!) minutes to render the provided blog template locally. After just one hour, I had my blog using Quarto, GitHub, and Netlify online. And half of this time, I spent thinking about a name for my blog and what to do with my older and outdated other blogdown web presences. (To put this quick access into perspective: I already had a GitHub account, GitHub credential, and a Netlify account.)\nI never was happy with the rapid development of Hugo that brought with it many changes and a considerable learning overhead. The same problem happened with the Academic theme by Wowchemy. The end product looked nice and ran fast, but I had already forgotten some of the many details after two weeks. As a result, I spent more time learning the blog machinery than I had time to write about substantive subjects.\nIt was helpful when Yihui Xie introduced `blogdown::checksite()` and the possibility of freezing to a specific Hugo version. But the work in this environment was never intuitive and satisfying. I think it’s self-explanatory that the introductory message to the blogdown book for over two years now states as a note from the authors: “Some of the information and instructions in this book are now out of date because of changes to Hugo and the blogdown package.”\n\n\n\nScreenshot from the introductory note by the authors of blogdown: Creating Websites with R Markdown"
+    "text": "ORCID LogoMy unique researcher ID = 0000-0003-4526-8791. Read my article: What is an ORCID ID?\nDict.cc IconUse my Croatian-German flashcards in dict.cc, a multilingual dictionary driven and maintained by the community.\nDiigo LogoSee and share booksmarks with me in Diigo, a social bookmarking website, especially suited as a digital research tool.\nDownload IconDownload my publications from Educational Patterns, a website I abandoned August 2018 for reasons explained here in the blue box.\nGithub iconMy repositories on GitHub, a Git repository hosting service.\nWordpress LogoVisit my German Wordpress blog Gedankensplitter and read about eLearning and educational technology.\nGoodreads LogoTrack the books I read and read my reviews on Goodreads, the largest site for readers and book recommendations.\nGoogle Scholar IconMy Page on Google Scholar, a freely accessible web search engine that indexes scholarly literature.\nPrezi LogoLook, download and edit my Prezi presentations, about half of them im English and some with German audit track.\nRStudio LogoRead and comment my R Markdown documents written in RStudio und published via RPubs.\nSkype LogoContact me via Skype.\nStack Overflow IconMy profile on StackOverflow, the world’s largest developer community.\nWakelet IconNew IconCapture, organize and share multi-media resources with me. Visit my curated links on my Wakelet Home Page.\nPublication IconRead my book Studieren und Forschen mit dem Internet on the Internet or as PDF, ePub or in mobi format.\nTwitter IconFollow me on Twitter, a social networking site for micro-blogging.\nZotero LogoVisit and follow me on Zotero, a citation management systems to collect, organize and share citations."
   }
 ]

@@ -1,1 +1,5 @@
 /* css styles */
+.quarto-figure-center figcaption.figure-caption {
+  margin: auto;
+  text-align: center;
+}

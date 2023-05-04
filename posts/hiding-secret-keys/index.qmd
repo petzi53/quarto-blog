@@ -1,0 +1,62 @@
+---
+title: "Hiding a secret API token"
+subtitle: "An article that explains something."
+author: "Peter Baumgartner"
+date: "2023-04-19"
+date-modified: "2023-04-20"
+image: ""
+categories:      [API, httr2, "R News", rstats]
+draft: true
+---
+
+I plan to write an R Package. I will call it `hypo2md`, and it should
+search and import annotations from
+[Hypothes.is](https://web.hypothes.is/ "is a open-source software for web annotations")
+into R markdown files. I need this functionality to process my
+highlights and comments generated during reading in my note-taking app
+[Obsidian](https://obsidian.md/ "Obsidian is a note-taking app"). 
+
+But writing about my package plans is not the goal of this post. Here I
+want to describe one of the learnings I had during my first experiments
+with the [Hypothes.is
+API](https://h.readthedocs.io/en/latest/api-reference/).
+
+Reading the two articles by Hadley Wickham about [httr2 R
+package](R%20package) ([get
+started](https://httr2.r-lib.org/articles/httr2.html) and [wrapping
+APIs](https://httr2.r-lib.org/articles/wrapping-apis.html)), I learned
+the basics of how to interface with APIs. As Hypothes.is requires an API
+user token, one particular problem I would need to overcome is [secret
+management](https://httr2.r-lib.org/articles/wrapping-apis.html#secret-management).
+
+Even after reading the detailed instructions multiple times, the code
+described in "Wrapping APIs" didn't work for me. As I finally solved the
+problem, I thought my errors could be interesting for other Newbies as
+well.
+
+## 5 steps to hide your secrets
+
+I am not going to use executable R program code for the explanation. It
+is difficult to show the functionality in a blog post and it may be even
+more difficult to prevent misunderstanding as it happened with me, when
+I followed the code.
+
+::: callout-note
+Note that there are five types of callouts, including: `note`,
+`warning`, `important`, `tip`, and `caution`.
+:::
+
+::: callout-tip
+## Tip with Title
+
+This is an example of a callout with a title.
+:::
+
+::: {.callout-caution collapse="true" appearance="default"}
+## Expand To Learn About Collapse
+
+This is an example of a 'folded' caution callout that can be expanded by
+the user. You can use `collapse="true"` to collapse it by default or
+`collapse="false"` to make a collapsible callout that is expanded by
+default.
+:::

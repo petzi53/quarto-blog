@@ -2,22 +2,52 @@ project:
   type: website
 
 website:
-  title: "quarto-blog"
+  title: "Life Long Learning Lab"
+  favicon: favicon.ico
+  twitter-card: true
+  search:
+    type: textbox
   navbar:
     right:
-      - about.qmd
+      - text: "About"
+        href: about.qmd
       - icon: github
-        href: https://github.com/
+        href: https://github.com/petzi53/
       - icon: twitter
-        href: https://twitter.com
+        href: https://twitter.com/pbaumgartner
+
+  page-footer:
+    border: true
+    background: rgb(26, 26, 26)
+    foreground: rgb(141, 141, 141)
+    center:
+      - text: "About"
+        href: about.qmd
+      - text: "Privacy"
+        href: privacy.qmd
+      - text: "Disclaimer"
+        href: disclaimer.qmd
+    left:
+      - text: <a href="https://l3lab.net">L3Lab</a> © 2023 by <a href="https://l3lab.net/about">Peter Baumgartner</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1">CC BY 4.0</a>
+    right:
+      - text: Proudly powered by <a href=https://quarto.org/>Quarto</a>
+
   comments:
     hypothesis:
       theme: classic
-      openSidebar: true
+      openSidebar: false
+      showHighlights: whenSidebarOpen
+      enableExperimentalNewNoteButton: true
+      branding:
+          appBackgroundColor: white
+          ctaBackgroundColor: rgb(26, 26, 26)
+          ctaTextColor: rgb(141, 141, 141)
+          selectionFontFamily: 'helvetica, arial, sans serif'
+
 
 format:
   html:
-    theme: cosmo
+    theme: lux
     css: styles.css
 
 editor: visual

@@ -1,0 +1,86 @@
+---
+title: "Bye, Bye Hugo, Welcome Quarto!"
+subtitle: "My first blogging impressions with Quarto"
+description: "This is my first entry in a new blog powered by Quarto. After continuously struggling with the complex machinery (blogdown, Hugo, Wowchemy), I feel like coming home  from a trip abroad!"
+author: "Peter Baumgartner"
+date: "2023-04-23"
+image: "New_Found_Glory_Coming_Home-min.png"
+image-alt: "A photo of lead vocalist Jordan Pundik walking out of a restaurant holding a suitcase that reads the words 'NEW FOUND GLORY'. The words 'COMING HOME' appear in the bottom-left of the image."
+categories: [blog, quarto]
+date-modified: "2023-04-29"
+draft: false
+---
+
+[![This is the front cover for the CD "Coming Home" by the artist "New
+Found Glory" via Wikipedia (Fair
+Use)](New_Found_Glory_Coming_Home-min.png){fig-alt="A photo of lead vocalist Jordan Pundik walking out of a restaurant holding a suitcase that reads the words \"NEW FOUND GLORY\". The words \"COMING HOME\" appear in the bottom-left of the image."
+fig-align="center"
+width="400"}](https://en.wikipedia.org/wiki/Coming_Home_(New_Found_Glory_album))
+
+## My first blog entry with Quarto
+
+This is my first entry in a new [blog powered by
+Quarto](https://quarto.org/ "Welcome to Quarto – An open-source scientific and technical publishing system").
+After continuously struggling with the complex machinery
+[blogdown](https://bookdown.org/yihui/blogdown/ "first page of the online blogdown book") -
+[Hugo](https://gohugo.io/ "The world’s fastest framework for building websites") -
+[Wowchemy](https://wowchemy.com/ "The site you need to grow as a creator — without the bloat"),
+I feel like coming home from a trip abroad!
+
+Following the Quarto guide [Creating a
+Blog](https://quarto.org/docs/websites/website-blog.html "Quarto websites include integrated support for blogging."),
+it took me only 2 (!) minutes to render the provided blog template
+locally. After just one hour, I had my blog using Quarto, GitHub, and
+Netlify online. And half of this time, I spent thinking about a name for
+my blog and what to do with my older and outdated other blogdown web
+presences. (To put this quick access into perspective: I already had a
+[GitHub
+account](https://github.com/petzi53 "The complete developer platform to build, scale, and deliver secure software"),
+GitHub credential, and a
+[Netlify](https://www.netlify.com/ "Bring it all together The fastest way to combine your favorite tools and APIs to build the fastest sites, stores, and apps for the web")
+account. And I didn't work on the content of a blog entry but used just
+the installed test pages.)
+
+I never was happy with the rapid development of Hugo that brought with
+it many changes and a considerable learning overhead. The same problem
+happened with the Academic theme by [Wowchemy](https://wowchemy.com/).
+The end product looked nice and ran fast, but I had already forgotten
+some of the many details for a good-looking blog post after two weeks.
+As a result, I spent more time learning the blog machinery than I had
+time to write about substantive subjects.
+
+It was helpful when [Yihui Xie introduced
+\`blogdown::checksite()\`](https://bookdown.org/yihui/blogdown/a-quick-example.html#when-in-doubt-run-blogdowncheck_site)
+and the possibility of [freezing to a specific Hugo
+version](https://bookdown.org/yihui/blogdown/global-options.html#global-options).
+But the work in the blogdown-Hugo environment was never intuitive and
+satisfying. I think it's self-explanatory that the introductory message
+to the blogdown book for over two years now states as a note from the
+authors: "Some of the information and instructions in this book are now
+out of date because of changes to Hugo and the blogdown package."
+
+[![Screenshot from the introductory note by the authors of blogdown:
+Creating Websites with R
+Markdown](intro-note-blogdown-book-min.png){fig-alt="A note from the authors: Some of the information and instructions in this book are now out of date because of changes to Hugo and the blogdown package. If you have suggestions for improving this book, please file an issue in our GitHub repository. Thanks for your patience while we work to update the book, and please stay tuned for the revised version! In the meantime, you can find an introduction to the changes and new features in the v1.0 release blog post and this \"Up & running with blogdown in 2021\" blog post. Yihui, Amber, & Alison"}](https://bookdown.org/yihui/blogdown/)
+
+## Future plans
+
+I am sure there will also be some intricacies I must learn and overcome
+with Quarto, but this will conform with all my other R knowledge. At the
+moment, my feeling is enthusiastic: It is easy and intuitive to write on
+this platform. I hope to overcome technical barriers and concentrate on
+thematic topics finally. Since English is not my mother tongue, it is
+already difficult enough to express myself precisely about complex
+content-related questions. I don't need any additional technical
+difficulty in writing blog posts.
+
+In contrast to my previous website projects, I am planning two different
+strategies: 
+
+-   I will not go into the details of the website design immediately but
+    will work on these issues from time to time.
+
+-   I will not announce the website until I am sure I will use it
+    regularly and long-term. I think that about 10 articles -- written
+    in two months -- should give me the trust that I will use it
+    sustainably.
