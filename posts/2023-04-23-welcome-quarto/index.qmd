@@ -59,10 +59,6 @@ to the blogdown book for over two years now states as a note from the
 authors: "Some of the information and instructions in this book are now
 out of date because of changes to Hugo and the blogdown package."
 
-[![Screenshot from the introductory note by the authors of blogdown:
-Creating Websites with R
-Markdown](intro-note-blogdown-book-min.png){fig-alt="A note from the authors: Some of the information and instructions in this book are now out of date because of changes to Hugo and the blogdown package. If you have suggestions for improving this book, please file an issue in our GitHub repository. Thanks for your patience while we work to update the book, and please stay tuned for the revised version! In the meantime, you can find an introduction to the changes and new features in the v1.0 release blog post and this \"Up & running with blogdown in 2021\" blog post. Yihui, Amber, & Alison"}](https://bookdown.org/yihui/blogdown/)
-
 ## Future plans
 
 I am sure there will also be some intricacies I must learn and overcome
