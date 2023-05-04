@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "Send me a message!\n\n  \n    Your Name: \n  \n  \n    Your Email: \n  \n  \n    \n      Don’t fill this out if you’re human: \n    \n  \n  \n  \n    Message:    \n  \n  \n  \n  \n  \n    Send\n  \n\n\n\n\n\n Back to top"
+  },
+  {
     "objectID": "posts/2023-04-23-welcome-quarto/index.html",
     "href": "posts/2023-04-23-welcome-quarto/index.html",
     "title": "Bye, Bye Hugo, Welcome Quarto!",
@@ -21,24 +28,66 @@
     "text": "Future plans\nI am sure there will also be some intricacies I must learn and overcome with Quarto, but this will conform with all my other R knowledge. At the moment, my feeling is enthusiastic: It is easy and intuitive to write on this platform. I hope to overcome technical barriers and concentrate on thematic topics finally. Since English is not my mother tongue, it is already difficult enough to express myself precisely about complex content-related questions. I don’t need any additional technical difficulty in writing blog posts.\nIn contrast to my previous website projects, I am planning two different strategies: \n\nI will not go into the details of the website design immediately but will work on these issues from time to time.\nI will not announce the website until I am sure I will use it regularly and long-term. I think that about 10 articles – written in two months – should give me the trust that I will use it sustainably."
   },
   {
+    "objectID": "submit_form.html",
+    "href": "submit_form.html",
+    "title": "Life Long Learning Lab",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "L3Lab",
     "section": "",
-    "text": "Bye, Bye Hugo, Welcome Quarto!\n\n\nMy first blogging impressions with Quarto\n\n\n\n\nblog\n\n\nquarto\n\n\n\n\nThis is my first entry in a new blog powered by Quarto. After continuously struggling with the complex machinery (blogdown, Hugo, Wowchemy), I feel like coming home from a trip abroad!\n\n\n\n\n\n\n2023-04-23\n\n\nPeter Baumgartner\n\n\n2023-05-04\n\n\n\n\n\n\nNo matching items"
+    "text": "Bye, Bye Hugo, Welcome Quarto!\n\n\nMy first blogging impressions with Quarto\n\n\n\n\nblog\n\n\nquarto\n\n\n\n\nThis is my first entry in a new blog powered by Quarto. After continuously struggling with the complex machinery (blogdown, Hugo, Wowchemy), I feel like coming home from a trip abroad!\n\n\n\n\n\n\n2023-04-23\n\n\nPeter Baumgartner\n\n\n2023-05-04\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "CopyOfcontact.html",
+    "href": "CopyOfcontact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "Send me a message!\nContactSend me a messageName\nEmail\nMessage\nDo not fill this field unless you are a bot: \n\n\n  \n  \n  \n  \n  \n  \n  \n  \n        \n  \n  \n\nSend\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "Peter Baumgartner",
     "section": "",
-    "text": "I am a retired professor of Education Technology. As head of the Department of Interactive Media and Educational Technologies at the University for Continuing Education Krems (UWK) (Austria), I researched how to apply technology in settings of Life Long Learning. \nI had held positions as a professor at several universities in Austria and Germany (Klagenfurt, Münster, Innsbruck, Hagen) before I accepted the nomination to Krems. I published 25 books (10 monographs and 15 edited volumes) and over 200 articles.\nWith my retirement, I became a Life Long Learner myself. I am interested in studying workflows for Open Science research, focusing on note-taking apps like Obsidian, Hypothes.is, etc., and the R programming language for statistical computing and data science."
+    "text": "I am a retired professor of Education Technology. As head of the Department of Interactive Media and Educational Technologies at the University for Continuing Education Krems (UWK) (Austria), I researched how to apply technology in settings of Life Long Learning. \nI had held positions as a professor at several universities in Austria and Germany (Klagenfurt, Münster, Innsbruck, Hagen) before I accepted the nomination to Krems. I published 25 books (10 monographs and 15 edited volumes) and over 200 articles.\nWith my retirement, I became a Life Long Learner myself. I am interested in studying workflows for Open Science research, focusing on note-taking apps like Obsidian, Hypothes.is, etc., and the R programming language for statistical computing and data science.\n\n\n Back to top"
+  },
+  {
+    "objectID": "example.html",
+    "href": "example.html",
+    "title": "Forms Documentation",
+    "section": "",
+    "text": "This page demonstrates how to use the form shortcode. A form consists of a set of YAML keys and a shortcode.\nInsert the shortcode where you want the form to appear. The form is wrapped in a div which you can use to style the form, using CSS. The default form style uses whatever theme you have chosen from the Bootswatch themes supported by Quarto.\nIf you use a custom theme, you will likely need to provide CSS for the form element classes, if you don’t like the default."
+  },
+  {
+    "objectID": "example.html#form-fields",
+    "href": "example.html#form-fields",
+    "title": "Forms Documentation",
+    "section": "Form Fields",
+    "text": "Form Fields\nThe fields element is a list of fields, as outlined below. All inputs are strings, unless mentioned:\n\n\n\n\n\n\n\n\nKey\nDescription\nRequired?\n\n\n\n\nname\nThe name for the field\nYes\n\n\ntype\nThe input type: see list below\nYes\n\n\nid\nThe id for the input\nYes\n\n\nlabel\nThe label to display for the input\nYes\n\n\nvalues\nA list of values for multiple inputs\nradio, checkbox, select\n\n\nwidth\ninteger: Width of input\nNo\n\n\nheight\ninteger: Height of input\nNo\n\n\nrequired\nboolean: Require a response1\nNo\n\n\nmultiple\nboolean: Allow multiple values\nNo\n\n\nsize\ninteger: Number of inputs to display\nNo\n\n\n\nThe currently supported input type-s are:\n\n\n\n\n\n\n\n\n\nType\nDescription\nRequireable?\nMultiple valued\n\n\n\n\ntext\nSingle-line text input\nYes\nNo\n\n\ntextarea\nA large, multi-line text input\nNo\nNo\n\n\ncheckbox\nA series of checkboxes\nYes2\nYes\n\n\nradio\nSeries of radio options\nYes3\nNo\n\n\nselect\nDropdown selection, styled by CSS\nYes\nNo\n\n\nemail\nEmail-only text input\nNo\nNo\n\n\nfile\nFile-submission button\nNo\nNo"
+  },
+  {
+    "objectID": "example.html#form-field-values",
+    "href": "example.html#form-field-values",
+    "title": "Forms Documentation",
+    "section": "Form Field Values",
+    "text": "Form Field Values\nThe values for multi-line inputs are specified as\nform:\n  ...\n  fields:\n  - ...:\n    values:\n    - text: Radio 1\n      value: 1\n\ntext is the label text for the option to be displayed\nvalue is the value selecting the option will select"
+  },
+  {
+    "objectID": "example.html#non-field-form-entries",
+    "href": "example.html#non-field-form-entries",
+    "title": "Forms Documentation",
+    "section": "Non-field Form Entries",
+    "text": "Non-field Form Entries\nYou can also add arbitrary text using the text field:\nform:\n  ...\n  fields:\n  - text: \"Some  text\"\n  - text: ---\nUsing --- will insert a horizontal rule in the form."
   },
   {
     "objectID": "presence.html",
     "href": "presence.html",
     "title": "Life Long Learning Lab",
     "section": "",
-    "text": "ORCID LogoMy unique researcher ID = 0000-0003-4526-8791. Read my article: What is an ORCID ID?\nDict.cc IconUse my Croatian-German flashcards in dict.cc, a multilingual dictionary driven and maintained by the community.\nDiigo LogoSee and share booksmarks with me in Diigo, a social bookmarking website, especially suited as a digital research tool.\nDownload IconDownload my publications from Educational Patterns, a website I abandoned August 2018 for reasons explained here in the blue box.\nGithub iconMy repositories on GitHub, a Git repository hosting service.\nWordpress LogoVisit my German Wordpress blog Gedankensplitter and read about eLearning and educational technology.\nGoodreads LogoTrack the books I read and read my reviews on Goodreads, the largest site for readers and book recommendations.\nGoogle Scholar IconMy Page on Google Scholar, a freely accessible web search engine that indexes scholarly literature.\nPrezi LogoLook, download and edit my Prezi presentations, about half of them im English and some with German audit track.\nRStudio LogoRead and comment my R Markdown documents written in RStudio und published via RPubs.\nSkype LogoContact me via Skype.\nStack Overflow IconMy profile on StackOverflow, the world’s largest developer community.\nWakelet IconNew IconCapture, organize and share multi-media resources with me. Visit my curated links on my Wakelet Home Page.\nPublication IconRead my book Studieren und Forschen mit dem Internet on the Internet or as PDF, ePub or in mobi format.\nTwitter IconFollow me on Twitter, a social networking site for micro-blogging.\nZotero LogoVisit and follow me on Zotero, a citation management systems to collect, organize and share citations."
+    "text": "ORCID LogoMy unique researcher ID = 0000-0003-4526-8791. Read my article: What is an ORCID ID?\nDict.cc IconUse my Croatian-German flashcards in dict.cc, a multilingual dictionary driven and maintained by the community.\nDiigo LogoSee and share booksmarks with me in Diigo, a social bookmarking website, especially suited as a digital research tool.\nDownload IconDownload my publications from Educational Patterns, a website I abandoned August 2018 for reasons explained here in the blue box.\nGithub iconMy repositories on GitHub, a Git repository hosting service.\nWordpress LogoVisit my German Wordpress blog Gedankensplitter and read about eLearning and educational technology.\nGoodreads LogoTrack the books I read and read my reviews on Goodreads, the largest site for readers and book recommendations.\nGoogle Scholar IconMy Page on Google Scholar, a freely accessible web search engine that indexes scholarly literature.\nPrezi LogoLook, download and edit my Prezi presentations, about half of them im English and some with German audit track.\nRStudio LogoRead and comment my R Markdown documents written in RStudio und published via RPubs.\nSkype LogoContact me via Skype.\nStack Overflow IconMy profile on StackOverflow, the world’s largest developer community.\nWakelet IconNew IconCapture, organize and share multi-media resources with me. Visit my curated links on my Wakelet Home Page.\nPublication IconRead my book Studieren und Forschen mit dem Internet on the Internet or as PDF, ePub or in mobi format.\nTwitter IconFollow me on Twitter, a social networking site for micro-blogging.\nZotero LogoVisit and follow me on Zotero, a citation management systems to collect, organize and share citations.\n\n\n\n Back to top"
   }
 ]
