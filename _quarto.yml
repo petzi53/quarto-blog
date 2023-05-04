@@ -4,8 +4,10 @@ project:
 website:
   title: "Life Long Learning Lab"
   favicon: favicon.ico
+  site-url: https://l3lab.net
   twitter-card: true
   search:
+    location: navbar
     type: textbox
   navbar:
     right:
