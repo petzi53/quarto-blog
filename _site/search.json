@@ -4,7 +4,35 @@
     "href": "contact.html",
     "title": "Contact",
     "section": "",
-    "text": "Send me a message!\n\n  \n    Your Name: \n  \n  \n    Your Email: \n  \n  \n    \n      Don’t fill this out if you’re human: \n    \n  \n  \n  \n    Message:    \n  \n  \n    Send\n  \n\n\n\n\n Back to top"
+    "text": "Send me a message!\n\n  \n    Your Name: \n  \n  \n    Your Email: \n  \n  \n    \n      Don’t fill this out if you’re human: \n    \n  \n  \n    Message:    \n  \n  \n    Send\n  \n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "posts/2023-05-05-how-to-delete-git-branches/index.html",
+    "href": "posts/2023-05-05-how-to-delete-git-branches/index.html",
+    "title": "How to delete Git branches",
+    "section": "",
+    "text": "As I am not very experienced with R and coding, my knowledge of using Git and GitHub is limited. Usually, I use the pr_*() family of usethis functions as pull request helpers. They work very well – as long as the workflow follows the standard (successful) workflow:\nInitiate the pull request with pr_init(&lt;branch name&gt;) Submit the changes in the new branch with pr_push(). Click the “Create pull request”-button to make the PR. After the code is accepted and merged, conclude the process with pr_finish(). This sequence does not fly if the workflow deviates from the above model. The mentioned article describes the scenario of a discussion between contributor and reviewer that finally results in the acceptance of the PR. But what about a rejection of the PR?"
+  },
+  {
+    "objectID": "posts/2023-05-05-how-to-delete-git-branches/index.html#deleting-a-remote-branch",
+    "href": "posts/2023-05-05-how-to-delete-git-branches/index.html#deleting-a-remote-branch",
+    "title": "How to delete Git branches",
+    "section": "Deleting a remote branch",
+    "text": "Deleting a remote branch\ngit push origin -d &lt;branch&gt;"
+  },
+  {
+    "objectID": "posts/2023-05-05-how-to-delete-git-branches/index.html#deleting-a-local-branch",
+    "href": "posts/2023-05-05-how-to-delete-git-branches/index.html#deleting-a-local-branch",
+    "title": "How to delete Git branches",
+    "section": "Deleting a local branch",
+    "text": "Deleting a local branch\ngit branch -d &lt;branch&gt;\ngit branch -D &lt;branch&gt; # Force-delete un-merged branches"
+  },
+  {
+    "objectID": "posts/2023-05-05-how-to-delete-git-branches/index.html#deleting-a-local-remote-tracking-branch",
+    "href": "posts/2023-05-05-how-to-delete-git-branches/index.html#deleting-a-local-remote-tracking-branch",
+    "title": "How to delete Git branches",
+    "section": "Deleting a local remote-tracking branch",
+    "text": "Deleting a local remote-tracking branch\n# 'dr' stands for \"delete remotes\"\ngit branch -dr &lt;remote&gt;/&lt;branch&gt;\ngit branch -dr origin/dev # example\n\n# Delete multiple obsolete remote-tracking branches\ngit fetch &lt;remote&gt; -p  # 'p' stands for \"prune\"\ngit fetch origin -p    # example"
   },
   {
     "objectID": "posts/2023-04-23-welcome-quarto/index.html",
@@ -28,25 +56,11 @@
     "text": "Future plans\nI am sure there will also be some intricacies I must learn and overcome with Quarto, but this will conform with all my other R knowledge. At the moment, my feeling is enthusiastic: It is easy and intuitive to write on this platform. I hope to overcome technical barriers and concentrate on thematic topics finally. Since English is not my mother tongue, it is already difficult enough to express myself precisely about complex content-related questions. I don’t need any additional technical difficulty in writing blog posts.\nIn contrast to my previous website projects, I am planning two different strategies: \n\nI will not go into the details of the website design immediately but will work on these issues from time to time.\nI will not announce the website until I am sure I will use it regularly and long-term. I think that about 10 articles – written in two months – should give me the trust that I will use it sustainably."
   },
   {
-    "objectID": "submit_form.html",
-    "href": "submit_form.html",
-    "title": "Life Long Learning Lab",
-    "section": "",
-    "text": "Back to top"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "L3Lab",
     "section": "",
-    "text": "Bye, Bye Hugo, Welcome Quarto!\n\n\nMy first blogging impressions with Quarto\n\n\n\n\nblog\n\n\nquarto\n\n\n\n\nThis is my first entry in a new blog powered by Quarto. After continuously struggling with the complex machinery (blogdown, Hugo, Wowchemy), I feel like coming home from a trip abroad!\n\n\n\n\n\n\n2023-04-23\n\n\nPeter Baumgartner\n\n\n2023-05-04\n\n\n\n\n\n\nNo matching items\n\n Back to top"
-  },
-  {
-    "objectID": "CopyOfcontact.html",
-    "href": "CopyOfcontact.html",
-    "title": "Contact",
-    "section": "",
-    "text": "Send me a message!\nContactSend me a messageName\nEmail\nMessage\nDo not fill this field unless you are a bot: \n\n\n  \n  \n  \n  \n  \n  \n  \n  \n        \n  \n  \n\nSend\n\n\n\n\n\n Back to top"
+    "text": "How to delete Git branches\n\n\nThe limits of RStudio and of the pr_*() family of {usethis} functions\n\n\n\n\ngit\n\n\ngithub\n\n\nhow-to\n\n\n\n\nThe article explains how I finally succeeded in deleting different branches in Git. It turned out – contrary to my previous mental model – that there are not only two branches but three (local, remote origin, and local remote-tracking branch).\n\n\n\n\n\n\n2023-05-05\n\n\nPeter Baumgartner\n\n\n2023-05-05\n\n\n\n\n\n\n  \n\n\n\n\nBye, Bye Hugo, Welcome Quarto!\n\n\nMy first blogging impressions with Quarto\n\n\n\n\nblog\n\n\nquarto\n\n\n\n\nThis is my first entry in a new blog powered by Quarto. After continuously struggling with the complex machinery (blogdown, Hugo, Wowchemy), I feel like coming home from a trip abroad!\n\n\n\n\n\n\n2023-04-23\n\n\nPeter Baumgartner\n\n\n2023-05-04\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "about.html",
@@ -56,38 +70,52 @@
     "text": "I am a retired professor of Education Technology. As head of the Department of Interactive Media and Educational Technologies at the University for Continuing Education Krems (UWK) (Austria), I researched how to apply technology in settings of Life Long Learning. \nI had held positions as a professor at several universities in Austria and Germany (Klagenfurt, Münster, Innsbruck, Hagen) before I accepted the nomination to Krems. I published 25 books (10 monographs and 15 edited volumes) and over 200 articles.\nWith my retirement, I became a Life Long Learner myself. I am interested in studying workflows for Open Science research, focusing on note-taking apps like Obsidian, Hypothes.is, etc., and the R programming language for statistical computing and data science.\n\n\n Back to top"
   },
   {
-    "objectID": "example.html",
-    "href": "example.html",
-    "title": "Forms Documentation",
-    "section": "",
-    "text": "This page demonstrates how to use the form shortcode. A form consists of a set of YAML keys and a shortcode.\nInsert the shortcode where you want the form to appear. The form is wrapped in a div which you can use to style the form, using CSS. The default form style uses whatever theme you have chosen from the Bootswatch themes supported by Quarto.\nIf you use a custom theme, you will likely need to provide CSS for the form element classes, if you don’t like the default."
-  },
-  {
-    "objectID": "example.html#form-fields",
-    "href": "example.html#form-fields",
-    "title": "Forms Documentation",
-    "section": "Form Fields",
-    "text": "Form Fields\nThe fields element is a list of fields, as outlined below. All inputs are strings, unless mentioned:\n\n\n\n\n\n\n\n\nKey\nDescription\nRequired?\n\n\n\n\nname\nThe name for the field\nYes\n\n\ntype\nThe input type: see list below\nYes\n\n\nid\nThe id for the input\nYes\n\n\nlabel\nThe label to display for the input\nYes\n\n\nvalues\nA list of values for multiple inputs\nradio, checkbox, select\n\n\nwidth\ninteger: Width of input\nNo\n\n\nheight\ninteger: Height of input\nNo\n\n\nrequired\nboolean: Require a response1\nNo\n\n\nmultiple\nboolean: Allow multiple values\nNo\n\n\nsize\ninteger: Number of inputs to display\nNo\n\n\n\nThe currently supported input type-s are:\n\n\n\n\n\n\n\n\n\nType\nDescription\nRequireable?\nMultiple valued\n\n\n\n\ntext\nSingle-line text input\nYes\nNo\n\n\ntextarea\nA large, multi-line text input\nNo\nNo\n\n\ncheckbox\nA series of checkboxes\nYes2\nYes\n\n\nradio\nSeries of radio options\nYes3\nNo\n\n\nselect\nDropdown selection, styled by CSS\nYes\nNo\n\n\nemail\nEmail-only text input\nNo\nNo\n\n\nfile\nFile-submission button\nNo\nNo"
-  },
-  {
-    "objectID": "example.html#form-field-values",
-    "href": "example.html#form-field-values",
-    "title": "Forms Documentation",
-    "section": "Form Field Values",
-    "text": "Form Field Values\nThe values for multi-line inputs are specified as\nform:\n  ...\n  fields:\n  - ...:\n    values:\n    - text: Radio 1\n      value: 1\n\ntext is the label text for the option to be displayed\nvalue is the value selecting the option will select"
-  },
-  {
-    "objectID": "example.html#non-field-form-entries",
-    "href": "example.html#non-field-form-entries",
-    "title": "Forms Documentation",
-    "section": "Non-field Form Entries",
-    "text": "Non-field Form Entries\nYou can also add arbitrary text using the text field:\nform:\n  ...\n  fields:\n  - text: \"Some  text\"\n  - text: ---\nUsing --- will insert a horizontal rule in the form."
-  },
-  {
     "objectID": "presence.html",
     "href": "presence.html",
     "title": "Life Long Learning Lab",
     "section": "",
     "text": "ORCID LogoMy unique researcher ID = 0000-0003-4526-8791. Read my article: What is an ORCID ID?\nDict.cc IconUse my Croatian-German flashcards in dict.cc, a multilingual dictionary driven and maintained by the community.\nDiigo LogoSee and share booksmarks with me in Diigo, a social bookmarking website, especially suited as a digital research tool.\nDownload IconDownload my publications from Educational Patterns, a website I abandoned August 2018 for reasons explained here in the blue box.\nGithub iconMy repositories on GitHub, a Git repository hosting service.\nWordpress LogoVisit my German Wordpress blog Gedankensplitter and read about eLearning and educational technology.\nGoodreads LogoTrack the books I read and read my reviews on Goodreads, the largest site for readers and book recommendations.\nGoogle Scholar IconMy Page on Google Scholar, a freely accessible web search engine that indexes scholarly literature.\nPrezi LogoLook, download and edit my Prezi presentations, about half of them im English and some with German audit track.\nRStudio LogoRead and comment my R Markdown documents written in RStudio und published via RPubs.\nSkype LogoContact me via Skype.\nStack Overflow IconMy profile on StackOverflow, the world’s largest developer community.\nWakelet IconNew IconCapture, organize and share multi-media resources with me. Visit my curated links on my Wakelet Home Page.\nPublication IconRead my book Studieren und Forschen mit dem Internet on the Internet or as PDF, ePub or in mobi format.\nTwitter IconFollow me on Twitter, a social networking site for micro-blogging.\nZotero LogoVisit and follow me on Zotero, a citation management systems to collect, organize and share citations.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "posts/2023-05-05-how-to-delete-git-branches/index.html#if-a-pull-request-is-not-accepted",
+    "href": "posts/2023-05-05-how-to-delete-git-branches/index.html#if-a-pull-request-is-not-accepted",
+    "title": "How to delete Git branches",
+    "section": "",
+    "text": "As I am not very experienced with R and coding, my knowledge of using Git and GitHub is limited. Usually, I use the pr_*() family of usethis functions as pull request helpers. They work very well – as long as the workflow follows the standard (successful) workflow:\nInitiate the pull request with pr_init(&lt;branch name&gt;) Submit the changes in the new branch with pr_push(). Click the “Create pull request”-button to make the PR. After the code is accepted and merged, conclude the process with pr_finish(). This sequence does not fly if the workflow deviates from the above model. The mentioned article describes the scenario of a discussion between contributor and reviewer that finally results in the acceptance of the PR. But what about a rejection of the PR?"
+  },
+  {
+    "objectID": "posts/2023-05-05-how-to-delete-git-branches/index.html#deleted-the-remote-branch-with-github-is-not-enough",
+    "href": "posts/2023-05-05-how-to-delete-git-branches/index.html#deleted-the-remote-branch-with-github-is-not-enough",
+    "title": "How to delete Git branches",
+    "section": "Deleted the remote branch with GitHub is not enough",
+    "text": "Deleted the remote branch with GitHub is not enough\nThis situation happened to me after I proposed fixing a typo for a repo that had been frozen because of a necessary general overhaul. I thought to delete the submitted remote branch at the GitHub site would bring me back to my initial position.\n\n\n\nScreenshot 1: Delete obsolete branch “typo” at GitHub site (simulated for this article).\n\n\nBut back in RStudio, it turned out that the deleted branch was still there.\n\n\n\nScreenshot 2: Local and Remote branches seen in RStudio\n\n\nOk, I understood that my remote action did not delete the local branch too. But why was the remote branch still there? After all, I had it just removed. (I double-checked the deletion, and the remote branch at the remote GitHub site was, in fact, completely gone."
+  },
+  {
+    "objectID": "posts/2023-05-05-how-to-delete-git-branches/index.html#there-are-three-not-two-branches",
+    "href": "posts/2023-05-05-how-to-delete-git-branches/index.html#there-are-three-not-two-branches",
+    "title": "How to delete Git branches",
+    "section": "There are three, not two branches",
+    "text": "There are three, not two branches\nAfter some research, I found an answer at StackOverflow with over 25.000 views! It seems that I am not the only one surprised by the situation.\nAfter reading this and other answers at SO, I learned that there are three different branches:\n\nWhen you’re dealing with deleting branches both locally and remotely, keep in mind that there are three different branches involved: The local branch X. The remote origin branch X. The local remote-tracking branch origin/X that tracks the remote branch X. I deleted the remote origin branch X manually at the GitHub site. The local branch but also the local remote-tracking branch were still functional!\n\nFor every one of these three branches, one needs different commands to delete them. And here – as far as I understood – we have met the limits of RStudio and/or {usethis.} For the following commands, you have to change from the console to the terminal."
+  },
+  {
+    "objectID": "posts/2023-05-05-how-to-delete-git-branches/index.html#useful-commands-for-deleting-branches",
+    "href": "posts/2023-05-05-how-to-delete-git-branches/index.html#useful-commands-for-deleting-branches",
+    "title": "How to delete Git branches",
+    "section": "Useful commands for deleting branches",
+    "text": "Useful commands for deleting branches\n\nDeleting a remote branch\ngit push origin -d &lt;branch&gt;\n\n\nDeleting a local branch\ngit checkout master # change branch, you can't delete a branch you are working on\ngit branch -d &lt;branch&gt;\ngit branch -D &lt;branch&gt; # Force-delete un-merged branches\n\n\nDeleting a local remote-tracking branch\n# 'dr' stands for \"delete remotes\"\ngit branch -dr &lt;remote&gt;/&lt;branch&gt;\ngit branch -dr origin/dev # example\n\n# Delete multiple obsolete remote-tracking branches\ngit fetch &lt;remote&gt; -p  # 'p' stands for \"prune\"\ngit fetch origin -p    # example\n\n\n\n\n\n\nNote\n\n\n\nDon’t forget to refresh the RStudio listing to verify that you have deleted the branches.\n\n\n\n\n\n\n\n\n\n\nClick on the circle symbol at the top right corner…\n\n\n\n\n\n\n… and choose “Refresh Now” to list the branches currently available."
+  },
+  {
+    "objectID": "posts/2023-05-05-how-to-delete-git-branches/index.html#to-delete-the-remote-branch-with-github-is-not-enough",
+    "href": "posts/2023-05-05-how-to-delete-git-branches/index.html#to-delete-the-remote-branch-with-github-is-not-enough",
+    "title": "How to delete Git branches",
+    "section": "To delete the remote branch with GitHub is not enough",
+    "text": "To delete the remote branch with GitHub is not enough\nThis situation happened to me after I proposed fixing a typo for a repo that had been frozen because of a necessary general overhaul. I thought to delete the submitted remote branch at the GitHub site would bring me back to my initial position.\n\n\n\nScreenshot 1: Delete obsolete branch “typo” at GitHub site (simulated for this article).\n\n\nBut back in RStudio, it turned out that the deleted branch was still there.\n\n\n\nScreenshot 2: Local and Remote branches seen in RStudio\n\n\nOk, I understood that my remote action did not delete the local branch too. But why was the remote branch still there? After all, I had it just removed. (I double-checked the deletion, and the remote branch at the remote GitHub site was, in fact, completely gone."
+  },
+  {
+    "objectID": "posts/2023-05-05-how-to-delete-git-branches/index.html#deletion-of-the-remote-branch-with-github-is-not-enough",
+    "href": "posts/2023-05-05-how-to-delete-git-branches/index.html#deletion-of-the-remote-branch-with-github-is-not-enough",
+    "title": "How to delete Git branches",
+    "section": "… deletion of the remote branch with GitHub is not enough",
+    "text": "… deletion of the remote branch with GitHub is not enough\nThis situation happened to me after I proposed fixing a typo for a repo that had been frozen because of a necessary general overhaul. I thought to delete the submitted remote branch at the GitHub site would bring me back to my initial position.\n\n\n\nScreenshot 1: Delete obsolete branch “typo” at GitHub site (simulated for this article).\n\n\nBut back in RStudio, it turned out that the deleted branch was still there.\n\n\n\nScreenshot 2: Local and Remote branches seen in RStudio\n\n\nOk, I understood that my remote action did not delete the local branch too. But why was the remote branch still there? After all, I had it just removed. (I double-checked the deletion, and the remote branch at the remote GitHub site was, in fact, completely gone."
   }
 ]

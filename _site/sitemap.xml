@@ -2,34 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://l3lab.net/contact.html</loc>
-    <lastmod>2023-05-04T23:24:30.107Z</lastmod>
+    <lastmod>2023-05-05T15:28:14.759Z</lastmod>
+  </url>
+  <url>
+    <loc>https://l3lab.net/posts/2023-05-05-how-to-delete-git-branches/index.html</loc>
+    <lastmod>2023-05-05T16:47:41.397Z</lastmod>
   </url>
   <url>
     <loc>https://l3lab.net/posts/2023-04-23-welcome-quarto/index.html</loc>
-    <lastmod>2023-05-04T22:51:31.713Z</lastmod>
-  </url>
-  <url>
-    <loc>https://l3lab.net/submit_form.html</loc>
-    <lastmod>2023-05-04T22:51:32.638Z</lastmod>
+    <lastmod>2023-05-05T15:28:15.982Z</lastmod>
   </url>
   <url>
     <loc>https://l3lab.net/index.html</loc>
-    <lastmod>2023-05-04T23:10:39.370Z</lastmod>
-  </url>
-  <url>
-    <loc>https://l3lab.net/CopyOfcontact.html</loc>
-    <lastmod>2023-05-04T22:51:34.074Z</lastmod>
+    <lastmod>2023-05-05T16:47:41.990Z</lastmod>
   </url>
   <url>
     <loc>https://l3lab.net/about.html</loc>
-    <lastmod>2023-05-04T22:51:34.509Z</lastmod>
-  </url>
-  <url>
-    <loc>https://l3lab.net/example.html</loc>
-    <lastmod>2023-05-04T22:51:35.248Z</lastmod>
+    <lastmod>2023-05-05T15:28:18.098Z</lastmod>
   </url>
   <url>
     <loc>https://l3lab.net/presence.html</loc>
-    <lastmod>2023-05-04T23:24:29.178Z</lastmod>
+    <lastmod>2023-05-05T15:28:18.956Z</lastmod>
   </url>
 </urlset>

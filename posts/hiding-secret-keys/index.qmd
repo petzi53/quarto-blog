@@ -5,7 +5,7 @@ author: "Peter Baumgartner"
 date: "2023-04-19"
 date-modified: "2023-04-20"
 image: ""
-categories:      [API, httr2, "R News", rstats]
+categories: [API, httr2]
 draft: true
 ---
 

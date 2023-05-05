@@ -1,0 +1,127 @@
+---
+title: "How to delete Git branches"
+subtitle: "The limits of RStudio and of the `pr_*()` family of {usethis} functions"
+description:  |
+  The article explains how I finally succeeded in deleting different branches
+  in Git. It turned out – contrary to my previous mental model – that there
+  are not only two branches but three (local, remote origin, and local
+  remote-tracking branch).
+author: "Peter Baumgartner"
+date: "2023-05-05"
+image: "git-cover-min.png"
+image-alt: "Got Logo"
+categories: [git, github, how-to]
+date-modified: "2023-05-05"
+engine: knitr
+---
+
+## If a pull request is not accepted…
+
+As I am not very experienced with R and coding, my knowledge of using
+Git and GitHub is limited. Usually, I use the `pr_*()` family of usethis
+functions as pull request helpers. They work very well -- as long as the
+workflow follows the standard (successful) workflow:
+
+Initiate the pull request with `pr_init(<branch name>)` Submit the
+changes in the new branch with `pr_push()`. Click the "Create pull
+request"-button to make the PR. After the code is accepted and merged,
+conclude the process with `pr_finish()`. This sequence does not fly if
+the workflow deviates from the above model. The mentioned article
+describes the scenario of a discussion between contributor and reviewer
+that finally results in the acceptance of the PR. But what about a
+rejection of the PR?
+
+## … deletion of the remote branch with GitHub is not enough
+
+This situation happened to me after I proposed fixing a typo for a repo
+that had been frozen because of a necessary general overhaul. I thought
+to delete the submitted remote branch at the GitHub site would bring me
+back to my initial position.
+
+![**Screenshot 1**: Delete obsolete branch "typo" at GitHub site
+(simulated for this
+article).](images/delete-remote-branch-at-github.png){fig-alt="A screenshot shows the default branch \"master\" and \"Your branches\" named \"typo,\" which also figures under \"Active branches\". The cursor hovers over the trash can to delete the active branch \"typo\"."
+fig-align="center"}
+
+But back in RStudio, it turned out that the deleted branch was still
+there.
+
+![**Screenshot 2**: Local and Remote branches seen in
+RStudio](images/git-branches-at-rstudio.png){fig-alt="The window shows under the two headings \"(Local Branches\") and (Remote: Origin) with \"master\" and \"typo\" two branches."
+fig-align="center"}
+
+Ok, I understood that my remote action did not delete the local branch
+too. But why was the remote branch still there? After all, I had it just
+removed. (I double-checked the deletion, and the remote branch at the
+remote GitHub site was, in fact, completely gone.
+
+## There are three, not two branches
+
+After some research, I found an answer at StackOverflow with over 25.000
+views! It seems that I am not the only one surprised by the situation.
+
+After reading this and other answers at SO, I learned that there are
+three different branches:
+
+> When you're dealing with deleting branches both locally and remotely,
+> keep in mind that there are three different branches involved: The
+> local branch X. The remote origin branch X. The local remote-tracking
+> branch origin/X that tracks the remote branch X. I deleted the remote
+> origin branch X manually at the GitHub site. The local branch but also
+> the local remote-tracking branch were still functional!
+
+For every one of these three branches, one needs different commands to
+delete them. And here -- as far as I understood -- we have met the
+limits of RStudio and/or {usethis.} For the following commands, you have
+to change from the console to the terminal.
+
+## Useful commands for deleting branches
+
+#### Deleting a remote branch
+
+``` zsh
+git push origin -d <branch>
+```
+
+#### Deleting a local branch
+
+``` zsh
+git checkout master # change branch, you can't delete a branch you are working on
+git branch -d <branch>
+git branch -D <branch> # Force-delete un-merged branches
+```
+
+#### Deleting a local remote-tracking branch
+
+``` zsh
+# 'dr' stands for "delete remotes"
+git branch -dr <remote>/<branch>
+git branch -dr origin/dev # example
+
+# Delete multiple obsolete remote-tracking branches
+git fetch <remote> -p  # 'p' stands for "prune"
+git fetch origin -p    # example
+```
+
+::: callout-note
+Don't forget to refresh the RStudio listing to verify that you have
+deleted the branches.
+:::
+
+```{css echo=FALSE}
+.column {
+text-align: center;
+}
+```
+
+::: columns
+::: {.column width="50%"}
+![Click on the circle symbol at the top right
+corner...](images/rstudio-refresh-branch-listing-circle-min.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+![... and choose "Refresh Now" to list the branches currently
+available.](images/rstudio-refresh-branch-listing-manually-min.png){fig-align="center"}
+:::
+:::
