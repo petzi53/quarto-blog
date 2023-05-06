@@ -2,11 +2,11 @@
 title: "Hiding a secret API token"
 subtitle: "An article that explains something."
 author: "Peter Baumgartner"
-date: "2023-04-19"
-date-modified: "2023-04-20"
+date: "2023-05-06"
+date-modified: "2023-05-06"
 image: ""
 categories: [API, httr2]
-draft: true
+draft: false
 ---
 
 I plan to write an R Package. I will call it `hypo2md`, and it should
@@ -60,3 +60,79 @@ the user. You can use `collapse="true"` to collapse it by default or
 `collapse="false"` to make a collapsible callout that is expanded by
 default.
 :::
+
+## Some formatting commands
+
+``` {.zsh filename="Terminal"}
+quarto create-project myproject
+```
+
++------------------------------------+------------------------------------------+-------------------------------+
+| ``` {.yaml filename="_quarto.yml"} | ``` {.yaml filename="dir/_metadata.yml"} | ``` {.yaml filename="merged"} |
+| format:                            | format:                                  | format:                       |
+|   html:                            |   html:                                  |   html:                       |
+|     toc: true                      |     code-fold: true                      |     toc: true                 |
+| bibliography:                      | bibliography:                            |     code-fold: true           |
+|   - refs.bib                       |   - proj.bib                             | bibliography:                 |
+|                                    |                                          |   - refs.bib                  |
+|                                    |                                          |   - proj.bib                  |
+| ```                                | ```                                      | ```                           |
++------------------------------------+------------------------------------------+-------------------------------+
+
+: {tbl-colwidths="\[33,33,33\]"}
+
+
+
++------------------------------------+------------------------------------------+
+| ``` {.yaml filename="_quarto.yml"} | ``` {.yaml filename="dir/_metadata.yml"} | 
+| format:                            | format:                                  |
+|   html:                            |   html:                                  |  
+|     toc: true                      |     code-fold: true                      | 
+| bibliography:                      | bibliography:                            |  
+|   - refs.bib                       |   - proj.bib                             | 
+|                                    |                                          | 
+|                                    |                                          |  
+| ```                                | ```                                      |          
++------------------------------------+------------------------------------------+
+
+: {tbl-colwidths="\[35,65\]"}
+
++-------------------------------+-------------------------------------------+
+| This here is a text to        | ``` {.yaml filename="dir/_metadata.yml"}  |
+| explain how the program is    |  format:                                  |
+| working. I am using a table   |    html:                                  |
+| to format the different       |        code-fold: true                    |
+| aspect of the code.           |  bibliography:                            |
+|                               |     - proj.bib                            |
+| It is possible to write text  |                                           |
+| in two separate columns. But  | ```                                       |  
+| it seem complex to produce    |                                           |
+| the table. Maybe one could    |                                           |
+| use a table generator?        |                                           |
+|                               |                                           |
++-------------------------------+-------------------------------------------+
+
+: {tbl-colwidths="\[65,35\]"}
+
+| Default                           | Left | Right | Center |
+|-----------------------------------|:-----|------:|:------:|
+| It is possible to write text in   | 12   |    12 |   12   |
+| two separate columns. But it seem | 123  |   123 |  123   |
+| complex to produce the table.     | 1    |     1 |   1    |
+
+: Demonstration of PIP Table Syntax
+
+## Table generated from Tables Generator
+
+| Origin            | Source                    | Note type | Category       | Subject | Emoji | Code | Title   |
+|-------------------|---------------------------|-----------|----------------|---------|-------|------|---------|
+| Clipping Notes    | web-clipping              |           |                |         | 🌐     | 0w   |         |
+| Emails            | ???                       | ???       |                |         | 📬     | 0e   |         |
+| Personal          | api-article  pb           | personal  |                |         | 🙋🏻‍♂️   | 0pi  | PI      |
+| Private           | scan uphold george joplin | private   | finance health |         | 🆔     | 0id  | FI GH   |
+| Readwise Article  | reader api-article        |           | articles       |         | 📄     | 0a   | FNA LNA |
+| Readwise Book     | readwise                  |           | books          |         | 📖     | 0b   | FNB LNB |
+| Readwise Podcasts |                           |           |                |         | 🔉     | 0po  | FNP     |
+| Readwise Twitter  | twitter                   |           | tweets         |         | 🐥     | 0t   |         |
+| Zettel            |                           |           | misc           |         |       |      |         |
+|                   |                           |           |                |         |       |      |         |
