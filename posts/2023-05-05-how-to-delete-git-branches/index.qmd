@@ -9,13 +9,13 @@ description:  |
 author: "Peter Baumgartner"
 date: "2023-05-05"
 image: "git-cover-min.png"
-image-alt: "Got Logo"
+image-alt: "Git Logo"
 categories: [git, github, how-to]
 date-modified: "2023-05-05"
 engine: knitr
 ---
 
-## If a pull request is not accepted…
+## If a pull request is not accepted...
 
 As I am not very experienced with R and coding, my knowledge of using
 Git and GitHub is limited. Usually, I use the `pr_*()` family of usethis
@@ -31,7 +31,7 @@ describes the scenario of a discussion between contributor and reviewer
 that finally results in the acceptance of the PR. But what about a
 rejection of the PR?
 
-## … deletion of the remote branch with GitHub is not enough
+## ... deletion of the remote branch with GitHub is not enough
 
 This situation happened to me after I proposed fixing a typo for a repo
 that had been frozen because of a necessary general overhaul. I thought

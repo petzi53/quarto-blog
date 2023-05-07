@@ -1,9 +1,21 @@
-/* css styles */
+/* my css styles */
+
+/* center figure caption whenever image is centered */
 .quarto-figure-center figcaption.figure-caption {
   margin: auto;
   text-align: center;
 }
 
+/* field with of contact form */
 .myform {
     width: 500px;
+}
+
+
+/* in cerulean theme is the table cpation too small */
+/* in contrast to th */
+.table caption {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24px;
 }

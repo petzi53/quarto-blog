@@ -6,7 +6,7 @@ date: "2023-05-06"
 date-modified: "2023-05-06"
 image: ""
 categories: [API, httr2]
-draft: false
+draft: true
 ---
 
 I plan to write an R Package. I will call it `hypo2md`, and it should
@@ -67,50 +67,50 @@ default.
 quarto create-project myproject
 ```
 
-+------------------------------------+------------------------------------------+-------------------------------+
-| ``` {.yaml filename="_quarto.yml"} | ``` {.yaml filename="dir/_metadata.yml"} | ``` {.yaml filename="merged"} |
-| format:                            | format:                                  | format:                       |
-|   html:                            |   html:                                  |   html:                       |
-|     toc: true                      |     code-fold: true                      |     toc: true                 |
-| bibliography:                      | bibliography:                            |     code-fold: true           |
-|   - refs.bib                       |   - proj.bib                             | bibliography:                 |
-|                                    |                                          |   - refs.bib                  |
-|                                    |                                          |   - proj.bib                  |
-| ```                                | ```                                      | ```                           |
-+------------------------------------+------------------------------------------+-------------------------------+
++---------------------+-------------------------+------------------+
+| \`\`\` {.yaml fil   | \`\`\` {.yaml filen     | \`\`\` {.yaml f  |
+| en                  | am                      | i                |
+| ame="\_quarto.yml"} | e="dir/\_metadata.yml"} | lename="merged"} |
+| format: html: toc:  | format: html:           | format: html:    |
+| true                | code-fold: true         | toc: true        |
+| bibliography: -     | bibliography: -         |                  |
+| refs.bib            | proj.bib                | code-fold: true  |
+|                     |                         | bibliography: -  |
+| \`\`\`              | \`\`\`                  | refs.bib -       |
+|                     |                         | proj.bib \`\`\`  |
++---------------------+-------------------------+------------------+
 
 : {tbl-colwidths="\[33,33,33\]"}
 
-
-
-+------------------------------------+------------------------------------------+
-| ``` {.yaml filename="_quarto.yml"} | ``` {.yaml filename="dir/_metadata.yml"} | 
-| format:                            | format:                                  |
-|   html:                            |   html:                                  |  
-|     toc: true                      |     code-fold: true                      | 
-| bibliography:                      | bibliography:                            |  
-|   - refs.bib                       |   - proj.bib                             | 
-|                                    |                                          | 
-|                                    |                                          |  
-| ```                                | ```                                      |          
-+------------------------------------+------------------------------------------+
++-------------------------------+------------------------------------+
+| ```                           | ``` {.                             |
+| {                             | yaml filename="dir/_metadata.yml"} |
+| .yaml filename="_quarto.yml"} | format:                            |
+| format:                       |   html:                            |
+|   html:                       |     code-fold: true                |
+|     toc: true                 | bibliography:                      |
+| bibliography:                 |   - proj.bib                       |
+|   - refs.bib                  | ```                                |
+| ```                           |                                    |
++-------------------------------+------------------------------------+
 
 : {tbl-colwidths="\[35,65\]"}
 
-+-------------------------------+-------------------------------------------+
-| This here is a text to        | ``` {.yaml filename="dir/_metadata.yml"}  |
-| explain how the program is    |  format:                                  |
-| working. I am using a table   |    html:                                  |
-| to format the different       |        code-fold: true                    |
-| aspect of the code.           |  bibliography:                            |
-|                               |     - proj.bib                            |
-| It is possible to write text  |                                           |
-| in two separate columns. But  | ```                                       |  
-| it seem complex to produce    |                                           |
-| the table. Maybe one could    |                                           |
-| use a table generator?        |                                           |
-|                               |                                           |
-+-------------------------------+-------------------------------------------+
++----------------------------+---------------------------------------+
+| This here is a text to     | \` {.yaml                             |
+| explain how the program is | filename="dir/\_metadata.yml"}        |
+| working. I am using a      | format: html: code-fold: true         |
+| table to format the        | bibliography: - proj.bib \`\`\`       |
+| different aspect of the    |                                       |
+| code.                      |                                       |
+|                            |                                       |
+| It is possible to write    |                                       |
+| text in two separate       |                                       |
+| columns. But it seem       |                                       |
+| complex to produce the     |                                       |
+| table. Maybe one could use |                                       |
+| a table generator?         |                                       |
++----------------------------+---------------------------------------+
 
 : {tbl-colwidths="\[65,35\]"}
 
@@ -124,15 +124,258 @@ quarto create-project myproject
 
 ## Table generated from Tables Generator
 
-| Origin            | Source                    | Note type | Category       | Subject | Emoji | Code | Title   |
-|-------------------|---------------------------|-----------|----------------|---------|-------|------|---------|
-| Clipping Notes    | web-clipping              |           |                |         | 🌐     | 0w   |         |
-| Emails            | ???                       | ???       |                |         | 📬     | 0e   |         |
-| Personal          | api-article  pb           | personal  |                |         | 🙋🏻‍♂️   | 0pi  | PI      |
-| Private           | scan uphold george joplin | private   | finance health |         | 🆔     | 0id  | FI GH   |
-| Readwise Article  | reader api-article        |           | articles       |         | 📄     | 0a   | FNA LNA |
-| Readwise Book     | readwise                  |           | books          |         | 📖     | 0b   | FNB LNB |
-| Readwise Podcasts |                           |           |                |         | 🔉     | 0po  | FNP     |
-| Readwise Twitter  | twitter                   |           | tweets         |         | 🐥     | 0t   |         |
-| Zettel            |                           |           | misc           |         |       |      |         |
-|                   |                           |           |                |         |       |      |         |
++------+------+------+------+------+------+------+------+------+
+| O    | So   | Note | Cat  | Su   | E    | Code | T    |      |
+| r    | urce | type | e    | b    | moji |      | itle |      |
+| igin |      | ===  | gory | ject |      | ===  |      |      |
+| ===  | ==== | ==== | ===  | ===  | ===  | ==== | ===  |      |
+| ==== | ==== |      | ==== | ==== | ==== | 0w   | ==== |      |
+| Cli  | we   |      |      |      | 🌐   |      |      |      |
+| p    | b-cl |      |      |      |      |      |      |      |
+| ping | ip   |      |      |      |      |      |      |      |
+| N    | ping |      |      |      |      |      |      |      |
+| otes |      |      |      |      |      |      |      |      |
++------+------+------+------+------+------+------+------+------+
+|      |      |      |      |      |      |      |      |      |
++------+------+------+------+------+------+------+------+------+
+| E    | ???  | ???  |      |      | 📬   | 0e   |      |      |
+| m    |      |      |      |      |      |      |      |      |
+| ails |      |      |      |      |      |      |      |      |
++------+------+------+------+------+------+------+------+------+
+| Per  | a    | per  |      |      | 🙋🏻‍♂️   |      |      |      |
+| s    | pi-a | s    |      |      | \|   |      |      |      |
+| onal | rt   | onal |      |      | 0pi  |      |      |      |
+|      | icle |      |      |      | \|   |      |      |      |
+|      | pb   |      |      |      | PI   |      |      |      |
+|      |      |      |      |      | \|   |      |      |      |
+|      |      |      |      |      | \|   |      |      |      |
+|      |      |      |      |      | \|   |      |      |      |
+|      |      |      |      |      | \|   |      |      |      |
+|      |      |      |      |      | \|   |      |      |      |
+|      |      |      |      |      | \|   |      |      |      |
++------+------+------+------+------+------+------+------+------+
+| Pr   | scan | pr   | fi   |      | 🆔   | 0id  | FI   |      |
+| i    | up   | i    | n    |      |      |      | GH   |      |
+| vate | hold | vate | ance |      |      |      |      |      |
+|      | ge   |      | h    |      |      |      |      |      |
+|      | orge |      | e    |      |      |      |      |      |
+|      | jo   |      | alth |      |      |      |      |      |
+|      | plin |      |      |      |      |      |      |      |
++------+------+------+------+------+------+------+------+------+
+| Rea  | re   |      | art  |      | 📄   | 0a   | FNA  |      |
+| d    | ader |      | i    |      |      |      | LNA  |      |
+| wise | a    |      | cles |      |      |      |      |      |
+| Ar   | pi-a |      |      |      |      |      |      |      |
+| t    | rt   |      |      |      |      |      |      |      |
+| icle | icle |      |      |      |      |      |      |      |
++------+------+------+------+------+------+------+------+------+
+| Rea  | re   |      | b    |      | 📖   | 0b   | FNB  |      |
+| d    | ad   |      | ooks |      |      |      | LNB  |      |
+| wise | wise |      |      |      |      |      |      |      |
+| Book |      |      |      |      |      |      |      |      |
++------+------+------+------+------+------+------+------+------+
+| Rea  |      |      |      |      | 🔉   | 0po  | FNP  |      |
+| d    |      |      |      |      |      |      |      |      |
+| wise |      |      |      |      |      |      |      |      |
+| Pod  |      |      |      |      |      |      |      |      |
+| c    |      |      |      |      |      |      |      |      |
+| asts |      |      |      |      |      |      |      |      |
++------+------+------+------+------+------+------+------+------+
+| Rea  | t    |      | t    |      | 🐥   | 0t   |      |      |
+| d    | wi   |      | w    |      |      |      |      |      |
+| wise | tter |      | eets |      |      |      |      |      |
+| Tw   |      |      |      |      |      |      |      |      |
+| i    |      |      |      |      |      |      |      |      |
+| tter |      |      |      |      |      |      |      |      |
++------+------+------+------+------+------+------+------+------+
+| Z    |      |      | misc |      |      |      |      |      |
+| e    |      |      |      |      |      |      |      |      |
+| ttel |      |      |      |      |      |      |      |      |
++------+------+------+------+------+------+------+------+------+
+|      |      |      |      |      |      |      |      |      |
++------+------+------+------+------+------+------+------+------+
+
+## Table with RStudio Visual Editor
+
+| Col1                                   | Col2     | Col3     |
+|----------------------------------------|----------|----------|
+| Here I got the first row               | sadfsadf | sdafasdf |
+| How about two or more lines in one row | asdfasdf | asdfasdf |
+| Last row                               | asdfsadf | sdfasdf  |
+
+: This is a test table
+
++---------------------------------:+:----------------------------------+
+| ![Click on the circle symbol at  | ![Choose from the drop-down menu  |
+| the top right                    | the option "Refresh               |
+| corner](/p                       | Now"](/                           |
+| osts/2023-05-05-how-to-delete-gi | posts/2023-05-05-how-to-delete-gi |
+| t-branches/images/rstudio-refres | t-branches/images/rstudio-refresh |
+| h-branch-listing-circle-min.png) | -branch-listing-manually-min.png) |
++----------------------------------+-----------------------------------+
+
+::: {layout="[[1,1],[1,1]]"}
+![Click on the circle symbol at the top right
+corner](/posts/2023-05-05-how-to-delete-git-branches/images/rstudio-refresh-branch-listing-circle-min.png){fig-align="center"}
+
+![Choose from the drop-down menu the option "Refresh
+Now"](/posts/2023-05-05-how-to-delete-git-branches/images/rstudio-refresh-branch-listing-manually-min.png){fig-align="center"}
+:::
+
+## Figure divs
+
+::: {#fig-elephant}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SNggmeilXDQ">
+
+</iframe>
+
+Elephant
+:::
+
+## Using figure divs for text
+
+::: {layout-nrow="2"}
+**This is the left column.**
+
+**This is the right column.**
+
+I am not going to use executable R program code for the explanation. It
+is difficult to show the functionality in a blog post and it may be even
+more difficult to prevent misunderstanding as it happened with me, when
+I followed the code.
+
+I am not going to use executable R program code for the explanation. It
+is difficult to show the functionality in a blog post and it may be even
+more difficult to prevent misunderstanding as it happened with me, when
+I followed the code.
+:::
+
+## Two columns Layout in Quarto
+
+::: grid
+::: g-col-6
+## First column
+
+I would like to have text here
+
+Sentence becomes longer, it should automatically stay in their column
+:::
+
+::: g-col-6
+## Second column
+
+and here
+
+More text
+:::
+:::
+
+## Two columns Layout in Quarto with `layout-nrow=4` (pb)
+
+::: {layout-nrow="4"}
+Zeile 1a
+
+Zeile 1b
+
+Zeile 2a
+
+Zeile 2b
+
+Zeile 3a
+
+Zeile 3b
+
+Zeile 4a
+
+Zeile 4b
+:::
+
+## Two columns Layout in Quarto with `layout-ncol=2` (pb)
+
+::: {layout-ncol="2"}
+Zeile 1a
+
+Zeile 1b
+
+Zeile 2a
+
+Zeile 2b
+
+Zeile 3a
+
+Zeile 3b
+
+Zeile 4a
+
+Zeile 4b
+:::
+
+## Two columns Layout in Quarto (Stackoverflow)
+
+::: {layout-ncol="2"}
+**First column**
+
+**Second column**
+
+I would like to have text here
+
+and here
+
+Sentence becomes longer, it should automatically stay in their column
+
+More text
+:::
+
+## Two columns Layout in Quarto (Variant 2)
+
+::: {layout="[[10,10], [40,40], [25,25], [1,1]]"}
+**First column**
+
+**Second column**
+
+I would like to have text here
+
+and here
+
+Sentence becomes longer, it should automatically stay in their column
+
+More text
+:::
+
+## Two columns Layout in Quarto (Version 1)
+
+::: {layout-ncol="2"}
+**First column**
+
+**Second column**
+
+I would like to have text here
+
+and here
+
+Sentence becomes longer, it should automatically stay in their column
+
+More text
+:::
+
+## Two columns Layout in Quarto (Version 2)
+
+::: {layout="[[10,5], [40,20], [26,13], [2,1]]"}
+**First column**
+
+**Second column**
+
+I would like to have text here
+
+and here
+
+Sentence becomes longer, it should automatically stay in their column
+
+More text
+:::
+
+***
+
+------------------------
+
+

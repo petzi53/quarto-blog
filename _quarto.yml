@@ -27,8 +27,13 @@ website:
 
   page-footer:
     border: true
-    background: rgb(26, 26, 26)
-    foreground: rgb(141, 141, 141)
+#  Theme lumen
+#    background: rgb(26, 26, 26)
+#    foreground: rgb(141, 141, 141)
+
+# Theme: cerulean
+    background: rgb(47, 164, 231)
+    foreground: rgb(255, 255, 255)
     center:
       - text: "About"
         href: about.qmd
@@ -49,14 +54,17 @@ website:
       enableExperimentalNewNoteButton: true
       branding:
           appBackgroundColor: white
-          ctaBackgroundColor: rgb(26, 26, 26)
-          ctaTextColor: rgb(141, 141, 141)
+          # theme: lumen
+          # ctaBackgroundColor: rgb(26, 26, 26)
+          # ctaTextColor: rgb(141, 141, 141)
+          ctaBackgroundColor: rgb(47, 164, 231)
+          ctaTextColor: rgb(255, 255, 255)
           selectionFontFamily: 'helvetica, arial, sans serif'
 
 
 format:
   html:
-    theme: lux
+    theme: cerulean
     css: styles.css
     toc: true
 

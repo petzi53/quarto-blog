@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2023-05-07-creating-a-column-based-layout/index.html",
       "/posts/2023-05-05-how-to-delete-git-branches/index.html",
       "/posts/2023-04-23-welcome-quarto/index.html"
     ]

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Peter Baumgartner">
-<meta name="dcterms.date" content="2023-04-19">
+<meta name="dcterms.date" content="2023-05-06">
 
 <title>Life Long Learning Lab - Hiding a secret API token</title>
 <style>
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -96,8 +130,8 @@ cookieconsent.run({
   "enableExperimentalNewNoteButton": true,
   "branding": {
     "appBackgroundColor": "white",
-    "ctaBackgroundColor": "rgb(26, 26, 26)",
-    "ctaTextColor": "rgb(141, 141, 141)",
+    "ctaBackgroundColor": "rgb(47, 164, 231)",
+    "ctaTextColor": "rgb(255, 255, 255)",
     "selectionFontFamily": "helvetica, arial, sans serif"
   }
 }
@@ -171,6 +205,18 @@ cookieconsent.run({
    
   <ul>
   <li><a href="#steps-to-hide-your-secrets" id="toc-steps-to-hide-your-secrets" class="nav-link active" data-scroll-target="#steps-to-hide-your-secrets">5 steps to hide your secrets</a></li>
+  <li><a href="#some-formatting-commands" id="toc-some-formatting-commands" class="nav-link" data-scroll-target="#some-formatting-commands">Some formatting commands</a></li>
+  <li><a href="#table-generated-from-tables-generator" id="toc-table-generated-from-tables-generator" class="nav-link" data-scroll-target="#table-generated-from-tables-generator">Table generated from Tables Generator</a></li>
+  <li><a href="#table-with-rstudio-visual-editor" id="toc-table-with-rstudio-visual-editor" class="nav-link" data-scroll-target="#table-with-rstudio-visual-editor">Table with RStudio Visual Editor</a></li>
+  <li><a href="#figure-divs" id="toc-figure-divs" class="nav-link" data-scroll-target="#figure-divs">Figure divs</a></li>
+  <li><a href="#using-figure-divs-for-text" id="toc-using-figure-divs-for-text" class="nav-link" data-scroll-target="#using-figure-divs-for-text">Using figure divs for text</a></li>
+  <li><a href="#two-columns-layout-in-quarto" id="toc-two-columns-layout-in-quarto" class="nav-link" data-scroll-target="#two-columns-layout-in-quarto">Two columns Layout in Quarto</a></li>
+  <li><a href="#two-columns-layout-in-quarto-with-layout-nrow4-pb" id="toc-two-columns-layout-in-quarto-with-layout-nrow4-pb" class="nav-link" data-scroll-target="#two-columns-layout-in-quarto-with-layout-nrow4-pb">Two columns Layout in Quarto with <code>layout-nrow=4</code> (pb)</a></li>
+  <li><a href="#two-columns-layout-in-quarto-with-layout-ncol2-pb" id="toc-two-columns-layout-in-quarto-with-layout-ncol2-pb" class="nav-link" data-scroll-target="#two-columns-layout-in-quarto-with-layout-ncol2-pb">Two columns Layout in Quarto with <code>layout-ncol=2</code> (pb)</a></li>
+  <li><a href="#two-columns-layout-in-quarto-stackoverflow" id="toc-two-columns-layout-in-quarto-stackoverflow" class="nav-link" data-scroll-target="#two-columns-layout-in-quarto-stackoverflow">Two columns Layout in Quarto (Stackoverflow)</a></li>
+  <li><a href="#two-columns-layout-in-quarto-variant-2" id="toc-two-columns-layout-in-quarto-variant-2" class="nav-link" data-scroll-target="#two-columns-layout-in-quarto-variant-2">Two columns Layout in Quarto (Variant 2)</a></li>
+  <li><a href="#two-columns-layout-in-quarto-version-1" id="toc-two-columns-layout-in-quarto-version-1" class="nav-link" data-scroll-target="#two-columns-layout-in-quarto-version-1">Two columns Layout in Quarto (Version 1)</a></li>
+  <li><a href="#two-columns-layout-in-quarto-version-2" id="toc-two-columns-layout-in-quarto-version-2" class="nav-link" data-scroll-target="#two-columns-layout-in-quarto-version-2">Two columns Layout in Quarto (Version 2)</a></li>
   </ul>
 </nav>
     </div>
@@ -201,14 +247,14 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 19, 2023</p>
+      <p class="date">May 6, 2023</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">April 20, 2023</p>
+      <p class="date-modified">May 6, 2023</p>
     </div>
   </div>
     
@@ -266,6 +312,548 @@ Expand To Learn About Collapse
 </div>
 </div>
 </div>
+</section>
+<section id="some-formatting-commands" class="level2">
+<h2 class="anchored" data-anchor-id="some-formatting-commands">Some formatting commands</h2>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> create-project myproject</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p>``` {.yaml fil en ame=“_quarto.yml”} format: html: toc: true bibliography: - refs.bib</p>
+<p>```</p></td>
+<td><p>``` {.yaml filen am e=“dir/_metadata.yml”} format: html: code-fold: true bibliography: - proj.bib</p>
+<p>```</p></td>
+<td><p>``` {.yaml f i lename=“merged”} format: html: toc: true</p>
+<p>code-fold: true bibliography: - refs.bib - proj.bib ```</p></td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 65%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><pre><code>{
+.yaml filename="_quarto.yml"}
+format:
+  html:
+    toc: true
+bibliography:
+  - refs.bib</code></pre></td>
+<td><code>{. yaml filename="dir/_metadata.yml"} format:   html:     code-fold: true bibliography:   - proj.bib</code></td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<colgroup>
+<col style="width: 65%">
+<col style="width: 35%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p>This here is a text to explain how the program is working. I am using a table to format the different aspect of the code.</p>
+<p>It is possible to write text in two separate columns. But it seem complex to produce the table. Maybe one could use a table generator?</p></td>
+<td>` {.yaml filename=“dir/_metadata.yml”} format: html: code-fold: true bibliography: - proj.bib ```</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<caption>Demonstration of PIP Table Syntax</caption>
+<thead>
+<tr class="header">
+<th>Default</th>
+<th style="text-align: left;">Left</th>
+<th style="text-align: right;">Right</th>
+<th style="text-align: center;">Center</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>It is possible to write text in</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: center;">12</td>
+</tr>
+<tr class="even">
+<td>two separate columns. But it seem</td>
+<td style="text-align: left;">123</td>
+<td style="text-align: right;">123</td>
+<td style="text-align: center;">123</td>
+</tr>
+<tr class="odd">
+<td>complex to produce the table.</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="table-generated-from-tables-generator" class="level2">
+<h2 class="anchored" data-anchor-id="table-generated-from-tables-generator">Table generated from Tables Generator</h2>
+<table class="table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 4%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>O r igin === ==== Cli p ping N otes</td>
+<td><p>So urce</p>
+<h1 id="section">====</h1>
+<p>we b-cl ip ping</p></td>
+<td>Note type === ====</td>
+<td>Cat e gory === ====</td>
+<td>Su b ject === ====</td>
+<td><p>E moji</p>
+<h1 id="section-1">===</h1>
+<p>🌐</p></td>
+<td><p>Code</p>
+<h1 id="section-2">===</h1>
+<p>0w</p></td>
+<td><p>T itle</p>
+<h1 id="section-3">===</h1></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>E m ails</td>
+<td>???</td>
+<td>???</td>
+<td></td>
+<td></td>
+<td>📬</td>
+<td>0e</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Per s onal</td>
+<td>a pi-a rt icle pb</td>
+<td>per s onal</td>
+<td></td>
+<td></td>
+<td colspan="5">🙋🏻‍♂️ | | | | | | | | 0pi | | | | | | | | | PI | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |</td>
+</tr>
+<tr class="odd">
+<td>Pr i vate</td>
+<td>scan up hold ge orge jo plin</td>
+<td>pr i vate</td>
+<td>fi n ance h e alth</td>
+<td></td>
+<td>🆔</td>
+<td>0id</td>
+<td>FI GH</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Rea d wise Ar t icle</td>
+<td>re ader a pi-a rt icle</td>
+<td></td>
+<td>art i cles</td>
+<td></td>
+<td>📄</td>
+<td>0a</td>
+<td>FNA LNA</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Rea d wise Book</td>
+<td>re ad wise</td>
+<td></td>
+<td>b ooks</td>
+<td></td>
+<td>📖</td>
+<td>0b</td>
+<td>FNB LNB</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Rea d wise Pod c asts</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>🔉</td>
+<td>0po</td>
+<td>FNP</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Rea d wise Tw i tter</td>
+<td>t wi tter</td>
+<td></td>
+<td>t w eets</td>
+<td></td>
+<td>🐥</td>
+<td>0t</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Z e ttel</td>
+<td></td>
+<td></td>
+<td>misc</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="table-with-rstudio-visual-editor" class="level2">
+<h2 class="anchored" data-anchor-id="table-with-rstudio-visual-editor">Table with RStudio Visual Editor</h2>
+<table class="table">
+<caption>This is a test table</caption>
+<thead>
+<tr class="header">
+<th>Col1</th>
+<th>Col2</th>
+<th>Col3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Here I got the first row</td>
+<td>sadfsadf</td>
+<td>sdafasdf</td>
+</tr>
+<tr class="even">
+<td>How about two or more lines in one row</td>
+<td>asdfasdf</td>
+<td>asdfasdf</td>
+</tr>
+<tr class="odd">
+<td>Last row</td>
+<td>asdfsadf</td>
+<td>sdfasdf</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<colgroup>
+<col style="width: 48%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><img src="../../p osts/2023-05-05-how-to-delete-gi t-branches/images/rstudio-refres h-branch-listing-circle-min.png" class="img-fluid" alt="Click on the circle symbol at the top right corner"></td>
+<td style="text-align: left;"><img src="../../ posts/2023-05-05-how-to-delete-gi t-branches/images/rstudio-refresh -branch-listing-manually-min.png" class="img-fluid" alt="Choose from the drop-down menu the option “Refresh Now”"></td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../posts/2023-05-05-how-to-delete-git-branches/images/rstudio-refresh-branch-listing-circle-min.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Click on the circle symbol at the top right corner</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../posts/2023-05-05-how-to-delete-git-branches/images/rstudio-refresh-branch-listing-manually-min.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Choose from the drop-down menu the option “Refresh Now”</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="figure-divs" class="level2">
+<h2 class="anchored" data-anchor-id="figure-divs">Figure divs</h2>
+<div id="fig-elephant" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SNggmeilXDQ">
+</iframe>
+<figcaption class="figure-caption">Figure&nbsp;1: Elephant</figcaption>
+</figure>
+</div>
+</section>
+<section id="using-figure-divs-for-text" class="level2">
+<h2 class="anchored" data-anchor-id="using-figure-divs-for-text">Using figure divs for text</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>This is the left column.</strong></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>This is the right column.</strong></p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>I am not going to use executable R program code for the explanation. It is difficult to show the functionality in a blog post and it may be even more difficult to prevent misunderstanding as it happened with me, when I followed the code.</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>I am not going to use executable R program code for the explanation. It is difficult to show the functionality in a blog post and it may be even more difficult to prevent misunderstanding as it happened with me, when I followed the code.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="two-columns-layout-in-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="two-columns-layout-in-quarto">Two columns Layout in Quarto</h2>
+</section>
+<div class="grid">
+<section id="first-column" class="level2 g-col-6">
+<h2 class="anchored" data-anchor-id="first-column">First column</h2>
+<p>I would like to have text here</p>
+<p>Sentence becomes longer, it should automatically stay in their column</p>
+</section>
+<section id="second-column" class="level2 g-col-6">
+<h2 class="anchored" data-anchor-id="second-column">Second column</h2>
+<p>and here</p>
+<p>More text</p>
+</section>
+</div>
+<section id="two-columns-layout-in-quarto-with-layout-nrow4-pb" class="level2">
+<h2 class="anchored" data-anchor-id="two-columns-layout-in-quarto-with-layout-nrow4-pb">Two columns Layout in Quarto with <code>layout-nrow=4</code> (pb)</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>Zeile 1a</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>Zeile 1b</p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>Zeile 2a</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>Zeile 2b</p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>Zeile 3a</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>Zeile 3b</p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>Zeile 4a</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>Zeile 4b</p>
+</div>
+</div>
+</div>
+</section>
+<section id="two-columns-layout-in-quarto-with-layout-ncol2-pb" class="level2">
+<h2 class="anchored" data-anchor-id="two-columns-layout-in-quarto-with-layout-ncol2-pb">Two columns Layout in Quarto with <code>layout-ncol=2</code> (pb)</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>Zeile 1a</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>Zeile 1b</p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>Zeile 2a</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>Zeile 2b</p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>Zeile 3a</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>Zeile 3b</p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>Zeile 4a</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>Zeile 4b</p>
+</div>
+</div>
+</div>
+</section>
+<section id="two-columns-layout-in-quarto-stackoverflow" class="level2">
+<h2 class="anchored" data-anchor-id="two-columns-layout-in-quarto-stackoverflow">Two columns Layout in Quarto (Stackoverflow)</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>First column</strong></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>Second column</strong></p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>I would like to have text here</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>and here</p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>Sentence becomes longer, it should automatically stay in their column</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>More text</p>
+</div>
+</div>
+</div>
+</section>
+<section id="two-columns-layout-in-quarto-variant-2" class="level2">
+<h2 class="anchored" data-anchor-id="two-columns-layout-in-quarto-variant-2">Two columns Layout in Quarto (Variant 2)</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>First column</strong></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>Second column</strong></p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>I would like to have text here</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>and here</p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>Sentence becomes longer, it should automatically stay in their column</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>More text</p>
+</div>
+</div>
+</div>
+</section>
+<section id="two-columns-layout-in-quarto-version-1" class="level2">
+<h2 class="anchored" data-anchor-id="two-columns-layout-in-quarto-version-1">Two columns Layout in Quarto (Version 1)</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>First column</strong></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>Second column</strong></p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>I would like to have text here</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>and here</p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>Sentence becomes longer, it should automatically stay in their column</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>More text</p>
+</div>
+</div>
+</div>
+</section>
+<section id="two-columns-layout-in-quarto-version-2" class="level2">
+<h2 class="anchored" data-anchor-id="two-columns-layout-in-quarto-version-2">Two columns Layout in Quarto (Version 2)</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<p><strong>First column</strong></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><strong>Second column</strong></p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<p>I would like to have text here</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p>and here</p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<p>Sentence becomes longer, it should automatically stay in their column</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p>More text</p>
+</div>
+</div>
+</div>
+<hr>
+<hr>
 
 
 </section>
