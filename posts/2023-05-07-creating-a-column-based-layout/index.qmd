@@ -9,7 +9,7 @@ author: "Peter Baumgartner"
 date: "2023-05-07"
 image: "three-columns-min.jpg"
 image-alt: "Three classical greek pillars"
-categories: [blog, quarto]
+categories: [blog, quarto, how-to]
 date-modified: "2023-05-07"
 draft: false
 engine: knitr
