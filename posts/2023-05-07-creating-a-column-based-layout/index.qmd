@@ -16,7 +16,8 @@ engine: knitr
 ---
 
 ![From [PxHere](https://pxhere.com/en/photo/649542) (CC0, Public
-Domain)](three-columns-min.jpg){fig-align="center"}
+Domain)](three-columns-min.jpg){style="text-align: center;"
+fig-align="center"}
 
 In my first two articles, I encountered the problem of changing the page
 layout several times: So I wanted -- for instance -- in my article [How

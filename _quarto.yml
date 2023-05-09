@@ -27,13 +27,13 @@ website:
 
   page-footer:
     border: true
-#  Theme lumen
-#    background: rgb(26, 26, 26)
-#    foreground: rgb(141, 141, 141)
+# Theme lumen
+    background: rgb(26, 26, 26)
+    foreground: rgb(141, 141, 141)
 
-# Theme: cerulean
-    background: rgb(47, 164, 231)
-    foreground: rgb(255, 255, 255)
+# # Theme: cerulean
+#     background: rgb(47, 164, 231)
+#     foreground: rgb(255, 255, 255)
     center:
       - text: "About"
         href: about.qmd
@@ -64,7 +64,7 @@ website:
 
 format:
   html:
-    theme: cerulean
+    theme: lux
     css: styles.css
     toc: true
 

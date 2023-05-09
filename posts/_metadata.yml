@@ -13,3 +13,6 @@ filters:
   - collapse-callout
 collapse-callout:
     all: false
+
+format:
+    html

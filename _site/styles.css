@@ -12,10 +12,85 @@
 }
 
 
-/* in cerulean theme is the table cpation too small */
+/* in lux theme is the table caption too small */
 /* in contrast to th */
+
 .table caption {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 24px;
 }
+
+
+/* padding 1.5rem is too much */
+.table td {
+    padding: 0.5rem;
+}
+
+
+
+
+/*
+
+.navbar {
+    background-color: rgb(63,81,181);
+}
+
+h2.anchored {
+    margin-top: 1rem;
+    font-size: 1.5rem
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: montserrat,sans-serif;
+    font-weight: 400;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.25;
+    color: #313131;
+    text-rendering: optimizeLegibility;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    -webkit-hyphens: manual;
+    -ms-hyphens: manual;
+    hyphens: manual;
+}
+
+a {
+    color: #3f51b5;
+    text-decoration: none;
+    background-color: transparent
+}
+
+.sidebar nav[role=doc-toc] ul>li>a.active,.sidebar nav[role=doc-toc] ul>li>ul>li>a.active {
+    border-left: 1px solid #3f51b5;
+    color: #3f51b5 !important
+}
+
+.sidebar nav[role=doc-toc] ul>li>a:hover,.sidebar nav[role=doc-toc] ul>li>ul>li>a:hover {
+    color: #3f51b5 !important
+}
+
+a:hover nav-link:hover {
+    color: #2b387c;
+    text-decoration: underline
+}
+
+a:not([href]):not([class]) {
+    color: inherit;
+    text-decoration: none
+}
+
+a:not([href]):not([class]):hover {
+    color: inherit;
+    text-decoration: none
+}
+
+pre,code {
+    font-family: roboto mono,monospace;
+    color: #c7254e;
+    background-color: #f8f8f8
+}
+
+*/
