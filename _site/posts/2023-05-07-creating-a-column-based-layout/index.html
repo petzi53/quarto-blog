@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.36">
+<meta name="generator" content="quarto-1.5.54">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2023-05-07">
 <meta name="description" content="Do you want to place two figures side by side or write text in parallel in different columns? The post describes four methods to turn part of your blog post into a column-based layout.">
 
-<title>Life Long Learning Lab - Creating a column-based layout</title>
+<title>Creating a column-based layout – Life Long Learning Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,7 +25,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -36,7 +36,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -85,7 +85,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -94,8 +99,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XYF778844K"></script>
@@ -119,6 +126,8 @@ cookieconsent.run({
   "notice_banner_reject_button_hide":false,
   "preferences_center_close_button_hide":false,
   "website_name":""
+  ,
+"language":"en"
   });
 });
 </script> 
@@ -131,17 +140,22 @@ cookieconsent.run({
   "enableExperimentalNewNoteButton": true,
   "branding": {
     "appBackgroundColor": "white",
-    "ctaBackgroundColor": "rgb(47, 164, 231)",
-    "ctaTextColor": "rgb(255, 255, 255)",
+    "ctaBackgroundColor": "rgb(81, 118, 153)",
+    "ctaTextColor": "rgb(221, 228, 235)",
     "selectionFontFamily": "helvetica, arial, sans serif"
   }
 }
 </script>
 <script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta name="twitter:title" content="Life Long Learning Lab - Creating a column-based layout">
+<meta name="twitter:title" content="Creating a column-based layout – Life Long Learning Lab">
 <meta name="twitter:description" content="Do you want to place two figures side by side or write text in parallel in different columns? The post describes four methods to turn part of your blog post into a column-based layout.">
 <meta name="twitter:image" content="https://l3lab.net/posts/2023-05-07-creating-a-column-based-layout/three-columns-min.jpg">
 <meta name="twitter:image:alt" content="Three classical greek pillars">
@@ -152,41 +166,41 @@ cookieconsent.run({
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Life Long Learning Lab</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../contact.html" rel="" target="">
- <span class="menu-text">Contact</span></a>
+    <a class="nav-link" href="../../contact.html"> 
+<span class="menu-text">Contact</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/petzi53/" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/petzi53/"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/pbaumgartner" rel="" target=""><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/pbaumgartner"> <i class="bi bi-twitter" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
+          </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -198,35 +212,11 @@ cookieconsent.run({
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../../../portrait-peter.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Peter Baumgartner</figcaption>
+<figcaption>Peter Baumgartner</figcaption>
 </figure>
 </div>
 </div></div>
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#help-page-about-article-layout" id="toc-help-page-about-article-layout" class="nav-link active" data-scroll-target="#help-page-about-article-layout">Help page about article layout</a></li>
-  <li><a href="#using-a-table-failed" id="toc-using-a-table-failed" class="nav-link" data-scroll-target="#using-a-table-failed">Using a table failed</a></li>
-  <li><a href="#using-pandoc-extensions" id="toc-using-pandoc-extensions" class="nav-link" data-scroll-target="#using-pandoc-extensions">Using pandoc extensions</a>
-  <ul class="collapse">
-  <li><a href="#example-1-two-columns-separated-by-a-small-third-column" id="toc-example-1-two-columns-separated-by-a-small-third-column" class="nav-link" data-scroll-target="#example-1-two-columns-separated-by-a-small-third-column">Example 1: Two columns separated by a small third column</a></li>
-  <li><a href="#example-2-two-columns-using-the-bootstrap-css-grid-system" id="toc-example-2-two-columns-using-the-bootstrap-css-grid-system" class="nav-link" data-scroll-target="#example-2-two-columns-using-the-bootstrap-css-grid-system">Example 2: Two columns using the bootstrap CSS grid system</a></li>
-  <li><a href="#example-3-two-columns-with-text-center-aligned" id="toc-example-3-two-columns-with-text-center-aligned" class="nav-link" data-scroll-target="#example-3-two-columns-with-text-center-aligned">Example 3: Two columns with text center-aligned</a></li>
-  </ul></li>
-  <li><a href="#fenced-divs-in-pandoc-how-do-they-work" id="toc-fenced-divs-in-pandoc-how-do-they-work" class="nav-link" data-scroll-target="#fenced-divs-in-pandoc-how-do-they-work">Fenced divs in Pandoc: How do they work?</a>
-  <ul class="collapse">
-  <li><a href="#what-is-pandoc" id="toc-what-is-pandoc" class="nav-link" data-scroll-target="#what-is-pandoc">What is Pandoc?</a></li>
-  <li><a href="#div-blocks-in-pandoc" id="toc-div-blocks-in-pandoc" class="nav-link" data-scroll-target="#div-blocks-in-pandoc">Div Blocks in Pandoc</a></li>
-  </ul></li>
-  <li><a href="#a-genuine-quarto-solution" id="toc-a-genuine-quarto-solution" class="nav-link" data-scroll-target="#a-genuine-quarto-solution">A genuine Quarto solution</a>
-  <ul class="collapse">
-  <li><a href="#version-1-with-equally-wide-columns" id="toc-version-1-with-equally-wide-columns" class="nav-link" data-scroll-target="#version-1-with-equally-wide-columns">Version 1 with equally wide columns</a></li>
-  <li><a href="#version-2-with-different-wide-columns" id="toc-version-2-with-different-wide-columns" class="nav-link" data-scroll-target="#version-2-with-different-wide-columns">Version 2 with different wide columns</a></li>
-  </ul></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -275,12 +265,14 @@ cookieconsent.run({
   </div>
   
 
+
 </header>
+
 
 <div class="quarto-figure quarto-figure-center" style="text-align: center;">
 <figure class="figure">
 <p><img src="three-columns-min.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">From <a href="https://pxhere.com/en/photo/649542">PxHere</a> (CC0, Public Domain)</figcaption>
+<figcaption>From <a href="https://pxhere.com/en/photo/649542">PxHere</a> (CC0, Public Domain)</figcaption>
 </figure>
 </div>
 <p>In my first two articles, I encountered the problem of changing the page layout several times: So I wanted – for instance – in my article <a href="https://l3lab.net/posts/2023-05-05-how-to-delete-git-branches/">How to delete Git branches</a> two small screenshots to appear side by side.</p>
@@ -301,14 +293,14 @@ cookieconsent.run({
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/error-message-image-not-found-min.png" class="img-fluid figure-img" alt="Two red error messages"></p>
-<figcaption class="figure-caption">Looking after rendering into the tab “Background Jobs” revealed these error messages</figcaption>
+<figcaption>Looking after rendering into the tab “Background Jobs” revealed these error messages</figcaption>
 </figure>
 </div>
 <p>As I inspected the source code, I saw the reason: The long image URLs didn’t fit in the table column, and therefore forced line breaks that destroyed the URLs.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/wrong-forced-line-breaks-min.png" class="img-fluid figure-img" alt="The source code shows that the URLs are wrapped in wrong places and therefore broken"></p>
-<figcaption class="figure-caption">Source code generated by RStudio after loading two images into a one-row / two-columns desing</figcaption>
+<figcaption>Source code generated by RStudio after loading two images into a one-row / two-columns desing</figcaption>
 </figure>
 </div>
 </section>
@@ -440,7 +432,7 @@ cookieconsent.run({
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>rmarkdown<span class="sc">::</span><span class="fu">find_pandoc</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$version
-[1] '3.1.2'
+[1] '3.2.1'
 
 $dir
 [1] "/usr/local/bin"</code></pre>
@@ -552,14 +544,14 @@ $dir
 
 
 </section>
-<aside id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
+
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
 <ol>
 <li id="fn1"><p>GNU is a recursive acronym and means: <a href="https://en.wikipedia.org/wiki/GNU">GNU’s Not Unix</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
-</aside>
-
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -595,18 +587,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -638,11 +619,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/l3lab\.net");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -652,8 +672,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -665,31 +694,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, function() {
-      let href = xref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (id.startsWith('sec-')) {
-        // Special case sections, only their first couple elements
-        const container = document.createElement("div");
-        if (note.children.length > 2) {
-          for (let i = 0; i < 2; i++) {
-            container.appendChild(note.children[i].cloneNode(true));
-          }
-          return container.innerHTML
-        } else {
-          return note.innerHTML;
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
         }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
       } else {
         return note.innerHTML;
       }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -733,6 +861,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -758,6 +887,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -830,13 +985,19 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="../../about.html">About</a>
+    <a class="nav-link" href="../../about.html">
+<p>About</p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../../privacy.html">Privacy</a>
+    <a class="nav-link" href="../../privacy.html">
+<p>Privacy</p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../../disclaimer.html">Disclaimer</a>
+    <a class="nav-link" href="../../disclaimer.html">
+<p>Disclaimer</p>
+</a>
   </li>  
 </ul>
     <div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
@@ -849,6 +1010,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+
 
 
 

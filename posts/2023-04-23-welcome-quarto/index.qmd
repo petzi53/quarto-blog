@@ -1,7 +1,7 @@
 ---
 title: "Bye, Bye Hugo, Welcome Quarto!"
 subtitle: "My first blogging impressions with Quarto"
-description: "This is my first entry in a new blog powered by Quarto. After continuously struggling with the complex machinery (blogdown, Hugo, Wowchemy), I feel like coming home  from a trip abroad!"
+description: "This is my first entry in a new blog powered by Quarto. After continuously struggling with a complex machinery (blogdown, Hugo, Wowchemy), I feel like coming home from a trip abroad!"
 author: "Peter Baumgartner"
 date: "2023-04-23"
 image: "New_Found_Glory_Coming_Home-min.png"

@@ -13,6 +13,7 @@ image-alt: "Git Logo"
 categories: [git, github, how-to]
 date-modified: "2023-05-05"
 engine: knitr
+draft: false
 ---
 
 ## If a pull request is not accepted...

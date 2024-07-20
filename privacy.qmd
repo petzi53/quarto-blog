@@ -1,8 +1,8 @@
 ---
 title: "Privacy Policy"
 date: 2023-05-01
-draft: true
-date-modified: 2023-05-01
+draft: false
+date-modified: 2024-07-19
 ---
 
 Several places on this website require you to identify yourself:
@@ -49,11 +49,6 @@ disable all cookies for this website without in any way reducing the
 functionality for you. [Read here](https://cookiesandyou.com/) to learn
 what cookies are and how to control or disable them.
 
-I have set the [GDPR
-options](https://gohugo.io/about/hugo-and-gdpr/#all-privacy-settings) of
-the static site generator I am using (Hugo) so that your IP address is
-anonymized within Google Analytics and the "Do Not Track" request is
-respected.
 
 ```{=html}
 <!-- Currently not in use

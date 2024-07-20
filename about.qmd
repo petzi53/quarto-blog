@@ -6,10 +6,10 @@ about:
   links:
     - icon: twitter
       text: Twitter
-      href: https://twitter.com/pbaumgartner
+      href: https://x.com/pbaumgartner
     - icon: github
       text: Github
-      href: https://github.com/petzi53
+      href: https://github.com/petzi53/quarto-blog
 ---
 
 I am a retired professor of Education Technology. As head of

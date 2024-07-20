@@ -1,31 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://l3lab.net/contact.html</loc>
-    <lastmod>2023-05-09T13:05:11.042Z</lastmod>
+    <loc>https://l3lab.net/privacy.html</loc>
+    <lastmod>2024-07-20T08:15:55.467Z</lastmod>
   </url>
   <url>
-    <loc>https://l3lab.net/posts/2023-05-05-how-to-delete-git-branches/index.html</loc>
-    <lastmod>2023-05-09T13:05:11.859Z</lastmod>
-  </url>
-  <url>
-    <loc>https://l3lab.net/posts/2023-04-23-welcome-quarto/index.html</loc>
-    <lastmod>2023-05-09T13:05:12.400Z</lastmod>
+    <loc>https://l3lab.net/disclaimer.html</loc>
+    <lastmod>2024-07-20T08:14:40.035Z</lastmod>
   </url>
   <url>
     <loc>https://l3lab.net/posts/2023-05-07-creating-a-column-based-layout/index.html</loc>
-    <lastmod>2023-05-09T13:05:14.741Z</lastmod>
+    <lastmod>2024-07-16T16:42:51.640Z</lastmod>
+  </url>
+  <url>
+    <loc>https://l3lab.net/posts/2023-05-05-how-to-delete-git-branches/index.html</loc>
+    <lastmod>2024-07-19T06:41:24.477Z</lastmod>
+  </url>
+  <url>
+    <loc>https://l3lab.net/contact.html</loc>
+    <lastmod>2024-07-16T16:42:51.634Z</lastmod>
+  </url>
+  <url>
+    <loc>https://l3lab.net/posts/2023-04-23-welcome-quarto/index.html</loc>
+    <lastmod>2024-07-16T16:44:29.077Z</lastmod>
   </url>
   <url>
     <loc>https://l3lab.net/index.html</loc>
-    <lastmod>2023-05-09T13:05:15.535Z</lastmod>
+    <lastmod>2024-07-20T08:21:03.900Z</lastmod>
   </url>
   <url>
     <loc>https://l3lab.net/about.html</loc>
-    <lastmod>2023-05-09T13:05:16.341Z</lastmod>
-  </url>
-  <url>
-    <loc>https://l3lab.net/presence.html</loc>
-    <lastmod>2023-05-09T13:05:17.156Z</lastmod>
+    <lastmod>2024-07-20T08:19:53.959Z</lastmod>
   </url>
 </urlset>

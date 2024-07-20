@@ -27,13 +27,9 @@ website:
 
   page-footer:
     border: true
-# Theme lumen
-    background: rgb(26, 26, 26)
-    foreground: rgb(141, 141, 141)
-
-# # Theme: cerulean
-#     background: rgb(47, 164, 231)
-#     foreground: rgb(255, 255, 255)
+# Theme default
+    background: rgb(81, 118, 153)
+    foreground: rgb(221, 228, 235)
     center:
       - text: "About"
         href: about.qmd
@@ -42,7 +38,7 @@ website:
       - text: "Disclaimer"
         href: disclaimer.qmd
     left:
-      - text: <a href="https://l3lab.net">L3Lab</a> © 2023 by <a href="https://l3lab.net/about">Peter Baumgartner</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1">CC BY 4.0</a>
+      - text: <a href=https://l3lab.net>L3Lab</a> © 2023 by <a href=https://l3lab.net/about>Peter Baumgartner</a> is licensed under <a href=https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1>CC BY 4.0</a>
     right:
       - text: Proudly powered by <a href=https://quarto.org/>Quarto</a>
 
@@ -54,19 +50,16 @@ website:
       enableExperimentalNewNoteButton: true
       branding:
           appBackgroundColor: white
-          # theme: lumen
-          # ctaBackgroundColor: rgb(26, 26, 26)
-          # ctaTextColor: rgb(141, 141, 141)
-          ctaBackgroundColor: rgb(47, 164, 231)
-          ctaTextColor: rgb(255, 255, 255)
+          # theme: default
+          ctaBackgroundColor: rgb(81, 118, 153)
+          ctaTextColor: rgb(221, 228, 235)
           selectionFontFamily: 'helvetica, arial, sans serif'
 
 
 format:
   html:
-    theme: lux
+    theme: default
     css: styles.css
-    toc: true
 
 editor: visual
 

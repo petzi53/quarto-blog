@@ -1,10 +1,122 @@
 [
   {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact",
+    "objectID": "privacy.html",
+    "href": "privacy.html",
+    "title": "Privacy Policy",
     "section": "",
-    "text": "Send me a message!\n\n  \n    Your Name: \n  \n  \n    Your Email: \n  \n  \n    \n      Don’t fill this out if you’re human: \n    \n  \n  \n    Message:    \n  \n  \n    Send\n  \n\n\n\n\n Back to top"
+    "text": "Several places on this website require you to identify yourself:"
+  },
+  {
+    "objectID": "privacy.html#comments",
+    "href": "privacy.html#comments",
+    "title": "Privacy Policy",
+    "section": "Comments",
+    "text": "Comments\nThis Quarto website uses Hypothesis as a commenting system. To control your data with Hypothesis, read the Hypothesis Privacy Policy."
+  },
+  {
+    "objectID": "privacy.html#contact",
+    "href": "privacy.html#contact",
+    "title": "Privacy Policy",
+    "section": "Contact",
+    "text": "Contact\nThe contact form is a service by formspree. They only store contents of the last 100 form submissions and delete the rest. Formspree is open source so that you can check, what they are doing. The emails themselves are sent using another open source project: SendGrid’s API, so on that end, their privacy policies apply.\nBy filling out the form, I get your name, email address, and your text. I will do nothing except handling your mailed concern. I will delete all mail sent by formspree at the latest after 12 months."
+  },
+  {
+    "objectID": "privacy.html#google-analytics",
+    "href": "privacy.html#google-analytics",
+    "title": "Privacy Policy",
+    "section": "Google Analytics",
+    "text": "Google Analytics\nThe only personal information collected while you visit this site is non-identifying information, such as browser type and operating system. This information is collected by Google Analytics for measuring visitor traffic to this site.\nFor each visitor to reach the site, Google Analytics collects the following non-personally identifiable information, including but not limited to browser type, version and language, operating system, pages viewed while browsing the site, page access times and referring website address. This information is presented to me as aggregated reports to gauge visitor traffic and trends.\nThis information is collected via cookies. Most web browsers allow you to control the handling of cookies. To the best of my knowledge, you can disable all cookies for this website without in any way reducing the functionality for you. Read here to learn what cookies are and how to control or disable them."
+  },
+  {
+    "objectID": "disclaimer.html",
+    "href": "disclaimer.html",
+    "title": "Disclaimer",
+    "section": "",
+    "text": "Peter Baumgartner Herzogstraße 1 3500 Krems an der Donau"
+  },
+  {
+    "objectID": "disclaimer.html#media-owner",
+    "href": "disclaimer.html#media-owner",
+    "title": "Disclaimer",
+    "section": "",
+    "text": "Peter Baumgartner Herzogstraße 1 3500 Krems an der Donau"
+  },
+  {
+    "objectID": "disclaimer.html#website",
+    "href": "disclaimer.html#website",
+    "title": "Disclaimer",
+    "section": "Website",
+    "text": "Website\n\nWebsite Content: Peter Baumgartner\nHosting: Acriba GmbH\nPhotos: Peter Baumgartner, if no other author is provided"
+  },
+  {
+    "objectID": "disclaimer.html#declaration-about-the-editorial-policy",
+    "href": "disclaimer.html#declaration-about-the-editorial-policy",
+    "title": "Disclaimer",
+    "section": "Declaration about the editorial policy",
+    "text": "Declaration about the editorial policy\nLife Long Learning Lab (L3Lab) is a personal blog by me (Peter Baumgartner). It focuses on news and comments about the research and teaching on Technology Enhanced Learning (TEL) and Data Science Education with a special focus on R subjects. Using R as an tool for data analysis and interpretation ‘L3Lab’ covers other subjects as well.\nThe content of this website is my personal opinion. The purpose of this website is not commercial and is, therefore, no professional service provided."
+  },
+  {
+    "objectID": "disclaimer.html#editorial-work",
+    "href": "disclaimer.html#editorial-work",
+    "title": "Disclaimer",
+    "section": "Editorial work",
+    "text": "Editorial work\nEditorial staff: Dr. Peter Baumgartner\nPowered by Quarto, an open-source scientific and technical publishing system\n\n\nThe information contained on https://l3lab.net website (the “Service”) is for general information purposes only.\n\n\n‘L3Lab’ assumes no responsibility for errors or omissions in the contents on the Service.\n\n\nIn no event shall ‘L3Lab’ be liable for any special, direct, indirect, consequential, or incidental damages or any damages whatsoever, whether in an action of contract, negligence or other torts, arising out of or in connection with the use of the Service or the contents of the Service. reserves the right to make additions, deletions, or modification to the contents on the Service at any time without prior notice.\nThe text of this Disclaimer for ‘Thought splinters’ is generated by TermsFeed\n\n\n‘L3Lab’ does not warrant that the website is free of viruses or other harmful components."
+  },
+  {
+    "objectID": "posts/2023-05-07-creating-a-column-based-layout/index.html",
+    "href": "posts/2023-05-07-creating-a-column-based-layout/index.html",
+    "title": "Creating a column-based layout",
+    "section": "",
+    "text": "From PxHere (CC0, Public Domain)\nIn my first two articles, I encountered the problem of changing the page layout several times: So I wanted – for instance – in my article How to delete Git branches two small screenshots to appear side by side."
+  },
+  {
+    "objectID": "posts/2023-05-07-creating-a-column-based-layout/index.html#help-page-about-article-layout",
+    "href": "posts/2023-05-07-creating-a-column-based-layout/index.html#help-page-about-article-layout",
+    "title": "Creating a column-based layout",
+    "section": "Help page about article layout",
+    "text": "Help page about article layout\nWhen I looked at the Quarto help pages, I found a chapter about article layouts. But it treated the layout of pages in a more general way by answering the following questions:\n\nHow to use the whole main content region?\nHow can content overflow this standard content region?\nHow can one span the width of the entire page?\nHow can authors place content on the document margin?\n\nI think that these questions address pretty special requirements. I just wanted a solution for content items side by side. This support page about the article layout was not helpful to me."
+  },
+  {
+    "objectID": "posts/2023-05-07-creating-a-column-based-layout/index.html#using-a-table-failed",
+    "href": "posts/2023-05-07-creating-a-column-based-layout/index.html#using-a-table-failed",
+    "title": "Creating a column-based layout",
+    "section": "Using a table failed",
+    "text": "Using a table failed\nMy first approach was to use a table to position images side by side. I created a one-row / two-column table with the visual editor of RStudio and uploaded in each column a picture. But the screenshots didn’t appear. Whenever I rendered the page, Quarto told me, “404: Not Found”.\n\n\n\nLooking after rendering into the tab “Background Jobs” revealed these error messages\n\n\nAs I inspected the source code, I saw the reason: The long image URLs didn’t fit in the table column, and therefore forced line breaks that destroyed the URLs.\n\n\n\nSource code generated by RStudio after loading two images into a one-row / two-columns desing"
+  },
+  {
+    "objectID": "posts/2023-05-07-creating-a-column-based-layout/index.html#using-pandoc-extensions",
+    "href": "posts/2023-05-07-creating-a-column-based-layout/index.html#using-pandoc-extensions",
+    "title": "Creating a column-based layout",
+    "section": "Using pandoc extensions",
+    "text": "Using pandoc extensions\nAfter long research, I found three answers to my question via StackOverflow. They all used the fenced_divs extension of pandoc.\nIt is easier to explain the method after I have presented these three examples. I will use the same toy text sample for the following illustration.\nText in the left column:\n\nI would like to have text here\n\n\nSentence becomes longer, it should automatically stay in their column\n\nText in the right column:\n\nand here\n\n\nMore text\n\n\nExample 1: Two columns separated by a small third column\n---\ntitle: \"Two columns separated by a small third column\"\nformat: html\nengine: knitr\n---\n\n:::: {.columns}\n\n::: {.column width=\"70%\"}\nI would like to have text here\n\nSentence becomes longer, it should automatically stay in their column\n:::\n\n::: {.column width=\"10%\"}\n&lt;!-- empty column to create gap --&gt;\n:::\n\n::: {.column width=\"20%\"}\nand here\n\nMore text\n:::\n\n::::\nThe example is — slightly redacted — taken from shafee via StackOverflow\n\n\nExample 2: Two columns using the bootstrap CSS grid system\n---\ntitle: \"Two columns using the bootstrap CSS grid system\"\nformat: html\nengine: knitr\n---\n  \n  \n::: {.grid}\n\n::: {.g-col-6}\n\n## First column \nI would like to have text here\n\nSentence becomes longer, it should automatically stay in their column\n:::\n  \n::: {.g-col-6}\n\n## Second column \n\nand here\n\nMore text\n\n:::\n  \n:::\nThe example is — slightly redacted — taken from Julian via StackOverflow.\n\n\nExample 3: Two columns with text center-aligned\n---\ntitle: \"Two columns with text center-aligned\"\nformat: html\nengine: knitr\n---\n    \n\n\n\n::: {.cell}\n&lt;style type=\"text/css\"&gt;\n.column {\ntext-align: center;\n}\n&lt;/style&gt;\n:::\n\n:::: {.columns}\n\n::: {.column width=\"50%\"}\n\nI would like to have text here\n\nSentence becomes longer, it should automatically stay in their column\n:::\n\n::: {.column width=\"50%\"}\n\nand here\n\nMore text\n:::\n\n::::\nThe example is — slightly redacted — taken again from shafee via StackOverflow."
+  },
+  {
+    "objectID": "posts/2023-05-07-creating-a-column-based-layout/index.html#fenced-divs-in-pandoc-how-do-they-work",
+    "href": "posts/2023-05-07-creating-a-column-based-layout/index.html#fenced-divs-in-pandoc-how-do-they-work",
+    "title": "Creating a column-based layout",
+    "section": "Fenced divs in Pandoc: How do they work?",
+    "text": "Fenced divs in Pandoc: How do they work?\n\nWhat is Pandoc?\nPandoc is an open-source universal document converter. Pandoc is licensed with the very permissive GNU1 General Public License (GPL). Currently, Pandoc supports the conversion of more than 60 formats. John MacFarlane, a philosophy professor at the University of Berkeley, is developing and maintaining Pandoc.\nRStudio IDE ships with a pandoc binary. The path is stored in the RSTUDIO_PANDOC environment variable. You can get the path and the current pandoc version used by RStudio with rmarkdown::find_pandoc().\n\nrmarkdown::find_pandoc()\n\n$version\n[1] '3.2.1'\n\n$dir\n[1] \"/usr/local/bin\"\n\n\nTo get the version number on your machine type in the terminal:\npandoc --version\n(base) path@my_machine quarto-blog % pandoc --version\npandoc 3.1.2\nFeatures: +server +lua\nScripting engine: Lua 5.4\nUser data directory: /Users/petzi/.pandoc\nCopyright (C) 2006-2023 John MacFarlane. Web:  https://pandoc.org\nThis is free software; see the source for copying conditions. There is no\nwarranty, not even for merchantability or fitness for a particular purpose.\n(base) path@my_machine quarto-blog % \nThis result shows I have two different pandoc versions installed — a potential danger for a version conflict: One version installed RStudio, and the other I downloaded with the macOS package manager Homebrew.\n\n\nDiv Blocks in Pandoc\nThe pandoc div extension allows a special fenced syntax to generate HTML div-tags:\n\nA div starts with a fence containing at least three consecutive colons plus some attributes. The attributes may optionally be followed by another string of consecutive colons. … [O]ne can use either attributes in curly braces or a single unbraced word, which will be treated as a class name. The Div ends with another line containing a string of at least three consecutive colons. The fenced Div should be separated by blank lines from preceding and following blocks. From Extension: fenced_divs\n\nTwo more remarks:\n\nIf you are going to nest pandoc div directives, you must provide more colons for the outer divs than the inner divs.\nTo prevent that Quarto uses the jupyter engine, you must provide engine: knitr in the YAML front matter."
+  },
+  {
+    "objectID": "posts/2023-05-07-creating-a-column-based-layout/index.html#a-genuine-quarto-solution",
+    "href": "posts/2023-05-07-creating-a-column-based-layout/index.html#a-genuine-quarto-solution",
+    "title": "Creating a column-based layout",
+    "section": "A genuine Quarto solution",
+    "text": "A genuine Quarto solution\nAfter I looked around at how to create a two-text column layout for a while, I found a simple Quarto answer. Hidden in the help page about figures, I found the remark:\n\nYou can treat any markdown content you want as a figure by enclosing it in Pandoc div block with an identifier prefaced with #fig-. See the first sentence under the header Figure Divs.\n\nThe first part of the sentence, “You can treat any markdown content you want as a figure…” could be reversed to the concept that a layout for figures works similarly to a design for text.\nI came up with the following solution that I also published to answer the StackOverflow post.\n\nVersion 1 with equally wide columns\n\n---\ntitle: \"Two columns layout Quarto with equally wide columns\"\nformat: html\nengine: knitr\n---\n\n::: {layout-ncol=2}\n\n\nFirst column\n\nSecond column\n\nI would like to have text here\n\nand here\n\nSentence becomes longer, it should automatically stay in their column\n\nMore text\n\n:::\nThe above solution uses the Quarto layout-ncol attribute. There is also a layout-nrowattribute. In both directives, you can specify the number of columns respectively rows.\n\n\nVersion 2 with different wide columns\n---\ntitle: \"Two columns layout Quarto with different wide columns\"\nformat: html\nengine: knitr\n---\n\n::: {layout=\"[[10,5], [40,20], [26,13], [2,1]]\"}\n\n\n**First column**\n\n**Second column**\n\nI would like to have text here\n\nand here\n\nSentence becomes longer, it should automatically stay in their column\n\nMore text\n\n:::\nThe version 2 solution uses the general form of the layout attribute. It is followed by a 2-dimensional array where the first dimension defines rows and the second columns. Note that the used row / column numbers in the second version are arbitrary. They just provide the desired proportion of 2:1. The code translates to “create four rows, where the first column has always the double size of the second column.”\nSome final remarks on both of the last examples:\n\nThere needs to be an empty line between every paragraph (here sentence). This structure is necessary so Pandoc can see the break and addresses the next column.\nYou need to use the engine: knitr command to prevent rendering with the jupyter engine."
+  },
+  {
+    "objectID": "posts/2023-05-07-creating-a-column-based-layout/index.html#conclusion",
+    "href": "posts/2023-05-07-creating-a-column-based-layout/index.html#conclusion",
+    "title": "Creating a column-based layout",
+    "section": "Conclusion",
+    "text": "Conclusion\nThere are many possibilities for a creative layout design in Quarto. This article shows the use of Pandocs div block directives with five different methods. These layout directives can be generalized from a two-column to a many column layout\n\nSeveral columns with varying percentages of widths.\nSeveral columns using the very flexible bootstrap CSS grid system.\nSeveral columns with formatted explicitly with a CSS style.\nSeveral columns with the same width using the Quarto layout-ncol or layout-nrow attribute.\nSeveral columns with different widths using the Quarto general layout attribute."
+  },
+  {
+    "objectID": "posts/2023-05-07-creating-a-column-based-layout/index.html#footnotes",
+    "href": "posts/2023-05-07-creating-a-column-based-layout/index.html#footnotes",
+    "title": "Creating a column-based layout",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nGNU is a recursive acronym and means: GNU’s Not Unix.↩︎"
   },
   {
     "objectID": "posts/2023-05-05-how-to-delete-git-branches/index.html",
@@ -42,6 +154,13 @@
     "text": "Useful commands for deleting branches\n\nDeleting a remote branch\ngit push origin -d &lt;branch&gt;\n\n\nDeleting a local branch\ngit checkout master # change branch, you can't delete a branch you are working on\ngit branch -d &lt;branch&gt;\ngit branch -D &lt;branch&gt; # Force-delete un-merged branches\n\n\nDeleting a local remote-tracking branch\n# 'dr' stands for \"delete remotes\"\ngit branch -dr &lt;remote&gt;/&lt;branch&gt;\ngit branch -dr origin/dev # example\n\n# Delete multiple obsolete remote-tracking branches\ngit fetch &lt;remote&gt; -p  # 'p' stands for \"prune\"\ngit fetch origin -p    # example\n\n\n\n\n\n\nNote\n\n\n\nDon’t forget to refresh the RStudio listing to verify that you have deleted the branches.\n\n\n\n\n\n\n\n\n\n\nClick on the circle symbol at the top right corner…\n\n\n\n\n\n\n… and choose “Refresh Now” to list the branches currently available."
   },
   {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "Send me a message!\n\n  \n    Your Name: \n  \n  \n    Your Email: \n  \n  \n    \n      Don’t fill this out if you’re human: \n    \n  \n  \n    Message:    \n  \n  \n    Send\n  \n\n\n\n\n Back to top"
+  },
+  {
     "objectID": "posts/2023-04-23-welcome-quarto/index.html",
     "href": "posts/2023-04-23-welcome-quarto/index.html",
     "title": "Bye, Bye Hugo, Welcome Quarto!",
@@ -63,60 +182,11 @@
     "text": "Future plans\nI am sure there will also be some intricacies I must learn and overcome with Quarto, but this will conform with all my other R knowledge. At the moment, my feeling is enthusiastic: It is easy and intuitive to write on this platform. I hope to overcome technical barriers and concentrate on thematic topics finally. Since English is not my mother tongue, it is already difficult enough to express myself precisely about complex content-related questions. I don’t need any additional technical difficulty in writing blog posts.\nIn contrast to my previous website projects, I am planning two different strategies: \n\nI will not go into the details of the website design immediately but will work on these issues from time to time.\nI will not announce the website until I am sure I will use it regularly and long-term. I think that about 10 articles – written in two months – should give me the trust that I will use it sustainably."
   },
   {
-    "objectID": "posts/2023-05-07-creating-a-column-based-layout/index.html",
-    "href": "posts/2023-05-07-creating-a-column-based-layout/index.html",
-    "title": "Creating a column-based layout",
-    "section": "",
-    "text": "From PxHere (CC0, Public Domain)\nIn my first two articles, I encountered the problem of changing the page layout several times: So I wanted – for instance – in my article How to delete Git branches two small screenshots to appear side by side."
-  },
-  {
-    "objectID": "posts/2023-05-07-creating-a-column-based-layout/index.html#help-page-about-article-layout",
-    "href": "posts/2023-05-07-creating-a-column-based-layout/index.html#help-page-about-article-layout",
-    "title": "Creating a column-based layout",
-    "section": "Help page about article layout",
-    "text": "Help page about article layout\nWhen I looked at the Quarto help pages, I found a chapter about article layouts. But it treated the layout of pages in a more general way by answering the following questions:\n\nHow to use the whole main content region?\nHow can content overflow this standard content region?\nHow can one span the width of the entire page?\nHow can authors place content on the document margin?\n\nI think that these questions address pretty special requirements. I just wanted a solution for content items side by side. This support page about the article layout was not helpful to me."
-  },
-  {
-    "objectID": "posts/2023-05-07-creating-a-column-based-layout/index.html#using-a-table-failed",
-    "href": "posts/2023-05-07-creating-a-column-based-layout/index.html#using-a-table-failed",
-    "title": "Creating a column-based layout",
-    "section": "Using a table failed",
-    "text": "Using a table failed\nMy first approach was to use a table to position images side by side. I created a one-row / two-column table with the visual editor of RStudio and uploaded in each column a picture. But the screenshots didn’t appear. Whenever I rendered the page, Quarto told me, “404: Not Found”.\n\n\n\nLooking after rendering into the tab “Background Jobs” revealed these error messages\n\n\nAs I inspected the source code, I saw the reason: The long image URLs didn’t fit in the table column, and therefore forced line breaks that destroyed the URLs.\n\n\n\nSource code generated by RStudio after loading two images into a one-row / two-columns desing"
-  },
-  {
-    "objectID": "posts/2023-05-07-creating-a-column-based-layout/index.html#using-pandoc-extensions",
-    "href": "posts/2023-05-07-creating-a-column-based-layout/index.html#using-pandoc-extensions",
-    "title": "Creating a column-based layout",
-    "section": "Using pandoc extensions",
-    "text": "Using pandoc extensions\nAfter long research, I found three answers to my question via StackOverflow. They all used the fenced_divs extension of pandoc.\nIt is easier to explain the method after I have presented these three examples. I will use the same toy text sample for the following illustration.\nText in the left column:\n\nI would like to have text here\n\n\nSentence becomes longer, it should automatically stay in their column\n\nText in the right column:\n\nand here\n\n\nMore text\n\n\nExample 1: Two columns separated by a small third column\n---\ntitle: \"Two columns separated by a small third column\"\nformat: html\nengine: knitr\n---\n\n:::: {.columns}\n\n::: {.column width=\"70%\"}\nI would like to have text here\n\nSentence becomes longer, it should automatically stay in their column\n:::\n\n::: {.column width=\"10%\"}\n&lt;!-- empty column to create gap --&gt;\n:::\n\n::: {.column width=\"20%\"}\nand here\n\nMore text\n:::\n\n::::\nThe example is — slightly redacted — taken from shafee via StackOverflow\n\n\nExample 2: Two columns using the bootstrap CSS grid system\n---\ntitle: \"Two columns using the bootstrap CSS grid system\"\nformat: html\nengine: knitr\n---\n  \n  \n::: {.grid}\n\n::: {.g-col-6}\n\n## First column \nI would like to have text here\n\nSentence becomes longer, it should automatically stay in their column\n:::\n  \n::: {.g-col-6}\n\n## Second column \n\nand here\n\nMore text\n\n:::\n  \n:::\nThe example is — slightly redacted — taken from Julian via StackOverflow.\n\n\nExample 3: Two columns with text center-aligned\n---\ntitle: \"Two columns with text center-aligned\"\nformat: html\nengine: knitr\n---\n    \n\n\n\n::: {.cell}\n&lt;style type=\"text/css\"&gt;\n.column {\ntext-align: center;\n}\n&lt;/style&gt;\n:::\n\n:::: {.columns}\n\n::: {.column width=\"50%\"}\n\nI would like to have text here\n\nSentence becomes longer, it should automatically stay in their column\n:::\n\n::: {.column width=\"50%\"}\n\nand here\n\nMore text\n:::\n\n::::\nThe example is — slightly redacted — taken again from shafee via StackOverflow."
-  },
-  {
-    "objectID": "posts/2023-05-07-creating-a-column-based-layout/index.html#fenced-divs-in-pandoc-how-do-they-work",
-    "href": "posts/2023-05-07-creating-a-column-based-layout/index.html#fenced-divs-in-pandoc-how-do-they-work",
-    "title": "Creating a column-based layout",
-    "section": "Fenced divs in Pandoc: How do they work?",
-    "text": "Fenced divs in Pandoc: How do they work?\n\nWhat is Pandoc?\nPandoc is an open-source universal document converter. Pandoc is licensed with the very permissive GNU1 General Public License (GPL). Currently, Pandoc supports the conversion of more than 60 formats. John MacFarlane, a philosophy professor at the University of Berkeley, is developing and maintaining Pandoc.\nRStudio IDE ships with a pandoc binary. The path is stored in the RSTUDIO_PANDOC environment variable. You can get the path and the current pandoc version used by RStudio with rmarkdown::find_pandoc().\n\nrmarkdown::find_pandoc()\n\n$version\n[1] '3.1.2'\n\n$dir\n[1] \"/usr/local/bin\"\n\n\nTo get the version number on your machine type in the terminal:\npandoc --version\n(base) path@my_machine quarto-blog % pandoc --version\npandoc 3.1.2\nFeatures: +server +lua\nScripting engine: Lua 5.4\nUser data directory: /Users/petzi/.pandoc\nCopyright (C) 2006-2023 John MacFarlane. Web:  https://pandoc.org\nThis is free software; see the source for copying conditions. There is no\nwarranty, not even for merchantability or fitness for a particular purpose.\n(base) path@my_machine quarto-blog % \nThis result shows I have two different pandoc versions installed — a potential danger for a version conflict: One version installed RStudio, and the other I downloaded with the macOS package manager Homebrew.\n\n\nDiv Blocks in Pandoc\nThe pandoc div extension allows a special fenced syntax to generate HTML div-tags:\n\nA div starts with a fence containing at least three consecutive colons plus some attributes. The attributes may optionally be followed by another string of consecutive colons. … [O]ne can use either attributes in curly braces or a single unbraced word, which will be treated as a class name. The Div ends with another line containing a string of at least three consecutive colons. The fenced Div should be separated by blank lines from preceding and following blocks. From Extension: fenced_divs\n\nTwo more remarks:\n\nIf you are going to nest pandoc div directives, you must provide more colons for the outer divs than the inner divs.\nTo prevent that Quarto uses the jupyter engine, you must provide engine: knitr in the YAML front matter."
-  },
-  {
-    "objectID": "posts/2023-05-07-creating-a-column-based-layout/index.html#a-genuine-quarto-solution",
-    "href": "posts/2023-05-07-creating-a-column-based-layout/index.html#a-genuine-quarto-solution",
-    "title": "Creating a column-based layout",
-    "section": "A genuine Quarto solution",
-    "text": "A genuine Quarto solution\nAfter I looked around at how to create a two-text column layout for a while, I found a simple Quarto answer. Hidden in the help page about figures, I found the remark:\n\nYou can treat any markdown content you want as a figure by enclosing it in Pandoc div block with an identifier prefaced with #fig-. See the first sentence under the header Figure Divs.\n\nThe first part of the sentence, “You can treat any markdown content you want as a figure…” could be reversed to the concept that a layout for figures works similarly to a design for text.\nI came up with the following solution that I also published to answer the StackOverflow post.\n\nVersion 1 with equally wide columns\n\n---\ntitle: \"Two columns layout Quarto with equally wide columns\"\nformat: html\nengine: knitr\n---\n\n::: {layout-ncol=2}\n\n\nFirst column\n\nSecond column\n\nI would like to have text here\n\nand here\n\nSentence becomes longer, it should automatically stay in their column\n\nMore text\n\n:::\nThe above solution uses the Quarto layout-ncol attribute. There is also a layout-nrowattribute. In both directives, you can specify the number of columns respectively rows.\n\n\nVersion 2 with different wide columns\n---\ntitle: \"Two columns layout Quarto with different wide columns\"\nformat: html\nengine: knitr\n---\n\n::: {layout=\"[[10,5], [40,20], [26,13], [2,1]]\"}\n\n\n**First column**\n\n**Second column**\n\nI would like to have text here\n\nand here\n\nSentence becomes longer, it should automatically stay in their column\n\nMore text\n\n:::\nThe version 2 solution uses the general form of the layout attribute. It is followed by a 2-dimensional array where the first dimension defines rows and the second columns. Note that the used row / column numbers in the second version are arbitrary. They just provide the desired proportion of 2:1. The code translates to “create four rows, where the first column has always the double size of the second column.”\nSome final remarks on both of the last examples:\n\nThere needs to be an empty line between every paragraph (here sentence). This structure is necessary so Pandoc can see the break and addresses the next column.\nYou need to use the engine: knitr command to prevent rendering with the jupyter engine."
-  },
-  {
-    "objectID": "posts/2023-05-07-creating-a-column-based-layout/index.html#conclusion",
-    "href": "posts/2023-05-07-creating-a-column-based-layout/index.html#conclusion",
-    "title": "Creating a column-based layout",
-    "section": "Conclusion",
-    "text": "Conclusion\nThere are many possibilities for a creative layout design in Quarto. This article shows the use of Pandocs div block directives with five different methods. These layout directives can be generalized from a two-column to a many column layout\n\nSeveral columns with varying percentages of widths.\nSeveral columns using the very flexible bootstrap CSS grid system.\nSeveral columns with formatted explicitly with a CSS style.\nSeveral columns with the same width using the Quarto layout-ncol or layout-nrow attribute.\nSeveral columns with different widths using the Quarto general layout attribute."
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "L3Lab",
     "section": "",
-    "text": "Creating a column-based layout\n\n\nChanging the Page Layout in Quarto\n\n\n\n\nblog\n\n\nquarto\n\n\nhow-to\n\n\n\n\nDo you want to place two figures side by side or write text in parallel in different columns? The post describes four methods to turn part of your blog post into a column-based layout.\n\n\n\n\n\n\n2023-05-07\n\n\nPeter Baumgartner\n\n\n2023-05-09\n\n\n\n\n\n\n  \n\n\n\n\nHow to delete Git branches\n\n\nThe limits of RStudio and of the pr_*() family of {usethis} functions\n\n\n\n\ngit\n\n\ngithub\n\n\nhow-to\n\n\n\n\nThe article explains how I finally succeeded in deleting different branches in Git. It turned out – contrary to my previous mental model – that there are not only two branches but three (local, remote origin, and local remote-tracking branch).\n\n\n\n\n\n\n2023-05-05\n\n\nPeter Baumgartner\n\n\n2023-05-09\n\n\n\n\n\n\n  \n\n\n\n\nBye, Bye Hugo, Welcome Quarto!\n\n\nMy first blogging impressions with Quarto\n\n\n\n\nblog\n\n\nquarto\n\n\n\n\nThis is my first entry in a new blog powered by Quarto. After continuously struggling with the complex machinery (blogdown, Hugo, Wowchemy), I feel like coming home from a trip abroad!\n\n\n\n\n\n\n2023-04-23\n\n\nPeter Baumgartner\n\n\n2023-05-04\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Creating a column-based layout\n\n\nChanging the Page Layout in Quarto\n\n\n\nblog\n\n\nquarto\n\n\nhow-to\n\n\n\nDo you want to place two figures side by side or write text in parallel in different columns? The post describes four methods to turn part of your blog post into a column-based layout. \n\n\n\n\n\n2023-05-07\n\n\nPeter Baumgartner\n\n\n2024-07-16\n\n\n\n\n\n\n\n\n\n\n\n\nHow to delete Git branches\n\n\nThe limits of RStudio and of the pr_*() family of {usethis} functions\n\n\n\ngit\n\n\ngithub\n\n\nhow-to\n\n\n\nThe article explains how I finally succeeded in deleting different branches in Git. It turned out – contrary to my previous mental model – that there are not only two branches but three (local, remote origin, and local remote-tracking branch). \n\n\n\n\n\n2023-05-05\n\n\nPeter Baumgartner\n\n\n2024-07-19\n\n\n\n\n\n\n\n\n\n\n\n\nBye, Bye Hugo, Welcome Quarto!\n\n\nMy first blogging impressions with Quarto\n\n\n\nblog\n\n\nquarto\n\n\n\nThis is my first entry in a new blog powered by Quarto. After continuously struggling with a complex machinery (blogdown, Hugo, Wowchemy), I feel like coming home from a trip abroad!\n\n\n\n\n\n2023-04-23\n\n\nPeter Baumgartner\n\n\n2024-07-16\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "about.html",
@@ -124,12 +194,5 @@
     "title": "Peter Baumgartner",
     "section": "",
     "text": "I am a retired professor of Education Technology. As head of the Department of Interactive Media and Educational Technologies at the University for Continuing Education Krems (UWK) (Austria), I researched how to apply technology in settings of Life Long Learning. \nI had held positions as a professor at several universities in Austria and Germany (Klagenfurt, Münster, Innsbruck, Hagen) before I accepted the nomination to Krems. I published 25 books (10 monographs and 15 edited volumes) and over 200 articles.\nWith my retirement, I became a Life Long Learner myself. I am interested in studying workflows for Open Science research, focusing on note-taking apps like Obsidian, Hypothes.is, etc., and the R programming language for statistical computing and data science.\n\n\n Back to top"
-  },
-  {
-    "objectID": "presence.html",
-    "href": "presence.html",
-    "title": "Life Long Learning Lab",
-    "section": "",
-    "text": "ORCID LogoMy unique researcher ID = 0000-0003-4526-8791. Read my article: What is an ORCID ID?\nDict.cc IconUse my Croatian-German flashcards in dict.cc, a multilingual dictionary driven and maintained by the community.\nDiigo LogoSee and share booksmarks with me in Diigo, a social bookmarking website, especially suited as a digital research tool.\nDownload IconDownload my publications from Educational Patterns, a website I abandoned August 2018 for reasons explained here in the blue box.\nGithub iconMy repositories on GitHub, a Git repository hosting service.\nWordpress LogoVisit my German Wordpress blog Gedankensplitter and read about eLearning and educational technology.\nGoodreads LogoTrack the books I read and read my reviews on Goodreads, the largest site for readers and book recommendations.\nGoogle Scholar IconMy Page on Google Scholar, a freely accessible web search engine that indexes scholarly literature.\nPrezi LogoLook, download and edit my Prezi presentations, about half of them im English and some with German audit track.\nRStudio LogoRead and comment my R Markdown documents written in RStudio und published via RPubs.\nSkype LogoContact me via Skype.\nStack Overflow IconMy profile on StackOverflow, the world’s largest developer community.\nWakelet IconNew IconCapture, organize and share multi-media resources with me. Visit my curated links on my Wakelet Home Page.\nPublication IconRead my book Studieren und Forschen mit dem Internet on the Internet or as PDF, ePub or in mobi format.\nTwitter IconFollow me on Twitter, a social networking site for micro-blogging.\nZotero LogoVisit and follow me on Zotero, a citation management systems to collect, organize and share citations.\n\n\n\n Back to top"
   }
 ]
