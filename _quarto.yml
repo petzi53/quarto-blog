@@ -6,6 +6,9 @@ website:
   favicon: favicon.ico
   site-url: https://l3lab.net
   description: "This is Peter Baumgartner's Personal English Blog."
+  repo-url: https://github.com/petzi53/quarto-blog
+  issue-url: https://github.com/petzi53/quarto-blog/issues/new/choose
+  repo-actions: [edit, issue]
   cookie-consent:
     type: express
   page-navigation: true

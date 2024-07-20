@@ -1,6 +1,6 @@
 ---
 title: "How to delete Git branches"
-subtitle: "The limits of RStudio and of the `pr_*()` family of {usethis} functions"
+subtitle: "The limits of RStudio with the `pr_*()` family of the {[usethis](https://usethis.r-lib.org/)} functions"
 description:  |
   The article explains how I finally succeeded in deleting different branches
   in Git. It turned out – contrary to my previous mental model – that there
@@ -11,7 +11,7 @@ date: "2023-05-05"
 image: "git-cover-min.png"
 image-alt: "Git Logo"
 categories: [git, github, how-to]
-date-modified: "2023-05-05"
+date-modified: "2024-07-20"
 engine: knitr
 draft: false
 ---
@@ -19,18 +19,21 @@ draft: false
 ## If a pull request is not accepted...
 
 As I am not very experienced with R and coding, my knowledge of using
-Git and GitHub is limited. Usually, I use the `pr_*()` family of usethis
+Git and GitHub is limited. Usually, I use the `pr_*()` family of
+{[usethis](https://usethis.r-lib.org/ "Automates repetitive tasks that arise during project setup and development")}
 functions as pull request helpers. They work very well -- as long as the
 workflow follows the standard (successful) workflow:
 
-Initiate the pull request with `pr_init(<branch name>)` Submit the
-changes in the new branch with `pr_push()`. Click the "Create pull
-request"-button to make the PR. After the code is accepted and merged,
-conclude the process with `pr_finish()`. This sequence does not fly if
-the workflow deviates from the above model. The mentioned article
-describes the scenario of a discussion between contributor and reviewer
-that finally results in the acceptance of the PR. But what about a
-rejection of the PR?
+-   Initiate the pull request with `pr_init(<branch name>)`
+-   Submit the changes in the new branch with `pr_push()`.
+-   Click the "Create pull request"-button to make the PR.
+-   After the code is accepted and merged, conclude the process with
+    `pr_finish()`.
+
+This sequence does not fly if the workflow deviates from the above
+model. The standard procedure describes the scenario of a discussion
+between contributor and reviewer that finally results in the acceptance
+of the PR. But what about a rejection of the PR?
 
 ## ... deletion of the remote branch with GitHub is not enough
 
@@ -41,7 +44,7 @@ back to my initial position.
 
 ![**Screenshot 1**: Delete obsolete branch "typo" at GitHub site
 (simulated for this
-article).](images/delete-remote-branch-at-github.png){fig-alt="A screenshot shows the default branch \"master\" and \"Your branches\" named \"typo,\" which also figures under \"Active branches\". The cursor hovers over the trash can to delete the active branch \"typo\"."
+article).](images/delete-remote-branch-at-github-min.png){fig-alt="A screenshot shows the default branch \"master\" and \"Your branches\" named \"typo,\" which also figures under \"Active branches\". The cursor hovers over the trash can to delete the active branch \"typo\"."
 fig-align="center"}
 
 But back in RStudio, it turned out that the deleted branch was still
@@ -58,53 +61,70 @@ remote GitHub site was, in fact, completely gone.
 
 ## There are three, not two branches
 
-After some research, I found an answer at StackOverflow with over 25.000
-views! It seems that I am not the only one surprised by the situation.
+After some research, I found an appropriate question-answer dialog ([How
+do I delete a Git branch locally and
+remotely?](https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-locally-and-remotely))
+at StackOverflow with more than 11 million views! It seems that I am not
+the only one surprised by the situation.
 
 After reading this and other answers at SO, I learned that there are
 three different branches:
 
 > When you're dealing with deleting branches both locally and remotely,
-> keep in mind that there are three different branches involved: The
-> local branch X. The remote origin branch X. The local remote-tracking
-> branch origin/X that tracks the remote branch X. I deleted the remote
-> origin branch X manually at the GitHub site. The local branch but also
-> the local remote-tracking branch were still functional!
+> keep in mind that there are three different branches involved:
+>
+> -   The local branch X.
+> -   The remote origin branch X.
+> -   The local remote-tracking branch origin/X that tracks the remote
+>     branch X. [Quote from the top second
+>     answer](https://stackoverflow.com/a/23961231/7322615)
+
+I deleted the remote origin branch X manually at the GitHub site. The
+local branch but also the local remote-tracking branch were still
+functional!
 
 For every one of these three branches, one needs different commands to
 delete them. And here -- as far as I understood -- we have met the
-limits of RStudio and/or {usethis.} For the following commands, you have
+limits of RStudio and/or {usethis}. For the following commands, you have
 to change from the console to the terminal.
 
 ## Useful commands for deleting branches
 
+::: {.callout-tip collapse='true'}
+##### Set comment character for interactive terminal use
+
+If you are using the [Z shell (zsh)](https://en.wikipedia.org/wiki/Z_shell) you have to set `setopt interactivecomments` for interactive use either in your `~/.zshrc` file or write this command into the terminal for temporary use during the terminal session. In contrast to `ksh` (Korn shell), `sh` (Bourne shell), and `bash` (Bourne-again shell) the `#` is for the `zsh` (Z shell) only set as the comment character for non-interactive use (scripts).
+:::
+
+
+
 #### Deleting a remote branch
 
-``` zsh
+``` {.zsh filename="Terminal"}
+setopt interactivecomments
 git push origin -d <branch>
 ```
 
 #### Deleting a local branch
 
-``` zsh
+``` {.zsh filename="Terminal"}
 git checkout master # change branch, you can't delete a branch you are working on
 git branch -d <branch>
-git branch -D <branch> # Force-delete un-merged branches
+git branch -D <branch> # force-delete un-merged branches
 ```
 
 #### Deleting a local remote-tracking branch
 
-``` zsh
-# 'dr' stands for "delete remotes"
-git branch -dr <remote>/<branch>
-git branch -dr origin/dev # example
+``` {.zsh filename="Terminal"}
+git branch -dr <remote>/<branch> # 'dr' stands for "delete remotes"
+git branch -dr origin/dev        # example
 
 # Delete multiple obsolete remote-tracking branches
 git fetch <remote> -p  # 'p' stands for "prune"
 git fetch origin -p    # example
 ```
 
-::: callout-note
+::: callout-warning
 Don't forget to refresh the RStudio listing to verify that you have
 deleted the branches.
 :::

@@ -14,5 +14,3 @@ filters:
 collapse-callout:
     all: false
 
-format:
-    html

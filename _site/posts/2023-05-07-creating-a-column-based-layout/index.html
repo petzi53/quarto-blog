@@ -188,12 +188,12 @@ cookieconsent.run({
 <span class="menu-text">Contact</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/petzi53/"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/petzi53/quarto-blog"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/pbaumgartner"> <i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://x.com/pbaumgartner"> <i class="bi bi-twitter" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -216,7 +216,31 @@ cookieconsent.run({
 </figure>
 </div>
 </div></div>
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#help-page-about-article-layout" id="toc-help-page-about-article-layout" class="nav-link active" data-scroll-target="#help-page-about-article-layout">Help page about article layout</a></li>
+  <li><a href="#using-a-table-failed" id="toc-using-a-table-failed" class="nav-link" data-scroll-target="#using-a-table-failed">Using a table failed</a></li>
+  <li><a href="#using-pandoc-extensions" id="toc-using-pandoc-extensions" class="nav-link" data-scroll-target="#using-pandoc-extensions">Using pandoc extensions</a>
+  <ul class="collapse">
+  <li><a href="#example-1-two-columns-separated-by-a-small-third-column" id="toc-example-1-two-columns-separated-by-a-small-third-column" class="nav-link" data-scroll-target="#example-1-two-columns-separated-by-a-small-third-column">Example 1: Two columns separated by a small third column</a></li>
+  <li><a href="#example-2-two-columns-using-the-bootstrap-css-grid-system" id="toc-example-2-two-columns-using-the-bootstrap-css-grid-system" class="nav-link" data-scroll-target="#example-2-two-columns-using-the-bootstrap-css-grid-system">Example 2: Two columns using the bootstrap CSS grid system</a></li>
+  <li><a href="#example-3-two-columns-with-text-center-aligned" id="toc-example-3-two-columns-with-text-center-aligned" class="nav-link" data-scroll-target="#example-3-two-columns-with-text-center-aligned">Example 3: Two columns with text center-aligned</a></li>
+  </ul></li>
+  <li><a href="#fenced-divs-in-pandoc-how-do-they-work" id="toc-fenced-divs-in-pandoc-how-do-they-work" class="nav-link" data-scroll-target="#fenced-divs-in-pandoc-how-do-they-work">Fenced divs in Pandoc: How do they work?</a>
+  <ul class="collapse">
+  <li><a href="#what-is-pandoc" id="toc-what-is-pandoc" class="nav-link" data-scroll-target="#what-is-pandoc">What is Pandoc?</a></li>
+  <li><a href="#div-blocks-in-pandoc" id="toc-div-blocks-in-pandoc" class="nav-link" data-scroll-target="#div-blocks-in-pandoc">Div Blocks in Pandoc</a></li>
+  </ul></li>
+  <li><a href="#a-genuine-quarto-solution" id="toc-a-genuine-quarto-solution" class="nav-link" data-scroll-target="#a-genuine-quarto-solution">A genuine Quarto solution</a>
+  <ul class="collapse">
+  <li><a href="#version-1-with-equally-wide-columns" id="toc-version-1-with-equally-wide-columns" class="nav-link" data-scroll-target="#version-1-with-equally-wide-columns">Version 1 with equally wide columns</a></li>
+  <li><a href="#version-2-with-different-wide-columns" id="toc-version-2-with-different-wide-columns" class="nav-link" data-scroll-target="#version-2-with-different-wide-columns">Version 2 with different wide columns</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/petzi53/quarto-blog/edit/main/posts/2023-05-07-creating-a-column-based-layout/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/petzi53/quarto-blog/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -271,7 +295,7 @@ cookieconsent.run({
 
 <div class="quarto-figure quarto-figure-center" style="text-align: center;">
 <figure class="figure">
-<p><img src="three-columns-min.jpg" class="img-fluid figure-img"></p>
+<p><img src="three-columns-min.jpg" class="img-fluid figure-img" alt="Four ionic column with scroll-shaped ornaments on the capital, which sits at the top of the column shaft against the blue sky"></p>
 <figcaption>From <a href="https://pxhere.com/en/photo/649542">PxHere</a> (CC0, Public Domain)</figcaption>
 </figure>
 </div>
@@ -280,10 +304,10 @@ cookieconsent.run({
 <h2 class="anchored" data-anchor-id="help-page-about-article-layout">Help page about article layout</h2>
 <p>When I looked at the Quarto help pages, I found a <a href="https://quarto.org/docs/authoring/article-layout.html">chapter about article layouts</a>. But it treated the layout of pages in a more general way by answering the following questions:</p>
 <ul>
-<li><p>How to use the whole main content region?</p></li>
-<li><p>How can content overflow this standard content region?</p></li>
-<li><p>How can one span the width of the entire page?</p></li>
-<li><p>How can authors place content on the document margin?</p></li>
+<li>How to use the whole main content region?</li>
+<li>How can content overflow this standard content region?</li>
+<li>How can one span the width of the entire page?</li>
+<li>How can authors place content on the document margin?</li>
 </ul>
 <p>I think that these questions address pretty special requirements. I just wanted a solution for content items side by side. This support page about the article layout was not helpful to me.</p>
 </section>
@@ -300,7 +324,7 @@ cookieconsent.run({
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/wrong-forced-line-breaks-min.png" class="img-fluid figure-img" alt="The source code shows that the URLs are wrapped in wrong places and therefore broken"></p>
-<figcaption>Source code generated by RStudio after loading two images into a one-row / two-columns desing</figcaption>
+<figcaption>Screenshot 1: Source code generated by RStudio after loading two images into a one-row / two-columns desing</figcaption>
 </figure>
 </div>
 </section>
@@ -324,6 +348,19 @@ cookieconsent.run({
 </blockquote>
 <section id="example-1-two-columns-separated-by-a-small-third-column" class="level3">
 <h3 class="anchored" data-anchor-id="example-1-two-columns-separated-by-a-small-third-column">Example 1: Two columns separated by a small third column</h3>
+<p>The example is — slightly redacted — taken <a href="https://stackoverflow.com/a/74162353/7322615">from shafee via StackOverflow</a></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Show the markdown code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>title<span class="sc">:</span> <span class="st">"Two columns separated by a small third column"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>format<span class="sc">:</span> html</span>
@@ -332,7 +369,7 @@ cookieconsent.run({
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="er">::::</span> {.columns}</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span> {.column width<span class="ot">=</span><span class="st">"70%"</span>}</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span> {.column width<span class="ot">=</span><span class="st">"30%"</span>}</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>I would like to have text here</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>Sentence becomes longer, it should automatically stay <span class="cf">in</span> their column</span>
@@ -349,10 +386,57 @@ cookieconsent.run({
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="er">::::</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The example is — slightly redacted — taken <a href="https://stackoverflow.com/a/74162353/7322615">from shafee via StackOverflow</a></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Show the result
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="columns">
+<div class="column" style="width:30%;">
+<section id="first-column" class="level5">
+<h5 class="anchored" data-anchor-id="first-column">First column</h5>
+<p>I would like to have text here</p>
+<p>Sentence becomes longer, it should automatically stay in their column</p>
+</section>
+</div><div class="column" style="width:10%;">
+<!-- empty column to create gap -->
+</div><div class="column" style="width:20%;">
+<section id="second-column" class="level5">
+<h5 class="anchored" data-anchor-id="second-column">Second column</h5>
+<p>and here</p>
+<p>More text</p>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="example-2-two-columns-using-the-bootstrap-css-grid-system" class="level3">
 <h3 class="anchored" data-anchor-id="example-2-two-columns-using-the-bootstrap-css-grid-system">Example 2: Two columns using the bootstrap CSS grid system</h3>
+<p>The example is — slightly redacted — taken <a href="https://stackoverflow.com/a/75383017/7322615">from Julian via StackOverflow</a>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Show the markdown code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>title<span class="sc">:</span> <span class="st">"Two columns using the bootstrap CSS grid system"</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>format<span class="sc">:</span> html</span>
@@ -360,66 +444,143 @@ cookieconsent.run({
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span> {.grid}</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="er">::::</span> {.grid}</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span> {.g<span class="sc">-</span>col<span class="dv">-6</span>}</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="do">## First column </span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>I would like to have text here</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>Sentence becomes longer, it should automatically stay <span class="cf">in</span> their column</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span> {.g<span class="sc">-</span>col<span class="dv">-6</span>}</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span> {.g<span class="sc">-</span>col<span class="dv">-4</span>}</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="do">##### First column </span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>I would like to have text here</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>Sentence becomes longer, it should automatically stay <span class="cf">in</span> their column</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span> {.g<span class="sc">-</span>col<span class="dv">-4</span>}</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="do">##### Second column </span></span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="do">## Second column </span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>and here</span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>and here</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>More text</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The example is — slightly redacted — taken <a href="https://stackoverflow.com/a/75383017/7322615">from Julian via StackOverflow</a>.</p>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>More text</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="er">::::</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Show the result
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="grid">
+<section id="first-column-1" class="level5 g-col-4">
+<h5 class="anchored" data-anchor-id="first-column-1">First column</h5>
+<p>I would like to have text here</p>
+<p>Sentence becomes longer, it should automatically stay in their column</p>
+</section>
+<section id="second-column-1" class="level5 g-col-4">
+<h5 class="anchored" data-anchor-id="second-column-1">Second column</h5>
+<p>and here</p>
+<p>More text</p>
+</section>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="example-3-two-columns-with-text-center-aligned" class="level3">
 <h3 class="anchored" data-anchor-id="example-3-two-columns-with-text-center-aligned">Example 3: Two columns with text center-aligned</h3>
+<p>The example is — slightly redacted — <a href="https://stackoverflow.com/a/73307989/7322615">taken again from shafee via StackOverflow</a>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Show the markdown code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>title<span class="sc">:</span> <span class="st">"Two columns with text center-aligned"</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>format<span class="sc">:</span> html</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>engine<span class="sc">:</span> knitr</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span> {.cell}</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="sc">&lt;</span>style type<span class="ot">=</span><span class="st">"text/css"</span><span class="sc">&gt;</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>.column {</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>text<span class="sc">-</span>align<span class="sc">:</span> center;</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="sc">&lt;</span><span class="er">/</span>style<span class="sc">&gt;</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="er">::::</span> {.columns}</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span> {.cell}</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="sc">&lt;</span>style type<span class="ot">=</span><span class="st">"text/css"</span><span class="sc">&gt;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>.column {</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>text<span class="sc">-</span>align<span class="sc">:</span> center;</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="sc">&lt;</span><span class="er">/</span>style<span class="sc">&gt;</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="er">::::</span> {.columns}</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span> {.column width<span class="ot">=</span><span class="st">"30%"</span>}</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="do">##### First column</span></span>
 <span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span> {.column width<span class="ot">=</span><span class="st">"50%"</span>}</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>I would like to have text here</span>
 <span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>I would like to have text here</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>Sentence becomes longer, it should automatically stay <span class="cf">in</span> their column</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span> {.column width<span class="ot">=</span><span class="st">"50%"</span>}</span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>and here</span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>More text</span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a><span class="er">::::</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The example is — slightly redacted — <a href="https://stackoverflow.com/a/73307989/7322615">taken again from shafee via StackOverflow</a>.</p>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>Sentence becomes longer, it should automatically stay <span class="cf">in</span> their column</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span> {.column width<span class="ot">=</span><span class="st">"30%"</span>}</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="do">##### Second column</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>and here</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>More text</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="er">::::</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Show the result
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<style type="text/css">
+.column {
+text-align: center;
+}
+</style>
+</div>
+<div class="columns">
+<div class="column" style="width:30%;">
+<section id="first-column-2" class="level5">
+<h5 class="anchored" data-anchor-id="first-column-2">First column</h5>
+<p>I would like to have text here</p>
+<p>Sentence becomes longer, it should automatically stay in their column</p>
+</section>
+</div><div class="column" style="width:30%;">
+<section id="second-column-2" class="level5">
+<h5 class="anchored" data-anchor-id="second-column-2">Second column</h5>
+<p>and here</p>
+<p>More text</p>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 </section>
 <section id="fenced-divs-in-pandoc-how-do-they-work" class="level2">
@@ -439,16 +600,21 @@ $dir
 </div>
 </div>
 <p>To get the version number on your machine type in the terminal:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pandoc</span> <span class="at">--version</span></span>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal (slightly redacted</strong></pre>
+</div>
+<div class="sourceCode" id="cb6" data-filename="Terminal (slightly redacted"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pandoc</span> <span class="at">--version</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">base</span><span class="kw">)</span> <span class="ex">path@my_machine</span> quarto-blog % pandoc <span class="at">--version</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pandoc</span> 3.1.2</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Features:</span> +server +lua</span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Scripting</span> engine: Lua 5.4</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="ex">User</span> data directory: /Users/petzi/.pandoc</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="ex">User</span> data directory: /Users/path@my_direcotry/.pandoc</span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="ex">Copyright</span> <span class="op">(C)</span> 2006-2023 John MacFarlane. Web:  https://pandoc.org</span>
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="ex">This</span> is free software<span class="kw">;</span> <span class="ex">see</span> the source for copying conditions. There is no</span>
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="ex">warranty,</span> not even for merchantability or fitness for a particular purpose.</span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">base</span><span class="kw">)</span> <span class="ex">path@my_machine</span> quarto-blog % </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>This result shows I have two different pandoc versions installed — a potential danger for a version conflict: One version installed RStudio, and the other I downloaded with the macOS package manager <a href="https://brew.sh/">Homebrew</a>.</p>
 </section>
 <section id="div-blocks-in-pandoc" class="level3">
@@ -535,11 +701,11 @@ $dir
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
 <p>There are many possibilities for a creative layout design in Quarto. This article shows the use of Pandocs <code>div block</code> directives with five different methods. These layout directives can be generalized from a two-column to a many column layout</p>
 <ol type="1">
-<li><p>Several columns with varying percentages of widths.</p></li>
-<li><p>Several columns using the very flexible bootstrap CSS grid system.</p></li>
-<li><p>Several columns with formatted explicitly with a CSS style.</p></li>
-<li><p>Several columns with the same width using the Quarto <code>layout-ncol</code> or <code>layout-nrow</code> attribute.</p></li>
-<li><p>Several columns with different widths using the Quarto general <code>layout</code> attribute.</p></li>
+<li>Several columns with varying percentages of widths.</li>
+<li>Several columns using the very flexible bootstrap CSS grid system.</li>
+<li>Several columns with formatted explicitly with a CSS style.</li>
+<li>Several columns with the same width using the Quarto <code>layout-ncol</code> or <code>layout-nrow</code> attribute.</li>
+<li>Several columns with different widths using the Quarto general <code>layout</code> attribute.</li>
 </ol>
 
 
@@ -1000,7 +1166,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
 </ul>
-    <div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/petzi53/quarto-blog/edit/main/posts/2023-05-07-creating-a-column-based-layout/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/petzi53/quarto-blog/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">

@@ -1,10 +1,17 @@
 /* my css styles */
 
 /* center figure caption whenever image is centered */
-.quarto-figure-center figcaption.figure-caption {
+.quarto-figure-center>figure>figcaption {
   margin: auto;
   text-align: center;
 }
+
+/*
+figcaption {
+  margin: auto;
+  text-align: center;
+}
+*/
 
 /* field with of contact form */
 .myform {
