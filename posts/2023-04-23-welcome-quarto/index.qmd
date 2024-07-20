@@ -41,7 +41,7 @@ GitHub credential, and a
 account. And I didn't work on the content of a blog entry but used just
 the installed test pages.)
 
-I never was happy with the rapid development of
+I never was happy with the fast development of
 [Hugo](https://gohugo.io/ "The world’s fastest framework for building websites")
 that brought with it many changes and a considerable learning overhead.
 The same problem happened with the Academic theme by
