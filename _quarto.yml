@@ -5,6 +5,7 @@ website:
   title: "Life Long Learning Lab"
   favicon: favicon.ico
   site-url: https://l3lab.net
+  description: "This is Peter Baumgartner's Personal English Blog."
   cookie-consent:
     type: express
   page-navigation: true
@@ -21,9 +22,9 @@ website:
       - text: "Contact"
         href: contact.qmd
       - icon: github
-        href: https://github.com/petzi53/
+        href: https://github.com/petzi53/quarto-blog
       - icon: twitter
-        href: https://twitter.com/pbaumgartner
+        href: https://x.com/pbaumgartner
 
   page-footer:
     border: true
@@ -60,6 +61,7 @@ format:
   html:
     theme: default
     css: styles.css
+    toc: true
 
 editor: visual
 
