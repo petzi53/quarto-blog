@@ -11,6 +11,8 @@ date-modified: "2023-04-29"
 draft: false
 ---
 
+<hr class=mytitle>
+
 [![This is the front cover for the CD "Coming Home" by the artist "New
 Found Glory" via Wikipedia (Fair
 Use)](New_Found_Glory_Coming_Home-min.png){fig-alt="A photo of lead vocalist Jordan Pundik walking out of a restaurant holding a suitcase that reads the words \"NEW FOUND GLORY\". The words \"COMING HOME\" appear in the bottom-left of the image."

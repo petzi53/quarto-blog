@@ -16,6 +16,8 @@ engine: knitr
 draft: false
 ---
 
+<hr class=mytitle>
+
 ## If a pull request is not accepted...
 
 As I am not very experienced with R and coding, my knowledge of using
@@ -90,13 +92,18 @@ to change from the console to the terminal.
 
 ## Useful commands for deleting branches
 
-::: {.callout-tip collapse='true'}
+::: {.callout-tip collapse="true"}
 ##### Set comment character for interactive terminal use
 
-If you are using the [Z shell (zsh)](https://en.wikipedia.org/wiki/Z_shell) you have to set `setopt interactivecomments` for interactive use either in your `~/.zshrc` file or write this command into the terminal for temporary use during the terminal session. In contrast to `ksh` (Korn shell), `sh` (Bourne shell), and `bash` (Bourne-again shell) the `#` is for the `zsh` (Z shell) only set as the comment character for non-interactive use (scripts).
+If you are using the [Z shell
+(zsh)](https://en.wikipedia.org/wiki/Z_shell) you have to set
+`setopt interactivecomments` for interactive use either in your
+`~/.zshrc` file or write this command into the terminal for temporary
+use during the terminal session. In contrast to `ksh` (Korn shell), `sh`
+(Bourne shell), and `bash` (Bourne-again shell) the `#` is for the `zsh`
+(Z shell) only set as the comment character for non-interactive use
+(scripts).
 :::
-
-
 
 #### Deleting a remote branch
 

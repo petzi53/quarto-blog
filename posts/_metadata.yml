@@ -4,10 +4,14 @@
 # (see https://quarto.org/docs/projects/code-execution.html#freeze)
 freeze: true
 
-# Enable banner style title blocks
-
+# Disable banner style title blocks
+title-block-banner: false
 
 # my personal metadata for blog posts
+
+comments:
+  utterances:
+    repo: petzi53/blog-comments
 
 filters:
   - collapse-callout

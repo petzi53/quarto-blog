@@ -18,4 +18,14 @@ figcaption {
     width: 500px;
 }
 
+#title-block-header.quarto-title-block.default .quarto-title-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1em;
+}
+
+hr.mytitle{
+    height: 5px;
+    background: black;
+}
 

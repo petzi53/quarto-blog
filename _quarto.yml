@@ -28,6 +28,17 @@ website:
         href: https://github.com/petzi53/quarto-blog
       - icon: twitter
         href: https://x.com/pbaumgartner
+      - icon: rss
+        href: index.xml
+      - text: Resources
+        menu:
+          - text: Gedankensplitter (German)
+            href: https://peter.baumgartner.name
+          - text: R Weekly
+            href: https://rweekly.org/
+          - text: R Bloggers
+            href: https://www.r-bloggers.com/
+
 
   page-footer:
     border: true

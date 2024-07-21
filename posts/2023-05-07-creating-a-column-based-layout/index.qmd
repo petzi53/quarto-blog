@@ -10,10 +10,13 @@ date: "2023-05-07"
 image: "three-columns-min.jpg"
 image-alt: "Three classical greek pillars"
 categories: [blog, quarto, how-to]
-date-modified: "2023-05-07"
+date-modified: "2024-07-21"
 draft: false
 engine: knitr
+title-block-style: default
 ---
+
+<hr class=mytitle>
 
 ![From [PxHere](https://pxhere.com/en/photo/649542) (CC0, Public
 Domain)](three-columns-min.jpg){style="text-align: center;"
@@ -90,7 +93,7 @@ illustration.
 The example is --- slightly redacted --- taken [from shafee via
 StackOverflow](https://stackoverflow.com/a/74162353/7322615)
 
-:::{.callout-note collapse='true'}
+::: {.callout-note collapse="true"}
 ### Show the markdown code
 
 ``` r
@@ -120,19 +123,15 @@ More text
 
 ::::
 ```
-
-
 :::
 
-
-
-:::{.callout-tip collapse='true'}
+::: {.callout-tip collapse="true"}
 ### Show the result
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="30%"}
 ##### First column
+
 I would like to have text here
 
 Sentence becomes longer, it should automatically stay in their column
@@ -144,27 +143,20 @@ Sentence becomes longer, it should automatically stay in their column
 
 ::: {.column width="20%"}
 ##### Second column
+
 and here
 
 More text
 :::
-
-::::
-
+:::
 :::
 
-
-
-
-
 ### Example 2: Two columns using the bootstrap CSS grid system
-
 
 The example is --- slightly redacted --- taken [from Julian via
 StackOverflow](https://stackoverflow.com/a/75383017/7322615).
 
-::::: {.callout-note collapse='true'}
-
+::: {.callout-note collapse="true"}
 ### Show the markdown code
 
 ``` r
@@ -194,39 +186,36 @@ More text
   
 ::::
 ```
-:::::
+:::
 
-
-:::::{.callout-tip collapse='true'}
+::: {.callout-tip collapse="true"}
 ### Show the result
 
-:::: {.grid}
+::: grid
+::: g-col-4
+##### First column
 
-::: {.g-col-4}
-##### First column 
 I would like to have text here
 
 Sentence becomes longer, it should automatically stay in their column
 :::
-  
-::: {.g-col-4}
-##### Second column 
+
+::: g-col-4
+##### Second column
 
 and here
 
 More text
 :::
-
-::::
-
-:::::
+:::
+:::
 
 ### Example 3: Two columns with text center-aligned
 
 The example is --- slightly redacted --- [taken again from shafee via
 StackOverflow](https://stackoverflow.com/a/73307989/7322615).
 
-::::: {.callout-note collapse='true'}
+::: {.callout-note collapse="true"}
 ### Show the markdown code
 
 ```` r
@@ -262,14 +251,10 @@ More text
 
 ::::
 ````
+:::
 
-:::::
-
-
-::::: {.callout-tip collapse='true'}
+::: {.callout-tip collapse="true"}
 ### Show the result
-
-
 
 ```{css echo=FALSE}
 .column {
@@ -277,8 +262,7 @@ text-align: center;
 }
 ```
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="30%"}
 ##### First column
 
@@ -294,11 +278,8 @@ and here
 
 More text
 :::
-
-::::
-
-
-:::::
+:::
+:::
 
 ## Fenced divs in Pandoc: How do they work?
 
