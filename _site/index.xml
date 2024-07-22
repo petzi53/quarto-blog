@@ -10,7 +10,739 @@
 <atom:link href="https://l3lab.net/index.xml" rel="self" type="application/rss+xml"/>
 <description>This is Peter Baumgartner&#39;s Personal English Blog.</description>
 <generator>quarto-1.5.54</generator>
-<lastBuildDate>Sat, 06 May 2023 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 21 Jul 2024 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>Creating a Quarto blog from Scratch using RStudio</title>
+  <dc:creator>Peter Baumgartner</dc:creator>
+  <link>https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://quarto.org/docs/blog/posts/2023-05-15-get-started"><img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/quarto-get-started-min.png" class="img-fluid figure-img" alt="Image by Mine Çetinkaya-Rundel from Get Started with Quarto - A video to jumpstart your Quarto journey. Featuring a new video for getting started with Quarto using R and RStudio."></a></p>
+<figcaption>Image by Mine Çetinkaya-Rundel from Get Started with Quarto - A video to jumpstart your Quarto journey. Featuring a new video for getting started with Quarto using R and RStudio.</figcaption>
+</figure>
+</div>
+<section id="create-quarto-blog" class="level2">
+<h2 class="anchored" data-anchor-id="create-quarto-blog">Create Quarto Blog</h2>
+<p>I will not explain everything related to creating a Quarto blog; instead, I will focus on my blog initialization choices.</p>
+<p>I am using</p>
+<ul>
+<li>R version 4.4.1 (2024-06-14)</li>
+<li>Quarto version 1.5.54</li>
+</ul>
+<section id="new-project" class="level3">
+<h3 class="anchored" data-anchor-id="new-project">New Project…</h3>
+<p>Inside RStudio, use the <code>New Project…</code> command and select <code>New Directory</code> and then <code>Quarto Blog</code>.</p>
+<div id="fig-new-project-wizard" class="quarto-float quarto-figure quarto-figure-center anchored" alt="RStudio new project wizard window with three options reading from the top: New Directory - Start a project in a brand new working directory; Existing Directory - Associate a project with an existing working directory; Version Control - Checkout a project from a version control repository." data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-new-project-wizard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/creating-quarto-blog-1-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="RStudio new project wizard window with three options reading from the top: New Directory - Start a project in a brand new working directory; Existing Directory - Associate a project with an existing working directory; Version Control - Checkout a project from a version control repository.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-new-project-wizard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: RStudio new project wizard window (Screenshot): Choose ‘New Directory’ to start an new project from scratch.
+</figcaption>
+</figure>
+</div>
+<div id="fig-new-blog-project-window" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The Project Type dialog window lists the choices for new project. The first seven options are visible: New Project, R Package, Shiny Application, Quarto Project, Quarto Website, Quarto Blog, Quarto Book. (From top to the bottom. Top left is a button 'Back' for returning to the previous dialog window. Bottom right is a 'Cancel' button to stop the initialization process." data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-new-blog-project-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/creating-quarto-blog-2-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Project Type dialog window lists the choices for new project. The first seven options are visible: New Project, R Package, Shiny Application, Quarto Project, Quarto Website, Quarto Blog, Quarto Book. (From top to the bottom. Top left is a button 'Back' for returning to the previous dialog window. Bottom right is a 'Cancel' button to stop the initialization process.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-new-blog-project-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: RStudio project type window (Screenshot): Choose ‘Quarto Blog’ to initialize a blog project
+</figcaption>
+</figure>
+</div>
+<div id="fig-create-blog-window" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The 'Create quarto Blog' dialog window requires a file name for the directory of the repository, titled 'Directory name', a directory where the project will be created, titled 'create project as subdirectory of:' with a 'Browse' button to the right, a drop down menu selecting 'Knitr' as the current option, titled 'Engine', three lines of check boxes, titled 'Create a git repository' (checked), 'Use renv with this project' and 'Use visual markdown editor'. The last option is followed by a question sign to get more information about the choice of a visual markdown editor. Top left in the dialog window is a button 'Back' for returning to the previous dialog window. Bottom left is a check box 'Open in a new session', Bottom right are a 'Create Project' button followed by a 'Cancel' button for stopping the initialization process." data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-create-blog-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/creating-quarto-blog-3-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The 'Create quarto Blog' dialog window requires a file name for the directory of the repository, titled 'Directory name', a directory where the project will be created, titled 'create project as subdirectory of:' with a 'Browse' button to the right, a drop down menu selecting 'Knitr' as the current option, titled 'Engine', three lines of check boxes, titled 'Create a git repository' (checked), 'Use renv with this project' and 'Use visual markdown editor'. The last option is followed by a question sign to get more information about the choice of a visual markdown editor. Top left in the dialog window is a button 'Back' for returning to the previous dialog window. Bottom left is a check box 'Open in a new session', Bottom right are a 'Create Project' button followed by a 'Cancel' button for stopping the initialization process.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-create-blog-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: RStudio Create Quarto Blog window (Screenshot): Fill the input fields with the appropriate data
+</figcaption>
+</figure>
+</div>
+<ul>
+<li>I am using {<strong>knitr</strong>} as the engine.</li>
+<li>The {<strong>renv</strong>} package is for creating&nbsp;<em>r</em>eproducible&nbsp;<em>env</em>ironments for R projects. I will not use it as I have no experience with this <a href="https://rstudio.github.io/renv/">complex package</a>, and reproducibility is not an issue for my private blog (at least, I think so at the moment).</li>
+<li>Selecting “Use visual markdown editor” is not important, as this option is for all <code>.qmd</code> files in RStudio always available. I think that this option only controls the default behavior whenever a new file for a post is created.</li>
+</ul>
+</section>
+<section id="key-files" class="level3">
+<h3 class="anchored" data-anchor-id="key-files">Key Files</h3>
+<p>Clicking the “Create Project” button generates different key files and opens the <code>_quarto.yml</code> file in the RStudio editor window.</p>
+<div id="fig-rstudio-file-listing-window" class="quarto-float quarto-figure quarto-figure-center anchored" alt="At the top of the screenshot there are six tabs. From left to the right: 'Files', 'Plots', 'Packages', 'Help', 'Viewer', 'Presentation' with the 'Files' tab active. Under the tabs are several buttons. From left to the right: 'New Folder', 'New Blank File', 'Delete', 'Rename' and a drop down menu 'More'. Under these buttons is the full path to the active directory 'Home>Documents>Meine-Repos>quarto-pb-blog' where each subdirectory is an active link. Under this line starts the file listing with 'Name', 'Size' and 'Modified' columns. Each line of file names starts with an (unchecked) check box, and an appropriate icon. From top to bottom: _freeze, _quarto.yml, _site, .git, .gitignore, .quarto, .Rhistory, .Rproj.use, about.qmd, index.qmd, posts, profile.jpg, quarto-pb-blog.Rproj, style.css." data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rstudio-file-listing-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/generated-files-at-start-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="At the top of the screenshot there are six tabs. From left to the right: 'Files', 'Plots', 'Packages', 'Help', 'Viewer', 'Presentation' with the 'Files' tab active. Under the tabs are several buttons. From left to the right: 'New Folder', 'New Blank File', 'Delete', 'Rename' and a drop down menu 'More'. Under these buttons is the full path to the active directory 'Home>Documents>Meine-Repos>quarto-pb-blog' where each subdirectory is an active link. Under this line starts the file listing with 'Name', 'Size' and 'Modified' columns. Each line of file names starts with an (unchecked) check box, and an appropriate icon. From top to bottom: _freeze, _quarto.yml, _site, .git, .gitignore, .quarto, .Rhistory, .Rproj.use, about.qmd, index.qmd, posts, profile.jpg, quarto-pb-blog.Rproj, style.css.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rstudio-file-listing-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: RStudio file listing window (Screenshot): Choose ‘New Directory’ to start an new project from scratch.
+</figcaption>
+</figure>
+</div>
+<p>Here’s a summary of the key files created within the starter blog project:</p>
+<div id="tbl-quarto-blog-key-files" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-quarto-blog-key-files-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Key files after initializing a Quarto blog
+</figcaption>
+<div aria-describedby="tbl-quarto-blog-key-files-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>File</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>_quarto.yml</code></td>
+<td>Quarto project file.</td>
+</tr>
+<tr class="even">
+<td><code>index.qmd</code></td>
+<td>Blog home page.</td>
+</tr>
+<tr class="odd">
+<td><code>about.qmd</code></td>
+<td>Blog about page.</td>
+</tr>
+<tr class="even">
+<td><code>posts/</code></td>
+<td>Directory containing posts</td>
+</tr>
+<tr class="odd">
+<td><code>posts/_metadata.yml</code></td>
+<td>Shared options for&nbsp;<code>posts</code></td>
+</tr>
+<tr class="even">
+<td><code>styles.css</code></td>
+<td>Custom CSS for website</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="content-of-the-quarto-project-file" class="level3">
+<h3 class="anchored" data-anchor-id="content-of-the-quarto-project-file">Content of the Quarto Project File</h3>
+<p>Here is the content of <code>_quarto.yml</code>:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_quarto.yml</strong></pre>
+</div>
+<div class="sourceCode" id="cb1" data-filename="_quarto.yml" style="background: #f1f3f5;"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">project</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span></span>
+<span id="cb1-2"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">type</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> website</span></span>
+<span id="cb1-3"></span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">website</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span></span>
+<span id="cb1-5"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">title</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"quarto-pb-blog"</span></span>
+<span id="cb1-6"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">navbar</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span></span>
+<span id="cb1-7"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">right</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span></span>
+<span id="cb1-8"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> about.qmd</span></span>
+<span id="cb1-9"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">icon</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> github</span></span>
+<span id="cb1-10"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">href</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> https://github.com/</span></span>
+<span id="cb1-11"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">icon</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> twitter</span></span>
+<span id="cb1-12"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">href</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> https://twitter.com</span></span>
+<span id="cb1-13"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">format</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span></span>
+<span id="cb1-14"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">html</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span></span>
+<span id="cb1-15"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> cosmo</span></span>
+<span id="cb1-16"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">css</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> styles.css</span></span></code></pre></div>
+</div>
+</section>
+<section id="content-of-the-blog-home-page" class="level3">
+<h3 class="anchored" data-anchor-id="content-of-the-blog-home-page">Content of the Blog Home Page</h3>
+<p>Here is the content of <code>index.qmd</code>:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>index.qmd</strong></pre>
+</div>
+<div class="sourceCode" id="cb2" data-filename="index.qmd" style="background: #f1f3f5;"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">title</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"quarto-pb-blog"</span></span>
+<span id="cb2-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">listing</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span></span>
+<span id="cb2-3"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">contents</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> posts</span></span>
+<span id="cb2-4"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sort</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"date desc"</span></span>
+<span id="cb2-5"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">type</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> default</span></span>
+<span id="cb2-6"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">categories</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">true</span></span>
+<span id="cb2-7"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sort-ui</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">false</span></span>
+<span id="cb2-8"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter-ui</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">false</span></span>
+<span id="cb2-9"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">page-layout</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> full</span></span>
+<span id="cb2-10"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">title-block-banner</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">true</span></span>
+<span id="cb2-11"><span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">---</span></span></code></pre></div>
+</div>
+</section>
+</section>
+<section id="render-blog" class="level2">
+<h2 class="anchored" data-anchor-id="render-blog">Render Blog</h2>
+<div id="fig-source-code-blog-home-page" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The screenshot shows a part of the RStudio source code window with two file tabs 'index.qmd' (active) and '_quarto.yml'. Below is a line of partly disabled buttons where the focus is on the 'Render' button that has below a tip tool saying 'Render the current document (SHIFT-CMD-K)'" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-source-code-blog-home-page-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/click-render-button-first-time-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The screenshot shows a part of the RStudio source code window with two file tabs 'index.qmd' (active) and '_quarto.yml'. Below is a line of partly disabled buttons where the focus is on the 'Render' button that has below a tip tool saying 'Render the current document (SHIFT-CMD-K)'">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-source-code-blog-home-page-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Source code of the blog home page ‘index.qmd’-file within RStudio window (Screenshot)
+</figcaption>
+</figure>
+</div>
+<p>You can control via <code>Tools-&gt;Global Options…-&gt;R Markdown-&gt;Show output preview in…</code> whether the rendered result appears in the browser window or in the viewer pane. Generally, I use the “Window” option because it gives me a better view of the real setting.</p>
+<div id="fig-blog-listing-start-page" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The webpage lists two dummy blog post with three columns: From left to the right: Date and author; blog post title, category buttons and a short description; a small image. On the right margin is a list of categories displayed with their frequency in parenthesis. The title header of the website consists of two lines: Left top: Name of the Quarto blog so far 'quarto-pb-blog', Right top: 'About' followed by icons for GitHub, Twitter and search engine." data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-blog-listing-start-page-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/rendered-blog-first-time-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The webpage lists two dummy blog post with three columns: From left to the right: Date and author; blog post title, category buttons and a short description; a small image. On the right margin is a list of categories displayed with their frequency in parenthesis. The title header of the website consists of two lines: Left top: Name of the Quarto blog so far 'quarto-pb-blog', Right top: 'About' followed by icons for GitHub, Twitter and search engine.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-blog-listing-start-page-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Website of the newly created Quarto blog (Screenshot):
+</figcaption>
+</figure>
+</div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>RStudio console output</strong></pre>
+</div>
+<div class="sourceCode" id="cb3" data-filename="RStudio console output" style="background: #f1f3f5;"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb3-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">==</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> quarto preview index.qmd <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--to</span> html <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--no-watch-inputs</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--no-browse</span></span>
+<span id="cb3-2"></span>
+<span id="cb3-3"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">pandoc</span> to: html</span>
+<span id="cb3-4">  <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">output-file:</span> index.html</span>
+<span id="cb3-5">  <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">standalone:</span> true</span>
+<span id="cb3-6">  <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">title-prefix:</span> quarto-pb-blog</span>
+<span id="cb3-7">  <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">section-divs:</span> true</span>
+<span id="cb3-8">  <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">html-math-method:</span> mathjax</span>
+<span id="cb3-9">  <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">wrap:</span> none</span>
+<span id="cb3-10">  <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">default-image-extension:</span> png</span>
+<span id="cb3-11">  <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">css:</span></span>
+<span id="cb3-12">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">-</span> styles.css</span>
+<span id="cb3-13">  </span>
+<span id="cb3-14"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">metadata</span></span>
+<span id="cb3-15">  <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">document-css:</span> false</span>
+<span id="cb3-16">  <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">link-citations:</span> true</span>
+<span id="cb3-17">  <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">date-format:</span> long</span>
+<span id="cb3-18">  <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">lang:</span> en</span>
+<span id="cb3-19">  <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">theme:</span> cosmo</span>
+<span id="cb3-20">  <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">title:</span> quarto-pb-blog</span>
+<span id="cb3-21">  <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">listing:</span></span>
+<span id="cb3-22">    <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">contents:</span> posts</span>
+<span id="cb3-23">    <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">sort:</span> date desc</span>
+<span id="cb3-24">    <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">type:</span> default</span>
+<span id="cb3-25">    <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">categories:</span> true</span>
+<span id="cb3-26">    <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">sort-ui:</span> false</span>
+<span id="cb3-27">    <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">filter-ui:</span> false</span>
+<span id="cb3-28">  <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">page-layout:</span> full</span>
+<span id="cb3-29">  <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">title-block-banner:</span> true</span>
+<span id="cb3-30">  </span>
+<span id="cb3-31"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">WARN:</span> Unable to read listing item description from posts/post-with-code/index.html</span>
+<span id="cb3-32"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">WARN:</span> Unable to read listing item description from posts/welcome/index.html</span>
+<span id="cb3-33"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">WARN:</span> Unable to read listing preview image from posts/welcome/index.html</span>
+<span id="cb3-34"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">Output</span> created: _site/index.html</span>
+<span id="cb3-35"></span>
+<span id="cb3-36"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">Preparing</span> to preview</span>
+<span id="cb3-37"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">[1/4]</span> posts/post-with-code/index.qmd</span>
+<span id="cb3-38"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">R</span> version 4.4.1 <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(2024-06-14)</span></span>
+<span id="cb3-39"></span>
+<span id="cb3-40"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">processing</span> file: index.qmd</span>
+<span id="cb3-41">                                                                                                            </span>
+<span id="cb3-42"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">output</span> file: index.knit.md</span>
+<span id="cb3-43"></span>
+<span id="cb3-44"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">[2/4]</span> posts/welcome/index.qmd</span>
+<span id="cb3-45"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">[3/4]</span> about.qmd</span>
+<span id="cb3-46"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">[4/4]</span> index.qmd</span>
+<span id="cb3-47"></span>
+<span id="cb3-48"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">Watching</span> files for changes</span>
+<span id="cb3-49"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">Browse</span> at http://localhost:5146/</span>
+<span id="cb3-50"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">GET:</span> /</span></code></pre></div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+During the rendering process, I got three warnings
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>As you can see in the above console output I got three warnings:</p>
+<ul>
+<li>Unable to read listing item description from posts/post-with-code/index.html</li>
+<li>Unable to read listing item description from posts/welcome/index.html</li>
+<li>Unable to read listing preview image from posts/welcome/index.html</li>
+</ul>
+</div>
+</div>
+</div>
+<p>These warnings are prompted by the fact that we need to render the complete blog with SHIFT-CMD-B or by clicking “Render Website” after choosing the “Build” button on the upper right RStudio pane. I will explain render strategies in a later post.</p>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>This is the end of the initialization process. In later blog posts I will add more functionality and style the web page it to get a more attractive appearance of the Quarto blog.</p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>blog</category>
+  <category>quarto</category>
+  <category>rstudio</category>
+  <guid>https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/</guid>
+  <pubDate>Sun, 21 Jul 2024 22:00:00 GMT</pubDate>
+  <media:content url="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/quarto-get-started-min.png" medium="image" type="image/png" height="81" width="144"/>
+</item>
+<item>
+  <title>Writing Blog Posts: New Attempt</title>
+  <dc:creator>Peter Baumgartner</dc:creator>
+  <link>https://l3lab.net/posts/2024-07-21-writing-blog-posts--new-attempt/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://l3lab.net/posts/2024-07-21-writing-blog-posts--new-attempt/perfectionism-min.jpg" class="img-fluid figure-img" alt="Scrabble pieces constructing the text: 'Done is better than perfect'"></p>
+<figcaption>Photo from <a href="https://thexycode.com/">The XY Code</a>. <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a></figcaption>
+</figure>
+</div>
+<section id="motivations-for-writing-blog-posts" class="level2">
+<h2 class="anchored" data-anchor-id="motivations-for-writing-blog-posts">Motivations for writing blog posts</h2>
+<p>My conception, written in my first blog entry, needed to be revised. The problem was a certain kind of perfectionism: I thought that my knowledge about R issues was not deep enough to be interesting to other people. After visiting the <a href="https://userconf2024.sched.com/">useR!2024 conference</a>, I changed my view in four aspects:</p>
+<ul>
+<li>R has a dynamic community where new people are constantly attracted. My meager knowledge could be helpful, especially for beginners, as I was struggling with the same starter issues not long ago. Sometimes, a person with intermediate knowledge can be more beneficial than an expert.</li>
+<li>The R project is a very complex field. Nobody has the same level of expert knowledge in every area. Therefore, it is possible that some parts of my knowledge could be useful for other people, even if they are (in other areas or generally) much more advanced.</li>
+<li>Putting my understanding into words so that other people can use this information for their project is an important exercise: It ensures that I have grasped the essentials and fosters my learning by writing down all the necessary details.</li>
+<li>The most important reason to write blog posts about issues I have learned is the “Future me.” After several months of working on other topics, I often notice that I have forgotten some details of procedures I have already learned.</li>
+</ul>
+<p>To elaborate on the last point: In one case, I was looking for a solution to a problem I experienced. After several web searches, I found the solution on <a href="https://stackoverflow.com/">StackOverflow</a>. I was shocked when I noticed that it was me who wrote the correct answer several years ago!</p>
+</section>
+<section id="a-new-start" class="level2">
+<h2 class="anchored" data-anchor-id="a-new-start">A new start</h2>
+<p>After the useR!2024, I was very motivated to resume the Quarto blog I started in April 2023. I noticed that there are two versions: One published via <a href="https://www.netlify.com/">Netlify</a> and another one – already pretty elaborated – locally.</p>
+<section id="looking-for-a-glitch" class="level3">
+<h3 class="anchored" data-anchor-id="looking-for-a-glitch">Looking for a glitch</h3>
+<p>The local version had a small but annoying flaw. It displayed three colons <code>:::</code> at the beginning of the listing on the homepage and at the end of every post. I knew that <code>:::</code> represents special <a href="https://pandoc.org/chunkedhtml-demo/8.18-divs-and-spans.html">fenced syntax</a> for native&nbsp;<code>Div</code>&nbsp;blocks in <a href="https://pandoc.org/#">pandoc</a>.</p>
+<p>Whatever I tried, I could not find the problem and solve it.</p>
+<ul>
+<li>I looked into all articles to see if there was a redundant fenced syntax symbol.</li>
+<li>I set for all posts <code>draft: true</code>.</li>
+<li>I even cloned the remote repo only to get the same behavior.</li>
+</ul>
+</section>
+<section id="starting-from-scratch" class="level3">
+<h3 class="anchored" data-anchor-id="starting-from-scratch">Starting from scratch</h3>
+<p>Another drawback was that I did not understand many code lines, especially in <code>_quarto.yml</code> but also in <code>posts/_metadata.yml</code> and in the main <code>index.qmd</code>.</p>
+<p>Finally, I decided to start with a new blog. I created a new repo with a different name, initiated a new RStudio project, and so on. As a surplus, I documented every single step. I wrote extensive notes and shot screenshots of every necessary action. After each tiny change, I checked the results by rendering the blog.</p>
+</section>
+<section id="lesson-learned" class="level3">
+<h3 class="anchored" data-anchor-id="lesson-learned">Lesson learned</h3>
+<p>As a result, I have extensive material to explain how to initialize a Quarto blog, which I will publish in several posts in the next few days. And I finally found the reason for the surplus fenced div!</p>
+<div id="tip-footer-text-quotation-marks" class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip&nbsp;1: href-URLs without quotation marks in YAML file
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The URLs of the right part of the footer text were incorrectly in quotation marks. This would be a perfect passage in HTML, but it was inappropriate as a Quarto directive.</p>
+<p>I wrote:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_quarto.yml</strong></pre>
+</div>
+<div class="sourceCode" id="cb1" data-filename="_quarto.yml" style="background: #f1f3f5;"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">right</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span></span>
+<span id="cb1-2"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">text</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> Proudly powered by &lt;a href="https://quarto.org/"&gt;Quarto&lt;/a&gt;</span></span></code></pre></div>
+</div>
+<p>Instead of:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_quarto.yml</strong></pre>
+</div>
+<div class="sourceCode" id="cb2" data-filename="_quarto.yml" style="background: #f1f3f5;"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">right</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span></span>
+<span id="cb2-2"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">text</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> Proudly powered by &lt;a href=https://quarto.org/&gt;Quarto&lt;/a&gt;</span></span></code></pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>blog</category>
+  <category>quarto</category>
+  <guid>https://l3lab.net/posts/2024-07-21-writing-blog-posts--new-attempt/</guid>
+  <pubDate>Sat, 20 Jul 2024 22:00:00 GMT</pubDate>
+  <media:content url="https://l3lab.net/posts/2024-07-21-writing-blog-posts--new-attempt/perfectionism-min.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Creating a column-based layout</title>
   <dc:creator>Peter Baumgartner</dc:creator>
@@ -20,7 +752,7 @@
 
 
 
-<hr class="mytitle">
+
 <div class="quarto-figure quarto-figure-center" style="text-align: center;">
 <figure class="figure">
 <p><img src="https://l3lab.net/posts/2023-05-07-creating-a-column-based-layout/three-columns-min.jpg" class="img-fluid figure-img" alt="Four ionic column with scroll-shaped ornaments on the capital, which sits at the top of the column shaft against the blue sky"></p>
@@ -718,7 +1450,7 @@ font-style: inherit;">:::</span></span></code></pre></div>
 
 
 
-<hr class="mytitle">
+
 <section id="if-a-pull-request-is-not-accepted" class="level2">
 <h2 class="anchored" data-anchor-id="if-a-pull-request-is-not-accepted">If a pull request is not accepted…</h2>
 <p>As I am not very experienced with R and coding, my knowledge of using Git and GitHub is limited. Usually, I use the <code>pr_*()</code> family of {<a href="https://usethis.r-lib.org/" title="Automates repetitive tasks that arise during project setup and development">usethis</a>} functions as pull request helpers. They work very well – as long as the workflow follows the standard (successful) workflow:</p>
@@ -942,15 +1674,11 @@ text-align: center;
 
 
 
-<hr class="mytitle">
+
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://en.wikipedia.org/wiki/Coming_Home_(New_Found_Glory_album)"><img src="https://l3lab.net/posts/2023-04-23-welcome-quarto/New_Found_Glory_Coming_Home-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="A photo of lead vocalist Jordan Pundik walking out of a restaurant holding a suitcase that reads the words &quot;NEW FOUND GLORY&quot;. The words &quot;COMING HOME&quot; appear in the bottom-left of the image." width="400"></a></p>
-</figure>
-</div>
-<figcaption>This is the front cover for the CD “Coming Home” by the artist “New Found Glory” via Wikipedia (Fair Use)</figcaption>
+<p><a href="https://en.wikipedia.org/wiki/Coming_Home_(New_Found_Glory_album)" data-fig-alt="A photo of lead vocalist Jordan Pundik walking out of a restaurant holding a suitcase that reads the words &quot;NEW FOUND GLORY&quot;. The words &quot;COMING HOME&quot; appear in the bottom-left of the image." data-fig-align="center"><img src="https://l3lab.net/posts/2023-04-23-welcome-quarto/New_Found_Glory_Coming_Home-min.png" class="img-fluid figure-img" alt="This is the front cover for the CD “Coming Home” by the artist “New Found Glory” via Wikipedia (Fair Use)"></a></p>
+<figcaption>This is the front cover for the CD “Coming Home” by the artist “New Found Glory” via <a href="https://en.wikipedia.org/wiki/Coming_Home_(New_Found_Glory_album)">Wikipedia</a> (Fair Use)</figcaption>
 </figure>
 </div>
 <section id="my-first-blog-entry-with-quarto" class="level2">
@@ -958,7 +1686,13 @@ text-align: center;
 <p>This is my first entry in a new <a href="https://quarto.org/" title="Welcome to Quarto – An open-source scientific and technical publishing system">blog powered by Quarto</a>. After continuously struggling with the complex machinery <a href="https://bookdown.org/yihui/blogdown/" title="first page of the online blogdown book">blogdown</a> - <a href="https://gohugo.io/" title="The world’s fastest framework for building websites">Hugo</a> - <a href="https://wowchemy.com/" title="The site you need to grow as a creator — without the bloat">Wowchemy</a>, I feel like coming home from a trip abroad!</p>
 <p>Following the Quarto guide <a href="https://quarto.org/docs/websites/website-blog.html" title="Quarto websites include integrated support for blogging.">Creating a Blog</a>, it took me only 2 (!) minutes to render the provided blog template locally. After just one hour, I had my blog using Quarto, GitHub, and Netlify online. And half of this time, I spent thinking about a name for my blog and what to do with my older and outdated other blogdown web presences. (To put this quick access into perspective: I already had a <a href="https://github.com/petzi53" title="The complete developer platform to build, scale, and deliver secure software">GitHub account</a>, GitHub credential, and a <a href="https://www.netlify.com/" title="Bring it all together The fastest way to combine your favorite tools and APIs to build the fastest sites, stores, and apps for the web">Netlify</a> account. And I didn’t work on the content of a blog entry but used just the installed test pages.)</p>
 <p>I never was happy with the fast development of <a href="https://gohugo.io/" title="The world’s fastest framework for building websites">Hugo</a> that brought with it many changes and a considerable learning overhead. The same problem happened with the Academic theme by <a href="https://wowchemy.com/">Wowchemy</a>. The end product looked nice and ran fast, but I had already forgotten some of the many details for a good-looking blog post after two weeks. As a result, I spent more time learning the blog machinery than I had time to write about substantive subjects.</p>
-<p>It was helpful when <a href="https://bookdown.org/yihui/blogdown/a-quick-example.html#when-in-doubt-run-blogdowncheck_site">Yihui Xie introduced `blogdown::checksite()`</a> and the possibility of <a href="https://bookdown.org/yihui/blogdown/global-options.html#global-options">freezing to a specific Hugo version</a>. But the work in the blogdown-Hugo environment was never intuitive and satisfying. I think it’s self-explanatory that the introductory message to the blogdown book for over two years now states as a note from the authors: “Some of the information and instructions in this book are now out of date because of changes to Hugo and the blogdown package.”</p>
+<p>It was helpful when <a href="https://bookdown.org/yihui/blogdown/a-quick-example.html#when-in-doubt-run-blogdowncheck_site">Yihui Xie introduced `blogdown::checksite()`</a> and the possibility of <a href="https://bookdown.org/yihui/blogdown/global-options.html#global-options">freezing to a specific Hugo version</a>. But the work in the blogdown-Hugo environment was never intuitive and satisfying. I think it’s self-explanatory that the introductory message to the blogdown book for over <del>two</del> three years now states as a note from the authors: “Some of the information and instructions in this book are now out of date because of changes to Hugo and the blogdown package.”</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://l3lab.net/posts/2023-04-23-welcome-quarto/intro-note-blogdown-book-min.png" class="img-fluid figure-img" style="width:70.0%" alt="A note from the authors: Some of the information and instructions in this book are now out of date because of changes to Hugo and the blogdown package. If you have suggestions for improving this book, please file an issue in our GitHub repository. Thanks for your patience while we work to update the book, and please stay tuned for the revised version! In the meantime, you can find an introduction to the changes and new features in the v1.0 release blog post and this 'Up &amp; running with blogdown in 2021' blog post. — Yihui, Amber, &amp; Alison"></p>
+<figcaption>Preface banner of <a href="https://bookdown.org/yihui/blogdown/">blogdown: Creating Websites with R Markdown</a></figcaption>
+</figure>
+</div>
 </section>
 <section id="future-plans" class="level2">
 <h2 class="anchored" data-anchor-id="future-plans">Future plans</h2>

@@ -1,0 +1,114 @@
+---
+title: "Writing Blog Posts: New Attempt"
+subtitle: "New motivations for writing blog posts"
+description:  |
+  I planned to write at least ten articles within two months before I wanted to
+  publish my new blog. I never reached this limit last year, guided wrongly by
+  perfectionism.
+author: "Peter Baumgartner"
+date: "2024-07-21"
+image: "perfectionism-min.jpg"
+image-alt: "Scrabble pieces with the text 'Done is better than perfect'"
+categories: [blog, quarto]
+date-modified: "2024-07-21"
+draft: FALSE
+---
+
+![Photo from [The XY Code](https://thexycode.com/). [CC BY-NC-ND
+4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)](perfectionism-min.jpg){fig-alt="Scrabble pieces constructing the text: 'Done is better than perfect'"
+fig-align="center"}
+
+## Motivations for writing blog posts
+
+My conception, written in my first blog entry, needed to be revised. The
+problem was a certain kind of perfectionism: I thought that my knowledge
+about R issues was not deep enough to be interesting to other people.
+After visiting the [useR!2024
+conference](https://userconf2024.sched.com/), I changed my view in four
+aspects:
+
+-   R has a dynamic community where new people are constantly attracted.
+    My meager knowledge could be helpful, especially for beginners, as I
+    was struggling with the same starter issues not long ago. Sometimes,
+    a person with intermediate knowledge can be more beneficial than an
+    expert.
+-   The R project is a very complex field. Nobody has the same level of
+    expert knowledge in every area. Therefore, it is possible that some
+    parts of my knowledge could be useful for other people, even if they
+    are (in other areas or generally) much more advanced.
+-   Putting my understanding into words so that other people can use
+    this information for their project is an important exercise: It
+    ensures that I have grasped the essentials and fosters my learning
+    by writing down all the necessary details.
+-   The most important reason to write blog posts about issues I have
+    learned is the "Future me." After several months of working on other
+    topics, I often notice that I have forgotten some details of
+    procedures I have already learned.
+
+To elaborate on the last point: In one case, I was looking for a
+solution to a problem I experienced. After several web searches, I found
+the solution on [StackOverflow](https://stackoverflow.com/). I was
+shocked when I noticed that it was me who wrote the correct answer
+several years ago!
+
+## A new start
+
+After the useR!2024, I was very motivated to resume the Quarto blog I
+started in April 2023. I noticed that there are two versions: One
+published via [Netlify](https://www.netlify.com/) and another one –
+already pretty elaborated – locally.
+
+### Looking for a glitch
+
+The local version had a small but annoying flaw. It displayed three
+colons `:::` at the beginning of the listing on the homepage and at the
+end of every post. I knew that `:::` represents special [fenced
+syntax](https://pandoc.org/chunkedhtml-demo/8.18-divs-and-spans.html)
+for native `Div` blocks in [pandoc](https://pandoc.org/#).
+
+Whatever I tried, I could not find the problem and solve it.
+
+-   I looked into all articles to see if there was a redundant fenced
+    syntax symbol.
+-   I set for all posts `draft: true`.
+-   I even cloned the remote repo only to get the same behavior.
+
+### Starting from scratch
+
+Another drawback was that I did not understand many code lines,
+especially in `_quarto.yml` but also in `posts/_metadata.yml` and in the
+main `index.qmd`.
+
+Finally, I decided to start with a new blog. I created a new repo with a
+different name, initiated a new RStudio project, and so on. As a
+surplus, I documented every single step. I wrote extensive notes and
+shot screenshots of every necessary action. After each tiny change, I
+checked the results by rendering the blog.
+
+### Lesson learned
+
+As a result, I have extensive material to explain how to initialize a
+Quarto blog, which I will publish in several posts in the next few days.
+And I finally found the reason for the surplus fenced div!
+
+::: {#tip-footer-text-quotation-marks .callout-tip collapse="true"}
+## href-URLs without quotation marks in YAML file
+
+The URLs of the right part of the footer text were incorrectly in
+quotation marks. This would be a perfect passage in HTML, but it was
+inappropriate as a Quarto directive.
+
+I wrote:
+
+``` {.yml filename="_quarto.yml"}
+    right:
+      - text: Proudly powered by <a href="https://quarto.org/">Quarto</a>
+```
+
+Instead of:
+
+``` {.yml filename="_quarto.yml"}
+    right:
+      - text: Proudly powered by <a href=https://quarto.org/>Quarto</a>
+```
+:::

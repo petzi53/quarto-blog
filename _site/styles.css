@@ -18,12 +18,23 @@ figcaption {
     width: 500px;
 }
 
+
+/* bring title-meta (autor, date, modified-date) into one line */
 #title-block-header.quarto-title-block.default .quarto-title-meta {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 1em;
 }
 
+/* draw shadow around figure */
+/*taken from custom.scss of Thought Splinters */
+.figure-img {
+    border: 1px;
+    border-style: groove;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px  rgba(0, 0, 0, 0.19);
+}
+
+/* a thicker horizontal line (not used at the moment) */
 hr.mytitle{
     height: 5px;
     background: black;

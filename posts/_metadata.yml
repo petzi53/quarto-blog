@@ -5,16 +5,10 @@
 freeze: true
 
 # Disable banner style title blocks
-title-block-banner: false
+title-block-banner: true
 
 # my personal metadata for blog posts
 
 comments:
   utterances:
     repo: petzi53/blog-comments
-
-filters:
-  - collapse-callout
-collapse-callout:
-    all: false
-

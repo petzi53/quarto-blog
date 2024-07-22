@@ -16,8 +16,6 @@ engine: knitr
 draft: false
 ---
 
-<hr class=mytitle>
-
 ## If a pull request is not accepted...
 
 As I am not very experienced with R and coding, my knowledge of using

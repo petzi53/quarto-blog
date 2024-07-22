@@ -16,8 +16,6 @@ engine: knitr
 title-block-style: default
 ---
 
-<hr class=mytitle>
-
 ![From [PxHere](https://pxhere.com/en/photo/649542) (CC0, Public
 Domain)](three-columns-min.jpg){style="text-align: center;"
 fig-alt="Four ionic column with scroll-shaped ornaments on the capital, which sits at the top of the column shaft against the blue sky"

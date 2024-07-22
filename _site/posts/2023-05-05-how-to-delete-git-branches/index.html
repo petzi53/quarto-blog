@@ -167,7 +167,7 @@ cookieconsent.run({
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -231,7 +231,52 @@ cookieconsent.run({
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">How to delete Git branches</h1>
+            <p class="subtitle lead">The limits of RStudio with the <code>pr_*()</code> family of the {<a href="https://usethis.r-lib.org/">usethis</a>} functions</p>
+                  <div>
+        <div class="description">
+          <p>The article explains how I finally succeeded in deleting different branches in Git. It turned out – contrary to my previous mental model – that there are not only two branches but three (local, remote origin, and local remote-tracking branch).</p>
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">git</div>
+                <div class="quarto-category">github</div>
+                <div class="quarto-category">how-to</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Peter Baumgartner </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">May 5, 2023</p>
+      </div>
+    </div>
+    
+      <div>
+      <div class="quarto-title-meta-heading">Modified</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date-modified">July 20, 2024</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
@@ -254,57 +299,12 @@ cookieconsent.run({
 <div class="toc-actions"><ul><li><a href="https://github.com/petzi53/quarto-blog/edit/main/posts/2023-05-05-how-to-delete-git-branches/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/petzi53/quarto-blog/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">How to delete Git branches</h1>
-<p class="subtitle lead">The limits of RStudio with the <code>pr_*()</code> family of the {<a href="https://usethis.r-lib.org/">usethis</a>} functions</p>
-  <div class="quarto-categories">
-    <div class="quarto-category">git</div>
-    <div class="quarto-category">github</div>
-    <div class="quarto-category">how-to</div>
-  </div>
-  </div>
-
-<div>
-  <div class="description">
-    <p>The article explains how I finally succeeded in deleting different branches in Git. It turned out – contrary to my previous mental model – that there are not only two branches but three (local, remote origin, and local remote-tracking branch).</p>
-  </div>
-</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Peter Baumgartner </p>
-          </div>
-  </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">May 5, 2023</p>
-    </div>
-  </div>
-  
-    <div>
-    <div class="quarto-title-meta-heading">Modified</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">July 20, 2024</p>
-    </div>
-  </div>
-    
-  </div>
-  
 
 
-</header>
 
-
-<hr class="mytitle">
 <section id="if-a-pull-request-is-not-accepted" class="level2">
 <h2 class="anchored" data-anchor-id="if-a-pull-request-is-not-accepted">If a pull request is not accepted…</h2>
 <p>As I am not very experienced with R and coding, my knowledge of using Git and GitHub is limited. Usually, I use the <code>pr_*()</code> family of {<a href="https://usethis.r-lib.org/" title="Automates repetitive tasks that arise during project setup and development">usethis</a>} functions as pull request helpers. They work very well – as long as the workflow follows the standard (successful) workflow:</p>

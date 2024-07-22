@@ -11,13 +11,9 @@ date-modified: "2023-04-29"
 draft: false
 ---
 
-<hr class=mytitle>
-
 [![This is the front cover for the CD "Coming Home" by the artist "New
-Found Glory" via Wikipedia (Fair
-Use)](New_Found_Glory_Coming_Home-min.png){fig-alt="A photo of lead vocalist Jordan Pundik walking out of a restaurant holding a suitcase that reads the words \"NEW FOUND GLORY\". The words \"COMING HOME\" appear in the bottom-left of the image."
-fig-align="center"
-width="400"}](https://en.wikipedia.org/wiki/Coming_Home_(New_Found_Glory_album))
+Found Glory" via <a href="https://en.wikipedia.org/wiki/Coming_Home_(New_Found_Glory_album)">Wikipedia</a> (Fair
+Use)](New_Found_Glory_Coming_Home-min.png)](https://en.wikipedia.org/wiki/Coming_Home_(New_Found_Glory_album)){fig-alt="A photo of lead vocalist Jordan Pundik walking out of a restaurant holding a suitcase that reads the words \"NEW FOUND GLORY\". The words \"COMING HOME\" appear in the bottom-left of the image." fig-align="center"}
 
 ## My first blog entry with Quarto
 
@@ -59,9 +55,13 @@ and the possibility of [freezing to a specific Hugo
 version](https://bookdown.org/yihui/blogdown/global-options.html#global-options).
 But the work in the blogdown-Hugo environment was never intuitive and
 satisfying. I think it's self-explanatory that the introductory message
-to the blogdown book for over two years now states as a note from the
+to the blogdown book for over ~~two~~ three years now states as a note from the
 authors: "Some of the information and instructions in this book are now
 out of date because of changes to Hugo and the blogdown package."
+
+![Preface banner of <a href="https://bookdown.org/yihui/blogdown/">blogdown: Creating Websites with R Markdown</a>](intro-note-blogdown-book-min.png){
+fig-alt="A note from the authors: Some of the information and instructions in this book are now out of date because of changes to Hugo and the blogdown package. If you have suggestions for improving this book, please file an issue in our GitHub repository. Thanks for your patience while we work to update the book, and please stay tuned for the revised version! In the meantime, you can find an introduction to the changes and new features in the v1.0 release blog post and this 'Up & running with blogdown in 2021' blog post. — Yihui, Amber, & Alison" fig-align="center" width="70%"}
+
 
 ## Future plans
 
