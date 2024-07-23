@@ -1,6 +1,6 @@
 ---
-title: "Creating a Quarto blog from Scratch using RStudio"
-subtitle: "Creating a Quarto blog from within RStudio. – A visual guide."
+title: "Initializing a Quarto using RStudio"
+subtitle: "Creating a Quarto blog from scratch using RStudio. – A visual guide."
 description:  |
   Initializing a Quarto blog, explaining the generated key files and the starting content of the Quarto project file `_quarto.yml` and the blog homepage file `index.qmd`.  
 author: "Peter Baumgartner"
@@ -17,10 +17,16 @@ to jumpstart your Quarto journey. Featuring a new video for getting
 started with Quarto using R and
 RStudio.](quarto-get-started-min.png)](https://quarto.org/docs/blog/posts/2023-05-15-get-started)
 
-## Create Quarto Blog
+## Initializing a Quarto Blog
 
-I will not explain everything related to creating a Quarto blog;
-instead, I will focus on my blog initialization choices.
+There are several ways to start a new Quarto blog. I will use a menu
+driven approach using
+[RStudio](https://posit.co/products/open-source/rstudio/ "RStudio is an integrated development environment (IDE) for R and Python").
+For the following workflow you should have installed RStudio and have
+some knowledge how to use it.
+
+I will not explain everything related to creating a new Quarto blog;
+instead, I will focus on my choices to initialize the blog.
 
 I am using
 
@@ -32,20 +38,23 @@ I am using
 Inside RStudio, use the `New Project…` command and select
 `New Directory` and then `Quarto Blog`.
 
-![RStudio new project wizard
-window (Screenshot): Choose 'New Directory' to start an new project from scratch. ](creating-quarto-blog-1-min.png){#fig-new-project-wizard
+![RStudio new project wizard window (Screenshot): Choose 'New Directory'
+to start an new project from
+scratch.](creating-quarto-blog-1-min.png){#fig-new-project-wizard
 fig-alt="RStudio new project wizard window with three options reading from the top: New Directory - Start a project in a brand new working directory; Existing Directory - Associate a project with an existing working directory; Version Control - Checkout a project from a version control repository."
 fig-align="center"}
 
-![RStudio project type window (Screenshot): Choose 'Quarto Blog' to initialize a blog project
-](creating-quarto-blog-2-min.png){#fig-new-blog-project-window
-fig-alt="The Project Type dialog window lists the choices for new project. The first seven options are visible: New Project, R Package, Shiny Application, Quarto Project, Quarto Website, Quarto Blog, Quarto Book. (From top to the bottom. Top left is a button 'Back' for returning to the previous dialog window. Bottom right is a 'Cancel' button to stop the initialization process." fig-align="center"}
-
-![RStudio Create Quarto Blog window (Screenshot): Fill the input fields with the appropriate data
-](creating-quarto-blog-3-min.png){#fig-create-blog-window
-fig-alt="The 'Create quarto Blog' dialog window requires a file name for the directory of the repository, titled 'Directory name', a directory where the project will be created, titled 'create project as subdirectory of:' with a 'Browse' button to the right, a drop down menu selecting 'Knitr' as the current option, titled 'Engine', three lines of check boxes, titled 'Create a git repository' (checked), 'Use renv with this project' and 'Use visual markdown editor'. The last option is followed by a question sign to get more information about the choice of a visual markdown editor. Top left in the dialog window is a button 'Back' for returning to the previous dialog window. Bottom left is a check box 'Open in a new session', Bottom right are a 'Create Project' button followed by a 'Cancel' button for stopping the initialization process."
+![RStudio project type window (Screenshot): Choose 'Quarto Blog' to
+initialize a blog
+project](creating-quarto-blog-2-min.png){#fig-new-blog-project-window
+fig-alt="The Project Type dialog window lists the choices for new project. The first seven options are visible: New Project, R Package, Shiny Application, Quarto Project, Quarto Website, Quarto Blog, Quarto Book. (From top to the bottom. Top left is a button 'Back' for returning to the previous dialog window. Bottom right is a 'Cancel' button to stop the initialization process."
 fig-align="center"}
 
+![RStudio Create Quarto Blog window (Screenshot): Fill the input fields
+with the appropriate
+data](creating-quarto-blog-3-min.png){#fig-create-blog-window
+fig-alt="The 'Create quarto Blog' dialog window requires a file name for the directory of the repository, titled 'Directory name', a directory where the project will be created, titled 'create project as subdirectory of:' with a 'Browse' button to the right, a drop down menu selecting 'Knitr' as the current option, titled 'Engine', three lines of check boxes, titled 'Create a git repository' (checked), 'Use renv with this project' and 'Use visual markdown editor'. The last option is followed by a question sign to get more information about the choice of a visual markdown editor. Top left in the dialog window is a button 'Back' for returning to the previous dialog window. Bottom left is a check box 'Open in a new session', Bottom right are a 'Create Project' button followed by a 'Cancel' button for stopping the initialization process."
+fig-align="center"}
 
 -   I am using {**knitr**} as the engine.
 -   The {**renv**} package is for creating *r*eproducible *env*ironments
@@ -54,18 +63,24 @@ fig-align="center"}
     reproducibility is not an issue for my private blog (at least, I
     think so at the moment).
 -   Selecting "Use visual markdown editor" is not important, as this
-    option is for all `.qmd` files in RStudio always available. I think that this option only controls
-    the default behavior whenever a new file for a post is created.
+    option is for all `.qmd` files in RStudio always available. I think
+    that this option only controls the default behavior whenever a new
+    file for a post is created.
 
 ### Key Files
 
 Clicking the "Create Project" button generates different key files and
 opens the `_quarto.yml` file in the RStudio editor window.
 
-![RStudio file listing window (Screenshot): Choose 'New Directory' to start an new project from scratch. ](generated-files-at-start-min.png){#fig-rstudio-file-listing-window
+![RStudio file listing window (Screenshot): Choose 'New Directory' to
+start an new project from
+scratch.](generated-files-at-start-min.png){#fig-rstudio-file-listing-window
 fig-alt="At the top of the screenshot there are six tabs. From left to the right: 'Files', 'Plots', 'Packages', 'Help', 'Viewer', 'Presentation' with the 'Files' tab active. Under the tabs are several buttons. From left to the right: 'New Folder', 'New Blank File', 'Delete', 'Rename' and a drop down menu 'More'. Under these buttons is the full path to the active directory 'Home>Documents>Meine-Repos>quarto-pb-blog' where each subdirectory is an active link. Under this line starts the file listing with 'Name', 'Size' and 'Modified' columns. Each line of file names starts with an (unchecked) check box, and an appropriate icon. From top to bottom: _freeze, _quarto.yml, _site, .git, .gitignore, .quarto, .Rhistory, .Rproj.use, about.qmd, index.qmd, posts, profile.jpg, quarto-pb-blog.Rproj, style.css."
 fig-align="center"}
 
+If you can't see all five files starting with a dot (so-called
+[dotfiles](https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory#Unix_and_Unix-like_environments "Hidden folders an files in UNIX-Like systems start with a dot in their file names")) in your installation, go to the drop-down menu 'More' and check the last option 'Show Hidden
+Files'.
 
 Here’s a summary of the key files created within the starter blog
 project:
@@ -78,7 +93,9 @@ project:
 | `posts/`              | Directory containing posts |
 | `posts/_metadata.yml` | Shared options for `posts` |
 | `styles.css`          | Custom CSS for website     |
-: Key files after initializing a Quarto blog {#tbl-quarto-blog-key-files}
+
+: Key files after initializing a Quarto blog
+{#tbl-quarto-blog-key-files}
 
 ### Content of the Quarto Project File
 
@@ -123,10 +140,11 @@ title-block-banner: true
 
 ## Render Blog
 
-![Source code of the blog home page 'index.qmd'-file within RStudio window (Screenshot) ](click-render-button-first-time-min.png){#fig-source-code-blog-home-page
+![Source code of the blog home page 'index.qmd'-file within RStudio
+window
+(Screenshot)](click-render-button-first-time-min.png){#fig-source-code-blog-home-page
 fig-alt="The screenshot shows a part of the RStudio source code window with two file tabs 'index.qmd' (active) and '_quarto.yml'. Below is a line of partly disabled buttons where the focus is on the 'Render' button that has below a tip tool saying 'Render the current document (SHIFT-CMD-K)'"
 fig-align="center"}
-
 
 You can control via
 `Tools->Global Options…->R Markdown->Show output preview in…` whether
@@ -134,10 +152,10 @@ the rendered result appears in the browser window or in the viewer pane.
 Generally, I use the "Window" option because it gives me a better view
 of the real setting.
 
-![Website of the newly created Quarto blog (Screenshot): ](rendered-blog-first-time-min.png){#fig-blog-listing-start-page
+![Website of the newly created Quarto blog
+(Screenshot):](rendered-blog-first-time-min.png){#fig-blog-listing-start-page
 fig-alt="The webpage lists two dummy blog post with three columns: From left to the right: Date and author; blog post title, category buttons and a short description; a small image. On the right margin is a list of categories displayed with their frequency in parenthesis. The title header of the website consists of two lines: Left top: Name of the Quarto blog so far 'quarto-pb-blog', Right top: 'About' followed by icons for GitHub, Twitter and search engine."
 fig-align="center"}
-
 
 ``` {.zsh filename="RStudio console output"}
 ==> quarto preview index.qmd --to html --no-watch-inputs --no-browse
@@ -192,20 +210,25 @@ Browse at http://localhost:5146/
 GET: /
 ```
 
-
-::: {.callout-warning collapse='true'}
+::: {.callout-warning collapse="true"}
 ## During the rendering process, I got three warnings
 
 As you can see in the above console output I got three warnings:
 
-- Unable to read listing item description from posts/post-with-code/index.html 
-- Unable to read listing item description from posts/welcome/index.html 
-- Unable to read listing preview image from posts/welcome/index.html
-
+-   Unable to read listing item description from
+    posts/post-with-code/index.html
+-   Unable to read listing item description from
+    posts/welcome/index.html
+-   Unable to read listing preview image from posts/welcome/index.html
 :::
 
-These warnings are prompted by the fact that we need to render the complete blog with SHIFT-CMD-B or by clicking "Render Website" after choosing the "Build" button on the upper right RStudio pane. I will explain render strategies in a later post.
+These warnings are prompted by the fact that we need to render the
+complete blog with SHIFT-CMD-B or by clicking "Render Website" after
+choosing the "Build" button on the upper right RStudio pane. I will
+explain render strategies in a later post.
 
 ## Summary
 
-This is the end of the initialization process. In later blog posts I will add more functionality and style the web page it to get a more attractive appearance of the Quarto blog.
+This is the end of the initialization process. In later blog posts I
+will add more functionality and style the web page it to get a more
+attractive appearance of the Quarto blog.
