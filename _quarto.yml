@@ -34,6 +34,8 @@ website:
         menu:
           - text: Gedankensplitter (German)
             href: https://peter.baumgartner.name
+          - text: Quarto Blog
+            href: https://quarto.org/docs/blog/index.html
           - text: R Weekly
             href: https://rweekly.org/
           - text: R Bloggers
