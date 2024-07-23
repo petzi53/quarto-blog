@@ -17,7 +17,7 @@ The following procedure requires some [credential setup for
 GitHub](https://happygitwithr.com/https-pat.html) on your end. There are
 several routes you can go:
 
--   \- **Set up the GitHub repo first**. It my sound counter-intuitive,
+-   **Set up the GitHub repo first**. It my sound counter-intuitive,
     but the easiest way to get your work onto GitHub is to initiate a
     GitHub repo first, then use RStudio to start working in a synced
     local copy. This approach is described in Happy Git’s workflows [New
@@ -25,7 +25,7 @@ several routes you can go:
     first](https://happygitwithr.com/new-github-first.html) and [Existing
     project, GitHub
     first](https://happygitwithr.com/existing-github-first.html).
--   \- **Command line Git**. I will use this approach to add a remote
+-   **Command line Git**. I will use this approach to add a remote
     repository *post hoc*. This is described detailed in the Happy Git
     workflow [Existing project, GitHub
     last](https://happygitwithr.com/existing-github-last.html).

@@ -249,7 +249,7 @@
     "href": "posts/2024-07-23-from-git-to-github-using-rstudio/index.html",
     "title": "From Git to GitHub using RStudio",
     "section": "",
-    "text": "The following procedure requires some credential setup for GitHub on your end. There are several routes you can go:\n\n- Set up the GitHub repo first. It my sound counter-intuitive, but the easiest way to get your work onto GitHub is to initiate a GitHub repo first, then use RStudio to start working in a synced local copy. This approach is described in Happy Git’s workflows New project, GitHub first and Existing project, GitHub first.\n- Command line Git. I will use this approach to add a remote repository post hoc. This is described detailed in the Happy Git workflow Existing project, GitHub last."
+    "text": "The following procedure requires some credential setup for GitHub on your end. There are several routes you can go:\n\nSet up the GitHub repo first. It my sound counter-intuitive, but the easiest way to get your work onto GitHub is to initiate a GitHub repo first, then use RStudio to start working in a synced local copy. This approach is described in Happy Git’s workflows New project, GitHub first and Existing project, GitHub first.\nCommand line Git. I will use this approach to add a remote repository post hoc. This is described detailed in the Happy Git workflow Existing project, GitHub last."
   },
   {
     "objectID": "posts/2024-07-23-from-git-to-github-using-rstudio/index.html#why-using-git-and-github",
@@ -263,7 +263,7 @@
     "href": "posts/2024-07-23-from-git-to-github-using-rstudio/index.html#requirements-to-follow-this-post",
     "title": "From Git to GitHub using RStudio",
     "section": "",
-    "text": "The following procedure requires some credential setup for GitHub on your end. There are several routes you can go:\n\n- Set up the GitHub repo first. It my sound counter-intuitive, but the easiest way to get your work onto GitHub is to initiate a GitHub repo first, then use RStudio to start working in a synced local copy. This approach is described in Happy Git’s workflows New project, GitHub first and Existing project, GitHub first.\n- Command line Git. I will use this approach to add a remote repository post hoc. This is described detailed in the Happy Git workflow Existing project, GitHub last."
+    "text": "The following procedure requires some credential setup for GitHub on your end. There are several routes you can go:\n\nSet up the GitHub repo first. It my sound counter-intuitive, but the easiest way to get your work onto GitHub is to initiate a GitHub repo first, then use RStudio to start working in a synced local copy. This approach is described in Happy Git’s workflows New project, GitHub first and Existing project, GitHub first.\nCommand line Git. I will use this approach to add a remote repository post hoc. This is described detailed in the Happy Git workflow Existing project, GitHub last."
   },
   {
     "objectID": "posts/2024-07-23-from-git-to-github-using-rstudio/index.html#procedure-for-using-git",
