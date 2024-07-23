@@ -1,5 +1,5 @@
 ---
-title: "Initializing a Quarto using RStudio"
+title: "Initializing a Quarto Blog using RStudio"
 subtitle: "Creating a Quarto blog from scratch using RStudio. – A visual guide."
 description:  |
   Initializing a Quarto blog, explaining the generated key files and the starting content of the Quarto project file `_quarto.yml` and the blog homepage file `index.qmd`.  
