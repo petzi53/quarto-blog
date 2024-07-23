@@ -10,7 +10,140 @@
 <atom:link href="https://l3lab.net/index.xml" rel="self" type="application/rss+xml"/>
 <description>This is Peter Baumgartner&#39;s Personal English Blog.</description>
 <generator>quarto-1.5.54</generator>
-<lastBuildDate>Sun, 21 Jul 2024 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 22 Jul 2024 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>From Git to GitHub using RStudio</title>
+  <dc:creator>Peter Baumgartner</dc:creator>
+  <link>https://l3lab.net/posts/2024-07-23-from-git-to-github-using-rstudio/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="requirements-to-follow-this-post" class="level2">
+<h2 class="anchored" data-anchor-id="requirements-to-follow-this-post">Requirements to follow this post</h2>
+<p>The following procedure requires some <a href="https://happygitwithr.com/https-pat.html">credential setup for GitHub</a> on your end. There are several routes you can go:</p>
+<ul>
+<li>- <strong>Set up the GitHub repo first</strong>. It my sound counter-intuitive, but the easiest way to get your work onto GitHub is to initiate a GitHub repo first, then use RStudio to start working in a synced local copy. This approach is described in Happy Git’s workflows&nbsp;<a href="https://happygitwithr.com/new-github-first.html">New project, GitHub first</a>&nbsp;and&nbsp;<a href="https://happygitwithr.com/existing-github-first.html">Existing project, GitHub first</a>.</li>
+<li>- <strong>Command line Git</strong>. I will use this approach to add a remote repository&nbsp;<em>post hoc</em>. This is described detailed in the Happy Git workflow&nbsp;<a href="https://happygitwithr.com/existing-github-last.html">Existing project, GitHub last</a>.</li>
+</ul>
+</section>
+<section id="why-using-git-and-github" class="level2">
+<h2 class="anchored" data-anchor-id="why-using-git-and-github">Why using Git and GitHub?</h2>
+<p>After <a href="../2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio">initializing a new Quarto blog</a> I will create the initial (first) Git commit, initialize a GitHub repo, and push the content of the initial commit into the new repository.</p>
+<p>There are several reasons to use Git:</p>
+<ul>
+<li>A <a href="https://git-scm.com/" title="Git is a free and open source distributed version control system designed to handle projects">Git</a> repository (or repo) holds all the project files and their entire revision history. It is therefore not only easier to track changes but also to restore a previous version if necessary. (See the nice introduction)</li>
+<li><a href="https://github.com/" title="GitHub is a cloud-based platform where you can store, share, and work together with others to write code or other (markdown) content">GitHub</a> is an online platform to store and manage your content (code but also text and other resources), as well as track changes to it. It facilitates collaborations with your team but also with other (unknown) people.</li>
+</ul>
+</section>
+<section id="procedure-for-using-git" class="level2">
+<h2 class="anchored" data-anchor-id="procedure-for-using-git">Procedure for using Git</h2>
+<p>In <a href="../2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/#fig-create-blog-window">the previous blog post</a>, we have already initialized the Quarto weblog, including Git support, by checking the appropriate check box.</p>
+<ol type="1">
+<li>To see all the changes you have made so far, click on the Git tab at the top right pane of RStudio. You should see a picture similar to the following one.</li>
+</ol>
+<div id="fig-git-files-unselected" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="RStudio top right pane with the following tabs: Environment, History, Connection, Build, Git, and Tutorial. The Git pane is selected and therefore active. Under the tabs is another line of icons and text buttons representing Git actions: From left to right: Diff, Commit, Pull (greyed out), Push (greyed out), History, More (drop-down menu), New Branch, (no branch). Underneath it shows added or changed files or folders (ending with a slash) from the initialization process. From top to the bottom: .gitignote, _freeze/, _quarto.yml, _site/, about.qmd, index.qmd, posts/, profile.jpg, quarto-pb-blog.Rproj, style.css.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-git-files-unselected-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://l3lab.net/posts/2024-07-23-from-git-to-github-using-rstudio/git-files-and-folders-unselected-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="RStudio top right pane with the following tabs: Environment, History, Connection, Build, Git, and Tutorial. The Git pane is selected and therefore active. Under the tabs is another line of icons and text buttons representing Git actions: From left to right: Diff, Commit, Pull (greyed out), Push (greyed out), History, More (drop-down menu), New Branch, (no branch). Underneath it shows added or changed files or folders (ending with a slash) from the initialization process. From top to the bottom: .gitignote, _freeze/, _quarto.yml, _site/, about.qmd, index.qmd, posts/, profile.jpg, quarto-pb-blog.Rproj, style.css.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-git-files-unselected-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Selected the Git tab of the RStudio right top pane (Screenshot):
+</figcaption>
+</figure>
+</div>
+<ol start="2" type="1">
+<li>After selecting all files and checking them (checking a single file of a group of selected files checks all selected files), the Git window shows all files seen above but also the files inside folders that are now prepared for the next Git commit.</li>
+</ol>
+<div id="fig-git-files-selected" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="RStudio top right pane with the following tabs: Environment, History, Connection, Build, Git, and Tutorial. The Git pane is selected and therefore active. Under the tabs is another line of icons and text buttons representing Git actions: From left to right: Diff, Commit, Pull (greyed out), Push (greyed out), History, More (drop-down menu), New Branch, (no branch). There is a tool tip under the Commit button saying: 'Commit pending changes (CTRL-ALT-M)'. Underneath it shows added or changed files from the initialization process. From top to the bottom in a blue background: .gitignote, _freeze/, _quarto.yml, _site/, about.qmd, index.qmd, posts/, profile.jpg, quarto-pb-blog.Rproj, style.css. These files are followed by the files in the directories from top to left: _freeze/post/post-with-code/index/execute-results/html.json, _freeze/site_libs/clipboard/clipboard.min.js, _freeze/site_libs/quarto-listing/list.min.js,  _freeze/site_libs/quarto-listing/quarto-listing.js, _site/about.html, _site/index.html, _site/listing.json, _site/profile.jpg. There are more files not visible because the window ends here.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-git-files-selected-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://l3lab.net/posts/2024-07-23-from-git-to-github-using-rstudio/git-files-and-folders-checked-2-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="RStudio top right pane with the following tabs: Environment, History, Connection, Build, Git, and Tutorial. The Git pane is selected and therefore active. Under the tabs is another line of icons and text buttons representing Git actions: From left to right: Diff, Commit, Pull (greyed out), Push (greyed out), History, More (drop-down menu), New Branch, (no branch). There is a tool tip under the Commit button saying: 'Commit pending changes (CTRL-ALT-M)'. Underneath it shows added or changed files from the initialization process. From top to the bottom in a blue background: .gitignote, _freeze/, _quarto.yml, _site/, about.qmd, index.qmd, posts/, profile.jpg, quarto-pb-blog.Rproj, style.css. These files are followed by the files in the directories from top to left: _freeze/post/post-with-code/index/execute-results/html.json, _freeze/site_libs/clipboard/clipboard.min.js, _freeze/site_libs/quarto-listing/list.min.js,  _freeze/site_libs/quarto-listing/quarto-listing.js, _site/about.html, _site/index.html, _site/listing.json, _site/profile.jpg. There are more files not visible because the window ends here.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-git-files-selected-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Selecting all added or changed files in the RStudio Git pane (Screenshot)
+</figcaption>
+</figure>
+</div>
+<ol start="3" type="1">
+<li>After clicking on the “Commit” tab (or using the shortcut <code>CTRL-ALT-M</code>) a window opens for writing the commit message. Write short notes using a commando language. For example a commit text for the main <code>index.qmd</code> file could be: “change title-block-banner to true”.<br>
+<br>
+It is usual to start the commit messages with “initial commit”. I had erroneously used “first commit” in the screenshot.</li>
+</ol>
+<div id="fig-preparing-initial-commit" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="A pop-up window overlaying the RStudio window separated in two parts: The left part contains at the top small buttons. From left to the right: Changes, History, (no branch), icon for update display, stage, revert, and ignore. The right part contains the dysfunctional button (grayed out) of 'Pull' and 'Push.' The left part shows underneath it added or changed file from the initialization process. From top to the bottom in a blue background: .gitignote, _freeze/, _quarto.yml, _site/, about.qmd, index.qmd, posts/, profile.jpg, quarto-pb-blog.Rproj, style.css. These files are followed by the files in the directories from top to left: _freeze/post/post-with-code/index/execute-results/html.json, _freeze/site_libs/clipboard/clipboard.min.js, _freeze/site_libs/quarto-listing/list.min.js. There are more files not visible because the window ends here. On the right side there is a writing pane with the header 'Commit message' and '12 characters'. The text in the writing pane says 'First commit'. Under the writing pane are two unchecked check boxes 'Amend previous commit' and 'Sign commit' with a 'Commit' button. Underneath those two window parts is another line of action buttons covering the whole length of the window: From left to the right: 'Show Staged' text followed by an empty radio button, 'Staged' text folllowed by an active radio button, 'Context' (text), 5 lines (drop-down menu), 'Ignore Whitespace' (active check box). Underneath is an empty white field over the whole length of the window dedicated to show more detailed information inf only one file would have been selected.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-preparing-initial-commit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://l3lab.net/posts/2024-07-23-from-git-to-github-using-rstudio/preparing-first-commit-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="A pop-up window overlaying the RStudio window separated in two parts: The left part contains at the top small buttons. From left to the right: Changes, History, (no branch), icon for update display, stage, revert, and ignore. The right part contains the dysfunctional button (grayed out) of 'Pull' and 'Push.' The left part shows underneath it added or changed file from the initialization process. From top to the bottom in a blue background: .gitignote, _freeze/, _quarto.yml, _site/, about.qmd, index.qmd, posts/, profile.jpg, quarto-pb-blog.Rproj, style.css. These files are followed by the files in the directories from top to left: _freeze/post/post-with-code/index/execute-results/html.json, _freeze/site_libs/clipboard/clipboard.min.js, _freeze/site_libs/quarto-listing/list.min.js. There are more files not visible because the window ends here. On the right side there is a writing pane with the header 'Commit message' and '12 characters'. The text in the writing pane says 'First commit'. Under the writing pane are two unchecked check boxes 'Amend previous commit' and 'Sign commit' with a 'Commit' button. Underneath those two window parts is another line of action buttons covering the whole length of the window: From left to the right: 'Show Staged' text followed by an empty radio button, 'Staged' text folllowed by an active radio button, 'Context' (text), 5 lines (drop-down menu), 'Ignore Whitespace' (active check box). Underneath is an empty white field over the whole length of the window dedicated to show more detailed information inf only one file would have been selected.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-preparing-initial-commit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Writing a commit message (Screenshot)
+</figcaption>
+</figure>
+</div>
+<ol start="4" type="1">
+<li>After clicking the <code>Commit</code> button, RStudio presents a window with the results of the action:</li>
+</ol>
+<div id="fig-review-changes-window" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="RStudio review window listing the result of the last git commit action: From top to the bottom: 'create mode 100644 about.qmd', 'create mode 100644 index.qmd' 'create mode 100644 posts/metadata.yml', 'create mode 100644 posts/post-with-code/image.png', 'create mode 100644 posts/post-with-code/index.qmd', 'posts/post-with-code/posts/welcome/index.qmd', 'create mode 100644 posts/welcome/thumbnail.jpg', 'create mode 100644  profile.jpg', 'create mode 100644 quarto-pb-blog.Rproj', 'create mode 100644 style.css'. There other lines covered at the top covered as the window scroll button shows only the end of the list. On the top right is a 'Close' button.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-review-changes-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://l3lab.net/posts/2024-07-23-from-git-to-github-using-rstudio/returned-commit-results-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="RStudio review window listing the result of the last git commit action: From top to the bottom: 'create mode 100644 about.qmd', 'create mode 100644 index.qmd' 'create mode 100644 posts/metadata.yml', 'create mode 100644 posts/post-with-code/image.png', 'create mode 100644 posts/post-with-code/index.qmd', 'posts/post-with-code/posts/welcome/index.qmd', 'create mode 100644 posts/welcome/thumbnail.jpg', 'create mode 100644  profile.jpg', 'create mode 100644 quarto-pb-blog.Rproj', 'create mode 100644 style.css'. There other lines covered at the top covered as the window scroll button shows only the end of the list. On the top right is a 'Close' button.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-review-changes-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Resulted actions after the last commit (Screenshot)
+</figcaption>
+</figure>
+</div>
+<p>Closing both windows will end the Git procedure to the local repository.</p>
+</section>
+<section id="procedure-for-initializing-a-github-repo" class="level2">
+<h2 class="anchored" data-anchor-id="procedure-for-initializing-a-github-repo">Procedure for initializing a GitHub repo</h2>
+<p>Next create a GitHub repo with all the locally committed content. I am using here the {<strong>usethis</strong>} package because it automates all the necessary steps. However, — as I mentioned above — there are several requirements before you can create and connect a GitHub repo. <a href="https://happygitwithr.com/">With Happy Git and GitHub for the useR</a> you should read and learn how to connect an RStudio project to GitHub under different conditions. In this case, I have applied <a href="https://happygitwithr.com/existing-github-last">Chapter 17, “Existing project, GitHub last”</a>.</p>
+<ol type="1">
+<li>Write <code>usethis::use_github()</code> into the console window of the RStudio window (lower left pane). After return your console will display the following lines:</li>
+</ol>
+<div id="fig-initialize-github-console-text" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="The screenshot shows the following lines, from top to the bottom: 'R version 4.4.1 (2024-04-14)' written in red, '> usethis::use_github()' written in red. From here the next lines start with a green ok check mark icon,  'Setting active project to' followed by the path, 'Creating GitHub repository' followed by the Github.com path of my repo., 'Setting remote `origin` to' followed by the appropriate path, 'Pushing `master` branch to gitHub and setting `origin/master` as upstream branch.', 'Opening URL' followed by the URL to my Github repo.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-initialize-github-console-text-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://l3lab.net/posts/2024-07-23-from-git-to-github-using-rstudio/console-using-github-repo-with-usethis-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The screenshot shows the following lines, from top to the bottom: 'R version 4.4.1 (2024-04-14)' written in red, '> usethis::use_github()' written in red. From here the next lines start with a green ok check mark icon,  'Setting active project to' followed by the path, 'Creating GitHub repository' followed by the Github.com path of my repo., 'Setting remote `origin` to' followed by the appropriate path, 'Pushing `master` branch to gitHub and setting `origin/master` as upstream branch.', 'Opening URL' followed by the URL to my Github repo.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-initialize-github-console-text-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Text of the RStudio window console window (Screenshot)
+</figcaption>
+</figure>
+</div>
+<p>The screenshot above shows the different actions for the <code>usethis::use_github()</code> command. In the last step, the newly generated and updated repository on GitHub was opened.</p>
+<div id="fig-github-quarto-blog-repo" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Listing the committed files on the GitHub repo web page in three columns. Name, commit message ('First commit' for all lines) and time ('19 minutes ago' for all lines). At the top left of this list there is a small profile picture of me, followed by the name of my GitHub account 'petzi53' and the t4ext 'first commit'. On the top side you can see the unique commit code '0ced0df' followed by the text '19 minutes ago' and in bold '1 commit'">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-github-quarto-blog-repo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://l3lab.net/posts/2024-07-23-from-git-to-github-using-rstudio/new-repo-page-opened-automatically-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Listing the committed files on the GitHub repo web page in three columns. Name, commit message ('First commit' for all lines) and time ('19 minutes ago' for all lines). At the top left of this list there is a small profile picture of me, followed by the name of my GitHub account 'petzi53' and the t4ext 'first commit'. On the top side you can see the unique commit code '0ced0df' followed by the text '19 minutes ago' and in bold '1 commit'">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-github-quarto-blog-repo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Web page of the GitHub repository of the Quarto blog after the initial commit
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>This post shows how to initialize Git and GitHub using RStudio after crating of the brand-new Quarto blog:</p>
+<ol type="1">
+<li>Commit all the files generated automatically after launching the Quarto blog (as described in <a href="../2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio">Initializing a Quarto Blog with RStudio</a>) to the local Git repository.</li>
+<li>Initializing a remote GitHub repository, connecting the local repo with it, and connecting it with the local repo.</li>
+</ol>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>git</category>
+  <category>github</category>
+  <category>rstudio</category>
+  <guid>https://l3lab.net/posts/2024-07-23-from-git-to-github-using-rstudio/</guid>
+  <pubDate>Mon, 22 Jul 2024 22:00:00 GMT</pubDate>
+  <media:content url="https://l3lab.net/posts/2024-07-23-from-git-to-github-using-rstudio/github-octocat.png" medium="image" type="image/png" height="96" width="144"/>
+</item>
 <item>
   <title>Initializing a Quarto Blog using RStudio</title>
   <dc:creator>Peter Baumgartner</dc:creator>
@@ -39,7 +172,7 @@
 <section id="new-project" class="level3">
 <h3 class="anchored" data-anchor-id="new-project">New Project…</h3>
 <p>Inside RStudio, use the <code>New Project…</code> command and select <code>New Directory</code> and then <code>Quarto Blog</code>.</p>
-<div id="fig-new-project-wizard" class="quarto-float quarto-figure quarto-figure-center anchored" alt="RStudio new project wizard window with three options reading from the top: New Directory - Start a project in a brand new working directory; Existing Directory - Associate a project with an existing working directory; Version Control - Checkout a project from a version control repository." data-fig-align="center">
+<div id="fig-new-project-wizard" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="RStudio new project wizard window with three options reading from the top: New Directory - Start a project in a brand new working directory; Existing Directory - Associate a project with an existing working directory; Version Control - Checkout a project from a version control repository.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-new-project-wizard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/creating-quarto-blog-1-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="RStudio new project wizard window with three options reading from the top: New Directory - Start a project in a brand new working directory; Existing Directory - Associate a project with an existing working directory; Version Control - Checkout a project from a version control repository.">
@@ -49,7 +182,7 @@ Figure&nbsp;1: RStudio new project wizard window (Screenshot): Choose ‘New Dir
 </figcaption>
 </figure>
 </div>
-<div id="fig-new-blog-project-window" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The Project Type dialog window lists the choices for new project. The first seven options are visible: New Project, R Package, Shiny Application, Quarto Project, Quarto Website, Quarto Blog, Quarto Book. (From top to the bottom. Top left is a button 'Back' for returning to the previous dialog window. Bottom right is a 'Cancel' button to stop the initialization process." data-fig-align="center">
+<div id="fig-new-blog-project-window" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="The Project Type dialog window lists the choices for new project. The first seven options are visible: New Project, R Package, Shiny Application, Quarto Project, Quarto Website, Quarto Blog, Quarto Book. (From top to the bottom. Top left is a button 'Back' for returning to the previous dialog window. Bottom right is a 'Cancel' button to stop the initialization process.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-new-blog-project-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/creating-quarto-blog-2-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Project Type dialog window lists the choices for new project. The first seven options are visible: New Project, R Package, Shiny Application, Quarto Project, Quarto Website, Quarto Blog, Quarto Book. (From top to the bottom. Top left is a button 'Back' for returning to the previous dialog window. Bottom right is a 'Cancel' button to stop the initialization process.">
@@ -59,7 +192,7 @@ Figure&nbsp;2: RStudio project type window (Screenshot): Choose ‘Quarto Blog�
 </figcaption>
 </figure>
 </div>
-<div id="fig-create-blog-window" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The 'Create quarto Blog' dialog window requires a file name for the directory of the repository, titled 'Directory name', a directory where the project will be created, titled 'create project as subdirectory of:' with a 'Browse' button to the right, a drop down menu selecting 'Knitr' as the current option, titled 'Engine', three lines of check boxes, titled 'Create a git repository' (checked), 'Use renv with this project' and 'Use visual markdown editor'. The last option is followed by a question sign to get more information about the choice of a visual markdown editor. Top left in the dialog window is a button 'Back' for returning to the previous dialog window. Bottom left is a check box 'Open in a new session', Bottom right are a 'Create Project' button followed by a 'Cancel' button for stopping the initialization process." data-fig-align="center">
+<div id="fig-create-blog-window" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="The 'Create quarto Blog' dialog window requires a file name for the directory of the repository, titled 'Directory name', a directory where the project will be created, titled 'create project as subdirectory of:' with a 'Browse' button to the right, a drop down menu selecting 'Knitr' as the current option, titled 'Engine', three lines of check boxes, titled 'Create a git repository' (checked), 'Use renv with this project' and 'Use visual markdown editor'. The last option is followed by a question sign to get more information about the choice of a visual markdown editor. Top left in the dialog window is a button 'Back' for returning to the previous dialog window. Bottom left is a check box 'Open in a new session', Bottom right are a 'Create Project' button followed by a 'Cancel' button for stopping the initialization process.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-create-blog-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/creating-quarto-blog-3-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The 'Create quarto Blog' dialog window requires a file name for the directory of the repository, titled 'Directory name', a directory where the project will be created, titled 'create project as subdirectory of:' with a 'Browse' button to the right, a drop down menu selecting 'Knitr' as the current option, titled 'Engine', three lines of check boxes, titled 'Create a git repository' (checked), 'Use renv with this project' and 'Use visual markdown editor'. The last option is followed by a question sign to get more information about the choice of a visual markdown editor. Top left in the dialog window is a button 'Back' for returning to the previous dialog window. Bottom left is a check box 'Open in a new session', Bottom right are a 'Create Project' button followed by a 'Cancel' button for stopping the initialization process.">
@@ -78,7 +211,7 @@ Figure&nbsp;3: RStudio Create Quarto Blog window (Screenshot): Fill the input fi
 <section id="key-files" class="level3">
 <h3 class="anchored" data-anchor-id="key-files">Key Files</h3>
 <p>Clicking the “Create Project” button generates different key files and opens the <code>_quarto.yml</code> file in the RStudio editor window.</p>
-<div id="fig-rstudio-file-listing-window" class="quarto-float quarto-figure quarto-figure-center anchored" alt="At the top of the screenshot there are six tabs. From left to the right: 'Files', 'Plots', 'Packages', 'Help', 'Viewer', 'Presentation' with the 'Files' tab active. Under the tabs are several buttons. From left to the right: 'New Folder', 'New Blank File', 'Delete', 'Rename' and a drop down menu 'More'. Under these buttons is the full path to the active directory 'Home>Documents>Meine-Repos>quarto-pb-blog' where each subdirectory is an active link. Under this line starts the file listing with 'Name', 'Size' and 'Modified' columns. Each line of file names starts with an (unchecked) check box, and an appropriate icon. From top to bottom: _freeze, _quarto.yml, _site, .git, .gitignore, .quarto, .Rhistory, .Rproj.use, about.qmd, index.qmd, posts, profile.jpg, quarto-pb-blog.Rproj, style.css." data-fig-align="center">
+<div id="fig-rstudio-file-listing-window" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="At the top of the screenshot there are six tabs. From left to the right: 'Files', 'Plots', 'Packages', 'Help', 'Viewer', 'Presentation' with the 'Files' tab active. Under the tabs are several buttons. From left to the right: 'New Folder', 'New Blank File', 'Delete', 'Rename' and a drop down menu 'More'. Under these buttons is the full path to the active directory 'Home>Documents>Meine-Repos>quarto-pb-blog' where each subdirectory is an active link. Under this line starts the file listing with 'Name', 'Size' and 'Modified' columns. Each line of file names starts with an (unchecked) check box, and an appropriate icon. From top to bottom: _freeze, _quarto.yml, _site, .git, .gitignore, .quarto, .Rhistory, .Rproj.use, about.qmd, index.qmd, posts, profile.jpg, quarto-pb-blog.Rproj, style.css.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-rstudio-file-listing-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/generated-files-at-start-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="At the top of the screenshot there are six tabs. From left to the right: 'Files', 'Plots', 'Packages', 'Help', 'Viewer', 'Presentation' with the 'Files' tab active. Under the tabs are several buttons. From left to the right: 'New Folder', 'New Blank File', 'Delete', 'Rename' and a drop down menu 'More'. Under these buttons is the full path to the active directory 'Home>Documents>Meine-Repos>quarto-pb-blog' where each subdirectory is an active link. Under this line starts the file listing with 'Name', 'Size' and 'Modified' columns. Each line of file names starts with an (unchecked) check box, and an appropriate icon. From top to bottom: _freeze, _quarto.yml, _site, .git, .gitignore, .quarto, .Rhistory, .Rproj.use, about.qmd, index.qmd, posts, profile.jpg, quarto-pb-blog.Rproj, style.css.">
@@ -403,7 +536,7 @@ font-style: inherit;">---</span></span></code></pre></div>
 </section>
 <section id="render-blog" class="level2">
 <h2 class="anchored" data-anchor-id="render-blog">Render Blog</h2>
-<div id="fig-source-code-blog-home-page" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The screenshot shows a part of the RStudio source code window with two file tabs 'index.qmd' (active) and '_quarto.yml'. Below is a line of partly disabled buttons where the focus is on the 'Render' button that has below a tip tool saying 'Render the current document (SHIFT-CMD-K)'" data-fig-align="center">
+<div id="fig-source-code-blog-home-page" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="The screenshot shows a part of the RStudio source code window with two file tabs 'index.qmd' (active) and '_quarto.yml'. Below is a line of partly disabled buttons where the focus is on the 'Render' button that has below a tip tool saying 'Render the current document (SHIFT-CMD-K)'">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-source-code-blog-home-page-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/click-render-button-first-time-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The screenshot shows a part of the RStudio source code window with two file tabs 'index.qmd' (active) and '_quarto.yml'. Below is a line of partly disabled buttons where the focus is on the 'Render' button that has below a tip tool saying 'Render the current document (SHIFT-CMD-K)'">
@@ -414,7 +547,7 @@ Figure&nbsp;5: Source code of the blog home page ‘index.qmd’-file within RSt
 </figure>
 </div>
 <p>You can control via <code>Tools-&gt;Global Options…-&gt;R Markdown-&gt;Show output preview in…</code> whether the rendered result appears in the browser window or in the viewer pane. Generally, I use the “Window” option because it gives me a better view of the real setting.</p>
-<div id="fig-blog-listing-start-page" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The webpage lists two dummy blog post with three columns: From left to the right: Date and author; blog post title, category buttons and a short description; a small image. On the right margin is a list of categories displayed with their frequency in parenthesis. The title header of the website consists of two lines: Left top: Name of the Quarto blog so far 'quarto-pb-blog', Right top: 'About' followed by icons for GitHub, Twitter and search engine." data-fig-align="center">
+<div id="fig-blog-listing-start-page" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="The webpage lists two dummy blog post with three columns: From left to the right: Date and author; blog post title, category buttons and a short description; a small image. On the right margin is a list of categories displayed with their frequency in parenthesis. The title header of the website consists of two lines: Left top: Name of the Quarto blog so far 'quarto-pb-blog', Right top: 'About' followed by icons for GitHub, Twitter and search engine.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-blog-listing-start-page-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/rendered-blog-first-time-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The webpage lists two dummy blog post with three columns: From left to the right: Date and author; blog post title, category buttons and a short description; a small image. On the right margin is a list of categories displayed with their frequency in parenthesis. The title header of the website consists of two lines: Left top: Name of the Quarto blog so far 'quarto-pb-blog', Right top: 'About' followed by icons for GitHub, Twitter and search engine.">
