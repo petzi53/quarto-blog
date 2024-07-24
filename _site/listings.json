@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2024-07-24-default-blog-source-code/index.html",
       "/posts/2024-07-23-from-git-to-github-using-rstudio/index.html",
       "/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/index.html",
       "/posts/2024-07-21-writing-blog-posts--new-attempt/index.html",

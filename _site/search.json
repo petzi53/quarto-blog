@@ -119,6 +119,90 @@
     "text": "Footnotes\n\n\nGNU is a recursive acronym and means: GNU’s Not Unix.↩︎"
   },
   {
+    "objectID": "posts/2024-07-24-default-blog-source-code/index.html",
+    "href": "posts/2024-07-24-default-blog-source-code/index.html",
+    "title": "Default blog source code",
+    "section": "",
+    "text": "Start page of my L3Lab blog (Screenshot from 2024-07-23)\nIn this article, I will explain and explore the source code that was automatically generated when I created my blog with RStudio as described in Initializing a Quarto Blog with RStudio."
+  },
+  {
+    "objectID": "posts/2024-07-24-default-blog-source-code/index.html#virgin-title-page",
+    "href": "posts/2024-07-24-default-blog-source-code/index.html#virgin-title-page",
+    "title": "Default blog source code",
+    "section": "Virgin Title Page",
+    "text": "Virgin Title Page\nHere is the source code of the main index.qmd after the initialization:\n\n\nindex.qmd\n\n---\ntitle: \"quarto-pb-blog\"\nlisting:\n  contents: posts\n  sort: \"date desc\"\n  type: default\n  categories: true\n  sort-ui: false\n  filter-ui: false\npage-layout: full\ntitle-block-banner: true\n---\n\nAnd here is the look of the blog’s home page after the first rendering:\n\n\n\n\n\n\nFigure 1: First rendering after initializing a Quarto blog (Screenshot)\n\n\n\nAs you see the title banner shows twice the name of the R project folder ‘quarto-pb-blog’."
+  },
+  {
+    "objectID": "posts/2024-07-24-default-blog-source-code/index.html#change-title",
+    "href": "posts/2024-07-24-default-blog-source-code/index.html#change-title",
+    "title": "Default blog source code",
+    "section": "Change Title",
+    "text": "Change Title\nThe first line of the homepage’s YAML header in index.qmd is the title. If I change the title to “L3Lab,” only one part of the title banner will change.\n\n\n\n\n\n\nFigure 2: Screenshot of the blog’s homepage after changing the blog listing title in index.qmd\n\n\n\nThe reason is that the upper left text is written in the Quarto project file.\n\n\n_quarto.yml\n\nproject:\n  type: website\n\nwebsite:\n  title: \"quarto-pb-blog\"\n  navbar:\n    right:\n      - about.qmd\n      - icon: github\n        href: https://github.com/\n      - icon: twitter\n        href: https://twitter.com\nformat:\n  html:\n    theme: cosmo\n    css: styles.css\n\nThe top left name is the website’s title (and not the blog title). A website can have several components, such as a web page and a blog. I will call the website “Life Long Learning Lab,” the blog’s name remains “L3Lab”.\n\n\n\n\n\n\nFigure 3: Screenshot of the blog’s homepage after changing the title of the website in _quarto.yml\n\n\n\nThe website’s header doesn’t look nice. I will change the blog’s design (color, font size, layout, etc.) later in a separate post."
+  },
+  {
+    "objectID": "posts/2024-07-24-default-blog-source-code/index.html#explore-listing",
+    "href": "posts/2024-07-24-default-blog-source-code/index.html#explore-listing",
+    "title": "Default blog source code",
+    "section": "Explore Listing",
+    "text": "Explore Listing\n\nContents Directive\nListings enable you to automatically generate the contents of a page from a list of Quarto documents. In our case, the blog’s title is actually the home page’s listing title.\nInstead of listing: default for a list of all documents in the directory and a drop-down menu for sorting direction, order criteria, and a search bar, we have specified with content: posts that only the documents in the folder “posts” should be listed. Have a look into the “posts” folder by selecting the “Files” tab in the bottom right pane of RStudio and click on the “posts” folder to open the directory.\n\n\n\n\n\n\nFigure 4: Content of the posts folder immediately after the initialization process\n\n\n\nThe two folders “post-with-code” and “welcome” contain the two dummy articles generated automatically in the initialization process. I will explain the function of the _metadata.yml file later in another post.\nBesides to list all articles of a folder, you can also write much more complex rules for including content by using globs and a list of targets in the contents directive. See for more details the two sections of the Quarto documentation: Listing Contents and Custom Listings.\n\n\nListing Types\nThere are three built-in types of listings you can choose from:\n\n\n\nTable 1: Quarto blog listing types\n\n\n\n\n\nType\nDescription\n\n\n\n\ndefault\nA blog-style list of items.\n\n\ntable\nA table of listings.\n\n\ngrid\nA grid of listing cards.\n\n\n\n\n\n\nI am going to use for my blog the default blog-style list of items. However, it is instructive to see the other types to get a sense of their different appearances.\n\nGrid Listings\n\n\n\n\n\n\nFigure 5: Dummy articles after the blog initialiation in grid listing mode (Screenshot)\n\n\n\n\n\nTable Listings\n\n\n\n\n\n\nFigure 6: Dummy articles after the blog initialiation in table listing mode\n\n\n\n\n\nDefault Listings\n\n\n\n\n\n\nFigure 7: Dummy articles after the blog initialiation in default listing mode (Screenshot)"
+  },
+  {
+    "objectID": "posts/2024-07-24-default-blog-source-code/index.html#sort-articles",
+    "href": "posts/2024-07-24-default-blog-source-code/index.html#sort-articles",
+    "title": "Default blog source code",
+    "section": "Sort articles",
+    "text": "Sort articles\nUsing the sort option controls the order of the listing. Each sort key can include a field name and optionally either asc or desc to control whether to sort in ascending or descending order. Since the default order is ascending, I had to add desc to get the most current article at the top. The sort key can also contain more than one field to sort."
+  },
+  {
+    "objectID": "posts/2024-07-24-default-blog-source-code/index.html#listing-options",
+    "href": "posts/2024-07-24-default-blog-source-code/index.html#listing-options",
+    "title": "Default blog source code",
+    "section": "Listing options",
+    "text": "Listing options\nFor every listing type, there are several listing options to specify details, such as:\n\nThe maximum number of items: max-items\nThe height of the image: image-height. The width is automatically determined and the image will fill the rectangle without scaling (i.e., cropped to fill).\nA placeholder for the image: image-placeholder. The default image for items if they do not refer to a special image. For more options, see Listing Options and Advanced Options."
+  },
+  {
+    "objectID": "posts/2024-07-24-default-blog-source-code/index.html#categories",
+    "href": "posts/2024-07-24-default-blog-source-code/index.html#categories",
+    "title": "Default blog source code",
+    "section": "Categories",
+    "text": "Categories\nListings can also automatically add a list of categories to the page on which they appear. To turn on this behavior, you must set the option for categories to true: categories: true. You can choose between a few different category display styles: numbered, unnumbered, and word cloud.\nWhen users click a category, the page will be updated to show only a listing of the items that match the selected category."
+  },
+  {
+    "objectID": "posts/2024-07-24-default-blog-source-code/index.html#sort--and-filter--interface",
+    "href": "posts/2024-07-24-default-blog-source-code/index.html#sort--and-filter--interface",
+    "title": "Default blog source code",
+    "section": "Sort- and Filter- Interface",
+    "text": "Sort- and Filter- Interface\nListings support interactive tools that allow the listing viewer to sort, filter, or page through listings.\nI have turned off the sort and filter user interface and applied the default number of items per page for the default listing type: page-size: 25."
+  },
+  {
+    "objectID": "posts/2024-07-24-default-blog-source-code/index.html#page-layout",
+    "href": "posts/2024-07-24-default-blog-source-code/index.html#page-layout",
+    "title": "Default blog source code",
+    "section": "Page Layout",
+    "text": "Page Layout\nQuarto provides three different default layouts for HTML pages:\n\nThe article layout provides a content area with a page-based grid layout that provides margins, areas for sidebars, and a reading width-optimized body region. I am going to use this layout type for article content. See for more information on article layout.\nThe full layout uses the article grid system but automatically expands the content area to use the sidebar and margin region if no content is placed within those regions. This is useful for layouts that don’t need to be constrained to reading width, and that will benefit from additional horizontal space (e.g., landing or index pages). It is also often appropriate for listing pages.\nThe custom layout provides the possibility to create an individual layout. Learn more on the Page Layout page."
+  },
+  {
+    "objectID": "posts/2024-07-24-default-blog-source-code/index.html#title-block-banner",
+    "href": "posts/2024-07-24-default-blog-source-code/index.html#title-block-banner",
+    "title": "Default blog source code",
+    "section": "Title Block Banner",
+    "text": "Title Block Banner\nHTML pages rendered with Quarto include a formatted title block at the start of the article. The title block contains the title, subtitle, authors, date, doi, and abstract. There are several options to style the title block. In addition, if you’d like a more prominent title block, you can use title-block-banner to create a banner-style title block.\nFor my blog, I don’t want (at the moment) a title block banner. Setting title-block-banner to false saves space on the title page and feels more prosaic and less business-like.\n\n\n\n\n\n\nFigure 8: Blog homepage without banner for the title block (Screenshot)"
+  },
+  {
+    "objectID": "posts/2024-07-24-default-blog-source-code/index.html#git-and-github",
+    "href": "posts/2024-07-24-default-blog-source-code/index.html#git-and-github",
+    "title": "Default blog source code",
+    "section": "Git and GitHub",
+    "text": "Git and GitHub\nHere I will pause and commit these changes to Git and GitHub. It is interesting to note that there are – besides index.qmd and _quatro.yml – several other files that have changed.\n\n\n\n\n\n\nFigure 9: List of changed files expalined in this blog post (Screenshot)\n\n\n\nI haven’t even touched many of these files. But the title change propagates the new name into all blog post titles of articles already written and also in the corresponding navigation bars. This is shown with the example of the about page in the next screenshot (Figure 10).\n\n\n\n\n\n\nFigure 10: Changes in the about.qmd file (Screenshot)\n\n\n\nAnd I have committed all these changes I’ve got with this second commit a new status in my GitHub repo.\n\n\n\n\n\n\nFigure 11: Updated GitHub repo after second commit (Screenshot)"
+  },
+  {
+    "objectID": "posts/2024-07-24-default-blog-source-code/index.html#summary",
+    "href": "posts/2024-07-24-default-blog-source-code/index.html#summary",
+    "title": "Default blog source code",
+    "section": "Summary",
+    "text": "Summary\nI have explained the different YAML directives for the blog’s homepage file index.qmd, which are generated automatically when the Quarto blog is initialized. During this tour I have changed two options:\n\nThe title of the blog listing in index.qmd and of the website in _quarto.yml.\nI got rid of the title block banner.\n\nTo follow the next sequence of my blog tutorial, check if you have the same starting position.\nThe changes of the source code of the home page index.qmd result to:\n\n\nindex.qmd\n\n---\ntitle: \"L3Lab\"\nlisting:\n  contents: posts\n  sort: \"date desc\"\n  type: default\n  categories: true\n  sort-ui: false\n  filter-ui: false\npage-layout: full\ntitle-block-banner: false\n---\n\nThere are also a change in the website title in the _quatro.yml file:\n\n\n_qarto.yml\n\nproject:\n  type: website\n\nwebsite:\n  title: \"Life Long Learning Lab\"\n  navbar:\n    right:\n      - about.qmd\n      - icon: github\n        href: https://github.com/\n      - icon: twitter\n        href: https://twitter.com\nformat:\n  html:\n    theme: cosmo\n    css: styles.css\n\nThen I have committed these changes to Git and my dummy GitHub repo."
+  },
+  {
     "objectID": "posts/2023-04-23-welcome-quarto/index.html",
     "href": "posts/2023-04-23-welcome-quarto/index.html",
     "title": "Bye, Bye Hugo, Welcome Quarto!",
@@ -210,6 +294,48 @@
     "text": "Useful commands for deleting branches\n\n\n\n\n\n\nSet comment character for interactive terminal use\n\n\n\n\n\nIf you are using the Z shell (zsh) you have to set setopt interactivecomments for interactive use either in your ~/.zshrc file or write this command into the terminal for temporary use during the terminal session. In contrast to ksh (Korn shell), sh (Bourne shell), and bash (Bourne-again shell) the # is for the zsh (Z shell) only set as the comment character for non-interactive use (scripts).\n\n\n\n\nDeleting a remote branch\n\n\nTerminal\n\nsetopt interactivecomments\ngit push origin -d &lt;branch&gt;\n\n\n\nDeleting a local branch\n\n\nTerminal\n\ngit checkout master # change branch, you can't delete a branch you are working on\ngit branch -d &lt;branch&gt;\ngit branch -D &lt;branch&gt; # force-delete un-merged branches\n\n\n\nDeleting a local remote-tracking branch\n\n\nTerminal\n\ngit branch -dr &lt;remote&gt;/&lt;branch&gt; # 'dr' stands for \"delete remotes\"\ngit branch -dr origin/dev        # example\n\n# Delete multiple obsolete remote-tracking branches\ngit fetch &lt;remote&gt; -p  # 'p' stands for \"prune\"\ngit fetch origin -p    # example\n\n\n\n\n\n\n\nWarning\n\n\n\nDon’t forget to refresh the RStudio listing to verify that you have deleted the branches.\n\n\n\n\n\n\n\n\n\n\nClick on the circle symbol at the top right corner…\n\n\n\n\n\n\n… and choose “Refresh Now” to list the branches currently available."
   },
   {
+    "objectID": "posts/2024-07-23-from-git-to-github-using-rstudio/index.html",
+    "href": "posts/2024-07-23-from-git-to-github-using-rstudio/index.html",
+    "title": "From Git to GitHub using RStudio",
+    "section": "",
+    "text": "The following procedure requires some credential setup for GitHub on your end. There are several routes you can go:\n\nSet up the GitHub repo first. It my sound counter-intuitive, but the easiest way to get your work onto GitHub is to initiate a GitHub repo first, then use RStudio to start working in a synced local copy. This approach is described in Happy Git’s workflows New project, GitHub first and Existing project, GitHub first.\nCommand line Git. I will use this approach to add a remote repository post hoc. This is described detailed in the Happy Git workflow Existing project, GitHub last."
+  },
+  {
+    "objectID": "posts/2024-07-23-from-git-to-github-using-rstudio/index.html#requirements-to-follow-this-post",
+    "href": "posts/2024-07-23-from-git-to-github-using-rstudio/index.html#requirements-to-follow-this-post",
+    "title": "From Git to GitHub using RStudio",
+    "section": "",
+    "text": "The following procedure requires some credential setup for GitHub on your end. There are several routes you can go:\n\nSet up the GitHub repo first. It my sound counter-intuitive, but the easiest way to get your work onto GitHub is to initiate a GitHub repo first, then use RStudio to start working in a synced local copy. This approach is described in Happy Git’s workflows New project, GitHub first and Existing project, GitHub first.\nCommand line Git. I will use this approach to add a remote repository post hoc. This is described detailed in the Happy Git workflow Existing project, GitHub last."
+  },
+  {
+    "objectID": "posts/2024-07-23-from-git-to-github-using-rstudio/index.html#why-using-git-and-github",
+    "href": "posts/2024-07-23-from-git-to-github-using-rstudio/index.html#why-using-git-and-github",
+    "title": "From Git to GitHub using RStudio",
+    "section": "Why using Git and GitHub?",
+    "text": "Why using Git and GitHub?\nAfter initializing a new Quarto blog I will create the initial (first) Git commit, initialize a GitHub repo, and push the content of the initial commit into the new repository.\nThere are several reasons to use Git:\n\nA Git repository (or repo) holds all the project files and their entire revision history. It is therefore not only easier to track changes but also to restore a previous version if necessary. (See the nice introduction)\nGitHub is an online platform to store and manage your content (code but also text and other resources), as well as track changes to it. It facilitates collaborations with your team but also with other (unknown) people."
+  },
+  {
+    "objectID": "posts/2024-07-23-from-git-to-github-using-rstudio/index.html#procedure-for-using-git",
+    "href": "posts/2024-07-23-from-git-to-github-using-rstudio/index.html#procedure-for-using-git",
+    "title": "From Git to GitHub using RStudio",
+    "section": "Procedure for using Git",
+    "text": "Procedure for using Git\nIn the previous blog post, we have already initialized the Quarto weblog, including Git support, by checking the appropriate check box.\n\nTo see all the changes you have made so far, click on the Git tab at the top right pane of RStudio. You should see a picture similar to the following one.\n\n\n\n\n\n\n\nFigure 1: Selected the Git tab of the RStudio right top pane (Screenshot):\n\n\n\n\nAfter selecting all files and checking them (checking a single file of a group of selected files checks all selected files), the Git window shows all files seen above but also the files inside folders that are now prepared for the next Git commit.\n\n\n\n\n\n\n\nFigure 2: Selecting all added or changed files in the RStudio Git pane (Screenshot)\n\n\n\n\nAfter clicking on the “Commit” tab (or using the shortcut CTRL-ALT-M) a window opens for writing the commit message. Write short notes using a commando language. For example a commit text for the main index.qmd file could be: “change title-block-banner to true”.\n\nIt is usual to start the commit messages with “initial commit”. I had erroneously used “first commit” in the screenshot.\n\n\n\n\n\n\n\nFigure 3: Writing a commit message (Screenshot)\n\n\n\n\nAfter clicking the Commit button, RStudio presents a window with the results of the action:\n\n\n\n\n\n\n\nFigure 4: Resulted actions after the last commit (Screenshot)\n\n\n\nClosing both windows will end the Git procedure to the local repository."
+  },
+  {
+    "objectID": "posts/2024-07-23-from-git-to-github-using-rstudio/index.html#procedure-for-initializing-a-github-repo",
+    "href": "posts/2024-07-23-from-git-to-github-using-rstudio/index.html#procedure-for-initializing-a-github-repo",
+    "title": "From Git to GitHub using RStudio",
+    "section": "Procedure for initializing a GitHub repo",
+    "text": "Procedure for initializing a GitHub repo\nNext create a GitHub repo with all the locally committed content. I am using here the {usethis} package because it automates all the necessary steps. However, — as I mentioned above — there are several requirements before you can create and connect a GitHub repo. With Happy Git and GitHub for the useR you should read and learn how to connect an RStudio project to GitHub under different conditions. In this case, I have applied Chapter 17, “Existing project, GitHub last”.\n\nWrite usethis::use_github() into the console window of the RStudio window (lower left pane). After return your console will display the following lines:\n\n\n\n\n\n\n\nFigure 5: Text of the RStudio window console window (Screenshot)\n\n\n\nThe screenshot above shows the different actions for the usethis::use_github() command. In the last step, the newly generated and updated repository on GitHub was opened.\n\n\n\n\n\n\nFigure 6: Web page of the GitHub repository of the Quarto blog after the initial commit"
+  },
+  {
+    "objectID": "posts/2024-07-23-from-git-to-github-using-rstudio/index.html#summary",
+    "href": "posts/2024-07-23-from-git-to-github-using-rstudio/index.html#summary",
+    "title": "From Git to GitHub using RStudio",
+    "section": "Summary",
+    "text": "Summary\nThis post shows how to initialize Git and GitHub using RStudio after crating of the brand-new Quarto blog:\n\nCommit all the files generated automatically after launching the Quarto blog (as described in Initializing a Quarto Blog with RStudio) to the local Git repository.\nInitializing a remote GitHub repository, connecting the local repo with it, and connecting it with the local repo."
+  },
+  {
     "objectID": "posts/2024-07-21-writing-blog-posts--new-attempt/index.html",
     "href": "posts/2024-07-21-writing-blog-posts--new-attempt/index.html",
     "title": "Writing Blog Posts: New Attempt",
@@ -235,7 +361,7 @@
     "href": "index.html",
     "title": "L3Lab",
     "section": "",
-    "text": "From Git to GitHub using RStudio\n\n\n\n\n\n\ngit\n\n\ngithub\n\n\nrstudio\n\n\n\nThis post shows how to create the initial (first) Git commit using RStudio. I will initialize a GitHub repo, and push the content of the initial commit into the new repository.\n\n\n\n\n\n2024-07-23\n\n\nPeter Baumgartner\n\n\n8 min\n\n\n2024-07-23\n\n\n\n\n\n\n\n\n\n\n\n\nInitializing a Quarto Blog using RStudio\n\n\nCreating a Quarto blog from scratch using RStudio. – A visual guide.\n\n\n\nblog\n\n\nquarto\n\n\nrstudio\n\n\n\nInitializing a Quarto blog, explaining the generated key files and the starting content of the Quarto project file _quarto.yml and the blog homepage file index.qmd. \n\n\n\n\n\n2024-07-22\n\n\nPeter Baumgartner\n\n\n8 min\n\n\n2024-07-23\n\n\n\n\n\n\n\n\n\n\n\n\nWriting Blog Posts: New Attempt\n\n\nNew motivations for writing blog posts\n\n\n\nblog\n\n\nquarto\n\n\n\nI planned to write at least ten articles within two months before I wanted to publish my new blog. I never reached this limit last year, guided wrongly by perfectionism. \n\n\n\n\n\n2024-07-21\n\n\nPeter Baumgartner\n\n\n4 min\n\n\n2024-07-21\n\n\n\n\n\n\n\n\n\n\n\n\nCreating a column-based layout\n\n\nChanging the Page Layout in Quarto\n\n\n\nblog\n\n\nquarto\n\n\nhow-to\n\n\n\nDo you want to place two figures side by side or write text in parallel in different columns? The post describes four methods to turn part of your blog post into a column-based layout. \n\n\n\n\n\n2023-05-07\n\n\nPeter Baumgartner\n\n\n8 min\n\n\n2024-07-21\n\n\n\n\n\n\n\n\n\n\n\n\nHow to delete Git branches\n\n\nThe limits of RStudio with the pr_*() family of the {usethis} functions\n\n\n\ngit\n\n\ngithub\n\n\nhow-to\n\n\n\nThe article explains how I finally succeeded in deleting different branches in Git. It turned out – contrary to my previous mental model – that there are not only two branches but three (local, remote origin, and local remote-tracking branch). \n\n\n\n\n\n2023-05-05\n\n\nPeter Baumgartner\n\n\n4 min\n\n\n2024-07-21\n\n\n\n\n\n\n\n\n\n\n\n\nBye, Bye Hugo, Welcome Quarto!\n\n\nMy first blogging impressions with Quarto\n\n\n\nblog\n\n\nquarto\n\n\n\nThis is my first entry in a new blog powered by Quarto. After continuously struggling with a complex machinery (blogdown, Hugo, Wowchemy), I feel like coming home from a trip abroad!\n\n\n\n\n\n2023-04-23\n\n\nPeter Baumgartner\n\n\n4 min\n\n\n2024-07-21\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Default blog source code\n\n\nExplaining generated default source code after initializing a Quarto Blog with RStudio\n\n\n\nhow-to\n\n\nquarto\n\n\n\n\n\n\n\n\n\n2024-07-24\n\n\nPeter Baumgartner\n\n\n14 min\n\n\n2024-07-24\n\n\n\n\n\n\n\n\n\n\n\n\nFrom Git to GitHub using RStudio\n\n\n\n\n\n\ngit\n\n\ngithub\n\n\nrstudio\n\n\n\nThis post shows how to create the initial (first) Git commit using RStudio. I will initialize a GitHub repo, and push the content of the initial commit into the new repository.\n\n\n\n\n\n2024-07-23\n\n\nPeter Baumgartner\n\n\n8 min\n\n\n2024-07-24\n\n\n\n\n\n\n\n\n\n\n\n\nInitializing a Quarto Blog using RStudio\n\n\nCreating a Quarto blog from scratch using RStudio. – A visual guide.\n\n\n\nblog\n\n\nquarto\n\n\nrstudio\n\n\n\nInitializing a Quarto blog, explaining the generated key files and the starting content of the Quarto project file _quarto.yml and the blog homepage file index.qmd. \n\n\n\n\n\n2024-07-22\n\n\nPeter Baumgartner\n\n\n8 min\n\n\n2024-07-23\n\n\n\n\n\n\n\n\n\n\n\n\nWriting Blog Posts: New Attempt\n\n\nNew motivations for writing blog posts\n\n\n\nblog\n\n\nquarto\n\n\n\nI planned to write at least ten articles within two months before I wanted to publish my new blog. I never reached this limit last year, guided wrongly by perfectionism. \n\n\n\n\n\n2024-07-21\n\n\nPeter Baumgartner\n\n\n4 min\n\n\n2024-07-21\n\n\n\n\n\n\n\n\n\n\n\n\nCreating a column-based layout\n\n\nChanging the Page Layout in Quarto\n\n\n\nblog\n\n\nquarto\n\n\nhow-to\n\n\n\nDo you want to place two figures side by side or write text in parallel in different columns? The post describes four methods to turn part of your blog post into a column-based layout. \n\n\n\n\n\n2023-05-07\n\n\nPeter Baumgartner\n\n\n8 min\n\n\n2024-07-21\n\n\n\n\n\n\n\n\n\n\n\n\nHow to delete Git branches\n\n\nThe limits of RStudio with the pr_*() family of the {usethis} functions\n\n\n\ngit\n\n\ngithub\n\n\nhow-to\n\n\n\nThe article explains how I finally succeeded in deleting different branches in Git. It turned out – contrary to my previous mental model – that there are not only two branches but three (local, remote origin, and local remote-tracking branch). \n\n\n\n\n\n2023-05-05\n\n\nPeter Baumgartner\n\n\n4 min\n\n\n2024-07-21\n\n\n\n\n\n\n\n\n\n\n\n\nBye, Bye Hugo, Welcome Quarto!\n\n\nMy first blogging impressions with Quarto\n\n\n\nblog\n\n\nquarto\n\n\n\nThis is my first entry in a new blog powered by Quarto. After continuously struggling with a complex machinery (blogdown, Hugo, Wowchemy), I feel like coming home from a trip abroad!\n\n\n\n\n\n2023-04-23\n\n\nPeter Baumgartner\n\n\n4 min\n\n\n2024-07-21\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "about.html",
@@ -243,47 +369,5 @@
     "title": "Peter Baumgartner",
     "section": "",
     "text": "I am a retired professor of Education Technology. As head of the Department of Interactive Media and Educational Technologies at the University for Continuing Education Krems (UWK) (Austria), I researched how to apply technology in settings of Life Long Learning. \nI had held positions as a professor at several universities in Austria and Germany (Klagenfurt, Münster, Innsbruck, Hagen) before I accepted the nomination to Krems. I published 25 books (10 monographs and 15 edited volumes) and over 200 articles.\nWith my retirement, I became a Life Long Learner myself. I am interested in studying workflows for Open Science research, focusing on note-taking apps like Obsidian, Hypothes.is, etc., and the R programming language for statistical computing and data science.\n\n\n Back to top"
-  },
-  {
-    "objectID": "posts/2024-07-23-from-git-to-github-using-rstudio/index.html",
-    "href": "posts/2024-07-23-from-git-to-github-using-rstudio/index.html",
-    "title": "From Git to GitHub using RStudio",
-    "section": "",
-    "text": "The following procedure requires some credential setup for GitHub on your end. There are several routes you can go:\n\nSet up the GitHub repo first. It my sound counter-intuitive, but the easiest way to get your work onto GitHub is to initiate a GitHub repo first, then use RStudio to start working in a synced local copy. This approach is described in Happy Git’s workflows New project, GitHub first and Existing project, GitHub first.\nCommand line Git. I will use this approach to add a remote repository post hoc. This is described detailed in the Happy Git workflow Existing project, GitHub last."
-  },
-  {
-    "objectID": "posts/2024-07-23-from-git-to-github-using-rstudio/index.html#why-using-git-and-github",
-    "href": "posts/2024-07-23-from-git-to-github-using-rstudio/index.html#why-using-git-and-github",
-    "title": "From Git to GitHub using RStudio",
-    "section": "Why using Git and GitHub?",
-    "text": "Why using Git and GitHub?\nAfter initializing a new Quarto blog I will create the initial (first) Git commit, initialize a GitHub repo, and push the content of the initial commit into the new repository.\nThere are several reasons to use Git:\n\nA Git repository (or repo) holds all the project files and their entire revision history. It is therefore not only easier to track changes but also to restore a previous version if necessary. (See the nice introduction)\nGitHub is an online platform to store and manage your content (code but also text and other resources), as well as track changes to it. It facilitates collaborations with your team but also with other (unknown) people."
-  },
-  {
-    "objectID": "posts/2024-07-23-from-git-to-github-using-rstudio/index.html#requirements-to-follow-this-post",
-    "href": "posts/2024-07-23-from-git-to-github-using-rstudio/index.html#requirements-to-follow-this-post",
-    "title": "From Git to GitHub using RStudio",
-    "section": "",
-    "text": "The following procedure requires some credential setup for GitHub on your end. There are several routes you can go:\n\nSet up the GitHub repo first. It my sound counter-intuitive, but the easiest way to get your work onto GitHub is to initiate a GitHub repo first, then use RStudio to start working in a synced local copy. This approach is described in Happy Git’s workflows New project, GitHub first and Existing project, GitHub first.\nCommand line Git. I will use this approach to add a remote repository post hoc. This is described detailed in the Happy Git workflow Existing project, GitHub last."
-  },
-  {
-    "objectID": "posts/2024-07-23-from-git-to-github-using-rstudio/index.html#procedure-for-using-git",
-    "href": "posts/2024-07-23-from-git-to-github-using-rstudio/index.html#procedure-for-using-git",
-    "title": "From Git to GitHub using RStudio",
-    "section": "Procedure for using Git",
-    "text": "Procedure for using Git\nIn the previous blog post, we have already initialized the Quarto weblog, including Git support, by checking the appropriate check box.\n\nTo see all the changes you have made so far, click on the Git tab at the top right pane of RStudio. You should see a picture similar to the following one.\n\n\n\n\n\n\n\nFigure 1: Selected the Git tab of the RStudio right top pane (Screenshot):\n\n\n\n\nAfter selecting all files and checking them (checking a single file of a group of selected files checks all selected files), the Git window shows all files seen above but also the files inside folders that are now prepared for the next Git commit.\n\n\n\n\n\n\n\nFigure 2: Selecting all added or changed files in the RStudio Git pane (Screenshot)\n\n\n\n\nAfter clicking on the “Commit” tab (or using the shortcut CTRL-ALT-M) a window opens for writing the commit message. Write short notes using a commando language. For example a commit text for the main index.qmd file could be: “change title-block-banner to true”.\n\nIt is usual to start the commit messages with “initial commit”. I had erroneously used “first commit” in the screenshot.\n\n\n\n\n\n\n\nFigure 3: Writing a commit message (Screenshot)\n\n\n\n\nAfter clicking the Commit button, RStudio presents a window with the results of the action:\n\n\n\n\n\n\n\nFigure 4: Resulted actions after the last commit (Screenshot)\n\n\n\nClosing both windows will end the Git procedure to the local repository."
-  },
-  {
-    "objectID": "posts/2024-07-23-from-git-to-github-using-rstudio/index.html#procedure-for-initializing-a-github-repo",
-    "href": "posts/2024-07-23-from-git-to-github-using-rstudio/index.html#procedure-for-initializing-a-github-repo",
-    "title": "From Git to GitHub using RStudio",
-    "section": "Procedure for initializing a GitHub repo",
-    "text": "Procedure for initializing a GitHub repo\nNext create a GitHub repo with all the locally committed content. I am using here the {usethis} package because it automates all the necessary steps. However, — as I mentioned above — there are several requirements before you can create and connect a GitHub repo. With Happy Git and GitHub for the useR you should read and learn how to connect an RStudio project to GitHub under different conditions. In this case, I have applied Chapter 17, “Existing project, GitHub last”.\n\nWrite usethis::use_github() into the console window of the RStudio window (lower left pane). After return your console will display the following lines:\n\n\n\n\n\n\n\nFigure 5: Text of the RStudio window console window (Screenshot)\n\n\n\nThe screenshot above shows the different actions for the usethis::use_github() command. In the last step, the newly generated and updated repository on GitHub was opened.\n\n\n\n\n\n\nFigure 6: Web page of the GitHub repository of the Quarto blog after the initial commit"
-  },
-  {
-    "objectID": "posts/2024-07-23-from-git-to-github-using-rstudio/index.html#summary",
-    "href": "posts/2024-07-23-from-git-to-github-using-rstudio/index.html#summary",
-    "title": "From Git to GitHub using RStudio",
-    "section": "Summary",
-    "text": "Summary\nThis post shows how to initialize Git and GitHub using RStudio after crating of the brand-new Quarto blog:\n\nCommit all the files generated automatically after launching the Quarto blog (as described in Initializing a Quarto Blog with RStudio) to the local Git repository.\nInitializing a remote GitHub repository, connecting the local repo with it, and connecting it with the local repo."
   }
 ]
