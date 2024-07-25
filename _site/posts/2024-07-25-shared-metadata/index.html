@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Peter Baumgartner">
-<meta name="dcterms.date" content="2023-04-23">
-<meta name="description" content="This is my first entry in a new blog powered by Quarto. After continuously struggling with a complex machinery (blogdown, Hugo, Wowchemy), I feel like coming home from a trip abroad!">
+<meta name="dcterms.date" content="2024-07-25">
+<meta name="description" content="In this post I will explain one of the most important features of blog (or generally Quarto) projects: The ability to share YAML metadata options across multiple documents. Shared metadata can be defined at both the blog (project) and directory level.">
 
-<title>Bye, Bye Hugo, Welcome Quarto! – Life Long Learning Lab</title>
+<title>Shared Metadata – Life Long Learning Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -45,9 +79,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -124,12 +155,10 @@ cookieconsent.run({
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta name="twitter:title" content="Bye, Bye Hugo, Welcome Quarto! – Life Long Learning Lab">
-<meta name="twitter:description" content="This is my first entry in a new blog powered by Quarto. After continuously struggling with a complex machinery (blogdown, Hugo, Wowchemy), I feel like coming home from a trip abroad!">
-<meta name="twitter:image" content="https://l3lab.net/posts/2023-04-23-welcome-quarto/New_Found_Glory_Coming_Home-min.png">
-<meta name="twitter:image-height" content="314">
-<meta name="twitter:image-width" content="317">
-<meta name="twitter:image:alt" content="A photo of lead vocalist Jordan Pundik walking out of a restaurant holding a suitcase that reads the words 'NEW FOUND GLORY'. The words 'COMING HOME' appear in the bottom-left of the image.">
+<meta name="twitter:title" content="Shared Metadata – Life Long Learning Lab">
+<meta name="twitter:description" content="In this post I will explain one of the most important features of blog (or generally Quarto) projects: The ability to share YAML metadata options across multiple documents. Shared metadata can be defined at both the blog (project) and directory level.">
+<meta name="twitter:image" content="https://l3lab.net/posts/2024-07-25-shared-metadata/pexels-cottonbro-3944311-min1.jpg">
+<meta name="twitter:image:alt" content="Seven different hands grab a slice of a salami pizza cut in eight different pieces.">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -207,15 +236,16 @@ cookieconsent.run({
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Bye, Bye Hugo, Welcome Quarto!</h1>
-            <p class="subtitle lead">My first blogging impressions with Quarto</p>
+      <h1 class="title">Shared Metadata</h1>
+            <p class="subtitle lead">Share YAML metadata options across multiple documents</p>
                   <div>
         <div class="description">
-          This is my first entry in a new blog powered by Quarto. After continuously struggling with a complex machinery (blogdown, Hugo, Wowchemy), I feel like coming home from a trip abroad!
+          In this post I will explain one of the most important features of blog (or generally Quarto) projects: The ability to share YAML metadata options across multiple documents. Shared metadata can be defined at both the blog (project) and directory level.
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">blog</div>
+                <div class="quarto-category">how-to</div>
                 <div class="quarto-category">quarto</div>
               </div>
                   </div>
@@ -234,14 +264,14 @@ cookieconsent.run({
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">April 23, 2023</p>
+        <p class="date">July 25, 2024</p>
       </div>
     </div>
     
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">April 29, 2023</p>
+        <p class="date-modified">July 25, 2024</p>
       </div>
     </div>
       
@@ -254,7 +284,7 @@ cookieconsent.run({
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../../../../portrait-peter.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Peter Baumgartner"><img src="../../../../portrait-peter.png" class="img-fluid figure-img" alt="Peter Baumgartner"></a></p>
+<p><img src="../../../../portrait-peter.png" class="img-fluid figure-img"></p>
 <figcaption>Peter Baumgartner</figcaption>
 </figure>
 </div>
@@ -263,10 +293,20 @@ cookieconsent.run({
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#my-first-blog-entry-with-quarto" id="toc-my-first-blog-entry-with-quarto" class="nav-link active" data-scroll-target="#my-first-blog-entry-with-quarto">My first blog entry with Quarto</a></li>
-  <li><a href="#future-plans" id="toc-future-plans" class="nav-link" data-scroll-target="#future-plans">Future plans</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#project-level" id="toc-project-level" class="nav-link" data-scroll-target="#project-level">Project Level</a>
+  <ul class="collapse">
+  <li><a href="#before-my-change" id="toc-before-my-change" class="nav-link" data-scroll-target="#before-my-change">Before My Change</a></li>
+  <li><a href="#after-my-change" id="toc-after-my-change" class="nav-link" data-scroll-target="#after-my-change">After My Change</a></li>
+  </ul></li>
+  <li><a href="#directory-level" id="toc-directory-level" class="nav-link" data-scroll-target="#directory-level">Directory Level</a>
+  <ul class="collapse">
+  <li><a href="#before-my-change-1" id="toc-before-my-change-1" class="nav-link" data-scroll-target="#before-my-change-1">Before My Change</a></li>
+  <li><a href="#after-my-change-1" id="toc-after-my-change-1" class="nav-link" data-scroll-target="#after-my-change-1">After My Change</a></li>
+  </ul></li>
+  <li><a href="#git-and-github" id="toc-git-and-github" class="nav-link" data-scroll-target="#git-and-github">Git and GitHub</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/petzi53/quarto-blog/edit/main/posts/2023-04-23-welcome-quarto/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/petzi53/quarto-blog/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/petzi53/quarto-blog/edit/main/posts/2024-07-25-shared-metadata/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/petzi53/quarto-blog/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -277,35 +317,126 @@ cookieconsent.run({
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="New_Found_Glory_Coming_Home-min.png" class="img-fluid figure-img"></p>
-<figcaption>This is the front cover for the CD “Coming Home” by the artist “New Found Glory” via <a href="https://en.wikipedia.org/wiki/Coming_Home_(New_Found_Glory_album)">Wikipedia</a> (Fair Use)</figcaption>
+<p><img src="pexels-cottonbro-3944311-min1.jpg" class="img-fluid figure-img" style="width:50.0%" alt="Seven different hands grab a slice of a salami pizza cut in eight different pieces."></p>
+<figcaption>Sharing resources via metadata. <br> Foto von <a href="https://www.pexels.com/de-de/foto/lebensmittel-essen-pizza-hande-3944311/">cottonbro studio</a> via <a href="https://www.pexels.com/">Pexels.com</a></figcaption>
 </figure>
 </div>
-<section id="my-first-blog-entry-with-quarto" class="level2">
-<h2 class="anchored" data-anchor-id="my-first-blog-entry-with-quarto">My first blog entry with Quarto</h2>
-<p>This is my first entry in a new <a href="https://quarto.org/" title="Welcome to Quarto – An open-source scientific and technical publishing system">blog powered by Quarto</a>. After continuously struggling with the complex machinery <a href="https://bookdown.org/yihui/blogdown/" title="first page of the online blogdown book">blogdown</a> - <a href="https://gohugo.io/" title="The world’s fastest framework for building websites">Hugo</a> - <a href="https://wowchemy.com/" title="The site you need to grow as a creator — without the bloat">Wowchemy</a>, I feel like coming home from a trip abroad!</p>
-<p>Following the Quarto guide <a href="https://quarto.org/docs/websites/website-blog.html" title="Quarto websites include integrated support for blogging.">Creating a Blog</a>, it took me only 2 (!) minutes to render the provided blog template locally. After just one hour, I had my blog using Quarto, GitHub, and Netlify online. And half of this time, I spent thinking about a name for my blog and what to do with my older and outdated other blogdown web presences. (To put this quick access into perspective: I already had a <a href="https://github.com/petzi53" title="The complete developer platform to build, scale, and deliver secure software">GitHub account</a>, GitHub credential, and a <a href="https://www.netlify.com/" title="Bring it all together The fastest way to combine your favorite tools and APIs to build the fastest sites, stores, and apps for the web">Netlify</a> account. And I didn’t work on the content of a blog entry but used just the installed test pages.)</p>
-<p>I never was happy with the fast development of <a href="https://gohugo.io/" title="The world’s fastest framework for building websites">Hugo</a> that brought with it many changes and a considerable learning overhead. The same problem happened with the Academic theme by <a href="https://wowchemy.com/">Wowchemy</a>. The end product looked nice and ran fast, but I had already forgotten some of the many details for a good-looking blog post after two weeks. As a result, I spent more time learning the blog machinery than I had time to write about substantive subjects.</p>
-<p>It was helpful when <a href="https://bookdown.org/yihui/blogdown/a-quick-example.html#when-in-doubt-run-blogdowncheck_site">Yihui Xie introduced `blogdown::checksite()`</a> and the possibility of <a href="https://bookdown.org/yihui/blogdown/global-options.html#global-options">freezing to a specific Hugo version</a>. But the work in the blogdown-Hugo environment was never intuitive and satisfying. I think it’s self-explanatory that the introductory message to the blogdown book for over <del>two</del> three years now states as a note from the authors: “Some of the information and instructions in this book are now out of date because of changes to Hugo and the blogdown package.”</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="intro-note-blogdown-book-min.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Preface banner of blogdown: Creating Websites with R Markdown"><img src="intro-note-blogdown-book-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="A note from the authors: Some of the information and instructions in this book are now out of date because of changes to Hugo and the blogdown package. If you have suggestions for improving this book, please file an issue in our GitHub repository. Thanks for your patience while we work to update the book, and please stay tuned for the revised version! In the meantime, you can find an introduction to the changes and new features in the v1.0 release blog post and this 'Up &amp; running with blogdown in 2021' blog post. — Yihui, Amber, &amp; Alison"></a></p>
-</figure>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Shared YAML metadata can be defined at both the project and directory level:</p>
+<ul>
+<li>project level: filename <code>_quarto.yml</code></li>
+<li>directory level: filename <code>_metadata.yml</code></li>
+</ul>
+<p>For more information, see <a href="https://quarto.org/docs/projects/quarto-projects.html#shared-metadata">Project Basics – Quarto Shared Metadata</a></p>
+</section>
+<section id="project-level" class="level2">
+<h2 class="anchored" data-anchor-id="project-level">Project Level</h2>
+<p>On the project level, I will change only the provided URLs for my GitHub and Twitter accounts in this first step.</p>
+<section id="before-my-change" class="level3">
+<h3 class="anchored" data-anchor-id="before-my-change">Before My Change</h3>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_quarto.yml</strong></pre>
 </div>
-<figcaption>Preface banner of <a href="https://bookdown.org/yihui/blogdown/">blogdown: Creating Websites with R Markdown</a></figcaption>
-</figure>
+<div class="sourceCode" id="cb1" data-filename="_quarto.yml"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Life Long Learning Lab"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">right</span><span class="kw">:</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> about.qmd</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> github</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://github.com/</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> twitter</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://twitter.com</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> cosmo</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="future-plans" class="level2">
-<h2 class="anchored" data-anchor-id="future-plans">Future plans</h2>
-<p>I am sure there will also be some intricacies I must learn and overcome with Quarto, but this will conform with all my other R knowledge. At the moment, my feeling is enthusiastic: It is easy and intuitive to write on this platform. I hope to overcome technical barriers and concentrate on thematic topics finally. Since English is not my mother tongue, it is already difficult enough to express myself precisely about complex content-related questions. I don’t need any additional technical difficulty in writing blog posts.</p>
-<p>In contrast to my previous website projects, I am planning two different strategies:&nbsp;</p>
+<section id="after-my-change" class="level3">
+<h3 class="anchored" data-anchor-id="after-my-change">After My Change</h3>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_quarto.yml</strong></pre>
+</div>
+<div class="sourceCode" id="cb2" data-filename="_quarto.yml"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Life Long Learning Lab"</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">right</span><span class="kw">:</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> about.qmd</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> github</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://github.com/petzi53/quarto-pb-blog</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> twitter</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://x.com/pbaumgartner</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> cosmo</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="directory-level" class="level2">
+<h2 class="anchored" data-anchor-id="directory-level">Directory Level</h2>
+<p>We have seen in an <a href="../../posts/2024-07-24-default-blog-source-code/#fig-content-posts-folder">previous post</a> that there is a <code>_metadata.yml</code> file in the <code>posts</code> folder.</p>
+<section id="before-my-change-1" class="level3">
+<h3 class="anchored" data-anchor-id="before-my-change-1">Before My Change</h3>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_metadata.yml</strong></pre>
+</div>
+<div class="sourceCode" id="cb3" data-filename="_metadata.yml"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># options specified here will apply to all posts in this folder</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># freeze computational output</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># (see https://quarto.org/docs/projects/code-execution.html#freeze)</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">freeze</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Enable banner style title blocks</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">title-block-banner</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="after-my-change-1" class="level3">
+<h3 class="anchored" data-anchor-id="after-my-change-1">After My Change</h3>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_metadata.yml</strong></pre>
+</div>
+<div class="sourceCode" id="cb4" data-filename="_metadata.yml"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># options specified here will apply to all posts in this folder</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># freeze computational output</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># (see https://quarto.org/docs/projects/code-execution.html#freeze)</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">freeze</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Enable banner style title blocks</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="fu">title-block-banner</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Author name of all blog posts</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">'Peter Baumgartner'</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Table of content settings</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="fu">toc-depth</span><span class="kw">:</span><span class="at"> </span><span class="dv">4</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="fu">page-layout</span><span class="kw">:</span><span class="at"> article</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The changes are self-explanatory, so short comments will suffice:</p>
 <ul>
-<li><p>I will not go into the details of the website design immediately but will work on these issues from time to time.</p></li>
-<li><p>I will not announce the website until I am sure I will use it regularly and long-term. I think that about 10 articles – written in two months – should give me the trust that I will use it sustainably.</p></li>
+<li><code>title-block-banner</code>: I have already removed the title block banner from the home page listings and will disable it for blog posts as well. (I will revise this decision after I have written several posts. Maybe the title block banner is very useful for displaying a short description of the article.)</li>
+<li><code>author</code>: All articles in my blog will be written by me.</li>
+<li><code>toc</code> and <code>toc-depth</code>: I want a table of contents on the right side of the blog post, with a maximum of four levels. (I will revise this decision after I have written some longer articles. Maybe the TOC levels go too deep.)</li>
+<li><code>page-layout</code>: I have <a href="../../posts/2024-07-24-default-blog-source-code/#page-layout">already explained</a> the <code>page-layout: full</code> directive from the title home page <code>index.qmd</code>. Now we want an <code>article</code> layout, because it creates a content area with a page-based grid layout that provides margins, areas for sidebars, and a reading width-optimized body region.</li>
 </ul>
+</section>
+</section>
+<section id="git-and-github" class="level2">
+<h2 class="anchored" data-anchor-id="git-and-github">Git and GitHub</h2>
+<p>I will commit these third bulk of changes to Git and my demonstration repository <code>quarto-pb-blog</code> <a href="https://github.com/petzi53/quarto-pb-blog">on GitHub</a>.</p>
 
 
 </section>
@@ -761,7 +892,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
 </ul>
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/petzi53/quarto-blog/edit/main/posts/2023-04-23-welcome-quarto/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/petzi53/quarto-blog/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/petzi53/quarto-blog/edit/main/posts/2024-07-25-shared-metadata/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/petzi53/quarto-blog/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
@@ -771,38 +902,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","loop":true});
-(function() {
-  let previousOnload = window.onload;
-  window.onload = () => {
-    if (previousOnload) {
-      previousOnload();
-    }
-    lightboxQuarto.on('slide_before_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      const href = trigger.getAttribute('href');
-      if (href !== null) {
-        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-        if (imgEl !== null) {
-          const srcAttr = imgEl.getAttribute("src");
-          if (srcAttr && srcAttr.startsWith("data:")) {
-            slideConfig.href = srcAttr;
-          }
-        }
-      } 
-    });
-  
-    lightboxQuarto.on('slide_after_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(slideNode);
-      }
-    });
-  
-  };
-  
-})();
-          </script>
 
 
 

@@ -12,10 +12,10 @@ date-modified: "2024-07-22"
 draft: false
 ---
 
-[![Image by Mine Çetinkaya-Rundel from Get Started with Quarto - A video
+![Image by Mine Çetinkaya-Rundel from [Get Started with Quarto](https://quarto.org/docs/blog/posts/2023-05-15-get-started) - A video
 to jumpstart your Quarto journey. Featuring a new video for getting
 started with Quarto using R and
-RStudio.](quarto-get-started-min.png)](https://quarto.org/docs/blog/posts/2023-05-15-get-started)
+RStudio.](quarto-get-started-min.png)
 
 ## Initializing a Quarto Blog
 

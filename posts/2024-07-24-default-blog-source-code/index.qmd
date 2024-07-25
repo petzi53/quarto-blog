@@ -5,7 +5,7 @@ description: ""
 author: "Peter Baumgartner"
 date: "2024-07-24"
 image: "L3Lab-blog-2024-07-23-min.png"
-image-alt: ""
+image-alt: "TEST"
 categories: [how-to, quarto]
 date-modified: "2024-07-24"
 draft: false

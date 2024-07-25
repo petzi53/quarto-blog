@@ -1,0 +1,122 @@
+---
+title: "Shared Metadata"
+subtitle: "Share YAML metadata options across multiple documents"
+description: "In this post I will explain one of the most important features of blog (or generally Quarto) projects: The ability to share YAML metadata options across multiple documents. Shared metadata can be defined at both the blog (project) and directory level."
+author: "Peter Baumgartner"
+date: "2024-07-25"
+image: "pexels-cottonbro-3944311-min1.jpg"
+image-alt: "Seven different hands grab a slice of a salami pizza cut in eight different pieces."
+categories: [blog, how-to, quarto]
+date-modified: "2024-07-25"
+draft: false
+lightbox: false
+---
+
+![Sharing resources via metadata. <br/> Foto von [cottonbro studio](https://www.pexels.com/de-de/foto/lebensmittel-essen-pizza-hande-3944311/) via [Pexels.com](https://www.pexels.com/)](pexels-cottonbro-3944311-min1.jpg){fig-alt="Seven different hands grab a slice of a salami pizza cut in eight different pieces." width="50%"}
+
+
+## Introduction
+
+Shared YAML metadata can be defined at both the project and directory level:
+
+- project level: filename `_quarto.yml`
+- directory level: filename `_metadata.yml`
+
+For more information, see [Project Basics – Quarto Shared Metadata](https://quarto.org/docs/projects/quarto-projects.html#shared-metadata)
+
+## Project Level
+
+On the project level, I will change only the provided URLs for my GitHub and Twitter accounts in this first step.
+
+### Before My Change
+
+``` {.yml filename="_quarto.yml"}
+project:
+  type: website
+
+website:
+  title: "Life Long Learning Lab"
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/
+      - icon: twitter
+        href: https://twitter.com
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+
+```
+
+### After My Change
+
+```  {.yml filename="_quarto.yml"}
+project:
+  type: website
+
+website:
+  title: "Life Long Learning Lab"
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/petzi53/quarto-pb-blog
+      - icon: twitter
+        href: https://x.com/pbaumgartner
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+```
+
+## Directory Level
+
+We have seen in an [previous post](/posts/2024-07-24-default-blog-source-code/#fig-content-posts-folder) that there is a `_metadata.yml` file in the `posts` folder.
+
+### Before My Change
+
+``` {.yml filename="_metadata.yml"}
+# options specified here will apply to all posts in this folder
+
+# freeze computational output
+# (see https://quarto.org/docs/projects/code-execution.html#freeze)
+freeze: true
+
+# Enable banner style title blocks
+title-block-banner: true
+```
+
+### After My Change
+
+``` {.yml filename="_metadata.yml"}
+# options specified here will apply to all posts in this folder
+
+# freeze computational output
+# (see https://quarto.org/docs/projects/code-execution.html#freeze)
+freeze: true
+
+# Enable banner style title blocks
+title-block-banner: false
+
+# Author name of all blog posts
+author: 'Peter Baumgartner'
+
+# Table of content settings
+toc: true
+toc-depth: 4
+
+page-layout: article
+```
+
+The changes are self-explanatory, so short comments will suffice:
+
+- `title-block-banner`: I have already removed the title block banner from the home page listings and will disable it for blog posts as well. (I will revise this decision after I have written several posts. Maybe the title block banner is very useful for displaying a short description of the article.)
+- `author`: All articles in my blog will be written by me.
+- `toc` and `toc-depth`: I want a table of contents on the right side of the blog post, with a maximum of four levels. (I will revise this decision after I have written some longer articles. Maybe the TOC levels go too deep.)
+- `page-layout`: I have [already explained](/posts/2024-07-24-default-blog-source-code/#page-layout) the `page-layout: full` directive from the title home page `index.qmd`. Now we want an `article` layout, because it creates a content area with a page-based grid layout that provides margins, areas for sidebars, and a reading width-optimized body region.
+
+## Git and GitHub
+
+I will commit these third bulk of changes to Git and my demonstration repository `quarto-pb-blog` [on GitHub](https://github.com/petzi53/quarto-pb-blog).
