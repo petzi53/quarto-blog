@@ -294,16 +294,8 @@ cookieconsent.run({
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#project-level" id="toc-project-level" class="nav-link" data-scroll-target="#project-level">Project Level</a>
-  <ul class="collapse">
-  <li><a href="#before-my-change" id="toc-before-my-change" class="nav-link" data-scroll-target="#before-my-change">Before My Change</a></li>
-  <li><a href="#after-my-change" id="toc-after-my-change" class="nav-link" data-scroll-target="#after-my-change">After My Change</a></li>
-  </ul></li>
-  <li><a href="#directory-level" id="toc-directory-level" class="nav-link" data-scroll-target="#directory-level">Directory Level</a>
-  <ul class="collapse">
-  <li><a href="#before-my-change-1" id="toc-before-my-change-1" class="nav-link" data-scroll-target="#before-my-change-1">Before My Change</a></li>
-  <li><a href="#after-my-change-1" id="toc-after-my-change-1" class="nav-link" data-scroll-target="#after-my-change-1">After My Change</a></li>
-  </ul></li>
+  <li><a href="#project-level" id="toc-project-level" class="nav-link" data-scroll-target="#project-level">Project Level</a></li>
+  <li><a href="#directory-level" id="toc-directory-level" class="nav-link" data-scroll-target="#directory-level">Directory Level</a></li>
   <li><a href="#git-and-github" id="toc-git-and-github" class="nav-link" data-scroll-target="#git-and-github">Git and GitHub</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/petzi53/quarto-blog/edit/main/posts/2024-07-25-shared-metadata/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/petzi53/quarto-blog/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -333,8 +325,9 @@ cookieconsent.run({
 <section id="project-level" class="level2">
 <h2 class="anchored" data-anchor-id="project-level">Project Level</h2>
 <p>On the project level, I will change only the provided URLs for my GitHub and Twitter accounts in this first step.</p>
-<section id="before-my-change" class="level3">
-<h3 class="anchored" data-anchor-id="before-my-change">Before My Change</h3>
+<div class="grid">
+<section id="before-my-change" class="level5 g-col-5">
+<h5 class="anchored" data-anchor-id="before-my-change">Before My Change</h5>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>_quarto.yml</strong></pre>
@@ -357,8 +350,8 @@ cookieconsent.run({
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="after-my-change" class="level3">
-<h3 class="anchored" data-anchor-id="after-my-change">After My Change</h3>
+<section id="after-my-change" class="level5 g-col-7">
+<h5 class="anchored" data-anchor-id="after-my-change">After My Change</h5>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>_quarto.yml</strong></pre>
@@ -381,12 +374,14 @@ cookieconsent.run({
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
+</div>
 </section>
 <section id="directory-level" class="level2">
 <h2 class="anchored" data-anchor-id="directory-level">Directory Level</h2>
 <p>We have seen in an <a href="../../posts/2024-07-24-default-blog-source-code/#fig-content-posts-folder">previous post</a> that there is a <code>_metadata.yml</code> file in the <code>posts</code> folder.</p>
-<section id="before-my-change-1" class="level3">
-<h3 class="anchored" data-anchor-id="before-my-change-1">Before My Change</h3>
+<div class="grid">
+<section id="before-my-change-1" class="level5 g-col-6">
+<h5 class="anchored" data-anchor-id="before-my-change-1">Before My Change</h5>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>_metadata.yml</strong></pre>
@@ -401,8 +396,8 @@ cookieconsent.run({
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">title-block-banner</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="after-my-change-1" class="level3">
-<h3 class="anchored" data-anchor-id="after-my-change-1">After My Change</h3>
+<section id="after-my-change-1" class="level5 g-col-6">
+<h5 class="anchored" data-anchor-id="after-my-change-1">After My Change</h5>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>_metadata.yml</strong></pre>
@@ -425,6 +420,8 @@ cookieconsent.run({
 <span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="fu">page-layout</span><span class="kw">:</span><span class="at"> article</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+</div>
 <p>The changes are self-explanatory, so short comments will suffice:</p>
 <ul>
 <li><code>title-block-banner</code>: I have already removed the title block banner from the home page listings and will disable it for blog posts as well. (I will revise this decision after I have written several posts. Maybe the title block banner is very useful for displaying a short description of the article.)</li>
@@ -432,7 +429,6 @@ cookieconsent.run({
 <li><code>toc</code> and <code>toc-depth</code>: I want a table of contents on the right side of the blog post, with a maximum of four levels. (I will revise this decision after I have written some longer articles. Maybe the TOC levels go too deep.)</li>
 <li><code>page-layout</code>: I have <a href="../../posts/2024-07-24-default-blog-source-code/#page-layout">already explained</a> the <code>page-layout: full</code> directive from the title home page <code>index.qmd</code>. Now we want an <code>article</code> layout, because it creates a content area with a page-based grid layout that provides margins, areas for sidebars, and a reading width-optimized body region.</li>
 </ul>
-</section>
 </section>
 <section id="git-and-github" class="level2">
 <h2 class="anchored" data-anchor-id="git-and-github">Git and GitHub</h2>

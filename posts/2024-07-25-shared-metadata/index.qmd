@@ -10,6 +10,7 @@ categories: [blog, how-to, quarto]
 date-modified: "2024-07-25"
 draft: false
 lightbox: false
+engine: knitr
 ---
 
 ![Sharing resources via metadata. <br/> Foto von [cottonbro studio](https://www.pexels.com/de-de/foto/lebensmittel-essen-pizza-hande-3944311/) via [Pexels.com](https://www.pexels.com/)](pexels-cottonbro-3944311-min1.jpg){fig-alt="Seven different hands grab a slice of a salami pizza cut in eight different pieces." width="50%"}
@@ -28,7 +29,10 @@ For more information, see [Project Basics – Quarto Shared Metadata](https://qu
 
 On the project level, I will change only the provided URLs for my GitHub and Twitter accounts in this first step.
 
-### Before My Change
+:::: {.grid}
+
+::: {.g-col-5}
+##### Before My Change
 
 ``` {.yml filename="_quarto.yml"}
 project:
@@ -50,7 +54,10 @@ format:
 
 ```
 
-### After My Change
+:::
+  
+::: {.g-col-7}
+##### After My Change
 
 ```  {.yml filename="_quarto.yml"}
 project:
@@ -71,11 +78,18 @@ format:
     css: styles.css
 ```
 
+:::
+  
+::::
+
 ## Directory Level
 
 We have seen in an [previous post](/posts/2024-07-24-default-blog-source-code/#fig-content-posts-folder) that there is a `_metadata.yml` file in the `posts` folder.
 
-### Before My Change
+:::: {.grid}
+
+::: {.g-col-6}
+##### Before My Change
 
 ``` {.yml filename="_metadata.yml"}
 # options specified here will apply to all posts in this folder
@@ -88,7 +102,10 @@ freeze: true
 title-block-banner: true
 ```
 
-### After My Change
+:::
+  
+::: {.g-col-6}
+##### After My Change
 
 ``` {.yml filename="_metadata.yml"}
 # options specified here will apply to all posts in this folder
@@ -109,6 +126,10 @@ toc-depth: 4
 
 page-layout: article
 ```
+
+:::
+  
+::::
 
 The changes are self-explanatory, so short comments will suffice:
 
