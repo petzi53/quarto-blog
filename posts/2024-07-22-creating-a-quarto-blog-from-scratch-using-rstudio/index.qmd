@@ -40,19 +40,19 @@ Inside RStudio, use the `New Project…` command and select
 
 ![RStudio new project wizard window (Screenshot): Choose 'New Directory'
 to start an new project from
-scratch.](creating-quarto-blog-1-min.png){#fig-new-project-wizard
+scratch.](creating-quarto-blog-1-min.png){#fig-new-project-wizard group="initialize-blog"
 fig-alt="RStudio new project wizard window with three options reading from the top: New Directory - Start a project in a brand new working directory; Existing Directory - Associate a project with an existing working directory; Version Control - Checkout a project from a version control repository."
 fig-align="center"}
 
 ![RStudio project type window (Screenshot): Choose 'Quarto Blog' to
 initialize a blog
-project](creating-quarto-blog-2-min.png){#fig-new-blog-project-window
+project](creating-quarto-blog-2-min.png){#fig-new-blog-project-window group="initialize-blog"
 fig-alt="The Project Type dialog window lists the choices for new project. The first seven options are visible: New Project, R Package, Shiny Application, Quarto Project, Quarto Website, Quarto Blog, Quarto Book. (From top to the bottom. Top left is a button 'Back' for returning to the previous dialog window. Bottom right is a 'Cancel' button to stop the initialization process."
 fig-align="center"}
 
 ![RStudio Create Quarto Blog window (Screenshot): Fill the input fields
 with the appropriate
-data](creating-quarto-blog-3-min.png){#fig-create-blog-window
+data](creating-quarto-blog-3-min.png){#fig-create-blog-window group="initialize-blog"
 fig-alt="The 'Create quarto Blog' dialog window requires a file name for the directory of the repository, titled 'Directory name', a directory where the project will be created, titled 'create project as subdirectory of:' with a 'Browse' button to the right, a drop down menu selecting 'Knitr' as the current option, titled 'Engine', three lines of check boxes, titled 'Create a git repository' (checked), 'Use renv with this project' and 'Use visual markdown editor'. The last option is followed by a question sign to get more information about the choice of a visual markdown editor. Top left in the dialog window is a button 'Back' for returning to the previous dialog window. Bottom left is a check box 'Open in a new session', Bottom right are a 'Create Project' button followed by a 'Cancel' button for stopping the initialization process."
 fig-align="center"}
 
@@ -74,7 +74,7 @@ opens the `_quarto.yml` file in the RStudio editor window.
 
 ![RStudio file listing window (Screenshot): Choose 'New Directory' to
 start an new project from
-scratch.](generated-files-at-start-min.png){#fig-rstudio-file-listing-window
+scratch.](generated-files-at-start-min.png){#fig-rstudio-file-listing-window group="initialize-blog"
 fig-alt="At the top of the screenshot there are six tabs. From left to the right: 'Files', 'Plots', 'Packages', 'Help', 'Viewer', 'Presentation' with the 'Files' tab active. Under the tabs are several buttons. From left to the right: 'New Folder', 'New Blank File', 'Delete', 'Rename' and a drop down menu 'More'. Under these buttons is the full path to the active directory 'Home>Documents>Meine-Repos>quarto-pb-blog' where each subdirectory is an active link. Under this line starts the file listing with 'Name', 'Size' and 'Modified' columns. Each line of file names starts with an (unchecked) check box, and an appropriate icon. From top to bottom: _freeze, _quarto.yml, _site, .git, .gitignore, .quarto, .Rhistory, .Rproj.use, about.qmd, index.qmd, posts, profile.jpg, quarto-pb-blog.Rproj, style.css."
 fig-align="center"}
 
@@ -142,7 +142,7 @@ title-block-banner: true
 
 ![Source code of the blog home page 'index.qmd'-file within RStudio
 window
-(Screenshot)](click-render-button-first-time-min.png){#fig-source-code-blog-home-page
+(Screenshot)](click-render-button-first-time-min.png){#fig-source-code-blog-home-page group="initialize-blog"
 fig-alt="The screenshot shows a part of the RStudio source code window with two file tabs 'index.qmd' (active) and '_quarto.yml'. Below is a line of partly disabled buttons where the focus is on the 'Render' button that has below a tip tool saying 'Render the current document (SHIFT-CMD-K)'"
 fig-align="center"}
 
@@ -153,7 +153,7 @@ Generally, I use the "Window" option because it gives me a better view
 of the real setting.
 
 ![Website of the newly created Quarto blog
-(Screenshot):](rendered-blog-first-time-min.png){#fig-blog-listing-start-page
+(Screenshot):](rendered-blog-first-time-min.png){#fig-blog-listing-start-page group="initialize-blog"
 fig-alt="The webpage lists two dummy blog post with three columns: From left to the right: Date and author; blog post title, category buttons and a short description; a small image. On the right margin is a list of categories displayed with their frequency in parenthesis. The title header of the website consists of two lines: Left top: Name of the Quarto blog so far 'quarto-pb-blog', Right top: 'About' followed by icons for GitHub, Twitter and search engine."
 fig-align="center"}
 

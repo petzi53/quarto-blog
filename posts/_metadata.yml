@@ -12,3 +12,9 @@ title-block-banner: true
 comments:
   utterances:
     repo: petzi53/blog-comments
+
+lightbox:
+  match: auto
+  effect: zoom # default
+  desc-position: bottom # default
+  loop: true # default

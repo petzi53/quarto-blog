@@ -45,6 +45,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -251,7 +254,7 @@ cookieconsent.run({
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../../../../portrait-peter.png" class="img-fluid figure-img"></p>
+<p><a href="../../../../portrait-peter.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Peter Baumgartner"><img src="../../../../portrait-peter.png" class="img-fluid figure-img" alt="Peter Baumgartner"></a></p>
 <figcaption>Peter Baumgartner</figcaption>
 </figure>
 </div>
@@ -274,7 +277,7 @@ cookieconsent.run({
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://en.wikipedia.org/wiki/Coming_Home_(New_Found_Glory_album)" data-fig-alt="A photo of lead vocalist Jordan Pundik walking out of a restaurant holding a suitcase that reads the words &quot;NEW FOUND GLORY&quot;. The words &quot;COMING HOME&quot; appear in the bottom-left of the image." data-fig-align="center"><img src="New_Found_Glory_Coming_Home-min.png" class="img-fluid figure-img" alt="This is the front cover for the CD “Coming Home” by the artist “New Found Glory” via Wikipedia (Fair Use)"></a></p>
+<p><img src="New_Found_Glory_Coming_Home-min.png" class="img-fluid figure-img"></p>
 <figcaption>This is the front cover for the CD “Coming Home” by the artist “New Found Glory” via <a href="https://en.wikipedia.org/wiki/Coming_Home_(New_Found_Glory_album)">Wikipedia</a> (Fair Use)</figcaption>
 </figure>
 </div>
@@ -286,7 +289,11 @@ cookieconsent.run({
 <p>It was helpful when <a href="https://bookdown.org/yihui/blogdown/a-quick-example.html#when-in-doubt-run-blogdowncheck_site">Yihui Xie introduced `blogdown::checksite()`</a> and the possibility of <a href="https://bookdown.org/yihui/blogdown/global-options.html#global-options">freezing to a specific Hugo version</a>. But the work in the blogdown-Hugo environment was never intuitive and satisfying. I think it’s self-explanatory that the introductory message to the blogdown book for over <del>two</del> three years now states as a note from the authors: “Some of the information and instructions in this book are now out of date because of changes to Hugo and the blogdown package.”</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="intro-note-blogdown-book-min.png" class="img-fluid figure-img" style="width:70.0%" alt="A note from the authors: Some of the information and instructions in this book are now out of date because of changes to Hugo and the blogdown package. If you have suggestions for improving this book, please file an issue in our GitHub repository. Thanks for your patience while we work to update the book, and please stay tuned for the revised version! In the meantime, you can find an introduction to the changes and new features in the v1.0 release blog post and this 'Up &amp; running with blogdown in 2021' blog post. — Yihui, Amber, &amp; Alison"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="intro-note-blogdown-book-min.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Preface banner of blogdown: Creating Websites with R Markdown"><img src="intro-note-blogdown-book-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="A note from the authors: Some of the information and instructions in this book are now out of date because of changes to Hugo and the blogdown package. If you have suggestions for improving this book, please file an issue in our GitHub repository. Thanks for your patience while we work to update the book, and please stay tuned for the revised version! In the meantime, you can find an introduction to the changes and new features in the v1.0 release blog post and this 'Up &amp; running with blogdown in 2021' blog post. — Yihui, Amber, &amp; Alison"></a></p>
+</figure>
+</div>
 <figcaption>Preface banner of <a href="https://bookdown.org/yihui/blogdown/">blogdown: Creating Websites with R Markdown</a></figcaption>
 </figure>
 </div>
@@ -764,6 +771,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"loop":true,"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","openEffect":"zoom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

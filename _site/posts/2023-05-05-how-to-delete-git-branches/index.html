@@ -79,6 +79,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -286,7 +289,7 @@ cookieconsent.run({
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../../../../portrait-peter.png" class="img-fluid figure-img"></p>
+<p><a href="../../../../portrait-peter.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Peter Baumgartner"><img src="../../../../portrait-peter.png" class="img-fluid figure-img" alt="Peter Baumgartner"></a></p>
 <figcaption>Peter Baumgartner</figcaption>
 </figure>
 </div>
@@ -325,14 +328,22 @@ cookieconsent.run({
 <p>This situation happened to me after I proposed fixing a typo for a repo that had been frozen because of a necessary general overhaul. I thought to delete the submitted remote branch at the GitHub site would bring me back to my initial position.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/delete-remote-branch-at-github-min.png" class="img-fluid figure-img" alt="A screenshot shows the default branch &quot;master&quot; and &quot;Your branches&quot; named &quot;typo,&quot; which also figures under &quot;Active branches&quot;. The cursor hovers over the trash can to delete the active branch &quot;typo&quot;."></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/delete-remote-branch-at-github-min.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Screenshot 1: Delete obsolete branch “typo” at GitHub site (simulated for this article)."><img src="images/delete-remote-branch-at-github-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="A screenshot shows the default branch &quot;master&quot; and &quot;Your branches&quot; named &quot;typo,&quot; which also figures under &quot;Active branches&quot;. The cursor hovers over the trash can to delete the active branch &quot;typo&quot;."></a></p>
+</figure>
+</div>
 <figcaption><strong>Screenshot 1</strong>: Delete obsolete branch “typo” at GitHub site (simulated for this article).</figcaption>
 </figure>
 </div>
 <p>But back in RStudio, it turned out that the deleted branch was still there.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/git-branches-at-rstudio.png" class="img-fluid figure-img" alt="The window shows under the two headings &quot;(Local Branches&quot;) and (Remote: Origin) with &quot;master&quot; and &quot;typo&quot; two branches."></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/git-branches-at-rstudio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Screenshot 2: Local and Remote branches seen in RStudio"><img src="images/git-branches-at-rstudio.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The window shows under the two headings &quot;(Local Branches&quot;) and (Remote: Origin) with &quot;master&quot; and &quot;typo&quot; two branches."></a></p>
+</figure>
+</div>
 <figcaption><strong>Screenshot 2</strong>: Local and Remote branches seen in RStudio</figcaption>
 </figure>
 </div>
@@ -429,14 +440,22 @@ text-align: center;
 <div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/rstudio-refresh-branch-listing-circle-min.png" class="img-fluid figure-img"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/rstudio-refresh-branch-listing-circle-min.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Click on the circle symbol at the top right corner…"><img src="images/rstudio-refresh-branch-listing-circle-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Click on the circle symbol at the top right corner…"></a></p>
+</figure>
+</div>
 <figcaption>Click on the circle symbol at the top right corner…</figcaption>
 </figure>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/rstudio-refresh-branch-listing-manually-min.png" class="img-fluid figure-img"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/rstudio-refresh-branch-listing-manually-min.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="… and choose “Refresh Now” to list the branches currently available."><img src="images/rstudio-refresh-branch-listing-manually-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="… and choose “Refresh Now” to list the branches currently available."></a></p>
+</figure>
+</div>
 <figcaption>… and choose “Refresh Now” to list the branches currently available.</figcaption>
 </figure>
 </div>
@@ -908,6 +927,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","descPosition":"bottom","loop":true});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
