@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://l3lab.net/posts/2024-07-24-default-blog-source-code/index.html</loc>
-    <lastmod>2024-07-25T09:59:09.696Z</lastmod>
+    <lastmod>2024-07-25T15:55:38.017Z</lastmod>
   </url>
   <url>
     <loc>https://l3lab.net/posts/2023-04-23-welcome-quarto/index.html</loc>
@@ -22,7 +22,7 @@
   </url>
   <url>
     <loc>https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/index.html</loc>
-    <lastmod>2024-07-25T10:43:59.358Z</lastmod>
+    <lastmod>2024-07-25T16:05:47.556Z</lastmod>
   </url>
   <url>
     <loc>https://l3lab.net/contact.html</loc>
@@ -30,7 +30,7 @@
   </url>
   <url>
     <loc>https://l3lab.net/posts/2024-07-25-shared-metadata/index.html</loc>
-    <lastmod>2024-07-25T12:31:58.291Z</lastmod>
+    <lastmod>2024-07-25T15:55:03.926Z</lastmod>
   </url>
   <url>
     <loc>https://l3lab.net/posts/2023-05-05-how-to-delete-git-branches/index.html</loc>
@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://l3lab.net/posts/2024-07-23-from-git-to-github-using-rstudio/index.html</loc>
-    <lastmod>2024-07-25T09:22:25.260Z</lastmod>
+    <lastmod>2024-07-25T15:56:02.871Z</lastmod>
   </url>
   <url>
     <loc>https://l3lab.net/posts/2024-07-21-writing-blog-posts--new-attempt/index.html</loc>
@@ -51,5 +51,9 @@
   <url>
     <loc>https://l3lab.net/about.html</loc>
     <lastmod>2024-07-20T15:56:25.496Z</lastmod>
+  </url>
+  <url>
+    <loc>https://l3lab.net/posts/2024-07-25-advanced-configurations/index.html</loc>
+    <lastmod>2024-07-25T16:10:15.707Z</lastmod>
   </url>
 </urlset>

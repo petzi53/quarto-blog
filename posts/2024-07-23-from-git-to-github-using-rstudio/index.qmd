@@ -1,12 +1,12 @@
 ---
-title: "From Git to GitHub using RStudio"
+title: "Quarto Blog Tutorial 2: From Git to GitHub using RStudio"
 subtitle: ""
 description: "This post shows how to create the initial (first) Git commit using RStudio. I will  initialize a GitHub repo, and push the content of the initial commit into the new repository."
 author: "Peter Baumgartner"
 date: "2024-07-23"
 image: "github-octocat.png"
 image-alt: "Decoration image showing the octocat logo of GitHub"
-categories: [git, github, rstudio]
+categories: [git, github, rstudio, tutorial]
 date-modified: "2024-07-23"
 draft: false
 ---
@@ -17,10 +17,10 @@ The following procedure requires some [credential setup for
 GitHub](https://happygitwithr.com/https-pat.html) on your end. There are
 several routes you can go:
 
--   **Set up the GitHub repo first**. It my sound counter-intuitive,
-    but the easiest way to get your work onto GitHub is to initiate a
-    GitHub repo first, then use RStudio to start working in a synced
-    local copy. This approach is described in Happy Git’s workflows [New
+-   **Set up the GitHub repo first**. It my sound counter-intuitive, but
+    the easiest way to get your work onto GitHub is to initiate a GitHub
+    repo first, then use RStudio to start working in a synced local
+    copy. This approach is described in Happy Git’s workflows [New
     project, GitHub
     first](https://happygitwithr.com/new-github-first.html) and [Existing
     project, GitHub
@@ -63,7 +63,8 @@ checking the appropriate check box.
     the following one.
 
 ![Selected the Git tab of the RStudio right top pane
-(Screenshot):](git-files-and-folders-unselected-min.png){#fig-git-files-unselected group="git-github"
+(Screenshot):](git-files-and-folders-unselected-min.png){#fig-git-files-unselected
+group="git-github"
 fig-alt="RStudio top right pane with the following tabs: Environment, History, Connection, Build, Git, and Tutorial. The Git pane is selected and therefore active. Under the tabs is another line of icons and text buttons representing Git actions: From left to right: Diff, Commit, Pull (greyed out), Push (greyed out), History, More (drop-down menu), New Branch, (no branch). Underneath it shows added or changed files or folders (ending with a slash) from the initialization process. From top to the bottom: .gitignote, _freeze/, _quarto.yml, _site/, about.qmd, index.qmd, posts/, profile.jpg, quarto-pb-blog.Rproj, style.css."
 fig-align="center"}
 
@@ -73,7 +74,8 @@ fig-align="center"}
     that are now prepared for the next Git commit.
 
 ![Selecting all added or changed files in the RStudio Git pane
-(Screenshot)](git-files-and-folders-checked-2-min.png){#fig-git-files-selected group="git-github"
+(Screenshot)](git-files-and-folders-checked-2-min.png){#fig-git-files-selected
+group="git-github"
 fig-alt="RStudio top right pane with the following tabs: Environment, History, Connection, Build, Git, and Tutorial. The Git pane is selected and therefore active. Under the tabs is another line of icons and text buttons representing Git actions: From left to right: Diff, Commit, Pull (greyed out), Push (greyed out), History, More (drop-down menu), New Branch, (no branch). There is a tool tip under the Commit button saying: 'Commit pending changes (CTRL-ALT-M)'. Underneath it shows added or changed files from the initialization process. From top to the bottom in a blue background: .gitignote, _freeze/, _quarto.yml, _site/, about.qmd, index.qmd, posts/, profile.jpg, quarto-pb-blog.Rproj, style.css. These files are followed by the files in the directories from top to left: _freeze/post/post-with-code/index/execute-results/html.json, _freeze/site_libs/clipboard/clipboard.min.js, _freeze/site_libs/quarto-listing/list.min.js,  _freeze/site_libs/quarto-listing/quarto-listing.js, _site/about.html, _site/index.html, _site/listing.json, _site/profile.jpg. There are more files not visible because the window ends here."
 fig-align="center"}
 
@@ -87,14 +89,17 @@ fig-align="center"}
     had erroneously used "first commit" in the screenshot.
 
 ![Writing a commit message
-(Screenshot)](preparing-first-commit-min.png){#fig-preparing-initial-commit group="git-github"
+(Screenshot)](preparing-first-commit-min.png){#fig-preparing-initial-commit
+group="git-github"
 fig-alt="A pop-up window overlaying the RStudio window separated in two parts: The left part contains at the top small buttons. From left to the right: Changes, History, (no branch), icon for update display, stage, revert, and ignore. The right part contains the dysfunctional buttons (grayed out) 'Pull' and 'Push.' The left part shows underneath added or changed file from the initialization process. From top to the bottom in a blue background: .gitignote, _freeze/, _quarto.yml, _site/, about.qmd, index.qmd, posts/, profile.jpg, quarto-pb-blog.Rproj, style.css. These files are followed by the files in the directories from top to left: _freeze/post/post-with-code/index/execute-results/html.json, _freeze/site_libs/clipboard/clipboard.min.js, _freeze/site_libs/quarto-listing/list.min.js. There are more files not visible because the window ends here. On the right side there is a writing pane with the header 'Commit message' and '12 characters'. The text in the writing pane says 'First commit'. Under the writing pane are two unchecked check boxes 'Amend previous commit' and 'Sign commit' with a 'Commit' button. Underneath those two window parts is another line of action buttons covering the whole length of the window: From left to the right: 'Show Staged' text followed by an empty radio button, 'Staged' text followed by an active radio button, 'Context' (text), 5 lines (drop-down menu), 'Ignore Whitespace' (active check box). Underneath is an empty white field over the whole length of the window dedicated to show more detailed information inf only one file would have been selected."
 fig-align="center"}
 
 4.  After clicking the `Commit` button, RStudio presents a window with
     the results of the action:
 
-![Resulted actions after the last commit (Screenshot)](returned-commit-results-min.png){#fig-review-changes-window group="git-github"
+![Resulted actions after the last commit
+(Screenshot)](returned-commit-results-min.png){#fig-review-changes-window
+group="git-github"
 fig-alt="RStudio review window listing the result of the last git commit action: From top to the bottom: 'create mode 100644 about.qmd', 'create mode 100644 index.qmd' 'create mode 100644 posts/metadata.yml', 'create mode 100644 posts/post-with-code/image.png', 'create mode 100644 posts/post-with-code/index.qmd', 'posts/post-with-code/posts/welcome/index.qmd', 'create mode 100644 posts/welcome/thumbnail.jpg', 'create mode 100644  profile.jpg', 'create mode 100644 quarto-pb-blog.Rproj', 'create mode 100644 style.css'. There other lines covered at the top covered as the window scroll button shows only the end of the list. On the top right is a 'Close' button."
 fig-align="center"}
 
@@ -112,21 +117,34 @@ different conditions. In this case, I have applied [Chapter 17,
 "Existing project, GitHub
 last"](https://happygitwithr.com/existing-github-last).
 
-1. Write `usethis::use_github()` into the console window of the RStudio window (lower left pane). After return your console will display the following lines:
+1.  Write `usethis::use_github()` into the console window of the RStudio
+    window (lower left pane). After return your console will display the
+    following lines:
 
-![Text of the RStudio window console window (Screenshot) ](console-using-github-repo-with-usethis-min.png){#fig-initialize-github-console-text group="git-github" fig-alt="The screenshot shows the following lines, from top to the bottom: 'R version 4.4.1 (2024-04-14)' written in red, '> usethis::use_github()' written in red. From here the next lines start with a green ok check mark icon,  'Setting active project to' followed by the path, 'Creating GitHub repository' followed by the Github.com path of my repo., 'Setting remote `origin` to' followed by the appropriate path, 'Pushing `master` branch to gitHub and setting `origin/master` as upstream branch.', 'Opening URL' followed by the URL to my Github repo."
+![Text of the RStudio window console window
+(Screenshot)](console-using-github-repo-with-usethis-min.png){#fig-initialize-github-console-text
+group="git-github"
+fig-alt="The screenshot shows the following lines, from top to the bottom: 'R version 4.4.1 (2024-04-14)' written in red, '> usethis::use_github()' written in red. From here the next lines start with a green ok check mark icon,  'Setting active project to' followed by the path, 'Creating GitHub repository' followed by the Github.com path of my repo., 'Setting remote `origin` to' followed by the appropriate path, 'Pushing `master` branch to gitHub and setting `origin/master` as upstream branch.', 'Opening URL' followed by the URL to my Github repo."
 fig-align="center"}
 
 The screenshot above shows the different actions for the
 `usethis::use_github()` command. In the last step, the newly generated
 and updated repository on GitHub was opened.
 
-![Web page of the GitHub repository of the Quarto blog after the initial commit](new-repo-page-opened-automatically-min.png){#fig-github-quarto-blog-repo group="git-github" fig-alt="Listing the committed files on the GitHub repo web page in three columns. Name, different commit messages and time ('15 minutes ago' and '10 hours ago' accordingly). At the top left of this list there is a small profile picture of me, followed by the name of my GitHub account 'petzi53' and the text 'first commit'. On the top side you can see the unique commit code '0ced0df' followed by the text '19 minutes ago' and in bold '1 Commit'"
+![Web page of the GitHub repository of the Quarto blog after the initial
+commit](new-repo-page-opened-automatically-min.png){#fig-github-quarto-blog-repo
+group="git-github"
+fig-alt="Listing the committed files on the GitHub repo web page in three columns. Name, different commit messages and time ('15 minutes ago' and '10 hours ago' accordingly). At the top left of this list there is a small profile picture of me, followed by the name of my GitHub account 'petzi53' and the text 'first commit'. On the top side you can see the unique commit code '0ced0df' followed by the text '19 minutes ago' and in bold '1 Commit'"
 fig-align="center"}
 
 ## Summary
 
-This post shows how to initialize Git and GitHub using RStudio after crating of the brand-new Quarto blog:
+This post shows how to initialize Git and GitHub using RStudio after
+crating of the brand-new Quarto blog:
 
-1. Commit all the files generated automatically after launching the Quarto blog (as described in [Initializing a Quarto Blog with RStudio](../2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio)) to the local Git repository.
-2. Initializing a remote GitHub repository, connecting the local repo with it, and connecting it with the local repo.
+1.  Commit all the files generated automatically after launching the
+    Quarto blog (as described in [Initializing a Quarto Blog with
+    RStudio](../2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio))
+    to the local Git repository.
+2.  Initializing a remote GitHub repository, connecting the local repo
+    with it, and connecting it with the local repo.

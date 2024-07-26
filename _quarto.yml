@@ -79,7 +79,7 @@ format:
     css: styles.css
     toc: true
 
-editor: visual
+editor: source
 
 margin-header: |
   ![Peter Baumgartner](/../../portrait-peter.png)
