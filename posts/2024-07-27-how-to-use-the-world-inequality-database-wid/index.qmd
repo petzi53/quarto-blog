@@ -535,14 +535,7 @@ It has the following parameters:
 : Description of the arguments for the \`wid::download_wid()\` function
 {#tbl-wid-parameters}
 
-::: my-example-header
-::: {#exm-plotting-wid-data-with-r}
-: R code for replicating Figure 7
-:::
-:::
-
-::: panel-tabset
-###### Download data
+#### Download data
 
 ::: my-r-code
 ::: my-r-code-header
@@ -576,7 +569,7 @@ Download data for the shares of France's pre-tax national income.
 :::
 :::
 
-###### Display some data
+#### Display some random data
 
 ::: my-r-code
 ::: my-r-code-header
@@ -601,8 +594,8 @@ my_glance_data(income_france, seed = 123)
 Display some random data imported with `wid::download_wid`, including
 the first and last row.
 :::
-
-------------------------------------------------------------------------
+:::
+:::
 
 Inspecting the data, we see:
 
@@ -612,7 +605,7 @@ Inspecting the data, we see:
     France.
 
 -   All presented records have the variable name `sptinc992j`. This
-    conforms to our previous calculation in xxx
+    conforms to our previous calculation.
 
 -   We see three different values for percentiles in the randomly
     displayed data: `p0p50`, `p50p90`, and `p90p100` representing the
@@ -625,10 +618,15 @@ Inspecting the data, we see:
 
 Overall, The result looks nice, but we must check the data more
 thoroughly. Is there really only one type of variable? [^2]
-:::
-:::
 
-###### Data structure
+[^2]: How important this check is showed me a previous version in which
+    I had not included `ages = 992` because I thought the adult
+    population was already defined with `pop = "j"`, the letter code for
+    equal-split *adults*. But it turned out that without the explicit
+    definition for the age, I also downloaded the default value `999`
+    (all ages).
+
+#### Display data structure
 
 ::: my-r-code
 ::: my-r-code-header
@@ -648,8 +646,8 @@ skimr::skim(income_france)
 Using the {**skimr**} package to display the data structure for the
 France pre-tax income data 1820-2022
 :::
-
-------------------------------------------------------------------------
+:::
+:::
 
 Here, we see that no data are missing, that we have only one value for
 the variables `country` and `variable`, and exactly the required three
@@ -657,10 +655,8 @@ values for `percentile`.
 
 We also see from the small histogram for `year` that we do not have many
 data points for more of the first half of the time.
-:::
-:::
 
-###### National income
+#### Display the national income figure
 
 ::: my-r-code
 ::: my-r-code-header
@@ -691,18 +687,10 @@ ggplot2::ggplot(income_france,
 
 Pre-tax national income inequality in France, 1820-2022
 :::
-
-------------------------------------------------------------------------
-:::
 :::
 :::
 
-[^2]: How important this check is showed me a previous version in which
-    I had not included `ages = 992` because I thought the adult
-    population was already defined with `pop = "j"`, the letter code for
-    equal-split *adults*. But it turned out that without the explicit
-    definition for the age, I also downloaded the default value `999`
-    (all ages).
+## Comparison of my result with the original Figure 7
 
 ::: grid
 ::: g-col-6
@@ -719,11 +707,9 @@ fig-align="center" width="100%" group="BHE-figure-compare2"}
 :::
 :::
 
-## Comparison of my result with the original Figure 7
-
-We are pretty near if we compare the above plot with the original
-figure. Besides the mentioned difference in the magnitude of the top 10%
-and middle 40% before 1900, there are the following differences:
+We are pretty near if we compare the above plots. Besides the mentioned
+difference in the magnitude of the top 10% and middle 40% before 1900,
+there are the following differences:
 
 -   title
 -   grid for x- and y-axis
@@ -733,14 +719,14 @@ and middle 40% before 1900, there are the following differences:
 -   the smoothness of the time series
 
 However, these differences are all solvable with the appropriate R code.
-Except for the last point (smoothness), I leave it here because the
-purpose of this article was to work with `r glossary("WID")` (and not to
-replicate figure 7 of `r glossary("BHE")` exactly.)
+I leave it here because the purpose of this article was to work with
+`r glossary("WID")` (and not to replicate figure 7 of
+`r glossary("BHE")` exactly.)
 
 I have no working experience with time series, but there are articles
 and tutorials on how to smooth time series. I still have to look into
-this issue. Therefore, I will list these resources for later reading and
-blog posts.
+this issue. Therefore, I will list the following resources for later
+reading and blog posts.
 
 ::: my-resource
 ::: my-resource-header
@@ -756,19 +742,16 @@ Without ranking, just a miscellaneous list of resources:
     ([StackOverflow](https://stackoverflow.com/questions/28924681/how-to-smooth-a-times-series-on-r))
 -   An Introduction to Time Series Smoothing in R:
     [BoostedML](https://boostedml.com/2020/05/an-introduction-to-time-series-smoothing-in-r.html)
-    (Articles on Statistics and Machine Learning for Healthcare)
 -   Smoothing time series with R: [R-Bloggers
     2010](https://www.r-bloggers.com/2010/03/smoothing-time-series-with-r/)
 -   Smoothing Time Series Data: [R-Bloggers
     2018](https://www.r-bloggers.com/2018/07/smoothing-time-series-data/)
--   sma() - Simple Moving Average: \[R Package for time series
-    smoothing\]https://cran.r-project.org/web/packages/smooth/vignettes/sma.html
+-   sma() - Simple Moving Average: [R Package for time series
+    smoothing](https://cran.r-project.org/web/packages/smooth/vignettes/sma.html)
 -   Smoothing time series: [PennState Eberly College of
     Science](https://online.stat.psu.edu/stat510/lesson/5/5.2)
 -   Smoothing time series with R: [Revolutions
     blog](https://blog.revolutionanalytics.com/2010/03/smoothing-time-series-with-r.html)
-    -- Milestones in AI, Machine Learning, Data Science, and
-    visualization with R and Python since 2008
 :::
 :::
 
@@ -782,14 +765,15 @@ I have shown procedures for working with the inequality data of
     graph. There are several ways to use the resulting figure:
     -   Downloading the picture as `r glossary("JPG")`
     -   Embedding a link to the interactive graph on your website
-    -   Embedding the result as`r glossary("iframe")` in your website
+    -   Embedding the result as `r glossary("iframe")` in your website
     -   Exploring the code in the URL and using it for the second
         approach (downloading the required data with R)
 -   The second approach uses the {**wid**} R package, especially the
     function `wid::download_wid()`. Knowing the required codes for the
     download function is essential. The first approach could help find
     the correct code composition in the WID code book, the [Codes
-    Dictionary](https://wid.world/codes-dictionary/).
+    Dictionary](https://wid.world/codes-dictionary/) or in the [Summary
+    Table](https://wid.world/summary-table/).
 
 ::: {#imp-how-to-not-enough .callout-important style="color: red;"}
 ##### How-to procedures are not enough
