@@ -23,4 +23,10 @@ base::source(file = "../../R/helper.R")
 Mises](https://www.mises.org.es/2015/01/la-funcion-social-de-la-desigualdad-economica/)
 (Escuela Austriaca De Economía E Ideas De Libertad Centro Mises)
 <br/>[CC BY-NC
-4.0](https://www.creativecommons.org/licenses/by-nc/4.0/deed.en)](inequality-scale-balance-min.png){width="50%"}
+4.0](https://www.creativecommons.org/licenses/by-nc/4.0/deed.en)](inequality-scale-balance-min.png){#fig-centro-mises
+width="50%"}
+
+-   This is my first bullet.
+-   This is my second bullet, this time with a cross-reference
+    @fig-centro-mises.  
+-   This is my third bullet.

@@ -21,8 +21,9 @@ ggplot2::theme_set(ggplot2::theme_bw())
 ```
 
 ![Logo of the [World Inequality Lab](https://inequalitylab.world/)
-(Screenshot). The WIL is a global research center studying inequality and public policies promoting social, economic, and
-environmental justice.](WID-Logo-min.png)
+(Screenshot). The WIL is a global research center studying inequality
+and public policies promoting social, economic, and environmental
+justice.](WID-Logo-min.png)
 
 ## Research on Social Inequality
 
@@ -86,25 +87,27 @@ pages) [@piketty2020a; @piketty2017].
 
 ### Lacking Graphs about Austria
 
-Most of the time, this book uses global, regional, or data from big,
+Most of the time, BHE uses global, regional, or data from big,
 respectively 'important' countries like China, France, Germany, India,
 United Kingdom, United States, etc. Data on Austria and its
-interpretation are missing from the mentioned book and most 
-scientific publications [referenced on the
+interpretation are missing from the mentioned book and most scientific
+publications [referenced on the
 website](https://wid.world/methodology/#library-browse-by-country). An
 exception is the working paper "Distributional National Accounts (DINA)"
 for Austria, 2004-2016 by @jestl2020. But this paper partly uses
-different indices and different approaches (for instance, the
-\[(<https://ourworldindata.org/what-is-the-gini-coefficient>). There are
-two other articles where at least Austria is shown in some graphs: There
-are five figures with Austria data in "What's New About Income
-Inequality in Europe (1980-2019)?" by @morgan2020 and the other two in
-"How Unequal Is Europe? Evidence from Distributional National Accounts,
-1980-2017" by @blanchet2019.
+different indices and different concepts (for instance, the [Gini
+coefficient](https://ourworldindata.org/what-is-the-gini-coefficient)).
 
-So, creating figures with Austrian data is not only an excellent exercise but
-the result could also increase our knowledge about the mechanisms and
-patterns of social inequality.
+On the `r glossary("WID")` website there are two other articles where at
+least Austria is shown in some graphs: You will find five figures with
+Austria data in "What's New About Income Inequality in Europe
+(1980-2019)?" by @morgan2020 and other two figures in "How Unequal Is
+Europe? Evidence from Distributional National Accounts, 1980-2017" by
+@blanchet2019.
+
+So, creating figures with Austrian data is not only an excellent
+exercise but the result could also increase our knowledge about the
+mechanisms and patterns of social inequality.
 
 ## Using the WID website
 
@@ -142,14 +145,15 @@ is to find an appropriate entry point to get started.
     results in a document of 18 pages.
 -   [Summary Table](https://wid.world/summary-table/): It summarizes all
     available WID.world data. The search tool can look for specific
-    countries, variables, or WID.world codes. The summary table is an
-    efficient starting point because it allows for a view of available
-    data, which one can then download for more detailed analysis.
+    countries, variables, or WID.world codes. It has currently 6253 rows
+    and 16 columns. The summary table is an efficient starting point
+    because it allows for a view of available data, which one can then
+    download for more detailed analysis.
 -   [Computer Code](https://github.com/WIDworld/wid-world): On the
     GitHub platform, you can inspect and fork the repository that
     contains all the code used to create the entire database from both
     the researcher's data and official sources. It consists of 98% of
-    STATA code, the rest (only 2%) is written in R.[^1]
+    STATA code, the rest (only 2%) is written in R. [^1]
 -   **Data**: There are two ways to download data:
     -   **Direct Download**: The [interactive
         page](https://wid.world/data/) allows one to select the required
@@ -163,11 +167,18 @@ is to find an appropriate entry point to get started.
 :::
 :::
 
-
+[^1]: This is somewhat disappointing. As I do not know STATA, these code
+    files do not make much sense to me. However, a quick internet search
+    showed that there are some resources to learn how to translate STATA
+    directives into R commands. Two examples: [Making the Transition? A
+    Guide for Switching from Stata to
+    R](https://www.hertiecodingclub.com/learn/rstudio/stata_to_r/) and
+    [STATA to R cheat
+    sheet](https://rstudio.github.io/cheatsheets/stata2r.pdf).
 
 It is a lot of work to read all the necessary information before
-starting. Instead of using this (tedious) sequential approach, I will try
-an interactive procedure, iteratively changing between theory
+starting. Instead of using this (tedious) sequential approach, I will
+try an interactive procedure, iteratively changing between theory
 (methodological guidelines) and practice (using R to replicate the
 figure).
 
@@ -178,14 +189,15 @@ figure).
 As my test bed, I will use Figure 7 of BHE [@piketty2022, pp. 46].
 
 ![Figure 7 of `r glossary("BHE")`, taken from the [original source on
-Piketty's website](http://piketty.pse.ens.fr/files/equality/).](BHE-Figure-07-Piketty-min.png){#fig-figure7-piketty fig-alt="alt-text" fig-align="center"}
-
+Piketty's
+website](http://piketty.pse.ens.fr/files/equality/).](BHE-Figure-07-Piketty-min.png){#fig-figure7-piketty
+fig-alt="alt-text" fig-align="center"}
 
 #### Interactive Replication
 
-As a first approach, I will replicate Figure 7 of BHE with the
-provided interactive tools of the WID. Here is a good [starting point
-for income inequality](https://wid.world/country/france/).
+As a first approach, I will replicate Figure 7 of BHE with the provided
+interactive tools of the WID. Here is a good [starting point for income
+inequality](https://wid.world/country/france/).
 
 ![Choosing France as "Country" and using the default values for income
 inequality (top 10% share and bottom 50%
@@ -195,8 +207,8 @@ fig-align="center" width="100%" group="BHE-Figure-07"}
 From here, I will show screenshots for every step necessary to replicate
 Figure 7 of BHE, but here in this post, it is @fig-figure7-piketty. If
 you click on one of the small images below, it will open the figure in
-the bigger original size, and you can navigate back and forth between the
-figures are seen in the table below.
+the bigger original size, and you can navigate back and forth between
+the figures in the table below.
 
 ::: grid
 ::: g-col-4
@@ -292,13 +304,13 @@ fig-align="center" width="100%" group="BHE-Figure-07"}
 #### Differences between original and replication
 
 If we compare both figures side by side, we will see a significant
-difference. Our replication differs from the original in the years before
-1900. For instance, in our figure, the people with the top 10% of
-income share about 60% of the total income, in contrast to the 50% share in
-the original graph. I need to find out where these differences come from.
-There may have been a correction of the computed extrapolations in an
-update after the book publication. In any case, this difference is not
-essential here. Remember, the primary purpose of the exercise is to
+difference. Our replication differs from the original in the years
+before 1900. For instance, in our figure, the people with the top 10% of
+income share about 60% of the total income, in contrast to the 50% share
+in the original graph. I need to find out where these differences come
+from. There may have been a correction of the computed extrapolations in
+an update after the book publication. In any case, this difference is
+not essential here. Remember, the primary purpose of the exercise is to
 understand the patterns of the database structure --- and not (at least
 at the moment) to get correct figures.
 
@@ -307,7 +319,8 @@ at the moment) to get correct figures.
 ![Figure 7 of `r glossary("BHE")`, taken from the [original source on
 Piketty's website](http://piketty.pse.ens.fr/files/equality/). The
 shares for the top 10% are lower. It is slightly above 50% of the total
-income, whereas it is about 60% in the replication. On the other hand, the share of the middle is 40% lower than that of the
+income, whereas it is about 60% in the replication. On the other hand,
+the share of the middle is 40% lower than that of the
 replication.](BHE-Figure-07-Piketty-min.png){#fig-figure7-piketty-2
 fig-align="center" width="95%" group="BHE-figure-compare"}
 :::
@@ -315,27 +328,27 @@ fig-align="center" width="95%" group="BHE-figure-compare"}
 ::: g-col-6
 ![The result of my replication is showing higher shares for the top 10%
 and accordingly lower shares for the middle 40% in contrast to the
-original figure. However, the level of the share of the bottom 50% of the
-population is approximately the same in both
+original figure. However, the level of the share of the bottom 50% of
+the population is approximately the same in both
 figures.](BHE-Figure-07-13-min.png){#fig-BHE-07-13-2 fig-alt="alt-text"
 fig-align="center" width="100%" group="BHE-figure-compare"}
 :::
 :::
 
-There are more differences between the two pictures, but they are more
+There are other differences between the two pictures, but they are more
 of cosmetically nature:
 
 -   The choice of colors for the various time series is different.
--   The labels of the x and y axes are different. The original is labeled
-    every 20 years and contains a vertical line every 10 years, whereas
-    the interactive replication has a 25-year grid. The y-axis in the
-    replication is missing the %-sign.
+-   The labels of the X- and Y-axes are different. The original is
+    labeled every 20 years and contains a vertical line every 10 years,
+    whereas the interactive replication has a 25-year grid. The Y-axis
+    in the replication is missing the %-sign.
 -   In the original, the time-series have different symbols in the data
     points (circle, triangle), which is vital in black & white (book)
     publications.
 -   The legend is in the original at a prominent place in the middle of
-    the graph, whereas it is at the bottom of the interactive
-    replication.
+    the graph, whereas it is in the interactive replication at the
+    bottom.
 
 ### Display the results
 
@@ -350,18 +363,18 @@ several possibilities to display results offered by the
 text.](BHE-Figure-07-graph_dl.jpg){#fig-wid-jpg-figure07
 fig-alt="alt-text" fig-align="center" width="100%"}
 
-Note that the figures have slightly changed. There are fewer labels on the
-x- and y-axis. The legend's appearance has changed somewhat, and
-some information that is irrelevant in a static view is removed.
+Note that there are now fewer labels on the X- and Y-axis. The legend's
+appearance has changed somewhat, and some information that is irrelevant
+in a static view is removed.
 
 #### Copy the URL
 
 Another option is to copy the URL and integrate it as a link into the
-Quarto text. It opens up a web page with the
-figure and all the WID menus in your default browser. Others can explore the
-interactive graph or create their own figure from here.
+Quarto text. It opens up a web page with the figure and all the WID
+menus in your default browser. Others can explore the interactive graph
+or create their own figure from here.
 
-[Income inequality, France,
+See the example: [Income inequality, France,
 1820-2022](https://wid.world/share/#0/countrytimeseries/sptinc_p90p100_z;sptinc_p0p50_z;sptinc_p50p90_z/FR/2015/eu/k/p/yearly/s/false/-10/62/curve/true/1820/2022)
 
 #### Embed as iframe
@@ -376,13 +389,13 @@ Another possibility is to embed the graph into an
 ::: {#cau-wid-iframe-overlapping-legend .callout-caution style="color: darkgoldenrod;"}
 ##### Embedding WID iframes has some drawbacks
 
-The legend overlaps the lower part of the graph. You have either
-to plan during the construction of the graph to prevent this drawback or
+The legend overlaps the lower part of the graph. You have either to plan
+during the construction of the graph to prevent this drawback or
 (better) to adapt the code in the URL itself.
 
-Besides, there is also an annoying cookies-consent message where the link
-to learn more is wrong by pointing to another graph and not to the
-cookies policy.
+Besides, there is also an annoying cookies-consent message where the
+link to 'learn more' is wrong by pointing to another graph and not to
+the cookies policy.
 :::
 
 The code in the above iframe is:
@@ -392,10 +405,11 @@ The code in the above iframe is:
 ```
 
 It turned out that besides changing the delimiter for the axis from
-`/9.4765/70/` to `/0/62/` it is also necessary to enlarge the iframe's height to position the legend lower. With trial & error
-experimenting, I got a good result after changing the height from `400`
-to `500`. Here is the adapted iframe where you can see the full figure
-and also the slider to change the time period of the data:
+`/9.4765/70/` to `/0/62/` it is also necessary to enlarge the iframe's
+height to position the legend lower. With trial & error experimenting, I
+got a good result after changing the height from `400` to `500`. Here is
+the adapted iframe where you can see the full figure and also the slider
+to change the time period of the data:
 
 <iframe width="800" height="500" src="https://wid.world/share/#1/countrytimeseries/sptinc_p90p100_z;sptinc_p0p50_z;sptinc_p50p90_z/FR/2015/eu/k/p/yearly/s/true/0/62/curve/true/1820/2022">
 
@@ -412,27 +426,29 @@ https://wid.world/share/#1/countrytimeseries/sptinc_p90p100_z;sptinc_p0p50_z;spt
 
 This is very helpful because it is now much easier to find the code
 explication in the [Code
-Dictionary](https://wid.world/codes-dictionary/). Let's analyze the
-example of the `sptinc_p90p100_z` code:
+Dictionary](https://wid.world/codes-dictionary/) or the [Summary
+Table](https://wid.world/summary-table/). Let's analyze the example of
+the `sptinc_p90p100_z` code:
 
 -   **s**: The first letter `s` determines the code series. `s` means
     "share" and contains a fraction between 0 and 1.
--   **ptinc**: The next five letters are the code for the series concept.
-    This is an essential help because a massive amount of
-    five-letter codes exist. More than half of the 38 pages of the PDF version
-    of the code dictionary lists five-letter codes and their meaning!
-    Searching `ptinc` in the online Code Dictionary with the browser
-    search tool results in "pretax national income".
+-   **ptinc**: The next five letters are the code for the series
+    concept. This is an essential help because a massive amount of
+    five-letter codes exist. More than half of the 38 pages of the PDF
+    version of the code dictionary lists five-letter codes and their
+    meaning! Searching `ptinc` in the online Code Dictionary with the
+    browser search tool results in "pretax national income".
 -   **p90p100**: This one is easy. `p90p100` is the top 10%, the
     `r glossary("percentile", "percentiles")` characterizing people with
-    an income equal to or higher than 90% of the population.
+    an income equal to or higher than 90% of the population. Or
+    **p0p50** is the bottom 50% etc.
 
 Additionally, we have the information from the legend that the units are
 adults, and the income is split equally between couples or other adult
 members (= 20 years or older) of the household. Therefore, we can add:
 
--   **992**: The age code description has three numbers. `992` stands for a
-    population of individuals over age 20.
+-   **992**: The age code description has three numbers. `992` stands
+    for a population of individuals over age 20.
 -   **j**: The last letter is the unit description. `j` means
     equal-split adults.
 
@@ -444,32 +460,44 @@ $$
 \begin{align*}
 s + ptinc + 992 + j = sptinc992j
 \end{align*}
-$$ {#eq-wid-variable-calcualtion}
+$$ {#eq-wid-variable-calculation}
 
+If we look for this complete code in the [Summary
+Table](https://wid.world/summary-table/), we can read in the column
+"Simple description of the variable" the following explanation:
+
+> Pre-tax national income is the sum of all pre-tax personal income
+> flows accruing to the owners of the production factors, labor and
+> capital, before taking into account the operation of the tax/transfer
+> system, but after taking into account the operation of pension system.
+> The central difference between personal factor income and pre-tax
+> income is the treatment of pensions, which are counted on a
+> contribution basis by factor income and on a distribution basis by
+> pre-tax income.
 
 ::: {#cau-ID .callout-caution style="color: darkgoldenrod;"}
 ##### Explaining just the procedure, not the concepts
 
 Remember that I am not discussing the concepts behind the different
 parameter codes. I just want to stress how to find the code for a
-required indicator here. Which concepts to apply and what
-indicator is appropriate for a specific research question will be covered
-in other articles.
+required indicator here. Which concepts to apply and what indicator is
+appropriate for a specific research question will be covered in other
+articles.
 :::
 
 ## R Code
 
 There is with {**wid**} a special R package for downloading data
 directly from `r glossary("WID")` [@wid-3]. Read the instructions on the
-[GitHub repo](https://github.com/thomasblanchet/wid-r-tool). How do you
-install the unavailable package on `r glossary("CRAN")`?
+[GitHub repo](https://github.com/thomasblanchet/wid-r-tool) to get
+install information.
 
 The R {wid} package should have a vignette with examples of its usage.
-But unfortunately, all the links to it are broken or not available except
-as [`.Rmd` file in the GitHub
+But unfortunately, all the links to it are broken or not available
+except as [`.Rmd` file in the GitHub
 repository](https://github.com/thomasblanchet/wid-r-tool/blob/master/vignettes/wid-demo.Rmd)
-itself. I have downloaded and rendered the vignette
-as a PDF for your convenience.
+itself. I have downloaded and rendered the vignette as a PDF for your
+convenience.
 
 ::: cell
 ```{=html}
@@ -492,20 +520,20 @@ text-align: center;
 The central function of the {**wid**} package is `wid::download_wid()`.
 It has the following parameters:
 
-| Name                  | Type      | Default | Description                                                            |
-|-------------|-------------|-------------|-----------------------------------|
-| indicators            | character | all     | Codes corresponding to indicators to retrieve                          |
-| areas                 | character | all     | Areas (mostly countries) for which to retrieve the indicators          |
-| years                 | numeric   | all     | Years for which to retrieve the indicators                             |
-| perc                  | character | all     | `r glossary("Percentile", "Percentiles")`\` (part of the distribution) |
-| ages                  | numeric   | all     | Age groups (adults, all ages, elderly, etc.)                           |
-| pop                   | character | all     | Population type (individual, households, tax units, etc.)              |
-| metadata              | logical   | FALSE   | Fetch metadata too? (eg. sources, etc.)                                |
-| verbose               | logical   | FALSE   | Display messages showing progress?                                     |
-| include_extrapolation | logical   | TRUE    | Include data based on extrapolations / interpolations                  |
+| Name                  | Type      | Default | Description                                                          |
+|:----------------------|:----------|:--------|:---------------------------------------------------------------------|
+| indicators            | character | all     | Codes corresponding to indicators to retrieve                        |
+| areas                 | character | all     | Areas (mostly countries) for which to retrieve the indicators        |
+| years                 | numeric   | all     | Years for which to retrieve the indicators                           |
+| perc                  | character | all     | `r glossary("Percentile", "Percentiles")` (part of the distribution) |
+| ages                  | numeric   | all     | Age groups (adults, all ages, elderly, etc.)                         |
+| pop                   | character | all     | Population type (individual, households, tax units, etc.)            |
+| metadata              | logical   | FALSE   | Fetch metadata too? (eg. sources, etc.)                              |
+| verbose               | logical   | FALSE   | Display messages showing progress?                                   |
+| include_extrapolation | logical   | TRUE    | Include data based on extrapolations / interpolations                |
 
 : Description of the arguments for the \`wid::download_wid()\` function
-{tbl-wid-parameters}
+{#tbl-wid-parameters}
 
 ::: my-example-header
 ::: {#exm-plotting-wid-data-with-r}
@@ -579,17 +607,24 @@ the first and last row.
 Inspecting the data, we see:
 
 -   Our dataset has 339 records.
--   All presented records have an area code `FR`, which stands for France.
+
+-   All presented records have an area code `FR`, which stands for
+    France.
+
 -   All presented records have the variable name `sptinc992j`. This
-    conforms to our previous calculation in
-    @eq-wid-variable-calcualtion.
--   We see three different values for percentiles in the randomly displayed data: `p0p50`, `p50p90`, and `p90p100` representing the income of the bottom 50%,
-    the middle 40%, and the top 10% of the population.
+    conforms to our previous calculation in xxx
+
+-   We see three different values for percentiles in the randomly
+    displayed data: `p0p50`, `p50p90`, and `p90p100` representing the
+    income of the bottom 50%, the middle 40%, and the top 10% of the
+    population.
+
 -   Our random data show a period from 1820 to 2022.
+
 -   The quantity for each record contains the column `value`.
 
 Overall, The result looks nice, but we must check the data more
-thoroughly. Is there really only one type of variable.[^2]
+thoroughly. Is there really only one type of variable? [^2]
 :::
 :::
 
@@ -610,15 +645,18 @@ thoroughly. Is there really only one type of variable.[^2]
 skimr::skim(income_france)
 ```
 
-Using the {**skimr**} package to display the data structure for the France pre-tax income data 1820-2022
+Using the {**skimr**} package to display the data structure for the
+France pre-tax income data 1820-2022
 :::
 
-***
+------------------------------------------------------------------------
 
-Here, we see that no data are missing, that we have only one value for the variables `country` and `variable`, and exactly the required three values for `percentile`.
+Here, we see that no data are missing, that we have only one value for
+the variables `country` and `variable`, and exactly the required three
+values for `percentile`.
 
-We also see from the small histogram for `year` that we do not have many data points for more of the first half of the time.
-
+We also see from the small histogram for `year` that we do not have many
+data points for more of the first half of the time.
 :::
 :::
 
@@ -654,88 +692,110 @@ ggplot2::ggplot(income_france,
 Pre-tax national income inequality in France, 1820-2022
 :::
 
-***
-
+------------------------------------------------------------------------
 :::
 :::
 :::
 
+[^2]: How important this check is showed me a previous version in which
+    I had not included `ages = 992` because I thought the adult
+    population was already defined with `pop = "j"`, the letter code for
+    equal-split *adults*. But it turned out that without the explicit
+    definition for the age, I also downloaded the default value `999`
+    (all ages).
 
 ::: grid
 ::: g-col-6
 ![Figure 7 of `r glossary("BHE")`, taken from the [original source on
-Piketty's website](http://piketty.pse.ens.fr/files/equality/). ](BHE-Figure-07-Piketty-min.png){#fig-figure7-piketty-3
+Piketty's
+website](http://piketty.pse.ens.fr/files/equality/).](BHE-Figure-07-Piketty-min.png){#fig-figure7-piketty-3
 fig-align="center" group="BHE-figure-compare2"}
 :::
 
 ::: g-col-6
-![Resulting figure after data download and plotting with R ](BHE-sptinc992j_fr-min.png){#fig-BHE-sptinc992j-fr fig-alt="alt-text"
+![Resulting figure after data download and plotting with
+R](BHE-sptinc992j_fr-min.png){#fig-BHE-sptinc992j-fr fig-alt="alt-text"
 fig-align="center" width="100%" group="BHE-figure-compare2"}
 :::
 :::
 
 ## Comparison of my result with the original Figure 7
 
-We are pretty near if we compare the above plot with the original figure. Besides the mentioned difference in the magnitude of the top 10% and middle 40% before 1900, there are the following differences:
+We are pretty near if we compare the above plot with the original
+figure. Besides the mentioned difference in the magnitude of the top 10%
+and middle 40% before 1900, there are the following differences:
 
-- title
-- grid for x- and y-axis
-- symbols for the data points
-- position of the legend
-- text of legend
-- the smoothness of the time series
+-   title
+-   grid for x- and y-axis
+-   symbols for the data points
+-   position of the legend
+-   text of legend
+-   the smoothness of the time series
 
-However, these differences are all solvable with the appropriate R code. Except for the last point (smoothness), I leave it here because the purpose of this article was to work with `r glossary("WID")` (and not to replicate figure 7 of `r glossary("BHE")` exactly.)
+However, these differences are all solvable with the appropriate R code.
+Except for the last point (smoothness), I leave it here because the
+purpose of this article was to work with `r glossary("WID")` (and not to
+replicate figure 7 of `r glossary("BHE")` exactly.)
 
-I have no working experience with time series, but there are articles and tutorials on how to smooth time series. I  still have to look into this issue. Therefore, I will list these resources for later reading and blog posts.
+I have no working experience with time series, but there are articles
+and tutorials on how to smooth time series. I still have to look into
+this issue. Therefore, I will list these resources for later reading and
+blog posts.
 
-:::::{.my-resource}
-:::{.my-resource-header}
-:::::: {#lem-smoothing-time-series}
+::: my-resource
+::: my-resource-header
+::: {#lem-smoothing-time-series}
 : Some internet resources on smoothing time series
-::::::
 :::
-::::{.my-resource-container}
+:::
 
+::: my-resource-container
 Without ranking, just a miscellaneous list of resources:
 
-- How to smooth a times series on R? ([StackOverflow](https://stackoverflow.com/questions/28924681/how-to-smooth-a-times-series-on-r))
-- An Introduction to Time Series Smoothing in R: [BoostedML](https://boostedml.com/2020/05/an-introduction-to-time-series-smoothing-in-r.html) (Articles on Statistics and Machine Learning for Healthcare)
-- Smoothing time series with R: [R-Bloggers 2010](https://www.r-bloggers.com/2010/03/smoothing-time-series-with-r/)
-- Smoothing Time Series Data: [R-Bloggers 2018](https://www.r-bloggers.com/2018/07/smoothing-time-series-data/)
-- sma() - Simple Moving Average: [R Package for time series smoothing]https://cran.r-project.org/web/packages/smooth/vignettes/sma.html
-- Smoothing time series: [PennState Eberly College of Science](https://online.stat.psu.edu/stat510/lesson/5/5.2)
-- Smoothing time series with R: [Revolutions blog](https://blog.revolutionanalytics.com/2010/03/smoothing-time-series-with-r.html) --  Milestones in AI, Machine Learning, Data Science, and visualization with R and Python since 2008
-
-::::
-:::::
+-   How to smooth a times series on R?
+    ([StackOverflow](https://stackoverflow.com/questions/28924681/how-to-smooth-a-times-series-on-r))
+-   An Introduction to Time Series Smoothing in R:
+    [BoostedML](https://boostedml.com/2020/05/an-introduction-to-time-series-smoothing-in-r.html)
+    (Articles on Statistics and Machine Learning for Healthcare)
+-   Smoothing time series with R: [R-Bloggers
+    2010](https://www.r-bloggers.com/2010/03/smoothing-time-series-with-r/)
+-   Smoothing Time Series Data: [R-Bloggers
+    2018](https://www.r-bloggers.com/2018/07/smoothing-time-series-data/)
+-   sma() - Simple Moving Average: \[R Package for time series
+    smoothing\]https://cran.r-project.org/web/packages/smooth/vignettes/sma.html
+-   Smoothing time series: [PennState Eberly College of
+    Science](https://online.stat.psu.edu/stat510/lesson/5/5.2)
+-   Smoothing time series with R: [Revolutions
+    blog](https://blog.revolutionanalytics.com/2010/03/smoothing-time-series-with-r.html)
+    -- Milestones in AI, Machine Learning, Data Science, and
+    visualization with R and Python since 2008
+:::
+:::
 
 ## Conclusion
 
-I have shown procedures for working with the inequality data of `r glossary("WID")`. 
+I have shown procedures for working with the inequality data of
+`r glossary("WID")`.
 
-- One approach explores the interactive website on [wid.world](https://wid.world/) and tries to create the desired graph. There are several ways to use the resulting figure:
-    - Downloading the picture as `r glossary("JPG")`
-    - Embedding a link to the interactive graph on your website
-    - Embedding the result as`r glossary("iframe")` in your website
-    - Exploring the code in the URL and using it for the second approach (downloading the required data with R)
-- The second approach uses the {**wid**} R package, especially the function `wid::download_wid()`. Knowing the required codes for the download function is essential. The first approach could help find the correct code composition in the WID code book, the [Codes Dictionary](https://wid.world/codes-dictionary/).
+-   One approach explores the interactive website on
+    [wid.world](https://wid.world/) and tries to create the desired
+    graph. There are several ways to use the resulting figure:
+    -   Downloading the picture as `r glossary("JPG")`
+    -   Embedding a link to the interactive graph on your website
+    -   Embedding the result as`r glossary("iframe")` in your website
+    -   Exploring the code in the URL and using it for the second
+        approach (downloading the required data with R)
+-   The second approach uses the {**wid**} R package, especially the
+    function `wid::download_wid()`. Knowing the required codes for the
+    download function is essential. The first approach could help find
+    the correct code composition in the WID code book, the [Codes
+    Dictionary](https://wid.world/codes-dictionary/).
 
-::: {.callout-important style="color: red;" #imp-how-to-not-enough}
+::: {#imp-how-to-not-enough .callout-important style="color: red;"}
 ##### How-to procedures are not enough
 
-The post only describes "how-to" procedures for WID and does not discuss the available concepts appropriate for specific research questions. I plan to describe and reflect on concepts for inequality research in later blog posts.
+The post only describes "how-to" procedures for WID and does not discuss
+the available concepts appropriate for specific research questions. I
+plan to describe and reflect on concepts for inequality research in
+later blog posts.
 :::
-
-
-
-[^1]: This is somewhat disappointing. As I do not know STATA,
-    these code files do not make much sense to me. However, a quick
-    internet search showed that there are some resources to learn how to
-    translate STATA directives into R commands. Two examples: [Making
-    the Transition? A Guide for Switching from Stata to
-    R](https://www.hertiecodingclub.com/learn/rstudio/stata_to_r/) and
-    [STATA to R cheat
-    sheet](https://rstudio.github.io/cheatsheets/stata2r.pdf).
-
-[2]: How important this check is showed me a previous version in which I had not included `ages = 992` because I thought the adult population was already defined with `pop = "j"`, the letter code for equal-split *adults*. But it turned out that without the explicit definition for the age, I also downloaded the default value `999` (all ages).
