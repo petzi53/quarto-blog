@@ -10,9 +10,1095 @@
 <atom:link href="https://l3lab.net/index.xml" rel="self" type="application/rss+xml"/>
 <description>This is Peter Baumgartner&#39;s Personal English Blog.</description>
 <generator>quarto-1.5.54</generator>
-<lastBuildDate>Wed, 24 Jul 2024 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 26 Jul 2024 22:00:00 GMT</lastBuildDate>
 <item>
-  <title>Shared Metadata</title>
+  <title>How to use the World Inequality Database (WID)?</title>
+  <dc:creator>Peter Baumgartner</dc:creator>
+  <link>https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="WID-Logo-min.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Logo of the World Inequality Lab (Screenshot). The WIL is a global research center studying inequality and public policies promoting social, economic, and environmental justice."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/WID-Logo-min.png" class="img-fluid figure-img" alt="Logo of the World Inequality Lab (Screenshot). The WIL is a global research center studying inequality and public policies promoting social, economic, and environmental justice."></a></p>
+<figcaption>Logo of the <a href="https://inequalitylab.world/">World Inequality Lab</a> (Screenshot). The WIL is a global research center studying inequality and public policies promoting social, economic, and environmental justice.</figcaption>
+</figure>
+</div>
+<section id="research-on-social-inequality" class="level2">
+<h2 class="anchored" data-anchor-id="research-on-social-inequality">Research on Social Inequality</h2>
+<p>I plan to write blog articles about social inequality in Austria, my native country. To be innovative, I want to avoid repeating what other people (journalists, scientists) were saying (claiming) but to illustrate my thinking backed by original data. But where does the data come from?</p>
+<section id="some-data-resources-for-inequality-research" class="level3">
+<h3 class="anchored" data-anchor-id="some-data-resources-for-inequality-research">Some Data Resources for Inequality Research</h3>
+<div class="my-resource">
+<div class="my-resource-header">
+<div id="lem-inequality-data" class="theorem lemma">
+<p><span class="theorem-title"><strong>Resource 1</strong></span> : Some Data Resources for Inequality Research</p>
+</div>
+</div>
+<div class="my-resource-container">
+<ul>
+<li><strong>WID</strong>: The <a href="https://wid.world/wid-world/">World Inequality Database</a> (WID) aims to provide open and convenient access to the most extensive available database on the historical evolution of the world distribution of income and wealth, both within countries and between countries <span class="citation" data-cites="worldinequalitylab2024">(Author Collective ’World Inequality Lab’ 2024)</span>.</li>
+<li><strong>OWID</strong>: <a href="https://ourworldindata.org/">Our World In Data</a> (OWID) is an online publication that focuses on large global problems such as poverty, disease, hunger, climate change, war, existential risks, and inequality <span class="citation" data-cites="globalchangedatalab2024">(Global Change Data Lab and Roser 2024)</span>.</li>
+<li><strong>PIP</strong>: The <a href="https://pip.worldbank.org/home">Poverty and Inequality Platform</a> (PIP) is an interactive computational tool that offers users quick access to the World Bank’s estimates of poverty, inequality, and shared prosperity. PIP provides a comprehensive view of global, regional, and country-level trends for more than 160 economies around the World <span class="citation" data-cites="worldbank2024">(World Bank 2024)</span>.</li>
+<li><strong>LIS</strong>: The <a href="https://www.lisdatacenter.org/">Luxembourg Income Study Database</a> (LIS) is a data archive and research center dedicated to cross-national analysis. It is home to the <a href="http://www.lisdatacenter.org/our-data/lis-database/">Luxembourg Income Study Database</a> (LIS) and the <a href="http://www.lisdatacenter.org/our-data/lws-database/">Luxembourg Wealth Study Database</a> (LWS) <span class="citation" data-cites="lisauthorcollective2024">(LIS Author Collective 2024)</span>.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="wid-a-brief-history-of-equality" class="level3">
+<h3 class="anchored" data-anchor-id="wid-a-brief-history-of-equality">WID &amp; A Brief History of Equality</h3>
+<p>Understanding the use of all these data resources is a complex enterprise. As a starting point, I will concentrate on the World Inequality Database (<a class="glossary" title="The ‘World Inequality Database’ (WID) aims to provide open and convenient access to the most extensive available database on the historical evolution of the world distribution of income and wealth, both within countries and between countries. WID.WORLD">WID</a>) because there exist several monographs where these data are used and interpreted.</p>
+<p>As a first step, I am going to follow the arguments of one book that I will use as <a class="glossary" title="Advance organizers are pedagogic devices that bridge the gap between what learners already know and what learners need to know. (Encyclopedia of the Science of Learning)">advanced organizer</a>. I am referring to “A Brief History of Equality” (BHE), which is only 274 pages, is a kind of executive summary of previous books by Thomas Piketty: “Capital in the Twenty-First Century” (816 pages) and “Capital and Ideology” (1093 pages) <span class="citation" data-cites="piketty2020a piketty2017">(Piketty 2020; Piketty and Goldhammer 2017)</span>.</p>
+</section>
+<section id="lacking-graphs-about-austria" class="level3">
+<h3 class="anchored" data-anchor-id="lacking-graphs-about-austria">Lacking Graphs about Austria</h3>
+<p>Most of the time, this book uses global, regional, or data from big, respectively ‘important’ countries like China, France, Germany, India, United Kingdom, United States, etc. Data on Austria and its interpretation are missing from the mentioned book and most scientific publications <a href="https://wid.world/methodology/#library-browse-by-country">referenced on the website</a>. An exception is the working paper “Distributional National Accounts (DINA)” for Austria, 2004-2016 by <span class="citation" data-cites="jestl2020">Jestl and List (2020)</span>. But this paper partly uses different indices and different approaches (for instance, the [(<a href="https://ourworldindata.org/what-is-the-gini-coefficient" class="uri">https://ourworldindata.org/what-is-the-gini-coefficient</a>). There are two other articles where at least Austria is shown in some graphs: There are five figures with Austria data in “What’s New About Income Inequality in Europe (1980-2019)?” by <span class="citation" data-cites="morgan2020">Morgan and Neef (2020)</span> and the other two in “How Unequal Is Europe? Evidence from Distributional National Accounts, 1980-2017” by <span class="citation" data-cites="blanchet2019">Blanchet, Chancel, and Gethin (2019)</span>.</p>
+<p>So, creating figures with Austrian data is not only an excellent exercise but the result could also increase our knowledge about the mechanisms and patterns of social inequality.</p>
+</section>
+</section>
+<section id="using-the-wid-website" class="level2">
+<h2 class="anchored" data-anchor-id="using-the-wid-website">Using the WID website</h2>
+<section id="key-resources" class="level3">
+<h3 class="anchored" data-anchor-id="key-resources">Key resources</h3>
+<p>To get started effectively, one has to overcome a paradoxical situation: The more detailed the methodological guidelines, the more difficult it is to find an appropriate entry point to get started.</p>
+<div class="my-resource">
+<div class="my-resource-header">
+<div id="lem-inequality-methodology" class="theorem lemma">
+<p><span class="theorem-title"><strong>Resource 2</strong></span> : Methodological Guidelines &amp; Other Resources</p>
+</div>
+</div>
+<div class="my-resource-container">
+<ul>
+<li><a href="https://wid.world/document/distributional-national-accounts-guidelines-2020-concepts-and-methods-used-in-the-world-inequality-database/">Distributional National Accounts (DINA) Guidelines</a>: This is the central resource for understanding the methodology behind the decomposition of <a class="glossary" title="National accounts are a system of accounts and balance sheets that provide a broad and integrated framework to describe an economy, whether a region, a country, or a group of countries such as the European Union (EU). For internationally comparable national accounts this system needs to be based on common concepts, definitions, classifications and accounting rules, in order to arrive at a consistent, reliable and comparable quantitative description of an economy. National accounts provide systematic and detailed economic data useful for economic analysis to support the development and monitoring of policy-making. (eurostat: Statics explained)">national accounts</a> and the inequality series for income and wealth. The purpose of these Distributional National Accounts (DINA) guidelines is to present the concepts, data sources, and methods used in the World Inequality Database (<a class="glossary" title="The ‘World Inequality Database’ (WID) aims to provide open and convenient access to the most extensive available database on the historical evolution of the world distribution of income and wealth, both within countries and between countries. WID.WORLD">WID</a>). It is a long document with 186 pages <span class="citation" data-cites="blanchet2024b">(Blanchet et al. 2024)</span>.</li>
+<li><a href="https://wid.world/codes-dictionary/" title="Describes the general structure of the World Inequality Database (WID)">Codes Dictionary</a> (Code Book): It describes the general structure of the World Inequality Database (WID). It explains how information is organized within it and how to retrieve and interpret its content. This document is invaluable for getting familiarized with the construction of WID variables and the structure of the database <span class="citation" data-cites="worldinequalitylab2024b">(World Inequality Lab 2024)</span>. Converting the web page into a PDF results in a document of 18 pages.</li>
+<li><a href="https://wid.world/summary-table/">Summary Table</a>: It summarizes all available WID.world data. The search tool can look for specific countries, variables, or WID.world codes. The summary table is an efficient starting point because it allows for a view of available data, which one can then download for more detailed analysis.</li>
+<li><a href="https://github.com/WIDworld/wid-world">Computer Code</a>: On the GitHub platform, you can inspect and fork the repository that contains all the code used to create the entire database from both the researcher’s data and official sources. It consists of 98% of STATA code, the rest (only 2%) is written in R.<sup>1</sup></li>
+<li><strong>Data</strong>: There are two ways to download data:
+<ul>
+<li><strong>Direct Download</strong>: The <a href="https://wid.world/data/">interactive page</a> allows one to select the required data and download it in the format that best suits one’s needs.</li>
+<li><strong>Advanced Interfaces</strong>: For special requirements, one can access the data with <a href="https://github.com/thomasblanchet/wid-stata-tool">STATA</a> or <a href="https://github.com/thomasblanchet/wid-r-tool">R interfaces</a>. In the case of the R interface, one can download from GitHub the R <code>{wid}</code> package <span class="citation" data-cites="wid-2">(Blanchet 2024a)</span>.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<p>It is a lot of work to read all the necessary information before starting. Instead of using this (tedious) sequential approach, I will try an interactive procedure, iteratively changing between theory (methodological guidelines) and practice (using R to replicate the figure).</p>
+</section>
+<section id="replicating-income-distribution" class="level3">
+<h3 class="anchored" data-anchor-id="replicating-income-distribution">Replicating income distribution</h3>
+<section id="figure-to-replicate" class="level4">
+<h4 class="anchored" data-anchor-id="figure-to-replicate">Figure to replicate</h4>
+<p>As my test bed, I will use Figure 7 of BHE <span class="citation" data-cites="piketty2022">(Piketty 2022, 46)</span>.</p>
+<div id="fig-figure7-piketty" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-figure7-piketty-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="BHE-Figure-07-Piketty-min.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;1: Figure 7 of BHE, taken from the original source on Piketty’s website."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-Piketty-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="alt-text"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-figure7-piketty-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Figure 7 of <a class="glossary" title="Piketty, T. (2022). A Brief History of Equality (S. Rendall, Trans.). Harvard University Press.">BHE</a>, taken from the <a href="http://piketty.pse.ens.fr/files/equality/">original source on Piketty’s website</a>.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="interactive-replication" class="level4">
+<h4 class="anchored" data-anchor-id="interactive-replication">Interactive Replication</h4>
+<p>As a first approach, I will replicate Figure 7 of BHE with the provided interactive tools of the WID. Here is a good <a href="https://wid.world/country/france/">starting point for income inequality</a>.</p>
+<div id="fig-BHE-07-00" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text" data-group="BHE-Figure-07">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-BHE-07-00-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="BHE-Figure-07-01-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;2: Choosing France as “Country” and using the default values for income inequality (top 10% share and bottom 50% share)"><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-01-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-BHE-07-00-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Choosing France as “Country” and using the default values for income inequality (top 10% share and bottom 50% share)
+</figcaption>
+</figure>
+</div>
+<p>From here, I will show screenshots for every step necessary to replicate Figure 7 of BHE, but here in this post, it is Figure&nbsp;1. If you click on one of the small images below, it will open the figure in the bigger original size, and you can navigate back and forth between the figures are seen in the table below.</p>
+<div class="grid">
+<section id="figures-3-6" class="level5 g-col-4">
+<h5 class="anchored" data-anchor-id="figures-3-6">Figures 3-6</h5>
+<div id="fig-BHE-07-01" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text" data-group="BHE-Figure-07">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-BHE-07-01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="BHE-Figure-07-01-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;3: Choosing France as “Country” and using the default values for income inequality (top 10% share and bottom 50% share)."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-01-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-BHE-07-01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Choosing France as “Country” and using the default values for income inequality (top 10% share and bottom 50% share).
+</figcaption>
+</figure>
+</div>
+<hr>
+<div id="fig-BHE-07-02" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text" data-group="BHE-Figure-07">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-BHE-07-02-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="BHE-Figure-07-02-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;4: Enlarge the time span of the data from 1947 to 1820 with the bottom slider.  &nbsp;"><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-02-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-BHE-07-02-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Enlarge the time span of the data from 1947 to 1820 with the bottom slider.<br> &nbsp;
+</figcaption>
+</figure>
+</div>
+<hr>
+<div id="fig-BHE-07-03" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text" data-group="BHE-Figure-07">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-BHE-07-03-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="BHE-Figure-07-03-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;5: Hiding the extrapolations (dotted lines) by choosing ‘More option’ on the top right corner and turning on the radio button."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-03-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-BHE-07-03-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Hiding the extrapolations (dotted lines) by choosing ‘More option’ on the top right corner and turning on the radio button.
+</figcaption>
+</figure>
+</div>
+<hr>
+<div id="fig-BHE-07-04" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-BHE-07-04-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="BHE-Figure-07-04-min.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;6: Check if ‘smooth lines’ is active. It should be turned on because it is the default value.  &nbsp;"><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-04-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-BHE-07-04-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Check if ‘smooth lines’ is active. It should be turned on because it is the default value. <br>&nbsp;
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="figures-7-10" class="level5 g-col-4">
+<h5 class="anchored" data-anchor-id="figures-7-10">Figures 7-10</h5>
+<div id="fig-BHE-07-05" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text" data-group="BHE-Figure-07">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-BHE-07-05-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="BHE-Figure-07-05-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;7: Change the limits of the Y-axis from 0 to 60%. This is different than in the original. See my comments later in this article."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-05-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-BHE-07-05-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Change the limits of the Y-axis from 0 to 60%. This is different than in the original. See my comments later in this article.
+</figcaption>
+</figure>
+</div>
+<hr>
+<div id="fig-BHE-07-06" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text" data-group="BHE-Figure-07">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-BHE-07-06-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="BHE-Figure-07-06-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;8: Compared with the original, we still will need a third time series for the share of the middle 40% of the population."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-06-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-BHE-07-06-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: Compared with the original, we still will need a third time series for the share of the middle 40% of the population.
+</figcaption>
+</figure>
+</div>
+<hr>
+<div id="fig-BHE-07-08" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text" data-group="BHE-Figure-07">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-BHE-07-08-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="BHE-Figure-07-08-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;9: Click on the bottom of the left green navigation bar to open ‘More Indicators’ to include custom indicators in the graph."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-08-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-BHE-07-08-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: Click on the bottom of the left green navigation bar to open ‘More Indicators’ to include custom indicators in the graph.
+</figcaption>
+</figure>
+</div>
+<hr>
+<div id="fig-BHE-07-09" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text" data-group="BHE-Figure-07">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-BHE-07-09-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="BHE-Figure-07-09-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;10: Choose ‘Income Inequality’ to get the option to include a preconfigured percentile into the graph."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-09-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-BHE-07-09-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: Choose ‘Income Inequality’ to get the option to include a preconfigured percentile into the graph.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="figures-11-14" class="level5 g-col-4">
+<h5 class="anchored" data-anchor-id="figures-11-14">Figures 11-14</h5>
+<div id="fig-BHE-07-10" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text" data-group="BHE-Figure-07">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-BHE-07-10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="BHE-Figure-07-10-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;11: Scroll down to select the radio box for the ‘Middle 40%’ percentile. &nbsp;"><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-10-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-BHE-07-10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11: Scroll down to select the radio box for the ‘Middle 40%’ percentile.<br>&nbsp;
+</figcaption>
+</figure>
+</div>
+<hr>
+<div id="fig-BHE-07-11" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text" data-group="BHE-Figure-07">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-BHE-07-11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="BHE-Figure-07-11-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;12: Confirm the default values. I will explain the different options in a later post.  &nbsp;"><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-11-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-BHE-07-11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12: Confirm the default values. I will explain the different options in a later post. <br>&nbsp;
+</figcaption>
+</figure>
+</div>
+<hr>
+<div id="fig-BHE-07-12" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text" data-group="BHE-Figure-07">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-BHE-07-12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="BHE-Figure-07-12-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;13: Our last action adds the share of the middle 40% to our graph, as was seen in Figure&nbsp;8.  &nbsp;"><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-12-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-BHE-07-12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13: Our last action adds the share of the middle 40% to our graph, as was seen in Figure&nbsp;8. <br>&nbsp;
+</figcaption>
+</figure>
+</div>
+<hr>
+<div id="fig-BHE-07-13" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text" data-group="BHE-Figure-07">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-BHE-07-13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="BHE-Figure-07-13-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;14: Hovering with the mouse over the graphs of the interactive website, we can get tooltips with the values for every year."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-13-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-BHE-07-13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14: Hovering with the mouse over the graphs of the interactive website, we can get tooltips with the values for every year.
+</figcaption>
+</figure>
+</div>
+</section>
+</div>
+</section>
+<section id="differences-between-original-and-replication" class="level4">
+<h4 class="anchored" data-anchor-id="differences-between-original-and-replication">Differences between original and replication</h4>
+<p>If we compare both figures side by side, we will see a significant difference. Our replication differs from the original in the years before 1900. For instance, in our figure, the people with the top 10% of income share about 60% of the total income, in contrast to the 50% share in the original graph. I need to find out where these differences come from. There may have been a correction of the computed extrapolations in an update after the book publication. In any case, this difference is not essential here. Remember, the primary purpose of the exercise is to understand the patterns of the database structure — and not (at least at the moment) to get correct figures.</p>
+<div class="grid">
+<div class="g-col-6">
+<div id="fig-figure7-piketty-2" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="BHE-figure-compare" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-figure7-piketty-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="BHE-Figure-07-Piketty-min.png" class="lightbox" data-gallery="BHE-figure-compare" title="Figure&nbsp;15: Figure 7 of BHE, taken from the original source on Piketty’s website. The shares for the top 10% are lower. It is slightly above 50% of the total income, whereas it is about 60% in the replication. On the other hand, the share of the middle is 40% lower than that of the replication."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-Piketty-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-figure7-piketty-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15: Figure 7 of <a class="glossary" title="Piketty, T. (2022). A Brief History of Equality (S. Rendall, Trans.). Harvard University Press.">BHE</a>, taken from the <a href="http://piketty.pse.ens.fr/files/equality/">original source on Piketty’s website</a>. The shares for the top 10% are lower. It is slightly above 50% of the total income, whereas it is about 60% in the replication. On the other hand, the share of the middle is 40% lower than that of the replication.
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="g-col-6">
+<div id="fig-BHE-07-13-2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text" data-group="BHE-figure-compare">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-BHE-07-13-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="BHE-Figure-07-13-min.png" class="lightbox" data-gallery="BHE-figure-compare" title="Figure&nbsp;16: The result of my replication is showing higher shares for the top 10% and accordingly lower shares for the middle 40% in contrast to the original figure. However, the level of the share of the bottom 50% of the population is approximately the same in both figures."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-13-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-BHE-07-13-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;16: The result of my replication is showing higher shares for the top 10% and accordingly lower shares for the middle 40% in contrast to the original figure. However, the level of the share of the bottom 50% of the population is approximately the same in both figures.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>There are more differences between the two pictures, but they are more of cosmetically nature:</p>
+<ul>
+<li>The choice of colors for the various time series is different.</li>
+<li>The labels of the x and y axes are different. The original is labeled every 20 years and contains a vertical line every 10 years, whereas the interactive replication has a 25-year grid. The y-axis in the replication is missing the %-sign.</li>
+<li>In the original, the time-series have different symbols in the data points (circle, triangle), which is vital in black &amp; white (book) publications.</li>
+<li>The legend is in the original at a prominent place in the middle of the graph, whereas it is at the bottom of the interactive replication.</li>
+</ul>
+</section>
+</section>
+<section id="display-the-results" class="level3">
+<h3 class="anchored" data-anchor-id="display-the-results">Display the results</h3>
+<p>Until now, I have used manually taken screenshots. But there are also several possibilities to display results offered by the <a class="glossary" title="The ‘World Inequality Database’ (WID) aims to provide open and convenient access to the most extensive available database on the historical evolution of the world distribution of income and wealth, both within countries and between countries. WID.WORLD">WID</a>.</p>
+<section id="download-a-jpg-file" class="level4">
+<h4 class="anchored" data-anchor-id="download-a-jpg-file">Download a JPG-file</h4>
+<div id="fig-wid-jpg-figure07" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-wid-jpg-figure07-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="BHE-Figure-07-graph_dl.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-19" title="Figure&nbsp;17: Income inequality, France, 1820-2022 download as JPG from the WID site and integrated into the Quarto text."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-graph_dl.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-wid-jpg-figure07-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17: Income inequality, France, 1820-2022 download as JPG from the <a class="glossary" title="The ‘World Inequality Database’ (WID) aims to provide open and convenient access to the most extensive available database on the historical evolution of the world distribution of income and wealth, both within countries and between countries. WID.WORLD">WID</a> site and integrated into the Quarto text.
+</figcaption>
+</figure>
+</div>
+<p>Note that the figures have slightly changed. There are fewer labels on the x- and y-axis. The legend’s appearance has changed somewhat, and some information that is irrelevant in a static view is removed.</p>
+</section>
+<section id="copy-the-url" class="level4">
+<h4 class="anchored" data-anchor-id="copy-the-url">Copy the URL</h4>
+<p>Another option is to copy the URL and integrate it as a link into the Quarto text. It opens up a web page with the figure and all the WID menus in your default browser. Others can explore the interactive graph or create their own figure from here.</p>
+<p><a href="https://wid.world/share/#0/countrytimeseries/sptinc_p90p100_z;sptinc_p0p50_z;sptinc_p50p90_z/FR/2015/eu/k/p/yearly/s/false/-10/62/curve/true/1820/2022">Income inequality, France, 1820-2022</a></p>
+</section>
+<section id="embed-as-iframe" class="level4">
+<h4 class="anchored" data-anchor-id="embed-as-iframe">Embed as iframe</h4>
+<p>Another possibility is to embed the graph into an <a class="glossary" title="iframes allow you to embed HTML documents inside another HTML document. They offer a seamless way to integrate content from one source into another, enabling developers to create more dynamic and interactive web pages. (dev.to)">iframe</a>.</p>
+<iframe width="800" height="400" src="https://wid.world/share/#1/countrytimeseries/sptinc_p90p100_z;sptinc_p0p50_z;sptinc_p50p90_z/FR/2015/eu/k/p/yearly/s/true/9.4765/70/curve/true/1820/2022">
+</iframe>
+<div id="cau-wid-iframe-overlapping-legend" class="callout callout-style-default callout-caution callout-titled" style="color: darkgoldenrod;">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution&nbsp;1: Embedding WID iframes has some drawbacks
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The legend overlaps the lower part of the graph. You have either to plan during the construction of the graph to prevent this drawback or (better) to adapt the code in the URL itself.</p>
+<p>Besides, there is also an annoying cookies-consent message where the link to learn more is wrong by pointing to another graph and not to the cookies policy.</p>
+</div>
+</div>
+<p>The code in the above iframe is:</p>
+<pre><code>&lt;iframe width="800" height="400" src="https://wid.world/share/#1/countrytimeseries/sptinc_p90p100_z;sptinc_p0p50_z;sptinc_p50p90_z/FR/2015/eu/k/p/yearly/s/true/9.4765/70/curve/true/1820/2022"&gt;&lt;/iframe&gt;</code></pre>
+<p>It turned out that besides changing the delimiter for the axis from <code>/9.4765/70/</code> to <code>/0/62/</code> it is also necessary to enlarge the iframe’s height to position the legend lower. With trial &amp; error experimenting, I got a good result after changing the height from <code>400</code> to <code>500</code>. Here is the adapted iframe where you can see the full figure and also the slider to change the time period of the data:</p>
+<iframe width="800" height="500" src="https://wid.world/share/#1/countrytimeseries/sptinc_p90p100_z;sptinc_p0p50_z;sptinc_p50p90_z/FR/2015/eu/k/p/yearly/s/true/0/62/curve/true/1820/2022">
+</iframe>
+</section>
+</section>
+</section>
+<section id="getting-codes-for-indicators" class="level2">
+<h2 class="anchored" data-anchor-id="getting-codes-for-indicators">Getting codes for indicators</h2>
+<p>By far, the most important result of our replication is that the URL contains the code for used indicators, areas, and percentiles.</p>
+<pre><code>https://wid.world/share/#1/countrytimeseries/sptinc_p90p100_z;sptinc_p0p50_z;sptinc_p50p90_z/FR/2015/eu/k/p/yearly/s/false/9.4765/70/curve/true/1820/2022</code></pre>
+<p>This is very helpful because it is now much easier to find the code explication in the <a href="https://wid.world/codes-dictionary/">Code Dictionary</a>. Let’s analyze the example of the <code>sptinc_p90p100_z</code> code:</p>
+<ul>
+<li><strong>s</strong>: The first letter <code>s</code> determines the code series. <code>s</code> means “share” and contains a fraction between 0 and 1.</li>
+<li><strong>ptinc</strong>: The next five letters are the code for the series concept. This is an essential help because a massive amount of five-letter codes exist. More than half of the 38 pages of the PDF version of the code dictionary lists five-letter codes and their meaning! Searching <code>ptinc</code> in the online Code Dictionary with the browser search tool results in “pretax national income”.</li>
+<li><strong>p90p100</strong>: This one is easy. <code>p90p100</code> is the top 10%, the <a class="glossary" title="The set of divisions that produce exactly 100 equal parts in a series of continuous values, such as blood pressure, weight, height, etc. Thus a person with blood pressure above the 80th percentile has a greater blood pressure value than over 80% of the other recorded values.” (CDS, p.323)">percentiles</a> characterizing people with an income equal to or higher than 90% of the population.</li>
+</ul>
+<p>Additionally, we have the information from the legend that the units are adults, and the income is split equally between couples or other adult members (= 20 years or older) of the household. Therefore, we can add:</p>
+<ul>
+<li><strong>992</strong>: The age code description has three numbers. <code>992</code> stands for a population of individuals over age 20.</li>
+<li><strong>j</strong>: The last letter is the unit description. <code>j</code> means equal-split adults.</li>
+</ul>
+<p>With these data, we can now look for the corresponding codes in the database and filter the database to get only the required information. The variable name is, in our case:</p>
+<p><span id="eq-wid-variable-calcualtion"><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Balign*%7D%0As%20+%20ptinc%20+%20992%20+%20j%20=%20sptinc992j%0A%5Cend%7Balign*%7D%0A%5Ctag%7B1%7D"></span></p>
+<div id="cau-ID" class="callout callout-style-default callout-caution callout-titled" style="color: darkgoldenrod;">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution&nbsp;2: Explaining just the procedure, not the concepts
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Remember that I am not discussing the concepts behind the different parameter codes. I just want to stress how to find the code for a required indicator here. Which concepts to apply and what indicator is appropriate for a specific research question will be covered in other articles.</p>
+</div>
+</div>
+</section>
+<section id="r-code" class="level2">
+<h2 class="anchored" data-anchor-id="r-code">R Code</h2>
+<p>There is with {<strong>wid</strong>} a special R package for downloading data directly from <a class="glossary" title="The ‘World Inequality Database’ (WID) aims to provide open and convenient access to the most extensive available database on the historical evolution of the world distribution of income and wealth, both within countries and between countries. WID.WORLD">WID</a> <span class="citation" data-cites="wid-3">(Blanchet 2024b)</span>. Read the instructions on the <a href="https://github.com/thomasblanchet/wid-r-tool">GitHub repo</a>. How do you install the unavailable package on <a class="glossary" title="Comprehensive R Archive Network (CRAN) is a network of ftp and web servers around the world that store identical, up-to-date, versions of code and documentation for R. Please use the CRAN mirror nearest to you to minimize network load. cran.r-project.org">CRAN</a>?</p>
+<p>The R {wid} package should have a vignette with examples of its usage. But unfortunately, all the links to it are broken or not available except as <a href="https://github.com/thomasblanchet/wid-r-tool/blob/master/vignettes/wid-demo.Rmd"><code>.Rmd</code> file in the GitHub repository</a> itself. I have downloaded and rendered the vignette as a PDF for your convenience.</p>
+<div class="cell">
+<style type="text/css">
+.column {
+text-align: center;
+}
+</style>
+</div>
+<div class="columns">
+<div class="column" style="width:100%;">
+<p><button class="btn btn-success downloadthis  " id="dnldts41026"><i class="bi bi-download"></i> Download WID-vignette as PDF </button></p>
+</div>
+</div>
+<section id="plotting-data-with-r" class="level3">
+<h3 class="anchored" data-anchor-id="plotting-data-with-r">Plotting data with R</h3>
+<p>The central function of the {<strong>wid</strong>} package is <code>wid::download_wid()</code>. It has the following parameters:</p>
+<table class="caption-top table">
+<caption>Description of the arguments for the `wid::download_wid()` function </caption>
+<colgroup>
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 47%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>indicators</td>
+<td>character</td>
+<td>all</td>
+<td>Codes corresponding to indicators to retrieve</td>
+</tr>
+<tr class="even">
+<td>areas</td>
+<td>character</td>
+<td>all</td>
+<td>Areas (mostly countries) for which to retrieve the indicators</td>
+</tr>
+<tr class="odd">
+<td>years</td>
+<td>numeric</td>
+<td>all</td>
+<td>Years for which to retrieve the indicators</td>
+</tr>
+<tr class="even">
+<td>perc</td>
+<td>character</td>
+<td>all</td>
+<td><a class="glossary" title="The set of divisions that produce exactly 100 equal parts in a series of continuous values, such as blood pressure, weight, height, etc. Thus a person with blood pressure above the 80th percentile has a greater blood pressure value than over 80% of the other recorded values.” (CDS, p.323)">Percentiles</a>` (part of the distribution)</td>
+</tr>
+<tr class="odd">
+<td>ages</td>
+<td>numeric</td>
+<td>all</td>
+<td>Age groups (adults, all ages, elderly, etc.)</td>
+</tr>
+<tr class="even">
+<td>pop</td>
+<td>character</td>
+<td>all</td>
+<td>Population type (individual, households, tax units, etc.)</td>
+</tr>
+<tr class="odd">
+<td>metadata</td>
+<td>logical</td>
+<td>FALSE</td>
+<td>Fetch metadata too? (eg. sources, etc.)</td>
+</tr>
+<tr class="even">
+<td>verbose</td>
+<td>logical</td>
+<td>FALSE</td>
+<td>Display messages showing progress?</td>
+</tr>
+<tr class="odd">
+<td>include_extrapolation</td>
+<td>logical</td>
+<td>TRUE</td>
+<td>Include data based on extrapolations / interpolations</td>
+</tr>
+</tbody>
+</table>
+<div class="my-example-header">
+<div id="exm-plotting-wid-data-with-r" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1</strong></span> : R code for replicating Figure 7</p>
+</div>
+</div>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true">Download data</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Display some data</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Data structure</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" aria-controls="tabset-1-4" aria-selected="false">National income</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
+<div class="my-r-code">
+<div class="my-r-code-header">
+<div id="cnj-download-wid-data-fr" class="theorem conjecture">
+<p><span class="theorem-title"><strong>R Code 1</strong></span> : Download data with <code>wid::download_wid</code></p>
+</div>
+</div>
+<div class="my-r-code-container">
+<div id="lst-download-wid-data-fr" class="listing quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-lst figure">
+<div aria-describedby="lst-download-wid-data-fr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">income_france <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> wid<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">download_wid</span>(</span>
+<span id="cb3-2">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">indicators =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"sptinc"</span>, <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Shares of pre-tax national income</span></span>
+<span id="cb3-3">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">areas =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"FR"</span>, <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># France</span></span>
+<span id="cb3-4">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">perc =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"p0p50"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"p50p90"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"p90p100"</span>), <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Bottom 50%, middle 40% and top 10%</span></span>
+<span id="cb3-5">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ages =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">992</span>, <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># individuals over age 20</span></span>
+<span id="cb3-6">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">pop =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"j"</span> <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># equal-split adults</span></span>
+<span id="cb3-7">)</span>
+<span id="cb3-8"></span>
+<span id="cb3-9"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">save_data_file</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"WID"</span>, income_france, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"income_france.rds"</span>)</span></code></pre></div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-lst" id="lst-download-wid-data-fr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Listing&nbsp;1: Download data for the shares of France’s pre-tax national income.
+</figcaption>
+</figure>
+</div>
+<p>(<em>For this R code chunk, is no output available</em>)</p>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
+<div class="my-r-code">
+<div class="my-r-code-header">
+<div id="cnj-display-some-wid-fr-data" class="theorem conjecture">
+<p><span class="theorem-title"><strong>R Code 2</strong></span> : Display some random data imported with <code>wid::download_wid</code></p>
+</div>
+</div>
+<div class="my-r-code-container">
+<div id="lst-display-some-wid-fr-data" class="listing quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-lst figure">
+<div aria-describedby="lst-display-some-wid-fr-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">data <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">paste0</span>(here<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">here</span>(), <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"/data/WID/income_france.rds"</span>)</span>
+<span id="cb4-2">income_france <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> base<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">readRDS</span>(data)</span>
+<span id="cb4-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">my_glance_data</span>(income_france, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">seed =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">123</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   obs country   variable percentile year  value
+1    1      FR sptinc992j      p0p50 1820 0.1209
+2   14      FR sptinc992j      p0p50 1923 0.1375
+3  118      FR sptinc992j     p50p90 1910 0.3524
+4  179      FR sptinc992j     p50p90 1975 0.4765
+5  195      FR sptinc992j     p50p90 1991 0.4694
+6  229      FR sptinc992j    p90p100 1880 0.5932
+7  244      FR sptinc992j    p90p100 1927 0.4699
+8  299      FR sptinc992j    p90p100 1982 0.2994
+9  306      FR sptinc992j    p90p100 1989 0.3319
+10 339      FR sptinc992j    p90p100 2022 0.3479</code></pre>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-lst" id="lst-display-some-wid-fr-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Listing&nbsp;2: Display some random data imported with <code>wid::download_wid</code>, including the first and last row.
+</figcaption>
+</figure>
+</div>
+<hr>
+<p>Inspecting the data, we see:</p>
+<ul>
+<li>Our dataset has 339 records.</li>
+<li>All presented records have an area code <code>FR</code>, which stands for France.</li>
+<li>All presented records have the variable name <code>sptinc992j</code>. This conforms to our previous calculation in
+<ol class="example" type="1">
+<li></li>
+</ol></li>
+<li>We see three different values for percentiles in the randomly displayed data: <code>p0p50</code>, <code>p50p90</code>, and <code>p90p100</code> representing the income of the bottom 50%, the middle 40%, and the top 10% of the population.</li>
+<li>Our random data show a period from 1820 to 2022.</li>
+<li>The quantity for each record contains the column <code>value</code>.</li>
+</ul>
+<p>Overall, The result looks nice, but we must check the data more thoroughly. Is there really only one type of variable.[^2]</p>
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
+<div class="my-r-code">
+<div class="my-r-code-header">
+<div id="cnj-wid-fr-income-data-structure" class="theorem conjecture">
+<p><span class="theorem-title"><strong>R Code 3</strong></span> : Data structure for the France data for pre-tax income (1820-2022)</p>
+</div>
+</div>
+<div class="my-r-code-container">
+<div id="lst-wid-fr-income-data-structureD" class="listing quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-lst figure">
+<div aria-describedby="lst-wid-fr-income-data-structureD-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1">skimr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">skim</span>(income_france)</span></code></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Data summary</caption>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Name</td>
+<td style="text-align: left;">income_france</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Number of rows</td>
+<td style="text-align: left;">339</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Number of columns</td>
+<td style="text-align: left;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">_______________________</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Column type frequency:</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">________________________</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Group variables</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: character</strong></p>
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 13%">
+<col style="width: 19%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 8%">
+<col style="width: 12%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">skim_variable</th>
+<th style="text-align: right;">n_missing</th>
+<th style="text-align: right;">complete_rate</th>
+<th style="text-align: right;">min</th>
+<th style="text-align: right;">max</th>
+<th style="text-align: right;">empty</th>
+<th style="text-align: right;">n_unique</th>
+<th style="text-align: right;">whitespace</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">country</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">variable</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">percentile</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: numeric</strong></p>
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 10%">
+<col style="width: 14%">
+<col style="width: 8%">
+<col style="width: 6%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 6%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">skim_variable</th>
+<th style="text-align: right;">n_missing</th>
+<th style="text-align: right;">complete_rate</th>
+<th style="text-align: right;">mean</th>
+<th style="text-align: right;">sd</th>
+<th style="text-align: right;">p0</th>
+<th style="text-align: right;">p25</th>
+<th style="text-align: right;">p50</th>
+<th style="text-align: right;">p75</th>
+<th style="text-align: right;">p100</th>
+<th style="text-align: left;">hist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">year</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1964.23</td>
+<td style="text-align: right;">37.08</td>
+<td style="text-align: right;">1820.00</td>
+<td style="text-align: right;">1938.00</td>
+<td style="text-align: right;">1966.00</td>
+<td style="text-align: right;">1994.00</td>
+<td style="text-align: right;">2022.00</td>
+<td style="text-align: left;">▁▁▆▇▇</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">value</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.33</td>
+<td style="text-align: right;">0.12</td>
+<td style="text-align: right;">0.12</td>
+<td style="text-align: right;">0.21</td>
+<td style="text-align: right;">0.34</td>
+<td style="text-align: right;">0.45</td>
+<td style="text-align: right;">0.61</td>
+<td style="text-align: left;">▇▂▇▇▁</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-lst" id="lst-wid-fr-income-data-structureD-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Listing&nbsp;3: Using the {<strong>skimr</strong>} package to display the data structure for the France pre-tax income data 1820-2022
+</figcaption>
+</figure>
+</div>
+<hr>
+<p>Here, we see that no data are missing, that we have only one value for the variables <code>country</code> and <code>variable</code>, and exactly the required three values for <code>percentile</code>.</p>
+<p>We also see from the small histogram for <code>year</code> that we do not have many data points for more of the first half of the time.</p>
+</div>
+</div>
+</div>
+<div id="tabset-1-4" class="tab-pane" aria-labelledby="tabset-1-4-tab">
+<div class="my-r-code">
+<div class="my-r-code-header">
+<div id="cnj-display-graph-income-france" class="theorem conjecture">
+<p><span class="theorem-title"><strong>R Code 4</strong></span> : Pre-tax national income inequality in France, 1820-2022</p>
+</div>
+</div>
+<div class="my-r-code-container">
+<div id="lst-display-graph-income-france" class="listing quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-lst figure">
+<div aria-describedby="lst-display-graph-income-france-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1">ggplot2<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(income_france, </span>
+<span id="cb7-2">    ggplot2<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> year, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> value, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> percentile)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb7-3">    ggplot2<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_line</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> </span>
+<span id="cb7-4">    ggplot2<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_point</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb7-5">    ggplot2<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ylab</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"share of income"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb7-6">    ggplot2<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_color_discrete</span>(</span>
+<span id="cb7-7">        <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">labels =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"p0p50"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"bottom 50%"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"p90p100"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"top 10%"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"p50p90"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"middle 40%"</span>)</span>
+<span id="cb7-8">    ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> </span>
+<span id="cb7-9">    ggplot2<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggtitle</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Pre-tax national income inequality in France, 1820-2022"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb7-10">    ggplot2<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">legend.position =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"bottom"</span>)</span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><a href="index_files/figure-html/display-graph-income-france-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20" title="Listing&nbsp;4: Pre-tax national income inequality in France, 1820-2022"><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/index_files/figure-html/display-graph-income-france-1.png" class="img-fluid figure-img" width="672"></a></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## save plot just once</span></span>
+<span id="cb8-2"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># ggplot2::ggsave(filename = "BHE-sptinc992j_fr.png")</span></span></code></pre></div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-lst" id="lst-display-graph-income-france-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Listing&nbsp;4: Pre-tax national income inequality in France, 1820-2022
+</figcaption>
+</figure>
+</div>
+<hr>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid">
+<div class="g-col-6">
+<div id="fig-figure7-piketty-3" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="BHE-figure-compare2" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-figure7-piketty-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="BHE-Figure-07-Piketty-min.png" class="lightbox" data-gallery="BHE-figure-compare2" title="Figure&nbsp;18: Figure 7 of BHE, taken from the original source on Piketty’s website."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-Piketty-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-figure7-piketty-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;18: Figure 7 of <a class="glossary" title="Piketty, T. (2022). A Brief History of Equality (S. Rendall, Trans.). Harvard University Press.">BHE</a>, taken from the <a href="http://piketty.pse.ens.fr/files/equality/">original source on Piketty’s website</a>.
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="g-col-6">
+<div id="fig-BHE-sptinc992j-fr" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text" data-group="BHE-figure-compare2">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-BHE-sptinc992j-fr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="BHE-sptinc992j_fr-min.png" class="lightbox" data-gallery="BHE-figure-compare2" title="Figure&nbsp;19: Resulting figure after data download and plotting with R"><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-sptinc992j_fr-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-BHE-sptinc992j-fr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;19: Resulting figure after data download and plotting with R
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="comparison-of-my-result-with-the-original-figure-7" class="level2">
+<h2 class="anchored" data-anchor-id="comparison-of-my-result-with-the-original-figure-7">Comparison of my result with the original Figure 7</h2>
+<p>We are pretty near if we compare the above plot with the original figure. Besides the mentioned difference in the magnitude of the top 10% and middle 40% before 1900, there are the following differences:</p>
+<ul>
+<li>title</li>
+<li>grid for x- and y-axis</li>
+<li>symbols for the data points</li>
+<li>position of the legend</li>
+<li>text of legend</li>
+<li>the smoothness of the time series</li>
+</ul>
+<p>However, these differences are all solvable with the appropriate R code. Except for the last point (smoothness), I leave it here because the purpose of this article was to work with <a class="glossary" title="The ‘World Inequality Database’ (WID) aims to provide open and convenient access to the most extensive available database on the historical evolution of the world distribution of income and wealth, both within countries and between countries. WID.WORLD">WID</a> (and not to replicate figure 7 of <a class="glossary" title="Piketty, T. (2022). A Brief History of Equality (S. Rendall, Trans.). Harvard University Press.">BHE</a> exactly.)</p>
+<p>I have no working experience with time series, but there are articles and tutorials on how to smooth time series. I still have to look into this issue. Therefore, I will list these resources for later reading and blog posts.</p>
+<div class="my-resource">
+<div class="my-resource-header">
+<div id="lem-smoothing-time-series" class="theorem lemma">
+<p><span class="theorem-title"><strong>Resource 3</strong></span> : Some internet resources on smoothing time series</p>
+</div>
+</div>
+<div class="my-resource-container">
+<p>Without ranking, just a miscellaneous list of resources:</p>
+<ul>
+<li>How to smooth a times series on R? (<a href="https://stackoverflow.com/questions/28924681/how-to-smooth-a-times-series-on-r">StackOverflow</a>)</li>
+<li>An Introduction to Time Series Smoothing in R: <a href="https://boostedml.com/2020/05/an-introduction-to-time-series-smoothing-in-r.html">BoostedML</a> (Articles on Statistics and Machine Learning for Healthcare)</li>
+<li>Smoothing time series with R: <a href="https://www.r-bloggers.com/2010/03/smoothing-time-series-with-r/">R-Bloggers 2010</a></li>
+<li>Smoothing Time Series Data: <a href="https://www.r-bloggers.com/2018/07/smoothing-time-series-data/">R-Bloggers 2018</a></li>
+<li>sma() - Simple Moving Average: [R Package for time series smoothing]https://cran.r-project.org/web/packages/smooth/vignettes/sma.html</li>
+<li>Smoothing time series: <a href="https://online.stat.psu.edu/stat510/lesson/5/5.2">PennState Eberly College of Science</a></li>
+<li>Smoothing time series with R: <a href="https://blog.revolutionanalytics.com/2010/03/smoothing-time-series-with-r.html">Revolutions blog</a> – Milestones in AI, Machine Learning, Data Science, and visualization with R and Python since 2008</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>I have shown procedures for working with the inequality data of <a class="glossary" title="The ‘World Inequality Database’ (WID) aims to provide open and convenient access to the most extensive available database on the historical evolution of the world distribution of income and wealth, both within countries and between countries. WID.WORLD">WID</a>.</p>
+<ul>
+<li>One approach explores the interactive website on <a href="https://wid.world/">wid.world</a> and tries to create the desired graph. There are several ways to use the resulting figure:
+<ul>
+<li>Downloading the picture as <a class="glossary" title="JPEG (/ˈdʒeɪpɛɡ/ JAY-peg, short for Joint Photographic Experts Group is a commonly used method of lossy compression for digital images. (Wikipedia)">JPG</a></li>
+<li>Embedding a link to the interactive graph on your website</li>
+<li>Embedding the result as<a class="glossary" title="iframes allow you to embed HTML documents inside another HTML document. They offer a seamless way to integrate content from one source into another, enabling developers to create more dynamic and interactive web pages. (dev.to)">iframe</a> in your website</li>
+<li>Exploring the code in the URL and using it for the second approach (downloading the required data with R)</li>
+</ul></li>
+<li>The second approach uses the {<strong>wid</strong>} R package, especially the function <code>wid::download_wid()</code>. Knowing the required codes for the download function is essential. The first approach could help find the correct code composition in the WID code book, the <a href="https://wid.world/codes-dictionary/">Codes Dictionary</a>.</li>
+</ul>
+<div id="imp-how-to-not-enough" class="callout callout-style-default callout-important callout-titled" style="color: red;">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important&nbsp;1: How-to procedures are not enough
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The post only describes “how-to” procedures for WID and does not discuss the available concepts appropriate for specific research questions. I plan to describe and reflect on concepts for inequality research in later blog posts.</p>
+</div>
+</div>
+<p>[2]: How important this check is showed me a previous version in which I had not included <code>ages = 992</code> because I thought the adult population was already defined with <code>pop = "j"</code>, the letter code for equal-split <em>adults</em>. But it turned out that without the explicit definition for the age, I also downloaded the default value <code>999</code> (all ages).</p>
+
+
+
+</section>
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
+<div id="ref-worldinequalitylab2024" class="csl-entry">
+Author Collective ’World Inequality Lab’. 2024. <span>“WID - World Inequality Database.”</span> <a href="https://wid.world/">https://wid.world/</a>.
+</div>
+<div id="ref-wid-2" class="csl-entry">
+Blanchet, Thomas. 2024a. <span>“Wid: Download Data from WID.world.”</span> <a href="https://github.com/WIDworld/wid-r-tool">https://github.com/WIDworld/wid-r-tool</a>.
+</div>
+<div id="ref-wid-3" class="csl-entry">
+———. 2024b. <span>“Wid: Download Data from WID.world.”</span> <a href="https://github.com/WIDworld/wid-r-tool">https://github.com/WIDworld/wid-r-tool</a>.
+</div>
+<div id="ref-blanchet2024b" class="csl-entry">
+Blanchet, Thomas, Lucas Chancel, Ignacio Flores, and Marc Morgan. 2024. <span>“Distributional National Accounts Guidelines: Methods and Concepts Used in the World Inequality Database (Version 2024-02-27),”</span> February. <a href="https://wid.world/document/distributional-national-accounts-guidelines-2020-concepts-and-methods-used-in-the-world-inequality-database/">https://wid.world/document/distributional-national-accounts-guidelines-2020-concepts-and-methods-used-in-the-world-inequality-database/</a>.
+</div>
+<div id="ref-blanchet2019" class="csl-entry">
+Blanchet, Thomas, Lucas Chancel, and Amory Gethin. 2019. <span>“How Unequal Is Europe? Evidence from Distributional National Accounts, 1980<span></span>2017.”</span> <em>WID.world, Working Paper</em>, no. 2019/06 (April): 77. <a href="https://wid.world/document/bcg2019-full-paper/">https://wid.world/document/bcg2019-full-paper/</a>.
+</div>
+<div id="ref-globalchangedatalab2024" class="csl-entry">
+Global Change Data Lab, and Max Roser. 2024. <span>“OWID Homepage.”</span> <em>Our World in Data</em>, March. <a href="https://ourworldindata.org">https://ourworldindata.org</a>.
+</div>
+<div id="ref-jestl2020" class="csl-entry">
+Jestl, Stefan, and Emanuel List. 2020. <span>“Distributional National Accounts (DINA) for Austria, 2004-2016,”</span> October.
+</div>
+<div id="ref-lisauthorcollective2024" class="csl-entry">
+LIS Author Collective. 2024. <span>“LIS Cross-National Data Center in Luxembourg.”</span> <a href="https://www.lisdatacenter.org/">https://www.lisdatacenter.org/</a>.
+</div>
+<div id="ref-morgan2020" class="csl-entry">
+Morgan, Marc, and Theresa Neef. 2020. <span>“What<span>’</span>s New About Income Inequality in Europe (1980-2019)?”</span> <em>World Inequality Lab, Issue Brief</em>, no. 2020/04 (November): 16.
+</div>
+<div id="ref-piketty2020a" class="csl-entry">
+Piketty, Thomas. 2020. <em>Capital and Ideology</em>. Illustrated Edition. Cambridge, Massachusetts ; London, England: Harvard University Press.
+</div>
+<div id="ref-piketty2022" class="csl-entry">
+———. 2022. <em>A Brief History of Equality</em>. Cambridge, Massachusetts: Harvard University Press.
+</div>
+<div id="ref-piketty2017" class="csl-entry">
+Piketty, Thomas, and Arthur Goldhammer. 2017. <em>Capital in the Twenty-First Century</em>. Harvard University Press.
+</div>
+<div id="ref-worldbank2024" class="csl-entry">
+World Bank. 2024. <span>“Poverty and Inequality Platform (Version: 20240326<span>_</span>2017).”</span> <a href="https://pip.worldbank.org/home">https://pip.worldbank.org/home</a>.
+</div>
+<div id="ref-worldinequalitylab2024b" class="csl-entry">
+World Inequality Lab. 2024. <span>“Codes Dictionary.”</span> <a href="https://wid.world/codes-dictionary/">https://wid.world/codes-dictionary/</a>.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>This is somewhat disappointing. As I do not know STATA, these code files do not make much sense to me. However, a quick internet search showed that there are some resources to learn how to translate STATA directives into R commands. Two examples: <a href="https://www.hertiecodingclub.com/learn/rstudio/stata_to_r/">Making the Transition? A Guide for Switching from Stata to R</a> and <a href="https://rstudio.github.io/cheatsheets/stata2r.pdf">STATA to R cheat sheet</a>.↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <category>inequality</category>
+  <category>research</category>
+  <category>WID</category>
+  <category>open-data</category>
+  <guid>https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/</guid>
+  <pubDate>Fri, 26 Jul 2024 22:00:00 GMT</pubDate>
+  <media:content url="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/WID-Logo-min.png" medium="image" type="image/png" height="103" width="144"/>
+</item>
+<item>
+  <title>Quarto Blog Tutorial 4: Shared Metadata</title>
   <dc:creator>Peter Baumgartner</dc:creator>
   <link>https://l3lab.net/posts/2024-07-25-shared-metadata/</link>
   <description><![CDATA[ 
@@ -505,33 +1591,6 @@ font-style: inherit;"> article</span></span></code></pre></div>
   <media:content url="https://l3lab.net/posts/2024-07-25-shared-metadata/pexels-cottonbro-3944311-min1.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>Quarto Blog Tutorial 5: Advanced Configurations</title>
-  <dc:creator>Peter Baumgartner</dc:creator>
-  <link>https://l3lab.net/posts/2024-07-25-advanced-configurations/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="cogwheels-min.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Photo from pxfuel"><img src="https://l3lab.net/posts/2024-07-25-advanced-configurations/cogwheels-min.jpg" class="img-fluid figure-img" style="width:50.0%" alt="Photo from pxfuel"></a></p>
-<figcaption>Photo from <a href="https://www.pxfuel.com/">pxfuel</a></figcaption>
-</figure>
-</div>
-
-
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>blog</category>
-  <category>how-to</category>
-  <category>tutorial</category>
-  <guid>https://l3lab.net/posts/2024-07-25-advanced-configurations/</guid>
-  <pubDate>Wed, 24 Jul 2024 22:00:00 GMT</pubDate>
-  <media:content url="https://l3lab.net/posts/2024-07-25-advanced-configurations/cogwheels-min.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
   <title>Quarto Blog Tutorial 3: Default blog source code</title>
   <dc:creator>Peter Baumgartner</dc:creator>
   <link>https://l3lab.net/posts/2024-07-24-default-blog-source-code/</link>
@@ -665,7 +1724,7 @@ background-color: null;
 font-style: inherit;">---</span></span></code></pre></div>
 </div>
 <p>And here is the look of the blog’s home page after the first rendering:</p>
-<div id="fig-fist-rendering" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'quarto-pb-blog' in bold. The white main page consists of four columns. It contains form left to right dummy data: Date and author; title of blog post in bold, buttons for categories, short summary; image; a list of categories with number of their appearances in parenthesis." data-group="blog-source" data-fig-align="center">
+<div id="fig-fist-rendering" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'quarto-pb-blog' in bold. The white main page consists of four columns. It contains form left to right dummy data: Date and author; title of blog post in bold, buttons for categories, short summary; image; a list of categories with number of their appearances in parenthesis." data-group="blog-source">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fist-rendering-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="virgin-blog-homepage-min.png" class="lightbox" data-gallery="blog-source" title="Figure&nbsp;1: First rendering after initializing a Quarto blog (Screenshot)"><img src="https://l3lab.net/posts/2024-07-24-default-blog-source-code/virgin-blog-homepage-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'quarto-pb-blog' in bold. The white main page consists of four columns. It contains form left to right dummy data: Date and author; title of blog post in bold, buttons for categories, short summary; image; a list of categories with number of their appearances in parenthesis."></a>
@@ -680,7 +1739,7 @@ Figure&nbsp;1: First rendering after initializing a Quarto blog (Screenshot)
 <section id="change-title" class="level2">
 <h2 class="anchored" data-anchor-id="change-title">Change Title</h2>
 <p>The first line of the homepage’s YAML header in <code>index.qmd</code> is the title. If I change the title to “L3Lab,” only one part of the title banner will change.</p>
-<div id="fig-blog-title-changed" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'L3Lab' in bold. The white main page consists of four columns. It contains form left to right dummy data: Date and author; title of blog post in bold, buttons for categories, short summary; image; a list of categories with number of their appearances in parenthesis." data-group="blog-source" data-fig-align="center">
+<div id="fig-blog-title-changed" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'L3Lab' in bold. The white main page consists of four columns. It contains form left to right dummy data: Date and author; title of blog post in bold, buttons for categories, short summary; image; a list of categories with number of their appearances in parenthesis." data-group="blog-source">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-blog-title-changed-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="blog-title-changed-min.png" class="lightbox" data-gallery="blog-source" title="Figure&nbsp;2: Screenshot of the blog’s homepage after changing the blog listing title in index.qmd"><img src="https://l3lab.net/posts/2024-07-24-default-blog-source-code/blog-title-changed-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'L3Lab' in bold. The white main page consists of four columns. It contains form left to right dummy data: Date and author; title of blog post in bold, buttons for categories, short summary; image; a list of categories with number of their appearances in parenthesis."></a>
@@ -840,7 +1899,7 @@ background-color: null;
 font-style: inherit;"> styles.css</span></span></code></pre></div>
 </div>
 <p>The top left name is the website’s title (and not the blog title). A website can have several components, such as a web page and a blog. I will call the website “Life Long Learning Lab,” the blog’s name remains “L3Lab”.</p>
-<div id="fig-website-title-changed" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'L3Lab' in bold. The white main page consists of four columns. It contains form left to right one row of dummy data: Date and author; title of blog post in bold, buttons for categories, short summary; image; a list of categories with numbers of their appearances in parenthesis." data-group="blog-source" data-fig-align="center">
+<div id="fig-website-title-changed" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'L3Lab' in bold. The white main page consists of four columns. It contains form left to right one row of dummy data: Date and author; title of blog post in bold, buttons for categories, short summary; image; a list of categories with numbers of their appearances in parenthesis." data-group="blog-source">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-website-title-changed-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="website-title-changed-min.png" class="lightbox" data-gallery="blog-source" title="Figure&nbsp;3: Screenshot of the blog’s homepage after changing the title of the website in _quarto.yml"><img src="https://l3lab.net/posts/2024-07-24-default-blog-source-code/website-title-changed-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'L3Lab' in bold. The white main page consists of four columns. It contains form left to right one row of dummy data: Date and author; title of blog post in bold, buttons for categories, short summary; image; a list of categories with numbers of their appearances in parenthesis."></a>
@@ -858,7 +1917,7 @@ Figure&nbsp;3: Screenshot of the blog’s homepage after changing the title of t
 <h3 class="anchored" data-anchor-id="contents-directive">Contents Directive</h3>
 <p>Listings enable you to automatically generate the contents of a page from a list of Quarto documents. In our case, the blog’s title is actually the home page’s listing title.</p>
 <p>Instead of <code>listing: default</code> for a list of all documents in the directory and a drop-down menu for sorting direction, order criteria, and a search bar, we have specified with <code>content: posts</code> that only the documents in the folder “posts” should be listed. Have a look into the “posts” folder by selecting the “Files” tab in the bottom right pane of RStudio and click on the “posts” folder to open the directory.</p>
-<div id="fig-content-posts-folder" class="quarto-float quarto-figure quarto-figure-center anchored" alt="On the top there are some window tabs. From left to the right: 'Files' (active), 'Plots', 'Packages', 'Help', 'Viewer', and 'Presentation. Underneath several buttons prepended by icons. From left to the right: 'New Folder', 'New Blank File', 'Delete', 'Rename', 'More' (drop-down-menu). Under these buttons is a URL where each part is a (blue) link: 'Home>Documents>Meine-Repos>quarto-pb-blog>posts'. Underneath is a list of three items in three columns titled 'Name', 'Size', and 'Modified'. The first item says: '_metadata.yml 237B, Jul 17, 2024, 10:08 AM'. The next two lines represent folder names: 'post-with-code' and 'welcome'." data-group="blog-source" data-fig-align="center">
+<div id="fig-content-posts-folder" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="On the top there are some window tabs. From left to the right: 'Files' (active), 'Plots', 'Packages', 'Help', 'Viewer', and 'Presentation. Underneath several buttons prepended by icons. From left to the right: 'New Folder', 'New Blank File', 'Delete', 'Rename', 'More' (drop-down-menu). Under these buttons is a URL where each part is a (blue) link: 'Home>Documents>Meine-Repos>quarto-pb-blog>posts'. Underneath is a list of three items in three columns titled 'Name', 'Size', and 'Modified'. The first item says: '_metadata.yml 237B, Jul 17, 2024, 10:08 AM'. The next two lines represent folder names: 'post-with-code' and 'welcome'." data-group="blog-source">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-content-posts-folder-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="content-of-posts-directory-min.png" class="lightbox" data-gallery="blog-source" title="Figure&nbsp;4: Content of the posts folder immediately after the initialization process"><img src="https://l3lab.net/posts/2024-07-24-default-blog-source-code/content-of-posts-directory-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="On the top there are some window tabs. From left to the right: 'Files' (active), 'Plots', 'Packages', 'Help', 'Viewer', and 'Presentation. Underneath several buttons prepended by icons. From left to the right: 'New Folder', 'New Blank File', 'Delete', 'Rename', 'More' (drop-down-menu). Under these buttons is a URL where each part is a (blue) link: 'Home>Documents>Meine-Repos>quarto-pb-blog>posts'. Underneath is a list of three items in three columns titled 'Name', 'Size', and 'Modified'. The first item says: '_metadata.yml 237B, Jul 17, 2024, 10:08 AM'. The next two lines represent folder names: 'post-with-code' and 'welcome'."></a>
@@ -908,7 +1967,7 @@ Table&nbsp;1: Quarto blog listing types
 <p>I am going to use for my blog the <code>default</code> blog-style list of items. However, it is instructive to see the other types to get a sense of their different appearances.</p>
 <section id="grid-listings" class="level4">
 <h4 class="anchored" data-anchor-id="grid-listings">Grid Listings</h4>
-<div id="fig-grid-listing" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'L3Lab' in bold. The white main page consists of two boxes and a list of categories. Each box consists of five (dummy) elements. From top to down: image, post title, category buttons, short description, author and date. On the right side is a list of categories with numbers of their appearances in parenthesis. " data-group="blog-source" data-fig-align="center">
+<div id="fig-grid-listing" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'L3Lab' in bold. The white main page consists of two boxes and a list of categories. Each box consists of five (dummy) elements. From top to down: image, post title, category buttons, short description, author and date. On the right side is a list of categories with numbers of their appearances in parenthesis. " data-group="blog-source">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-grid-listing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="grid-listing-min.png" class="lightbox" data-gallery="blog-source" title="Figure&nbsp;5: Dummy articles after the blog initialiation in grid listing mode (Screenshot)"><img src="https://l3lab.net/posts/2024-07-24-default-blog-source-code/grid-listing-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'L3Lab' in bold. The white main page consists of two boxes and a list of categories. Each box consists of five (dummy) elements. From top to down: image, post title, category buttons, short description, author and date. On the right side is a list of categories with numbers of their appearances in parenthesis. "></a>
@@ -921,7 +1980,7 @@ Figure&nbsp;5: Dummy articles after the blog initialiation in grid listing mode 
 </section>
 <section id="table-listings" class="level4">
 <h4 class="anchored" data-anchor-id="table-listings">Table Listings</h4>
-<div id="fig-table-listing" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'L3Lab' in bold. The white main page consists of a table of three columns and a list of categories. The two rows are titled 'Date', 'Title', and 'Author'. The two rows from, consists each from left to the right with dummy data: 'July 17, 2024', 'Post With Code', 'harlow Malloc' and 'July 14, 2024', 'Welcome to the Blog', and 'Tristan O'Malley'. On the right side is a list of categories with numbers of their appearances in parenthesis. " data-group="blog-source" data-fig-align="center">
+<div id="fig-table-listing" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'L3Lab' in bold. The white main page consists of a table of three columns and a list of categories. The two rows are titled 'Date', 'Title', and 'Author'. The two rows from, consists each from left to the right with dummy data: 'July 17, 2024', 'Post With Code', 'harlow Malloc' and 'July 14, 2024', 'Welcome to the Blog', and 'Tristan O'Malley'. On the right side is a list of categories with numbers of their appearances in parenthesis. " data-group="blog-source">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-table-listing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="table-listing-min.png" class="lightbox" data-gallery="blog-source" title="Figure&nbsp;6: Dummy articles after the blog initialiation in table listing mode"><img src="https://l3lab.net/posts/2024-07-24-default-blog-source-code/table-listing-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'L3Lab' in bold. The white main page consists of a table of three columns and a list of categories. The two rows are titled 'Date', 'Title', and 'Author'. The two rows from, consists each from left to the right with dummy data: 'July 17, 2024', 'Post With Code', 'harlow Malloc' and 'July 14, 2024', 'Welcome to the Blog', and 'Tristan O'Malley'. On the right side is a list of categories with numbers of their appearances in parenthesis. "></a>
@@ -934,7 +1993,7 @@ Figure&nbsp;6: Dummy articles after the blog initialiation in table listing mode
 </section>
 <section id="default-listings" class="level4">
 <h4 class="anchored" data-anchor-id="default-listings">Default Listings</h4>
-<div id="fig-default-listing" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'L3Lab' in bold. The white main page consists of four columns. It contains form left to right two rows of dummy data: Date and author; title of blog post in bold, buttons for categories, short summary; image; a list of categories with numbers of their appearances in parenthesis." data-group="blog-source" data-fig-align="center">
+<div id="fig-default-listing" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'L3Lab' in bold. The white main page consists of four columns. It contains form left to right two rows of dummy data: Date and author; title of blog post in bold, buttons for categories, short summary; image; a list of categories with numbers of their appearances in parenthesis." data-group="blog-source">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-default-listing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="default-listing-min.png" class="lightbox" data-gallery="blog-source" title="Figure&nbsp;7: Dummy articles after the blog initialiation in default listing mode (Screenshot)"><img src="https://l3lab.net/posts/2024-07-24-default-blog-source-code/default-listing-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'L3Lab' in bold. The white main page consists of four columns. It contains form left to right two rows of dummy data: Date and author; title of blog post in bold, buttons for categories, short summary; image; a list of categories with numbers of their appearances in parenthesis."></a>
@@ -983,7 +2042,7 @@ Figure&nbsp;7: Dummy articles after the blog initialiation in default listing mo
 <h2 class="anchored" data-anchor-id="title-block-banner">Title Block Banner</h2>
 <p>HTML pages rendered with Quarto include a formatted title block at the start of the article. The title block contains the title, subtitle, authors, date, doi, and abstract. There are several options to style the title block. In addition, if you’d like a more prominent title block, you can use&nbsp;<code>title-block-banner</code>&nbsp;to create a banner-style title block.</p>
 <p>For my blog, I don’t want (at the moment) a title block banner. Setting <code>title-block-banner</code> to false saves space on the title page and feels more prosaic and less business-like.</p>
-<div id="fig-no-blog-banner" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Screenshot of the blog’s homepage. The grey title header consists of one line. On the top left corner: 'Life Long Learning Lab'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. The white main page consists of four columns. It contains form left to right two rows of dummy data: Date and author; title of blog post in bold, buttons for categories, short summary; image; a list of categories with numbers of their appearances in parenthesis. The left first column is tited 'L3Lab'" data-group="blog-source" data-fig-align="center">
+<div id="fig-no-blog-banner" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Screenshot of the blog’s homepage. The grey title header consists of one line. On the top left corner: 'Life Long Learning Lab'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. The white main page consists of four columns. It contains form left to right two rows of dummy data: Date and author; title of blog post in bold, buttons for categories, short summary; image; a list of categories with numbers of their appearances in parenthesis. The left first column is tited 'L3Lab'" data-group="blog-source">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-no-blog-banner-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="no-title-block-banner-min.png" class="lightbox" data-gallery="blog-source" title="Figure&nbsp;8: Blog homepage without banner for the title block (Screenshot)"><img src="https://l3lab.net/posts/2024-07-24-default-blog-source-code/no-title-block-banner-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Screenshot of the blog’s homepage. The grey title header consists of one line. On the top left corner: 'Life Long Learning Lab'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. The white main page consists of four columns. It contains form left to right two rows of dummy data: Date and author; title of blog post in bold, buttons for categories, short summary; image; a list of categories with numbers of their appearances in parenthesis. The left first column is tited 'L3Lab'"></a>
@@ -997,7 +2056,7 @@ Figure&nbsp;8: Blog homepage without banner for the title block (Screenshot)
 <section id="git-and-github" class="level2">
 <h2 class="anchored" data-anchor-id="git-and-github">Git and GitHub</h2>
 <p>Here I will pause and commit these changes to Git and GitHub. It is interesting to note that there are – besides <code>index.qmd</code> and <code>_quatro.yml</code> – several other files that have changed.</p>
-<div id="fig-changed-files" class="quarto-float quarto-figure quarto-figure-center anchored" alt="RStudio top right pane with the following tabs: Environment, History, Connection, Build, Git, and Tutorial. The Git pane is selected and therefore active. Under the tabs is another line of icons and text buttons representing Git actions: From left to right: 'Diff', 'Commit', 'Pull', 'Push', 'History', 'More' (drop-down menu), 'New Branch', 'master'). Underneath it shows changed files. From top to the bottom: '_quarto.yml', 'index.qmd', '_site/about.html' (with blue background = selected, '_site/index.html', '_site/search.json', '_site/posts/post-with-code/index.html', and '_site/posts/welcome/index.html'" data-group="blog-source" data-fig-align="center">
+<div id="fig-changed-files" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="RStudio top right pane with the following tabs: Environment, History, Connection, Build, Git, and Tutorial. The Git pane is selected and therefore active. Under the tabs is another line of icons and text buttons representing Git actions: From left to right: 'Diff', 'Commit', 'Pull', 'Push', 'History', 'More' (drop-down menu), 'New Branch', 'master'). Underneath it shows changed files. From top to the bottom: '_quarto.yml', 'index.qmd', '_site/about.html' (with blue background = selected, '_site/index.html', '_site/search.json', '_site/posts/post-with-code/index.html', and '_site/posts/welcome/index.html'" data-group="blog-source">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-changed-files-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="changed-files-min.png" class="lightbox" data-gallery="blog-source" title="Figure&nbsp;9: List of changed files expalined in this blog post (Screenshot)"><img src="https://l3lab.net/posts/2024-07-24-default-blog-source-code/changed-files-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="RStudio top right pane with the following tabs: Environment, History, Connection, Build, Git, and Tutorial. The Git pane is selected and therefore active. Under the tabs is another line of icons and text buttons representing Git actions: From left to right: 'Diff', 'Commit', 'Pull', 'Push', 'History', 'More' (drop-down menu), 'New Branch', 'master'). Underneath it shows changed files. From top to the bottom: '_quarto.yml', 'index.qmd', '_site/about.html' (with blue background = selected, '_site/index.html', '_site/search.json', '_site/posts/post-with-code/index.html', and '_site/posts/welcome/index.html'"></a>
@@ -1008,7 +2067,7 @@ Figure&nbsp;9: List of changed files expalined in this blog post (Screenshot)
 </figure>
 </div>
 <p>I haven’t even touched many of these files. But the title change propagates the new name into all blog post titles of articles already written and also in the corresponding navigation bars. This is shown with the example of the about page in the next screenshot (Figure&nbsp;10).</p>
-<div id="fig-commit-about-changes" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A pop-up window overlaying the RStudio window separated in two parts: The left part contains at the top small buttons. From left to the right: 'Changes', 'History', 'master', 'stage', 'revert', and 'ignore.' The right part contains the buttons 'Pull' and 'Push.' Underneath of the left side are changed files listed. From top to the bottom: '_quarto.yml', 'index.qmd', '_site/about.html' (with blue background = selected, '_site/index.html', '_site/search.json', '_site/posts/post-with-code/index.html', and '_site/posts/welcome/index.html'  On the right side there is an empty writing pane with the header 'Commit message'. Under the writing pane are two unchecked check boxes 'Amend previous commit' and 'Sign commit' with a 'Commit' button. Underneath those two window parts is another line of action buttons covering the whole length of the window: From left to the right: 'Show Staged' text followed by an empty radio button, 'Staged' text followed by an active radio button, 'Context' (text), 5 lines (drop-down menu), 'Ignore Whitespace' (active check box), 'Unstage All'. Underneath is the content of the HTML code of the 'About' file listed over the whole length of the window. Every line is numbered. Line 10 and 81 are duplicated. The first line 10 with a red background reads '<title>About - quarto-blog-title</title>'. The second line underneath is green and reads: '<title>About - Life Long Learning Lab</title>'. The first line 81 with a red background reads '<span class=navbar-title>quarto-pb-blog</span>'. The second line underneath is green and reads: '<span class=navbar-title>Life Long Learning</span>'." data-group="blog-source" data-fig-align="center">
+<div id="fig-commit-about-changes" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="A pop-up window overlaying the RStudio window separated in two parts: The left part contains at the top small buttons. From left to the right: 'Changes', 'History', 'master', 'stage', 'revert', and 'ignore.' The right part contains the buttons 'Pull' and 'Push.' Underneath of the left side are changed files listed. From top to the bottom: '_quarto.yml', 'index.qmd', '_site/about.html' (with blue background = selected, '_site/index.html', '_site/search.json', '_site/posts/post-with-code/index.html', and '_site/posts/welcome/index.html'  On the right side there is an empty writing pane with the header 'Commit message'. Under the writing pane are two unchecked check boxes 'Amend previous commit' and 'Sign commit' with a 'Commit' button. Underneath those two window parts is another line of action buttons covering the whole length of the window: From left to the right: 'Show Staged' text followed by an empty radio button, 'Staged' text followed by an active radio button, 'Context' (text), 5 lines (drop-down menu), 'Ignore Whitespace' (active check box), 'Unstage All'. Underneath is the content of the HTML code of the 'About' file listed over the whole length of the window. Every line is numbered. Line 10 and 81 are duplicated. The first line 10 with a red background reads '<title>About - quarto-blog-title</title>'. The second line underneath is green and reads: '<title>About - Life Long Learning Lab</title>'. The first line 81 with a red background reads '<span class=navbar-title>quarto-pb-blog</span>'. The second line underneath is green and reads: '<span class=navbar-title>Life Long Learning</span>'." data-group="blog-source">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-commit-about-changes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="content-of-changes-in-about-min.png" class="lightbox" data-gallery="blog-source" title="Figure&nbsp;10: Changes in the about.qmd file (Screenshot)"><img src="https://l3lab.net/posts/2024-07-24-default-blog-source-code/content-of-changes-in-about-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="A pop-up window overlaying the RStudio window separated in two parts: The left part contains at the top small buttons. From left to the right: 'Changes', 'History', 'master', 'stage', 'revert', and 'ignore.' The right part contains the buttons 'Pull' and 'Push.' Underneath of the left side are changed files listed. From top to the bottom: '_quarto.yml', 'index.qmd', '_site/about.html' (with blue background = selected, '_site/index.html', '_site/search.json', '_site/posts/post-with-code/index.html', and '_site/posts/welcome/index.html'  On the right side there is an empty writing pane with the header 'Commit message'. Under the writing pane are two unchecked check boxes 'Amend previous commit' and 'Sign commit' with a 'Commit' button. Underneath those two window parts is another line of action buttons covering the whole length of the window: From left to the right: 'Show Staged' text followed by an empty radio button, 'Staged' text followed by an active radio button, 'Context' (text), 5 lines (drop-down menu), 'Ignore Whitespace' (active check box), 'Unstage All'. Underneath is the content of the HTML code of the 'About' file listed over the whole length of the window. Every line is numbered. Line 10 and 81 are duplicated. The first line 10 with a red background reads '<title>About - quarto-blog-title</title>'. The second line underneath is green and reads: '<title>About - Life Long Learning Lab</title>'. The first line 81 with a red background reads '<span class=navbar-title>quarto-pb-blog</span>'. The second line underneath is green and reads: '<span class=navbar-title>Life Long Learning</span>'."></a>
@@ -1019,7 +2078,7 @@ Figure&nbsp;10: Changes in the about.qmd file (Screenshot)
 </figure>
 </div>
 <p>And I have committed all these changes I’ve got with this second commit a new status in my GitHub repo.</p>
-<div id="fig-github-second-commit" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Listing the committed files on the GitHub repo web page in three columns. Name, commit message ('First commit' for all lines) and time ('19 minutes ago' for all lines). At the top left of this list there is a small profile picture of me, followed by the name of my GitHub account 'petzi53' and the text 'first commit'. On the top left of this list there is a small profile picture of me, followed by the name of my GitHub account 'petzi53' and the text 'title of homepage listing and website'. On the top side you can see the unique commit code '1e825ff' followed by the text '15 minutes ago' and in bold '2 Commits'" data-group="blog-source" data-fig-align="center">
+<div id="fig-github-second-commit" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Listing the committed files on the GitHub repo web page in three columns. Name, commit message ('First commit' for all lines) and time ('19 minutes ago' for all lines). At the top left of this list there is a small profile picture of me, followed by the name of my GitHub account 'petzi53' and the text 'first commit'. On the top left of this list there is a small profile picture of me, followed by the name of my GitHub account 'petzi53' and the text 'title of homepage listing and website'. On the top side you can see the unique commit code '1e825ff' followed by the text '15 minutes ago' and in bold '2 Commits'" data-group="blog-source">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-github-second-commit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="github-second-commit-2-min.png" class="lightbox" data-gallery="blog-source" title="Figure&nbsp;11: Updated GitHub repo after second commit (Screenshot)"><img src="https://l3lab.net/posts/2024-07-24-default-blog-source-code/github-second-commit-2-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Listing the committed files on the GitHub repo web page in three columns. Name, commit message ('First commit' for all lines) and time ('19 minutes ago' for all lines). At the top left of this list there is a small profile picture of me, followed by the name of my GitHub account 'petzi53' and the text 'first commit'. On the top left of this list there is a small profile picture of me, followed by the name of my GitHub account 'petzi53' and the text 'title of homepage listing and website'. On the top side you can see the unique commit code '1e825ff' followed by the text '15 minutes ago' and in bold '2 Commits'"></a>
@@ -1476,7 +2535,7 @@ Figure&nbsp;6: Web page of the GitHub repository of the Quarto blog after the in
 <section id="new-project" class="level3">
 <h3 class="anchored" data-anchor-id="new-project">New Project…</h3>
 <p>Inside RStudio, use the <code>New Project…</code> command and select <code>New Directory</code> and then <code>Quarto Blog</code>.</p>
-<div id="fig-new-project-wizard" class="quarto-float quarto-figure quarto-figure-center anchored" alt="RStudio new project wizard window with three options reading from the top: New Directory - Start a project in a brand new working directory; Existing Directory - Associate a project with an existing working directory; Version Control - Checkout a project from a version control repository." data-group="initialize-blog" data-fig-align="center">
+<div id="fig-new-project-wizard" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="initialize-blog" alt="RStudio new project wizard window with three options reading from the top: New Directory - Start a project in a brand new working directory; Existing Directory - Associate a project with an existing working directory; Version Control - Checkout a project from a version control repository.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-new-project-wizard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="creating-quarto-blog-1-min.png" class="lightbox" data-gallery="initialize-blog" title="Figure&nbsp;1: RStudio new project wizard window (Screenshot): Choose ‘New Directory’ to start an new project from scratch."><img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/creating-quarto-blog-1-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="RStudio new project wizard window with three options reading from the top: New Directory - Start a project in a brand new working directory; Existing Directory - Associate a project with an existing working directory; Version Control - Checkout a project from a version control repository."></a>
@@ -1486,7 +2545,7 @@ Figure&nbsp;1: RStudio new project wizard window (Screenshot): Choose ‘New Dir
 </figcaption>
 </figure>
 </div>
-<div id="fig-new-blog-project-window" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The Project Type dialog window lists the choices for new project. The first seven options are visible: New Project, R Package, Shiny Application, Quarto Project, Quarto Website, Quarto Blog, Quarto Book. (From top to the bottom. Top left is a button 'Back' for returning to the previous dialog window. Bottom right is a 'Cancel' button to stop the initialization process." data-group="initialize-blog" data-fig-align="center">
+<div id="fig-new-blog-project-window" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="initialize-blog" alt="The Project Type dialog window lists the choices for new project. The first seven options are visible: New Project, R Package, Shiny Application, Quarto Project, Quarto Website, Quarto Blog, Quarto Book. (From top to the bottom. Top left is a button 'Back' for returning to the previous dialog window. Bottom right is a 'Cancel' button to stop the initialization process.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-new-blog-project-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="creating-quarto-blog-2-min.png" class="lightbox" data-gallery="initialize-blog" title="Figure&nbsp;2: RStudio project type window (Screenshot): Choose ‘Quarto Blog’ to initialize a blog project"><img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/creating-quarto-blog-2-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Project Type dialog window lists the choices for new project. The first seven options are visible: New Project, R Package, Shiny Application, Quarto Project, Quarto Website, Quarto Blog, Quarto Book. (From top to the bottom. Top left is a button 'Back' for returning to the previous dialog window. Bottom right is a 'Cancel' button to stop the initialization process."></a>
@@ -1496,7 +2555,7 @@ Figure&nbsp;2: RStudio project type window (Screenshot): Choose ‘Quarto Blog�
 </figcaption>
 </figure>
 </div>
-<div id="fig-create-blog-window" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The 'Create quarto Blog' dialog window requires a file name for the directory of the repository, titled 'Directory name', a directory where the project will be created, titled 'create project as subdirectory of:' with a 'Browse' button to the right, a drop down menu selecting 'Knitr' as the current option, titled 'Engine', three lines of check boxes, titled 'Create a git repository' (checked), 'Use renv with this project' and 'Use visual markdown editor'. The last option is followed by a question sign to get more information about the choice of a visual markdown editor. Top left in the dialog window is a button 'Back' for returning to the previous dialog window. Bottom left is a check box 'Open in a new session', Bottom right are a 'Create Project' button followed by a 'Cancel' button for stopping the initialization process." data-group="initialize-blog" data-fig-align="center">
+<div id="fig-create-blog-window" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="initialize-blog" alt="The 'Create quarto Blog' dialog window requires a file name for the directory of the repository, titled 'Directory name', a directory where the project will be created, titled 'create project as subdirectory of:' with a 'Browse' button to the right, a drop down menu selecting 'Knitr' as the current option, titled 'Engine', three lines of check boxes, titled 'Create a git repository' (checked), 'Use renv with this project' and 'Use visual markdown editor'. The last option is followed by a question sign to get more information about the choice of a visual markdown editor. Top left in the dialog window is a button 'Back' for returning to the previous dialog window. Bottom left is a check box 'Open in a new session', Bottom right are a 'Create Project' button followed by a 'Cancel' button for stopping the initialization process.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-create-blog-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="creating-quarto-blog-3-min.png" class="lightbox" data-gallery="initialize-blog" title="Figure&nbsp;3: RStudio Create Quarto Blog window (Screenshot): Fill the input fields with the appropriate data"><img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/creating-quarto-blog-3-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The 'Create quarto Blog' dialog window requires a file name for the directory of the repository, titled 'Directory name', a directory where the project will be created, titled 'create project as subdirectory of:' with a 'Browse' button to the right, a drop down menu selecting 'Knitr' as the current option, titled 'Engine', three lines of check boxes, titled 'Create a git repository' (checked), 'Use renv with this project' and 'Use visual markdown editor'. The last option is followed by a question sign to get more information about the choice of a visual markdown editor. Top left in the dialog window is a button 'Back' for returning to the previous dialog window. Bottom left is a check box 'Open in a new session', Bottom right are a 'Create Project' button followed by a 'Cancel' button for stopping the initialization process."></a>
@@ -1515,7 +2574,7 @@ Figure&nbsp;3: RStudio Create Quarto Blog window (Screenshot): Fill the input fi
 <section id="key-files" class="level3">
 <h3 class="anchored" data-anchor-id="key-files">Key Files</h3>
 <p>Clicking the “Create Project” button generates different key files and opens the <code>_quarto.yml</code> file in the RStudio editor window.</p>
-<div id="fig-rstudio-file-listing-window" class="quarto-float quarto-figure quarto-figure-center anchored" alt="At the top of the screenshot there are six tabs. From left to the right: 'Files', 'Plots', 'Packages', 'Help', 'Viewer', 'Presentation' with the 'Files' tab active. Under the tabs are several buttons. From left to the right: 'New Folder', 'New Blank File', 'Delete', 'Rename' and a drop down menu 'More'. Under these buttons is the full path to the active directory 'Home>Documents>Meine-Repos>quarto-pb-blog' where each subdirectory is an active link. Under this line starts the file listing with 'Name', 'Size' and 'Modified' columns. Each line of file names starts with an (unchecked) check box, and an appropriate icon. From top to bottom: _freeze, _quarto.yml, _site, .git, .gitignore, .quarto, .Rhistory, .Rproj.use, about.qmd, index.qmd, posts, profile.jpg, quarto-pb-blog.Rproj, style.css." data-group="initialize-blog" data-fig-align="center">
+<div id="fig-rstudio-file-listing-window" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="initialize-blog" alt="At the top of the screenshot there are six tabs. From left to the right: 'Files', 'Plots', 'Packages', 'Help', 'Viewer', 'Presentation' with the 'Files' tab active. Under the tabs are several buttons. From left to the right: 'New Folder', 'New Blank File', 'Delete', 'Rename' and a drop down menu 'More'. Under these buttons is the full path to the active directory 'Home>Documents>Meine-Repos>quarto-pb-blog' where each subdirectory is an active link. Under this line starts the file listing with 'Name', 'Size' and 'Modified' columns. Each line of file names starts with an (unchecked) check box, and an appropriate icon. From top to bottom: _freeze, _quarto.yml, _site, .git, .gitignore, .quarto, .Rhistory, .Rproj.use, about.qmd, index.qmd, posts, profile.jpg, quarto-pb-blog.Rproj, style.css.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-rstudio-file-listing-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="generated-files-at-start-min.png" class="lightbox" data-gallery="initialize-blog" title="Figure&nbsp;4: RStudio file listing window (Screenshot): Choose ‘New Directory’ to start an new project from scratch."><img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/generated-files-at-start-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="At the top of the screenshot there are six tabs. From left to the right: 'Files', 'Plots', 'Packages', 'Help', 'Viewer', 'Presentation' with the 'Files' tab active. Under the tabs are several buttons. From left to the right: 'New Folder', 'New Blank File', 'Delete', 'Rename' and a drop down menu 'More'. Under these buttons is the full path to the active directory 'Home>Documents>Meine-Repos>quarto-pb-blog' where each subdirectory is an active link. Under this line starts the file listing with 'Name', 'Size' and 'Modified' columns. Each line of file names starts with an (unchecked) check box, and an appropriate icon. From top to bottom: _freeze, _quarto.yml, _site, .git, .gitignore, .quarto, .Rhistory, .Rproj.use, about.qmd, index.qmd, posts, profile.jpg, quarto-pb-blog.Rproj, style.css."></a>
@@ -1840,7 +2899,7 @@ font-style: inherit;">---</span></span></code></pre></div>
 </section>
 <section id="render-blog" class="level2">
 <h2 class="anchored" data-anchor-id="render-blog">Render Blog</h2>
-<div id="fig-source-code-blog-home-page" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The screenshot shows a part of the RStudio source code window with two file tabs 'index.qmd' (active) and '_quarto.yml'. Below is a line of partly disabled buttons where the focus is on the 'Render' button that has below a tip tool saying 'Render the current document (SHIFT-CMD-K)'" data-group="initialize-blog" data-fig-align="center">
+<div id="fig-source-code-blog-home-page" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="initialize-blog" alt="The screenshot shows a part of the RStudio source code window with two file tabs 'index.qmd' (active) and '_quarto.yml'. Below is a line of partly disabled buttons where the focus is on the 'Render' button that has below a tip tool saying 'Render the current document (SHIFT-CMD-K)'">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-source-code-blog-home-page-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="click-render-button-first-time-min.png" class="lightbox" data-gallery="initialize-blog" title="Figure&nbsp;5: Source code of the blog home page ‘index.qmd’-file within RStudio window (Screenshot)"><img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/click-render-button-first-time-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The screenshot shows a part of the RStudio source code window with two file tabs 'index.qmd' (active) and '_quarto.yml'. Below is a line of partly disabled buttons where the focus is on the 'Render' button that has below a tip tool saying 'Render the current document (SHIFT-CMD-K)'"></a>
@@ -1851,7 +2910,7 @@ Figure&nbsp;5: Source code of the blog home page ‘index.qmd’-file within RSt
 </figure>
 </div>
 <p>You can control via <code>Tools-&gt;Global Options…-&gt;R Markdown-&gt;Show output preview in…</code> whether the rendered result appears in the browser window or in the viewer pane. Generally, I use the “Window” option because it gives me a better view of the real setting.</p>
-<div id="fig-blog-listing-start-page" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The webpage lists two dummy blog post with three columns: From left to the right: Date and author; blog post title, category buttons and a short description; a small image. On the right margin is a list of categories displayed with their frequency in parenthesis. The title header of the website consists of two lines: Left top: Name of the Quarto blog so far 'quarto-pb-blog', Right top: 'About' followed by icons for GitHub, Twitter and search engine." data-group="initialize-blog" data-fig-align="center">
+<div id="fig-blog-listing-start-page" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="initialize-blog" alt="The webpage lists two dummy blog post with three columns: From left to the right: Date and author; blog post title, category buttons and a short description; a small image. On the right margin is a list of categories displayed with their frequency in parenthesis. The title header of the website consists of two lines: Left top: Name of the Quarto blog so far 'quarto-pb-blog', Right top: 'About' followed by icons for GitHub, Twitter and search engine.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-blog-listing-start-page-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="rendered-blog-first-time-min.png" class="lightbox" data-gallery="initialize-blog" title="Figure&nbsp;6: Website of the newly created Quarto blog (Screenshot):"><img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/rendered-blog-first-time-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The webpage lists two dummy blog post with three columns: From left to the right: Date and author; blog post title, category buttons and a short description; a small image. On the right margin is a list of categories displayed with their frequency in parenthesis. The title header of the website consists of two lines: Left top: Name of the Quarto blog so far 'quarto-pb-blog', Right top: 'About' followed by icons for GitHub, Twitter and search engine."></a>

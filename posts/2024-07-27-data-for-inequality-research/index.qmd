@@ -1,0 +1,26 @@
+---
+title: "Data for Inequality Research"
+subtitle: ""
+description: ""
+author: "Peter Baumgartner"
+date: "2024-07-27"
+image: "inequality-scale-balance-min.png"
+image-alt: ""
+categories: [inequality, research]
+date-modified: "2024-07-27"
+draft: true
+bibliography: references.bib
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+base::source(file = "../../R/helper.R")
+```
+
+![Photo from [Centro
+Mises](https://www.mises.org.es/2015/01/la-funcion-social-de-la-desigualdad-economica/)
+(Escuela Austriaca De Economía E Ideas De Libertad Centro Mises)
+<br/>[CC BY-NC
+4.0](https://www.creativecommons.org/licenses/by-nc/4.0/deed.en)](inequality-scale-balance-min.png){width="50%"}

@@ -158,6 +158,7 @@ cookieconsent.run({
 
 
 <link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="../../glossary.css">
 <meta name="twitter:title" content="Creating a column-based layout – Life Long Learning Lab">
 <meta name="twitter:description" content="Do you want to place two figures side by side or write text in parallel in different columns? The post describes four methods to turn part of your blog post into a column-based layout.">
 <meta name="twitter:image" content="https://l3lab.net/posts/2023-05-07-creating-a-column-based-layout/three-columns-min.jpg">
@@ -292,25 +293,25 @@ cookieconsent.run({
 </figure>
 </div>
 </div></div>
-        <nav id="TOC" role="doc-toc" class="toc-active">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="4">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
   <li><a href="#help-page-about-article-layout" id="toc-help-page-about-article-layout" class="nav-link active" data-scroll-target="#help-page-about-article-layout">Help page about article layout</a></li>
   <li><a href="#using-a-table-failed" id="toc-using-a-table-failed" class="nav-link" data-scroll-target="#using-a-table-failed">Using a table failed</a></li>
   <li><a href="#using-pandoc-extensions" id="toc-using-pandoc-extensions" class="nav-link" data-scroll-target="#using-pandoc-extensions">Using pandoc extensions</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#example-1-two-columns-separated-by-a-small-third-column" id="toc-example-1-two-columns-separated-by-a-small-third-column" class="nav-link" data-scroll-target="#example-1-two-columns-separated-by-a-small-third-column">Example 1: Two columns separated by a small third column</a></li>
   <li><a href="#example-2-two-columns-using-the-bootstrap-css-grid-system" id="toc-example-2-two-columns-using-the-bootstrap-css-grid-system" class="nav-link" data-scroll-target="#example-2-two-columns-using-the-bootstrap-css-grid-system">Example 2: Two columns using the bootstrap CSS grid system</a></li>
   <li><a href="#example-3-two-columns-with-text-center-aligned" id="toc-example-3-two-columns-with-text-center-aligned" class="nav-link" data-scroll-target="#example-3-two-columns-with-text-center-aligned">Example 3: Two columns with text center-aligned</a></li>
   </ul></li>
   <li><a href="#fenced-divs-in-pandoc-how-do-they-work" id="toc-fenced-divs-in-pandoc-how-do-they-work" class="nav-link" data-scroll-target="#fenced-divs-in-pandoc-how-do-they-work">Fenced divs in Pandoc: How do they work?</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#what-is-pandoc" id="toc-what-is-pandoc" class="nav-link" data-scroll-target="#what-is-pandoc">What is Pandoc?</a></li>
   <li><a href="#div-blocks-in-pandoc" id="toc-div-blocks-in-pandoc" class="nav-link" data-scroll-target="#div-blocks-in-pandoc">Div Blocks in Pandoc</a></li>
   </ul></li>
   <li><a href="#a-genuine-quarto-solution" id="toc-a-genuine-quarto-solution" class="nav-link" data-scroll-target="#a-genuine-quarto-solution">A genuine Quarto solution</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#version-1-with-equally-wide-columns" id="toc-version-1-with-equally-wide-columns" class="nav-link" data-scroll-target="#version-1-with-equally-wide-columns">Version 1 with equally wide columns</a></li>
   <li><a href="#version-2-with-different-wide-columns" id="toc-version-2-with-different-wide-columns" class="nav-link" data-scroll-target="#version-2-with-different-wide-columns">Version 2 with different wide columns</a></li>
   </ul></li>
@@ -1222,7 +1223,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":true});
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":true,"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

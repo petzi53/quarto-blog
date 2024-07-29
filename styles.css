@@ -40,3 +40,111 @@ hr.mytitle{
     background: black;
 }
 
+
+/* #######################################################################  */
+/*                                                                          */
+/*                           Theorems and friends                           */
+/*  https://www.andreashandel.com/posts/2023-06-13-custom-callouts-quarto/  */
+/*                                                                          */
+/* #######################################################################  */
+
+/* ##############   Example   ############# */
+
+.my-example {
+  margin: 1em 0;
+  border: 2px solid gray;
+  border-left: 10px solid #36648B;
+  border-radius: 10px;
+}
+
+.my-example-header {
+  margin-left: 0;
+  padding-left:  60px;
+  padding-top:  15px;
+  padding-bottom: 0.1em;
+  color: white;
+  background-color: #5CACEE;
+  border-top-right-radius: 10px;
+  font-size: 1em;
+  font-weight: bold;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  background-image: url("img/icons8/example-64.png");
+}
+
+
+.my-example-container {
+  padding-top: 5px;
+  padding-left: 10px;
+  color: black;
+  background-color: white;
+  border-bottom-right-radius: 10px;
+}
+
+/* ##############   R Code   ############# */
+
+.my-r-code {
+  margin: 1em 0;
+  border: 2px solid burlywood;
+  border-left: 10px solid #8B7355;
+  border-radius: 10px;
+}
+
+.my-r-code-header {
+  margin-left: 0;
+  padding-left:  60px;
+  padding-top:  15px;
+  padding-bottom: 0.1em;
+  color: black;
+  background-color: #FFD39B;
+  border-top-right-radius: 10px;
+  font-size: 1em;
+  font-weight: bold;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  background-image: url("img/icons8/r-code.png");
+}
+
+.my-r-code-container {
+  padding-top: 5px;
+  padding-left: 10px;
+  color: black;
+  background-color: white;
+  border-bottom-right-radius: 10px;
+}
+
+/* ##############   Resources   ############# */
+
+.my-resource {
+  margin: 1em 0;
+  border: 2px solid gray;
+  border-left: 10px solid teal;
+  border-radius: 10px;
+}
+
+.my-resource-header {
+  margin-left: 0;
+  padding-left:  60px;
+  padding-top:  15px;
+  padding-bottom: 0.1em;
+  color: white;
+  background-color: rgb(123, 173, 173);
+  border-top-right-radius: 10px;
+  font-size: 1em;
+  font-weight: bold;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  background-image: url("img/icons8/books-48.png");
+}
+
+.my-resource-container {
+  padding-top: 5px;
+  padding-left: 10px;
+  color: black;
+  background-color: white;
+  border-bottom-right-radius: 10px;
+}
+

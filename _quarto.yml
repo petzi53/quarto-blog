@@ -76,12 +76,23 @@ website:
 format:
   html:
     theme: default
-    css: styles.css
+    css:
+      - styles.css
+      - glossary.css
     toc: true
+    toc-depth: 5
+    toc-expand: 4
 
 editor: source
 
 margin-header: |
   ![Peter Baumgartner](/../../portrait-peter.png)
+
+language:
+   crossref-lem-title: "Resource"    # replaces "Lemma"
+   crossref-cnj-title: "R Code"      # replaces "Conjecture"
+   crossref-exm-title: "Example"     # remains  "Example"
+
+lst-cap-location: bottom
 
 

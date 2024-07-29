@@ -2,8 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/index.html",
       "/posts/2024-07-25-shared-metadata/index.html",
-      "/posts/2024-07-25-advanced-configurations/index.html",
       "/posts/2024-07-24-default-blog-source-code/index.html",
       "/posts/2024-07-23-from-git-to-github-using-rstudio/index.html",
       "/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/index.html",

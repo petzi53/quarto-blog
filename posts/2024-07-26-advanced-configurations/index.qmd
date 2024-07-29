@@ -3,12 +3,12 @@ title: "Quarto Blog Tutorial 5: Advanced Configurations"
 subtitle: "Configure and style your blog to get more attention and functionality"
 description: "In the post I explain different option to configure your blog and to upgrade its functionality."
 author: "Peter Baumgartner"
-date: "2024-07-25"
+date: "2024-07-26"
 image: "cogwheels-min.jpg"
 image-alt: "Two cogwheels within a monumental machinery. The whole image is in sepia tones"
 categories: [blog, how-to, tutorial]
-date-modified: "2024-07-25"
-draft: false
+date-modified: "2024-07-27"
+draft: true
 ---
 
 ![Photo from [pxfuel](https://www.pxfuel.com/)](cogwheels-min.jpg){width="50%"}
