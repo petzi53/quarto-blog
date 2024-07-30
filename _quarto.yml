@@ -13,7 +13,8 @@ website:
     type: express
   page-navigation: true
   back-to-top-navigation: true
-  google-analytics: G-XYF778844K
+  google-analytics:
+    tracking-id: G-XYF778844K
   twitter-card: true
   search:
     location: navbar
