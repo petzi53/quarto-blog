@@ -1,8 +1,8 @@
 {
-  "hash": "83af2e9161a63ebc43826f5ab6e9d824",
+  "hash": "339694ed72e13dfb35c69c3405f0ac16",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"Data for Inequality Research\"\nsubtitle: \"\"\ndescription: \"\"\nauthor: \"Peter Baumgartner\"\ndate: \"2024-07-27\"\nimage: \"inequality-scale-balance-min.png\"\nimage-alt: \"\"\ncategories: [inequality, research]\ndate-modified: \"2024-07-27\"\ndraft: true\nbibliography: references.bib\n---\n\n\n\n\n\n![Photo from [Centro\nMises](https://www.mises.org.es/2015/01/la-funcion-social-de-la-desigualdad-economica/)\n(Escuela Austriaca De Economía E Ideas De Libertad Centro Mises)\n<br/>[CC BY-NC\n4.0](https://www.creativecommons.org/licenses/by-nc/4.0/deed.en)](inequality-scale-balance-min.png){width=\"50%\"}\n\n\n",
+    "markdown": "---\ntitle: \"Data for Inequality Research\"\nsubtitle: \"\"\ndescription: \"\"\nauthor: \"Peter Baumgartner\"\ndate: \"2024-07-27\"\nimage: \"inequality-scale-balance-min.png\"\nimage-alt: \"\"\ncategories: [inequality, research]\ndate-modified: \"2024-07-27\"\ndraft: true\nbibliography: references.bib\n---\n\n\n\n\n\n![Photo from [Centro\nMises](https://www.mises.org.es/2015/01/la-funcion-social-de-la-desigualdad-economica/)\n(Escuela Austriaca De Economía E Ideas De Libertad Centro Mises)\n<br/>[CC BY-NC\n4.0](https://www.creativecommons.org/licenses/by-nc/4.0/deed.en)](inequality-scale-balance-min.png){#fig-centro-mises\nwidth=\"50%\"}\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
