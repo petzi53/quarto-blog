@@ -674,6 +674,7 @@ ggplot2::ggplot(income_france,
     ggplot2::aes(x = year, y = value, color = percentile)) +
     ggplot2::geom_line() + 
     ggplot2::geom_point() +
+    # ggplot2::geom_smooth(span = .9) + # for smoothing
     ggplot2::ylab("share of income") +
     ggplot2::scale_color_discrete(
         labels = c("p0p50" = "bottom 50%", "p90p100" = "top 10%", "p50p90" = "middle 40%")
@@ -722,38 +723,6 @@ However, these differences are all solvable with the appropriate R code.
 I leave it here because the purpose of this article was to work with
 `r glossary("WID")` (and not to replicate figure 7 of
 `r glossary("BHE")` exactly.)
-
-I have no working experience with time series, but there are articles
-and tutorials on how to smooth time series. I still have to look into
-this issue. Therefore, I will list the following resources for later
-reading and blog posts.
-
-::: my-resource
-::: my-resource-header
-::: {#lem-smoothing-time-series}
-: Some internet resources on smoothing time series
-:::
-:::
-
-::: my-resource-container
-Without ranking, just a miscellaneous list of resources:
-
--   How to smooth a times series on R?
-    ([StackOverflow](https://stackoverflow.com/questions/28924681/how-to-smooth-a-times-series-on-r))
--   An Introduction to Time Series Smoothing in R:
-    [BoostedML](https://boostedml.com/2020/05/an-introduction-to-time-series-smoothing-in-r.html)
--   Smoothing time series with R: [R-Bloggers
-    2010](https://www.r-bloggers.com/2010/03/smoothing-time-series-with-r/)
--   Smoothing Time Series Data: [R-Bloggers
-    2018](https://www.r-bloggers.com/2018/07/smoothing-time-series-data/)
--   sma() - Simple Moving Average: [R Package for time series
-    smoothing](https://cran.r-project.org/web/packages/smooth/vignettes/sma.html)
--   Smoothing time series: [PennState Eberly College of
-    Science](https://online.stat.psu.edu/stat510/lesson/5/5.2)
--   Smoothing time series with R: [Revolutions
-    blog](https://blog.revolutionanalytics.com/2010/03/smoothing-time-series-with-r.html)
-:::
-:::
 
 ## Conclusion
 

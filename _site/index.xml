@@ -106,7 +106,7 @@ Figure&nbsp;1: Figure 7 of <a class="glossary" title="Piketty, T. (2022). A Brie
 <section id="interactive-replication" class="level4">
 <h4 class="anchored" data-anchor-id="interactive-replication">Interactive Replication</h4>
 <p>As a first approach, I will replicate Figure 7 of BHE with the provided interactive tools of the WID. Here is a good <a href="https://wid.world/country/france/">starting point for income inequality</a>.</p>
-<div id="fig-BHE-07-00" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="BHE-Figure-07" alt="alt-text" data-fig-align="center">
+<div id="fig-BHE-07-00" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-00-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-01-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;2: Choosing France as “Country” and using the default values for income inequality (top 10% share and bottom 50% share)"><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-01-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -120,7 +120,7 @@ Figure&nbsp;2: Choosing France as “Country” and using the default values for
 <div class="grid">
 <section id="figures-3-6" class="level5 g-col-4">
 <h5 class="anchored" data-anchor-id="figures-3-6">Figures 3-6</h5>
-<div id="fig-BHE-07-01" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="BHE-Figure-07" alt="alt-text" data-fig-align="center">
+<div id="fig-BHE-07-01" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-01-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;3: Choosing France as “Country” and using the default values for income inequality (top 10% share and bottom 50% share)."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-01-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -131,7 +131,7 @@ Figure&nbsp;3: Choosing France as “Country” and using the default values for
 </figure>
 </div>
 <hr>
-<div id="fig-BHE-07-02" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="BHE-Figure-07" alt="alt-text" data-fig-align="center">
+<div id="fig-BHE-07-02" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-02-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-02-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;4: Enlarge the time span of the data from 1947 to 1820 with the bottom slider.  &nbsp;"><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-02-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -142,7 +142,7 @@ Figure&nbsp;4: Enlarge the time span of the data from 1947 to 1820 with the bott
 </figure>
 </div>
 <hr>
-<div id="fig-BHE-07-03" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="BHE-Figure-07" alt="alt-text" data-fig-align="center">
+<div id="fig-BHE-07-03" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-03-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-03-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;5: Hiding the extrapolations (dotted lines) by choosing ‘More option’ on the top right corner and turning on the radio button."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-03-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -166,7 +166,7 @@ Figure&nbsp;6: Check if ‘smooth lines’ is active. It should be turned on bec
 </section>
 <section id="figures-7-10" class="level5 g-col-4">
 <h5 class="anchored" data-anchor-id="figures-7-10">Figures 7-10</h5>
-<div id="fig-BHE-07-05" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="BHE-Figure-07" alt="alt-text" data-fig-align="center">
+<div id="fig-BHE-07-05" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-05-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-05-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;7: Change the limits of the Y-axis from 0 to 60%. This is different than in the original. See my comments later in this article."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-05-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -177,7 +177,7 @@ Figure&nbsp;7: Change the limits of the Y-axis from 0 to 60%. This is different 
 </figure>
 </div>
 <hr>
-<div id="fig-BHE-07-06" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="BHE-Figure-07" alt="alt-text" data-fig-align="center">
+<div id="fig-BHE-07-06" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-06-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-06-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;8: Compared with the original, we still will need a third time series for the share of the middle 40% of the population."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-06-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -188,7 +188,7 @@ Figure&nbsp;8: Compared with the original, we still will need a third time serie
 </figure>
 </div>
 <hr>
-<div id="fig-BHE-07-08" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="BHE-Figure-07" alt="alt-text" data-fig-align="center">
+<div id="fig-BHE-07-08" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-08-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-08-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;9: Click on the bottom of the left green navigation bar to open ‘More Indicators’ to include custom indicators in the graph."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-08-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -199,7 +199,7 @@ Figure&nbsp;9: Click on the bottom of the left green navigation bar to open ‘M
 </figure>
 </div>
 <hr>
-<div id="fig-BHE-07-09" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="BHE-Figure-07" alt="alt-text" data-fig-align="center">
+<div id="fig-BHE-07-09" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-09-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-09-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;10: Choose ‘Income Inequality’ to get the option to include a preconfigured percentile into the graph."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-09-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -212,7 +212,7 @@ Figure&nbsp;10: Choose ‘Income Inequality’ to get the option to include a pr
 </section>
 <section id="figures-11-14" class="level5 g-col-4">
 <h5 class="anchored" data-anchor-id="figures-11-14">Figures 11-14</h5>
-<div id="fig-BHE-07-10" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="BHE-Figure-07" alt="alt-text" data-fig-align="center">
+<div id="fig-BHE-07-10" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-10-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;11: Scroll down to select the radio box for the ‘Middle 40%’ percentile. &nbsp;"><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-10-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -223,7 +223,7 @@ Figure&nbsp;11: Scroll down to select the radio box for the ‘Middle 40%’ per
 </figure>
 </div>
 <hr>
-<div id="fig-BHE-07-11" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="BHE-Figure-07" alt="alt-text" data-fig-align="center">
+<div id="fig-BHE-07-11" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-11-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;12: Confirm the default values. I will explain the different options in a later post.  &nbsp;"><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-11-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -234,7 +234,7 @@ Figure&nbsp;12: Confirm the default values. I will explain the different options
 </figure>
 </div>
 <hr>
-<div id="fig-BHE-07-12" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="BHE-Figure-07" alt="alt-text" data-fig-align="center">
+<div id="fig-BHE-07-12" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-12-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;13: Our last action adds the share of the middle 40% to our graph, as was seen in Figure&nbsp;8.  &nbsp;"><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-12-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -245,7 +245,7 @@ Figure&nbsp;13: Our last action adds the share of the middle 40% to our graph, a
 </figure>
 </div>
 <hr>
-<div id="fig-BHE-07-13" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="BHE-Figure-07" alt="alt-text" data-fig-align="center">
+<div id="fig-BHE-07-13" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-13-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;14: Hovering with the mouse over the graphs of the interactive website, we can get tooltips with the values for every year."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-13-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -275,7 +275,7 @@ Figure&nbsp;15: Figure 7 of <a class="glossary" title="Piketty, T. (2022). A Bri
 </div>
 </div>
 <div class="g-col-6">
-<div id="fig-BHE-07-13-2" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="BHE-figure-compare" alt="alt-text" data-fig-align="center">
+<div id="fig-BHE-07-13-2" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-figure-compare" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-13-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-13-min.png" class="lightbox" data-gallery="BHE-figure-compare" title="Figure&nbsp;16: The result of my replication is showing higher shares for the top 10% and accordingly lower shares for the middle 40% in contrast to the original figure. However, the level of the share of the bottom 50% of the population is approximately the same in both figures."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-13-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -393,7 +393,7 @@ text-align: center;
 </div>
 <div class="columns">
 <div class="column" style="width:100%;">
-<p><button class="btn btn-success downloadthis  " id="dnldts62239"><i class="bi bi-download"></i> Download WID-vignette as PDF </button></p>
+<p><button class="btn btn-success downloadthis  " id="dnldts25379"><i class="bi bi-download"></i> Download WID-vignette as PDF </button></p>
 </div>
 </div>
 <section id="plotting-data-with-r" class="level3">
@@ -866,7 +866,10 @@ background-color: null;
 font-style: inherit;">geom_point</span>() <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb7-5">    ggplot2<span class="sc" style="color: #5E5E5E;
+<span id="cb7-5">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># ggplot2::geom_smooth(span = .9) + # for smoothing</span></span>
+<span id="cb7-6">    ggplot2<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -875,12 +878,12 @@ background-color: null;
 font-style: inherit;">"share of income"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb7-6">    ggplot2<span class="sc" style="color: #5E5E5E;
+<span id="cb7-7">    ggplot2<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">scale_color_discrete</span>(</span>
-<span id="cb7-7">        <span class="at" style="color: #657422;
+<span id="cb7-8">        <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">labels =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -903,10 +906,10 @@ background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"middle 40%"</span>)</span>
-<span id="cb7-8">    ) <span class="sc" style="color: #5E5E5E;
+<span id="cb7-9">    ) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> </span>
-<span id="cb7-9">    ggplot2<span class="sc" style="color: #5E5E5E;
+<span id="cb7-10">    ggplot2<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -915,7 +918,7 @@ background-color: null;
 font-style: inherit;">"Pre-tax national income inequality in France, 1820-2022"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb7-10">    ggplot2<span class="sc" style="color: #5E5E5E;
+<span id="cb7-11">    ggplot2<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -965,7 +968,7 @@ Figure&nbsp;18: Figure 7 of <a class="glossary" title="Piketty, T. (2022). A Bri
 </div>
 </div>
 <div class="g-col-6">
-<div id="fig-BHE-sptinc992j-fr" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="BHE-figure-compare2" alt="alt-text" data-fig-align="center">
+<div id="fig-BHE-sptinc992j-fr" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-figure-compare2" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-sptinc992j-fr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-sptinc992j_fr-min.png" class="lightbox" data-gallery="BHE-figure-compare2" title="Figure&nbsp;19: Resulting figure after data download and plotting with R"><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-sptinc992j_fr-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -987,26 +990,6 @@ Figure&nbsp;19: Resulting figure after data download and plotting with R
 <li>the smoothness of the time series</li>
 </ul>
 <p>However, these differences are all solvable with the appropriate R code. I leave it here because the purpose of this article was to work with <a class="glossary" title="The ‘World Inequality Database’ (WID) aims to provide open and convenient access to the most extensive available database on the historical evolution of the world distribution of income and wealth, both within countries and between countries. WID.WORLD">WID</a> (and not to replicate figure 7 of <a class="glossary" title="Piketty, T. (2022). A Brief History of Equality (S. Rendall, Trans.). Harvard University Press.">BHE</a> exactly.)</p>
-<p>I have no working experience with time series, but there are articles and tutorials on how to smooth time series. I still have to look into this issue. Therefore, I will list the following resources for later reading and blog posts.</p>
-<div class="my-resource">
-<div class="my-resource-header">
-<div id="lem-smoothing-time-series" class="theorem lemma">
-<p><span class="theorem-title"><strong>Resource 3</strong></span> : Some internet resources on smoothing time series</p>
-</div>
-</div>
-<div class="my-resource-container">
-<p>Without ranking, just a miscellaneous list of resources:</p>
-<ul>
-<li>How to smooth a times series on R? (<a href="https://stackoverflow.com/questions/28924681/how-to-smooth-a-times-series-on-r">StackOverflow</a>)</li>
-<li>An Introduction to Time Series Smoothing in R: <a href="https://boostedml.com/2020/05/an-introduction-to-time-series-smoothing-in-r.html">BoostedML</a></li>
-<li>Smoothing time series with R: <a href="https://www.r-bloggers.com/2010/03/smoothing-time-series-with-r/">R-Bloggers 2010</a></li>
-<li>Smoothing Time Series Data: <a href="https://www.r-bloggers.com/2018/07/smoothing-time-series-data/">R-Bloggers 2018</a></li>
-<li>sma() - Simple Moving Average: <a href="https://cran.r-project.org/web/packages/smooth/vignettes/sma.html">R Package for time series smoothing</a></li>
-<li>Smoothing time series: <a href="https://online.stat.psu.edu/stat510/lesson/5/5.2">PennState Eberly College of Science</a></li>
-<li>Smoothing time series with R: <a href="https://blog.revolutionanalytics.com/2010/03/smoothing-time-series-with-r.html">Revolutions blog</a></li>
-</ul>
-</div>
-</div>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
