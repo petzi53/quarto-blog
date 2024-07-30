@@ -399,6 +399,13 @@
     "text": "Conclusion\nI have shown procedures for working with the inequality data of WID.\n\nOne approach explores the interactive website on wid.world and tries to create the desired graph. There are several ways to use the resulting figure:\n\nDownloading the picture as JPG\nEmbedding a link to the interactive graph on your website\nEmbedding the result as iframe in your website\nExploring the code in the URL and using it for the second approach (downloading the required data with R)\n\nThe second approach uses the {wid} R package, especially the function wid::download_wid(). Knowing the required codes for the download function is essential. The first approach could help find the correct code composition in the WID code book, the Codes Dictionary or in the Summary Table.\n\n\n\n\n\n\n\nImportant 1: How-to procedures are not enough\n\n\n\nThe post only describes “how-to” procedures for WID and does not discuss the available concepts appropriate for specific research questions. I plan to describe and reflect on concepts for inequality research in later blog posts."
   },
   {
+    "objectID": "posts/2024-07-27-how-to-use-the-world-inequality-database-wid/index.html#footnotes",
+    "href": "posts/2024-07-27-how-to-use-the-world-inequality-database-wid/index.html#footnotes",
+    "title": "How to use the World Inequality Database (WID)?",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThis is somewhat disappointing. As I do not know STATA, these code files do not make much sense to me. However, a quick internet search showed that there are some resources to learn how to translate STATA directives into R commands. Two examples: Making the Transition? A Guide for Switching from Stata to R and STATA to R cheat sheet.↩︎\nHow important this check is showed me a previous version in which I had not included ages = 992 because I thought the adult population was already defined with pop = \"j\", the letter code for equal-split adults. But it turned out that without the explicit definition for the age, I also downloaded the default value 999 (all ages).↩︎"
+  },
+  {
     "objectID": "posts/2024-07-23-from-git-to-github-using-rstudio/index.html",
     "href": "posts/2024-07-23-from-git-to-github-using-rstudio/index.html",
     "title": "Quarto Blog Tutorial 2: From Git to GitHub using RStudio",
@@ -452,13 +459,6 @@
     "href": "about.html",
     "title": "Peter Baumgartner",
     "section": "",
-    "text": "I am a retired professor of Education Technology. As head of the Department of Interactive Media and Educational Technologies at the University for Continuing Education Krems (UWK) (Austria), I researched how to apply technology in settings of Life Long Learning. \nI had held positions as a professor at several universities in Austria and Germany (Klagenfurt, Münster, Innsbruck, Hagen) before I accepted the nomination to Krems. I published 25 books (10 monographs and 15 edited volumes) and over 200 articles.\nWith my retirement, I became a Life Long Learner myself. I am interested in studying workflows for Open Science research, focusing on note-taking apps like Obsidian, Hypothes.is, etc., and the R programming language for statistical computing and data science.\n\n\n Back to top"
-  },
-  {
-    "objectID": "posts/2024-07-27-how-to-use-the-world-inequality-database-wid/index.html#footnotes",
-    "href": "posts/2024-07-27-how-to-use-the-world-inequality-database-wid/index.html#footnotes",
-    "title": "How to use the World Inequality Database (WID)?",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nThis is somewhat disappointing. As I do not know STATA, these code files do not make much sense to me. However, a quick internet search showed that there are some resources to learn how to translate STATA directives into R commands. Two examples: Making the Transition? A Guide for Switching from Stata to R and STATA to R cheat sheet.↩︎\nHow important this check is showed me a previous version in which I had not included ages = 992 because I thought the adult population was already defined with pop = \"j\", the letter code for equal-split adults. But it turned out that without the explicit definition for the age, I also downloaded the default value 999 (all ages).↩︎"
+    "text": "I am a retired professor of Education Technology. As head of the Department of Interactive Media and Educational Technologies at the University for Continuing Education Krems (UWK) (Austria), I researched how to apply technology in settings of Life Long Learning. \nFor more detailed information see my different blogs:\n\nGedankensplitter: German, still active.\nThought Splinters: English 2017-2022, not active anymore. It contains my English [blog posts] during this time span.\nEducational Patterns: English, 2017-2018, not active anymore. It contains a download area for all my published articles until 2017, slides and other material.\n\nI had held positions as a professor at several universities in Austria and Germany (Klagenfurt, Münster, Innsbruck, Hagen) before I accepted the nomination to Krems. I published 25 books (10 monographs and 15 edited volumes) and over 200 articles.\nWith my retirement, I became a Life Long Learner myself. I am interested in studying workflows for Open Science research, focusing on note-taking apps like Obsidian, Hypothes.is, etc., and the R programming language for statistical computing and data science.\n\n\n Back to top"
   }
 ]
