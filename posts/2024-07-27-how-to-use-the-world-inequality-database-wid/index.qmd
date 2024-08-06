@@ -130,10 +130,10 @@ is to find an appropriate entry point to get started.
     This is the central resource for understanding the methodology
     behind the decomposition of `r glossary("national accounts")` and
     the inequality series for income and wealth. The purpose of these
-    Distributional National Accounts (DINA) guidelines is to present the
-    concepts, data sources, and methods used in the World Inequality
-    Database (`r glossary("WID")`). It is a long document with 186 pages
-    [@blanchet2024b].
+    Distributional National Accounts (`r glossary("DINA")`) guidelines
+    is to present the concepts, data sources, and methods used in the
+    World Inequality Database (`r glossary("WID")`). It is a long
+    document with 186 pages [@blanchet2024b].
 -   [Codes
     Dictionary](https://wid.world/codes-dictionary/ "Describes the general structure of the World Inequality Database (WID)")
     (Code Book): It describes the general structure of the World
@@ -752,3 +752,13 @@ the available concepts appropriate for specific research questions. I
 plan to describe and reflect on concepts for inequality research in
 later blog posts.
 :::
+
+## Appendix
+
+###### Glossary
+
+```{r}
+#| label: glossary
+#| echo: false
+glossary::glossary_table(as_kable = TRUE)
+```

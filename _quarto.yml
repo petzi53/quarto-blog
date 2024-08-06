@@ -45,7 +45,7 @@ website:
 
   page-footer:
     border: true
-# Theme default
+  # Theme default
     background: rgb(81, 118, 153)
     foreground: rgb(221, 228, 235)
     center:
@@ -73,6 +73,11 @@ website:
           ctaTextColor: rgb(221, 228, 235)
           selectionFontFamily: 'helvetica, arial, sans serif'
 
+crossref:
+  custom:
+    - kind: float
+      reference-prefix: Definition
+      key: def
 
 format:
   html:
@@ -95,5 +100,3 @@ language:
    crossref-exm-title: "Example"     # remains  "Example"
 
 lst-cap-location: bottom
-
-

@@ -18,7 +18,6 @@ figcaption {
     width: 500px;
 }
 
-
 /* bring title-meta (autor, date, modified-date) into one line */
 #title-block-header.quarto-title-block.default .quarto-title-meta {
     display: grid;

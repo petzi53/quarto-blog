@@ -73,7 +73,7 @@
 </div>
 <div class="my-resource-container">
 <ul>
-<li><a href="https://wid.world/document/distributional-national-accounts-guidelines-2020-concepts-and-methods-used-in-the-world-inequality-database/">Distributional National Accounts (DINA) Guidelines</a>: This is the central resource for understanding the methodology behind the decomposition of <a class="glossary" title="National accounts are a system of accounts and balance sheets that provide a broad and integrated framework to describe an economy, whether a region, a country, or a group of countries such as the European Union (EU). For internationally comparable national accounts this system needs to be based on common concepts, definitions, classifications and accounting rules, in order to arrive at a consistent, reliable and comparable quantitative description of an economy. National accounts provide systematic and detailed economic data useful for economic analysis to support the development and monitoring of policy-making. (eurostat: Statics explained)">national accounts</a> and the inequality series for income and wealth. The purpose of these Distributional National Accounts (DINA) guidelines is to present the concepts, data sources, and methods used in the World Inequality Database (<a class="glossary" title="The ‘World Inequality Database’ (WID) aims to provide open and convenient access to the most extensive available database on the historical evolution of the world distribution of income and wealth, both within countries and between countries. WID.WORLD">WID</a>). It is a long document with 186 pages <span class="citation" data-cites="blanchet2024b">(Blanchet et al. 2024)</span>.</li>
+<li><a href="https://wid.world/document/distributional-national-accounts-guidelines-2020-concepts-and-methods-used-in-the-world-inequality-database/">Distributional National Accounts (DINA) Guidelines</a>: This is the central resource for understanding the methodology behind the decomposition of <a class="glossary" title="National accounts are a system of accounts and balance sheets that provide a broad and integrated framework to describe an economy, whether a region, a country, or a group of countries such as the European Union (EU). For internationally comparable national accounts this system needs to be based on common concepts, definitions, classifications and accounting rules, in order to arrive at a consistent, reliable and comparable quantitative description of an economy. National accounts provide systematic and detailed economic data useful for economic analysis to support the development and monitoring of policy-making. eurostat - Statistics explained.">national accounts</a> and the inequality series for income and wealth. The purpose of these Distributional National Accounts (<a class="glossary" title="Distributional national accounts (DINAs) aim to gather information on the distribution of the net national income and to explore it over time. (Distributional National Accounts (DINA) for Austria, 2004-2016)">DINA</a>) guidelines is to present the concepts, data sources, and methods used in the World Inequality Database (<a class="glossary" title="The ‘World Inequality Database’ (WID) aims to provide open and convenient access to the most extensive available database on the historical evolution of the world distribution of income and wealth, both within countries and between countries. WID.WORLD">WID</a>). It is a long document with 186 pages <span class="citation" data-cites="blanchet2024b">(Blanchet et al. 2024)</span>.</li>
 <li><a href="https://wid.world/codes-dictionary/" title="Describes the general structure of the World Inequality Database (WID)">Codes Dictionary</a> (Code Book): It describes the general structure of the World Inequality Database (WID). It explains how information is organized within it and how to retrieve and interpret its content. This document is invaluable for getting familiarized with the construction of WID variables and the structure of the database <span class="citation" data-cites="worldinequalitylab2024b">(World Inequality Lab 2024)</span>. Converting the web page into a PDF results in a document of 18 pages.</li>
 <li><a href="https://wid.world/summary-table/">Summary Table</a>: It summarizes all available WID.world data. The search tool can look for specific countries, variables, or WID.world codes. It has currently 6253 rows and 16 columns. The summary table is an efficient starting point because it allows for a view of available data, which one can then download for more detailed analysis.</li>
 <li><a href="https://github.com/WIDworld/wid-world">Computer Code</a>: On the GitHub platform, you can inspect and fork the repository that contains all the code used to create the entire database from both the researcher’s data and official sources. It consists of 98% of STATA code, the rest (only 2%) is written in R. <sup>1</sup></li>
@@ -92,7 +92,7 @@
 <section id="figure-to-replicate" class="level4">
 <h4 class="anchored" data-anchor-id="figure-to-replicate">Figure to replicate</h4>
 <p>As my test bed, I will use Figure 7 of BHE <span class="citation" data-cites="piketty2022">(Piketty 2022, 46)</span>.</p>
-<div id="fig-figure7-piketty" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text">
+<div id="fig-figure7-piketty" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-figure7-piketty-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-Piketty-min.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;1: Figure 7 of BHE, taken from the original source on Piketty’s website."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-Piketty-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="alt-text"></a>
@@ -106,7 +106,7 @@ Figure&nbsp;1: Figure 7 of <a class="glossary" title="Piketty, T. (2022). A Brie
 <section id="interactive-replication" class="level4">
 <h4 class="anchored" data-anchor-id="interactive-replication">Interactive Replication</h4>
 <p>As a first approach, I will replicate Figure 7 of BHE with the provided interactive tools of the WID. Here is a good <a href="https://wid.world/country/france/">starting point for income inequality</a>.</p>
-<div id="fig-BHE-07-00" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text" data-group="BHE-Figure-07">
+<div id="fig-BHE-07-00" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-00-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-01-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;2: Choosing France as “Country” and using the default values for income inequality (top 10% share and bottom 50% share)"><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-01-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -120,7 +120,7 @@ Figure&nbsp;2: Choosing France as “Country” and using the default values for
 <div class="grid">
 <section id="figures-3-6" class="level5 g-col-4">
 <h5 class="anchored" data-anchor-id="figures-3-6">Figures 3-6</h5>
-<div id="fig-BHE-07-01" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text" data-group="BHE-Figure-07">
+<div id="fig-BHE-07-01" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-01-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;3: Choosing France as “Country” and using the default values for income inequality (top 10% share and bottom 50% share)."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-01-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -131,7 +131,7 @@ Figure&nbsp;3: Choosing France as “Country” and using the default values for
 </figure>
 </div>
 <hr>
-<div id="fig-BHE-07-02" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text" data-group="BHE-Figure-07">
+<div id="fig-BHE-07-02" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-02-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-02-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;4: Enlarge the time span of the data from 1947 to 1820 with the bottom slider.  &nbsp;"><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-02-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -142,7 +142,7 @@ Figure&nbsp;4: Enlarge the time span of the data from 1947 to 1820 with the bott
 </figure>
 </div>
 <hr>
-<div id="fig-BHE-07-03" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text" data-group="BHE-Figure-07">
+<div id="fig-BHE-07-03" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-03-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-03-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;5: Hiding the extrapolations (dotted lines) by choosing ‘More option’ on the top right corner and turning on the radio button."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-03-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -153,7 +153,7 @@ Figure&nbsp;5: Hiding the extrapolations (dotted lines) by choosing ‘More opti
 </figure>
 </div>
 <hr>
-<div id="fig-BHE-07-04" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text">
+<div id="fig-BHE-07-04" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-04-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-04-min.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;6: Check if ‘smooth lines’ is active. It should be turned on because it is the default value.  &nbsp;"><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-04-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -166,7 +166,7 @@ Figure&nbsp;6: Check if ‘smooth lines’ is active. It should be turned on bec
 </section>
 <section id="figures-7-10" class="level5 g-col-4">
 <h5 class="anchored" data-anchor-id="figures-7-10">Figures 7-10</h5>
-<div id="fig-BHE-07-05" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text" data-group="BHE-Figure-07">
+<div id="fig-BHE-07-05" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-05-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-05-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;7: Change the limits of the Y-axis from 0 to 60%. This is different than in the original. See my comments later in this article."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-05-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -177,7 +177,7 @@ Figure&nbsp;7: Change the limits of the Y-axis from 0 to 60%. This is different 
 </figure>
 </div>
 <hr>
-<div id="fig-BHE-07-06" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text" data-group="BHE-Figure-07">
+<div id="fig-BHE-07-06" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-06-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-06-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;8: Compared with the original, we still will need a third time series for the share of the middle 40% of the population."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-06-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -188,7 +188,7 @@ Figure&nbsp;8: Compared with the original, we still will need a third time serie
 </figure>
 </div>
 <hr>
-<div id="fig-BHE-07-08" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text" data-group="BHE-Figure-07">
+<div id="fig-BHE-07-08" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-08-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-08-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;9: Click on the bottom of the left green navigation bar to open ‘More Indicators’ to include custom indicators in the graph."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-08-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -199,7 +199,7 @@ Figure&nbsp;9: Click on the bottom of the left green navigation bar to open ‘M
 </figure>
 </div>
 <hr>
-<div id="fig-BHE-07-09" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text" data-group="BHE-Figure-07">
+<div id="fig-BHE-07-09" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-09-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-09-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;10: Choose ‘Income Inequality’ to get the option to include a preconfigured percentile into the graph."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-09-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -212,7 +212,7 @@ Figure&nbsp;10: Choose ‘Income Inequality’ to get the option to include a pr
 </section>
 <section id="figures-11-14" class="level5 g-col-4">
 <h5 class="anchored" data-anchor-id="figures-11-14">Figures 11-14</h5>
-<div id="fig-BHE-07-10" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text" data-group="BHE-Figure-07">
+<div id="fig-BHE-07-10" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-10-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;11: Scroll down to select the radio box for the ‘Middle 40%’ percentile. &nbsp;"><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-10-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -223,7 +223,7 @@ Figure&nbsp;11: Scroll down to select the radio box for the ‘Middle 40%’ per
 </figure>
 </div>
 <hr>
-<div id="fig-BHE-07-11" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text" data-group="BHE-Figure-07">
+<div id="fig-BHE-07-11" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-11-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;12: Confirm the default values. I will explain the different options in a later post.  &nbsp;"><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-11-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -234,7 +234,7 @@ Figure&nbsp;12: Confirm the default values. I will explain the different options
 </figure>
 </div>
 <hr>
-<div id="fig-BHE-07-12" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text" data-group="BHE-Figure-07">
+<div id="fig-BHE-07-12" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-12-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;13: Our last action adds the share of the middle 40% to our graph, as was seen in Figure&nbsp;8.  &nbsp;"><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-12-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -245,7 +245,7 @@ Figure&nbsp;13: Our last action adds the share of the middle 40% to our graph, a
 </figure>
 </div>
 <hr>
-<div id="fig-BHE-07-13" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text" data-group="BHE-Figure-07">
+<div id="fig-BHE-07-13" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-13-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;14: Hovering with the mouse over the graphs of the interactive website, we can get tooltips with the values for every year."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-13-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -263,7 +263,7 @@ Figure&nbsp;14: Hovering with the mouse over the graphs of the interactive websi
 <p>If we compare both figures side by side, we will see a significant difference. Our replication differs from the original in the years before 1900. For instance, in our figure, the people with the top 10% of income share about 60% of the total income, in contrast to the 50% share in the original graph. I need to find out where these differences come from. There may have been a correction of the computed extrapolations in an update after the book publication. In any case, this difference is not essential here. Remember, the primary purpose of the exercise is to understand the patterns of the database structure — and not (at least at the moment) to get correct figures.</p>
 <div class="grid">
 <div class="g-col-6">
-<div id="fig-figure7-piketty-2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="BHE-figure-compare">
+<div id="fig-figure7-piketty-2" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="BHE-figure-compare" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-figure7-piketty-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-Piketty-min.png" class="lightbox" data-gallery="BHE-figure-compare" title="Figure&nbsp;15: Figure 7 of BHE, taken from the original source on Piketty’s website. The shares for the top 10% are lower. It is slightly above 50% of the total income, whereas it is about 60% in the replication. On the other hand, the share of the middle is 40% lower than that of the replication."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-Piketty-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%"></a>
@@ -275,7 +275,7 @@ Figure&nbsp;15: Figure 7 of <a class="glossary" title="Piketty, T. (2022). A Bri
 </div>
 </div>
 <div class="g-col-6">
-<div id="fig-BHE-07-13-2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text" data-group="BHE-figure-compare">
+<div id="fig-BHE-07-13-2" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-figure-compare" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-13-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-13-min.png" class="lightbox" data-gallery="BHE-figure-compare" title="Figure&nbsp;16: The result of my replication is showing higher shares for the top 10% and accordingly lower shares for the middle 40% in contrast to the original figure. However, the level of the share of the bottom 50% of the population is approximately the same in both figures."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-13-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -301,7 +301,7 @@ Figure&nbsp;16: The result of my replication is showing higher shares for the to
 <p>Until now, I have used manually taken screenshots. But there are also several possibilities to display results offered by the <a class="glossary" title="The ‘World Inequality Database’ (WID) aims to provide open and convenient access to the most extensive available database on the historical evolution of the world distribution of income and wealth, both within countries and between countries. WID.WORLD">WID</a>.</p>
 <section id="download-a-jpg-file" class="level4">
 <h4 class="anchored" data-anchor-id="download-a-jpg-file">Download a JPG-file</h4>
-<div id="fig-wid-jpg-figure07" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text">
+<div id="fig-wid-jpg-figure07" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-wid-jpg-figure07-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-graph_dl.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-19" title="Figure&nbsp;17: Income inequality, France, 1820-2022 download as JPG from the WID site and integrated into the Quarto text."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-graph_dl.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -393,7 +393,7 @@ text-align: center;
 </div>
 <div class="columns">
 <div class="column" style="width:100%;">
-<p><button class="btn btn-success downloadthis  " id="dnldts17474"><i class="bi bi-download"></i> Download WID-vignette as PDF </button></p>
+<p><button class="btn btn-success downloadthis  " id="dnldts3275"><i class="bi bi-download"></i> Download WID-vignette as PDF </button></p>
 </div>
 </div>
 <section id="plotting-data-with-r" class="level3">
@@ -956,7 +956,7 @@ Listing&nbsp;4: Pre-tax national income inequality in France, 1820-2022
 <h2 class="anchored" data-anchor-id="comparison-of-my-result-with-the-original-figure-7">Comparison of my result with the original Figure 7</h2>
 <div class="grid">
 <div class="g-col-6">
-<div id="fig-figure7-piketty-3" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="BHE-figure-compare2">
+<div id="fig-figure7-piketty-3" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="BHE-figure-compare2" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-figure7-piketty-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-Piketty-min.png" class="lightbox" data-gallery="BHE-figure-compare2" title="Figure&nbsp;18: Figure 7 of BHE, taken from the original source on Piketty’s website."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-Piketty-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a>
@@ -968,7 +968,7 @@ Figure&nbsp;18: Figure 7 of <a class="glossary" title="Piketty, T. (2022). A Bri
 </div>
 </div>
 <div class="g-col-6">
-<div id="fig-BHE-sptinc992j-fr" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text" data-group="BHE-figure-compare2">
+<div id="fig-BHE-sptinc992j-fr" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-figure-compare2" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-sptinc992j-fr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-sptinc992j_fr-min.png" class="lightbox" data-gallery="BHE-figure-compare2" title="Figure&nbsp;19: Resulting figure after data download and plotting with R"><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-sptinc992j_fr-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -1017,9 +1017,63 @@ Important&nbsp;1: How-to procedures are not enough
 <p>The post only describes “how-to” procedures for WID and does not discuss the available concepts appropriate for specific research questions. I plan to describe and reflect on concepts for inequality research in later blog posts.</p>
 </div>
 </div>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<section id="glossary" class="level6">
+<h6 class="anchored" data-anchor-id="glossary">Glossary</h6>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">term</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Advanced Organizer</td>
+<td style="text-align: left;">Advance organizers are pedagogic devices that bridge the gap between what learners already know and what learners need to know. (&lt;a href="https://link.springer.com/referenceworkentry/10.1007/978-1-4419-1428-6_157"&gt;Encyclopedia of the Science of Learning&lt;/a&gt;)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BHE</td>
+<td style="text-align: left;">Piketty, T. (2022). A Brief History of Equality (S. Rendall, Trans.). Harvard University Press.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DINA</td>
+<td style="text-align: left;">Distributional national accounts (DINAs) aim to gather information on the distribution of the net national income and to explore it over time. ([Distributional National Accounts (DINA) for Austria, 2004-2016](https://wid.world/document/distributional-national-accounts-dina-for-austria-2004-2016-world-inequality-lab-wp-2020-23/))</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">iframe</td>
+<td style="text-align: left;">iframes allow you to embed HTML documents inside another HTML document. They offer a seamless way to integrate content from one source into another, enabling developers to create more dynamic and interactive web pages. ([dev.to](https://dev.to/joanayebola/what-is-iframe-and-how-to-use-them-1c63))</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">JPG</td>
+<td style="text-align: left;">JPEG (/ˈdʒeɪpɛɡ/ JAY-peg, short for Joint Photographic Experts Group is a commonly used method of lossy compression for digital images. [(Wikipedia](https://en.wikipedia.org/wiki/JPEG))</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">National Accounts</td>
+<td style="text-align: left;">National accounts are a system of accounts and balance sheets that provide a broad and integrated framework to describe an economy, whether a region, a country, or a group of countries such as the European Union (EU). For internationally comparable national accounts this system needs to be based on common concepts, definitions, classifications and accounting rules, in order to arrive at a consistent, reliable and comparable quantitative description of an economy. National accounts provide systematic and detailed economic data useful for economic analysis to support the development and monitoring of policy-making. [eurostat - Statistics explained]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Percentile</td>
+<td style="text-align: left;">The set of divisions that produce exactly 100 equal parts in a series of continuous values, such as blood pressure, weight, height, etc. Thus a person with blood pressure above the 80th percentile has a greater blood pressure value than over 80% of the other recorded values.” (CDS, p.323)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">WID</td>
+<td style="text-align: left;">The 'World Inequality Database' (WID) aims to provide open and convenient access to the most extensive available database on the historical evolution of the world distribution of income and wealth, both within countries and between countries. [WID.WORLD](https://wid.world/wid-world/)</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
 
 
 
+</section>
 </section>
 
 
@@ -2390,7 +2444,7 @@ font-style: inherit;"> styles.css</span></span></code></pre></div>
 <ol type="1">
 <li>To see all the changes you have made so far, click on the Git tab at the top right pane of RStudio. You should see a picture similar to the following one.</li>
 </ol>
-<div id="fig-git-files-unselected" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="git-github" data-fig-align="center" alt="RStudio top right pane with the following tabs: Environment, History, Connection, Build, Git, and Tutorial. The Git pane is selected and therefore active. Under the tabs is another line of icons and text buttons representing Git actions: From left to right: Diff, Commit, Pull (greyed out), Push (greyed out), History, More (drop-down menu), New Branch, (no branch). Underneath it shows added or changed files or folders (ending with a slash) from the initialization process. From top to the bottom: .gitignote, _freeze/, _quarto.yml, _site/, about.qmd, index.qmd, posts/, profile.jpg, quarto-pb-blog.Rproj, style.css.">
+<div id="fig-git-files-unselected" class="quarto-float quarto-figure quarto-figure-center anchored" alt="RStudio top right pane with the following tabs: Environment, History, Connection, Build, Git, and Tutorial. The Git pane is selected and therefore active. Under the tabs is another line of icons and text buttons representing Git actions: From left to right: Diff, Commit, Pull (greyed out), Push (greyed out), History, More (drop-down menu), New Branch, (no branch). Underneath it shows added or changed files or folders (ending with a slash) from the initialization process. From top to the bottom: .gitignote, _freeze/, _quarto.yml, _site/, about.qmd, index.qmd, posts/, profile.jpg, quarto-pb-blog.Rproj, style.css." data-fig-align="center" data-group="git-github">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-git-files-unselected-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="git-files-and-folders-unselected-min.png" class="lightbox" data-gallery="git-github" title="Figure&nbsp;1: Selected the Git tab of the RStudio right top pane (Screenshot):"><img src="https://l3lab.net/posts/2024-07-23-from-git-to-github-using-rstudio/git-files-and-folders-unselected-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="RStudio top right pane with the following tabs: Environment, History, Connection, Build, Git, and Tutorial. The Git pane is selected and therefore active. Under the tabs is another line of icons and text buttons representing Git actions: From left to right: Diff, Commit, Pull (greyed out), Push (greyed out), History, More (drop-down menu), New Branch, (no branch). Underneath it shows added or changed files or folders (ending with a slash) from the initialization process. From top to the bottom: .gitignote, _freeze/, _quarto.yml, _site/, about.qmd, index.qmd, posts/, profile.jpg, quarto-pb-blog.Rproj, style.css."></a>
@@ -2403,7 +2457,7 @@ Figure&nbsp;1: Selected the Git tab of the RStudio right top pane (Screenshot):
 <ol start="2" type="1">
 <li>After selecting all files and checking them (checking a single file of a group of selected files checks all selected files), the Git window shows all files seen above but also the files inside folders that are now prepared for the next Git commit.</li>
 </ol>
-<div id="fig-git-files-selected" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="git-github" data-fig-align="center" alt="RStudio top right pane with the following tabs: Environment, History, Connection, Build, Git, and Tutorial. The Git pane is selected and therefore active. Under the tabs is another line of icons and text buttons representing Git actions: From left to right: Diff, Commit, Pull (greyed out), Push (greyed out), History, More (drop-down menu), New Branch, (no branch). There is a tool tip under the Commit button saying: 'Commit pending changes (CTRL-ALT-M)'. Underneath it shows added or changed files from the initialization process. From top to the bottom in a blue background: .gitignote, _freeze/, _quarto.yml, _site/, about.qmd, index.qmd, posts/, profile.jpg, quarto-pb-blog.Rproj, style.css. These files are followed by the files in the directories from top to left: _freeze/post/post-with-code/index/execute-results/html.json, _freeze/site_libs/clipboard/clipboard.min.js, _freeze/site_libs/quarto-listing/list.min.js,  _freeze/site_libs/quarto-listing/quarto-listing.js, _site/about.html, _site/index.html, _site/listing.json, _site/profile.jpg. There are more files not visible because the window ends here.">
+<div id="fig-git-files-selected" class="quarto-float quarto-figure quarto-figure-center anchored" alt="RStudio top right pane with the following tabs: Environment, History, Connection, Build, Git, and Tutorial. The Git pane is selected and therefore active. Under the tabs is another line of icons and text buttons representing Git actions: From left to right: Diff, Commit, Pull (greyed out), Push (greyed out), History, More (drop-down menu), New Branch, (no branch). There is a tool tip under the Commit button saying: 'Commit pending changes (CTRL-ALT-M)'. Underneath it shows added or changed files from the initialization process. From top to the bottom in a blue background: .gitignote, _freeze/, _quarto.yml, _site/, about.qmd, index.qmd, posts/, profile.jpg, quarto-pb-blog.Rproj, style.css. These files are followed by the files in the directories from top to left: _freeze/post/post-with-code/index/execute-results/html.json, _freeze/site_libs/clipboard/clipboard.min.js, _freeze/site_libs/quarto-listing/list.min.js,  _freeze/site_libs/quarto-listing/quarto-listing.js, _site/about.html, _site/index.html, _site/listing.json, _site/profile.jpg. There are more files not visible because the window ends here." data-fig-align="center" data-group="git-github">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-git-files-selected-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="git-files-and-folders-checked-2-min.png" class="lightbox" data-gallery="git-github" title="Figure&nbsp;2: Selecting all added or changed files in the RStudio Git pane (Screenshot)"><img src="https://l3lab.net/posts/2024-07-23-from-git-to-github-using-rstudio/git-files-and-folders-checked-2-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="RStudio top right pane with the following tabs: Environment, History, Connection, Build, Git, and Tutorial. The Git pane is selected and therefore active. Under the tabs is another line of icons and text buttons representing Git actions: From left to right: Diff, Commit, Pull (greyed out), Push (greyed out), History, More (drop-down menu), New Branch, (no branch). There is a tool tip under the Commit button saying: 'Commit pending changes (CTRL-ALT-M)'. Underneath it shows added or changed files from the initialization process. From top to the bottom in a blue background: .gitignote, _freeze/, _quarto.yml, _site/, about.qmd, index.qmd, posts/, profile.jpg, quarto-pb-blog.Rproj, style.css. These files are followed by the files in the directories from top to left: _freeze/post/post-with-code/index/execute-results/html.json, _freeze/site_libs/clipboard/clipboard.min.js, _freeze/site_libs/quarto-listing/list.min.js,  _freeze/site_libs/quarto-listing/quarto-listing.js, _site/about.html, _site/index.html, _site/listing.json, _site/profile.jpg. There are more files not visible because the window ends here."></a>
@@ -2418,7 +2472,7 @@ Figure&nbsp;2: Selecting all added or changed files in the RStudio Git pane (Scr
 <br>
 It is usual to start the commit messages with “initial commit”. I had erroneously used “first commit” in the screenshot.</li>
 </ol>
-<div id="fig-preparing-initial-commit" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="git-github" data-fig-align="center" alt="A pop-up window overlaying the RStudio window separated in two parts: The left part contains at the top small buttons. From left to the right: Changes, History, (no branch), icon for update display, stage, revert, and ignore. The right part contains the dysfunctional buttons (grayed out) 'Pull' and 'Push.' The left part shows underneath added or changed file from the initialization process. From top to the bottom in a blue background: .gitignote, _freeze/, _quarto.yml, _site/, about.qmd, index.qmd, posts/, profile.jpg, quarto-pb-blog.Rproj, style.css. These files are followed by the files in the directories from top to left: _freeze/post/post-with-code/index/execute-results/html.json, _freeze/site_libs/clipboard/clipboard.min.js, _freeze/site_libs/quarto-listing/list.min.js. There are more files not visible because the window ends here. On the right side there is a writing pane with the header 'Commit message' and '12 characters'. The text in the writing pane says 'First commit'. Under the writing pane are two unchecked check boxes 'Amend previous commit' and 'Sign commit' with a 'Commit' button. Underneath those two window parts is another line of action buttons covering the whole length of the window: From left to the right: 'Show Staged' text followed by an empty radio button, 'Staged' text followed by an active radio button, 'Context' (text), 5 lines (drop-down menu), 'Ignore Whitespace' (active check box). Underneath is an empty white field over the whole length of the window dedicated to show more detailed information inf only one file would have been selected.">
+<div id="fig-preparing-initial-commit" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A pop-up window overlaying the RStudio window separated in two parts: The left part contains at the top small buttons. From left to the right: Changes, History, (no branch), icon for update display, stage, revert, and ignore. The right part contains the dysfunctional buttons (grayed out) 'Pull' and 'Push.' The left part shows underneath added or changed file from the initialization process. From top to the bottom in a blue background: .gitignote, _freeze/, _quarto.yml, _site/, about.qmd, index.qmd, posts/, profile.jpg, quarto-pb-blog.Rproj, style.css. These files are followed by the files in the directories from top to left: _freeze/post/post-with-code/index/execute-results/html.json, _freeze/site_libs/clipboard/clipboard.min.js, _freeze/site_libs/quarto-listing/list.min.js. There are more files not visible because the window ends here. On the right side there is a writing pane with the header 'Commit message' and '12 characters'. The text in the writing pane says 'First commit'. Under the writing pane are two unchecked check boxes 'Amend previous commit' and 'Sign commit' with a 'Commit' button. Underneath those two window parts is another line of action buttons covering the whole length of the window: From left to the right: 'Show Staged' text followed by an empty radio button, 'Staged' text followed by an active radio button, 'Context' (text), 5 lines (drop-down menu), 'Ignore Whitespace' (active check box). Underneath is an empty white field over the whole length of the window dedicated to show more detailed information inf only one file would have been selected." data-fig-align="center" data-group="git-github">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-preparing-initial-commit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="preparing-first-commit-min.png" class="lightbox" data-gallery="git-github" title="Figure&nbsp;3: Writing a commit message (Screenshot)"><img src="https://l3lab.net/posts/2024-07-23-from-git-to-github-using-rstudio/preparing-first-commit-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="A pop-up window overlaying the RStudio window separated in two parts: The left part contains at the top small buttons. From left to the right: Changes, History, (no branch), icon for update display, stage, revert, and ignore. The right part contains the dysfunctional buttons (grayed out) 'Pull' and 'Push.' The left part shows underneath added or changed file from the initialization process. From top to the bottom in a blue background: .gitignote, _freeze/, _quarto.yml, _site/, about.qmd, index.qmd, posts/, profile.jpg, quarto-pb-blog.Rproj, style.css. These files are followed by the files in the directories from top to left: _freeze/post/post-with-code/index/execute-results/html.json, _freeze/site_libs/clipboard/clipboard.min.js, _freeze/site_libs/quarto-listing/list.min.js. There are more files not visible because the window ends here. On the right side there is a writing pane with the header 'Commit message' and '12 characters'. The text in the writing pane says 'First commit'. Under the writing pane are two unchecked check boxes 'Amend previous commit' and 'Sign commit' with a 'Commit' button. Underneath those two window parts is another line of action buttons covering the whole length of the window: From left to the right: 'Show Staged' text followed by an empty radio button, 'Staged' text followed by an active radio button, 'Context' (text), 5 lines (drop-down menu), 'Ignore Whitespace' (active check box). Underneath is an empty white field over the whole length of the window dedicated to show more detailed information inf only one file would have been selected."></a>
@@ -2431,7 +2485,7 @@ Figure&nbsp;3: Writing a commit message (Screenshot)
 <ol start="4" type="1">
 <li>After clicking the <code>Commit</code> button, RStudio presents a window with the results of the action:</li>
 </ol>
-<div id="fig-review-changes-window" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="git-github" data-fig-align="center" alt="RStudio review window listing the result of the last git commit action: From top to the bottom: 'create mode 100644 about.qmd', 'create mode 100644 index.qmd' 'create mode 100644 posts/metadata.yml', 'create mode 100644 posts/post-with-code/image.png', 'create mode 100644 posts/post-with-code/index.qmd', 'posts/post-with-code/posts/welcome/index.qmd', 'create mode 100644 posts/welcome/thumbnail.jpg', 'create mode 100644  profile.jpg', 'create mode 100644 quarto-pb-blog.Rproj', 'create mode 100644 style.css'. There other lines covered at the top covered as the window scroll button shows only the end of the list. On the top right is a 'Close' button.">
+<div id="fig-review-changes-window" class="quarto-float quarto-figure quarto-figure-center anchored" alt="RStudio review window listing the result of the last git commit action: From top to the bottom: 'create mode 100644 about.qmd', 'create mode 100644 index.qmd' 'create mode 100644 posts/metadata.yml', 'create mode 100644 posts/post-with-code/image.png', 'create mode 100644 posts/post-with-code/index.qmd', 'posts/post-with-code/posts/welcome/index.qmd', 'create mode 100644 posts/welcome/thumbnail.jpg', 'create mode 100644  profile.jpg', 'create mode 100644 quarto-pb-blog.Rproj', 'create mode 100644 style.css'. There other lines covered at the top covered as the window scroll button shows only the end of the list. On the top right is a 'Close' button." data-fig-align="center" data-group="git-github">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-review-changes-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="returned-commit-results-min.png" class="lightbox" data-gallery="git-github" title="Figure&nbsp;4: Resulted actions after the last commit (Screenshot)"><img src="https://l3lab.net/posts/2024-07-23-from-git-to-github-using-rstudio/returned-commit-results-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="RStudio review window listing the result of the last git commit action: From top to the bottom: 'create mode 100644 about.qmd', 'create mode 100644 index.qmd' 'create mode 100644 posts/metadata.yml', 'create mode 100644 posts/post-with-code/image.png', 'create mode 100644 posts/post-with-code/index.qmd', 'posts/post-with-code/posts/welcome/index.qmd', 'create mode 100644 posts/welcome/thumbnail.jpg', 'create mode 100644  profile.jpg', 'create mode 100644 quarto-pb-blog.Rproj', 'create mode 100644 style.css'. There other lines covered at the top covered as the window scroll button shows only the end of the list. On the top right is a 'Close' button."></a>
@@ -2449,7 +2503,7 @@ Figure&nbsp;4: Resulted actions after the last commit (Screenshot)
 <ol type="1">
 <li>Write <code>usethis::use_github()</code> into the console window of the RStudio window (lower left pane). After return your console will display the following lines:</li>
 </ol>
-<div id="fig-initialize-github-console-text" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="git-github" data-fig-align="center" alt="The screenshot shows the following lines, from top to the bottom: 'R version 4.4.1 (2024-04-14)' written in red, '> usethis::use_github()' written in red. From here the next lines start with a green ok check mark icon,  'Setting active project to' followed by the path, 'Creating GitHub repository' followed by the Github.com path of my repo., 'Setting remote `origin` to' followed by the appropriate path, 'Pushing `master` branch to gitHub and setting `origin/master` as upstream branch.', 'Opening URL' followed by the URL to my Github repo.">
+<div id="fig-initialize-github-console-text" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The screenshot shows the following lines, from top to the bottom: 'R version 4.4.1 (2024-04-14)' written in red, '> usethis::use_github()' written in red. From here the next lines start with a green ok check mark icon,  'Setting active project to' followed by the path, 'Creating GitHub repository' followed by the Github.com path of my repo., 'Setting remote `origin` to' followed by the appropriate path, 'Pushing `master` branch to gitHub and setting `origin/master` as upstream branch.', 'Opening URL' followed by the URL to my Github repo." data-fig-align="center" data-group="git-github">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-initialize-github-console-text-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="console-using-github-repo-with-usethis-min.png" class="lightbox" data-gallery="git-github" title="Figure&nbsp;5: Text of the RStudio window console window (Screenshot)"><img src="https://l3lab.net/posts/2024-07-23-from-git-to-github-using-rstudio/console-using-github-repo-with-usethis-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The screenshot shows the following lines, from top to the bottom: 'R version 4.4.1 (2024-04-14)' written in red, '> usethis::use_github()' written in red. From here the next lines start with a green ok check mark icon,  'Setting active project to' followed by the path, 'Creating GitHub repository' followed by the Github.com path of my repo., 'Setting remote `origin` to' followed by the appropriate path, 'Pushing `master` branch to gitHub and setting `origin/master` as upstream branch.', 'Opening URL' followed by the URL to my Github repo."></a>
@@ -2460,7 +2514,7 @@ Figure&nbsp;5: Text of the RStudio window console window (Screenshot)
 </figure>
 </div>
 <p>The screenshot above shows the different actions for the <code>usethis::use_github()</code> command. In the last step, the newly generated and updated repository on GitHub was opened.</p>
-<div id="fig-github-quarto-blog-repo" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="git-github" data-fig-align="center" alt="Listing the committed files on the GitHub repo web page in three columns. Name, different commit messages and time ('15 minutes ago' and '10 hours ago' accordingly). At the top left of this list there is a small profile picture of me, followed by the name of my GitHub account 'petzi53' and the text 'first commit'. On the top side you can see the unique commit code '0ced0df' followed by the text '19 minutes ago' and in bold '1 Commit'">
+<div id="fig-github-quarto-blog-repo" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Listing the committed files on the GitHub repo web page in three columns. Name, different commit messages and time ('15 minutes ago' and '10 hours ago' accordingly). At the top left of this list there is a small profile picture of me, followed by the name of my GitHub account 'petzi53' and the text 'first commit'. On the top side you can see the unique commit code '0ced0df' followed by the text '19 minutes ago' and in bold '1 Commit'" data-fig-align="center" data-group="git-github">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-github-quarto-blog-repo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="new-repo-page-opened-automatically-min.png" class="lightbox" data-gallery="git-github" title="Figure&nbsp;6: Web page of the GitHub repository of the Quarto blog after the initial commit"><img src="https://l3lab.net/posts/2024-07-23-from-git-to-github-using-rstudio/new-repo-page-opened-automatically-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Listing the committed files on the GitHub repo web page in three columns. Name, different commit messages and time ('15 minutes ago' and '10 hours ago' accordingly). At the top left of this list there is a small profile picture of me, followed by the name of my GitHub account 'petzi53' and the text 'first commit'. On the top side you can see the unique commit code '0ced0df' followed by the text '19 minutes ago' and in bold '1 Commit'"></a>
@@ -2519,7 +2573,7 @@ Figure&nbsp;6: Web page of the GitHub repository of the Quarto blog after the in
 <section id="new-project" class="level3">
 <h3 class="anchored" data-anchor-id="new-project">New Project…</h3>
 <p>Inside RStudio, use the <code>New Project…</code> command and select <code>New Directory</code> and then <code>Quarto Blog</code>.</p>
-<div id="fig-new-project-wizard" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="initialize-blog" alt="RStudio new project wizard window with three options reading from the top: New Directory - Start a project in a brand new working directory; Existing Directory - Associate a project with an existing working directory; Version Control - Checkout a project from a version control repository.">
+<div id="fig-new-project-wizard" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="RStudio new project wizard window with three options reading from the top: New Directory - Start a project in a brand new working directory; Existing Directory - Associate a project with an existing working directory; Version Control - Checkout a project from a version control repository." data-group="initialize-blog">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-new-project-wizard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="creating-quarto-blog-1-min.png" class="lightbox" data-gallery="initialize-blog" title="Figure&nbsp;1: RStudio new project wizard window (Screenshot): Choose ‘New Directory’ to start an new project from scratch."><img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/creating-quarto-blog-1-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="RStudio new project wizard window with three options reading from the top: New Directory - Start a project in a brand new working directory; Existing Directory - Associate a project with an existing working directory; Version Control - Checkout a project from a version control repository."></a>
@@ -2529,7 +2583,7 @@ Figure&nbsp;1: RStudio new project wizard window (Screenshot): Choose ‘New Dir
 </figcaption>
 </figure>
 </div>
-<div id="fig-new-blog-project-window" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="initialize-blog" alt="The Project Type dialog window lists the choices for new project. The first seven options are visible: New Project, R Package, Shiny Application, Quarto Project, Quarto Website, Quarto Blog, Quarto Book. (From top to the bottom. Top left is a button 'Back' for returning to the previous dialog window. Bottom right is a 'Cancel' button to stop the initialization process.">
+<div id="fig-new-blog-project-window" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="The Project Type dialog window lists the choices for new project. The first seven options are visible: New Project, R Package, Shiny Application, Quarto Project, Quarto Website, Quarto Blog, Quarto Book. (From top to the bottom. Top left is a button 'Back' for returning to the previous dialog window. Bottom right is a 'Cancel' button to stop the initialization process." data-group="initialize-blog">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-new-blog-project-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="creating-quarto-blog-2-min.png" class="lightbox" data-gallery="initialize-blog" title="Figure&nbsp;2: RStudio project type window (Screenshot): Choose ‘Quarto Blog’ to initialize a blog project"><img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/creating-quarto-blog-2-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Project Type dialog window lists the choices for new project. The first seven options are visible: New Project, R Package, Shiny Application, Quarto Project, Quarto Website, Quarto Blog, Quarto Book. (From top to the bottom. Top left is a button 'Back' for returning to the previous dialog window. Bottom right is a 'Cancel' button to stop the initialization process."></a>
@@ -2539,7 +2593,7 @@ Figure&nbsp;2: RStudio project type window (Screenshot): Choose ‘Quarto Blog�
 </figcaption>
 </figure>
 </div>
-<div id="fig-create-blog-window" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="initialize-blog" alt="The 'Create quarto Blog' dialog window requires a file name for the directory of the repository, titled 'Directory name', a directory where the project will be created, titled 'create project as subdirectory of:' with a 'Browse' button to the right, a drop down menu selecting 'Knitr' as the current option, titled 'Engine', three lines of check boxes, titled 'Create a git repository' (checked), 'Use renv with this project' and 'Use visual markdown editor'. The last option is followed by a question sign to get more information about the choice of a visual markdown editor. Top left in the dialog window is a button 'Back' for returning to the previous dialog window. Bottom left is a check box 'Open in a new session', Bottom right are a 'Create Project' button followed by a 'Cancel' button for stopping the initialization process.">
+<div id="fig-create-blog-window" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="The 'Create quarto Blog' dialog window requires a file name for the directory of the repository, titled 'Directory name', a directory where the project will be created, titled 'create project as subdirectory of:' with a 'Browse' button to the right, a drop down menu selecting 'Knitr' as the current option, titled 'Engine', three lines of check boxes, titled 'Create a git repository' (checked), 'Use renv with this project' and 'Use visual markdown editor'. The last option is followed by a question sign to get more information about the choice of a visual markdown editor. Top left in the dialog window is a button 'Back' for returning to the previous dialog window. Bottom left is a check box 'Open in a new session', Bottom right are a 'Create Project' button followed by a 'Cancel' button for stopping the initialization process." data-group="initialize-blog">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-create-blog-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="creating-quarto-blog-3-min.png" class="lightbox" data-gallery="initialize-blog" title="Figure&nbsp;3: RStudio Create Quarto Blog window (Screenshot): Fill the input fields with the appropriate data"><img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/creating-quarto-blog-3-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The 'Create quarto Blog' dialog window requires a file name for the directory of the repository, titled 'Directory name', a directory where the project will be created, titled 'create project as subdirectory of:' with a 'Browse' button to the right, a drop down menu selecting 'Knitr' as the current option, titled 'Engine', three lines of check boxes, titled 'Create a git repository' (checked), 'Use renv with this project' and 'Use visual markdown editor'. The last option is followed by a question sign to get more information about the choice of a visual markdown editor. Top left in the dialog window is a button 'Back' for returning to the previous dialog window. Bottom left is a check box 'Open in a new session', Bottom right are a 'Create Project' button followed by a 'Cancel' button for stopping the initialization process."></a>
@@ -2558,7 +2612,7 @@ Figure&nbsp;3: RStudio Create Quarto Blog window (Screenshot): Fill the input fi
 <section id="key-files" class="level3">
 <h3 class="anchored" data-anchor-id="key-files">Key Files</h3>
 <p>Clicking the “Create Project” button generates different key files and opens the <code>_quarto.yml</code> file in the RStudio editor window.</p>
-<div id="fig-rstudio-file-listing-window" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="initialize-blog" alt="At the top of the screenshot there are six tabs. From left to the right: 'Files', 'Plots', 'Packages', 'Help', 'Viewer', 'Presentation' with the 'Files' tab active. Under the tabs are several buttons. From left to the right: 'New Folder', 'New Blank File', 'Delete', 'Rename' and a drop down menu 'More'. Under these buttons is the full path to the active directory 'Home>Documents>Meine-Repos>quarto-pb-blog' where each subdirectory is an active link. Under this line starts the file listing with 'Name', 'Size' and 'Modified' columns. Each line of file names starts with an (unchecked) check box, and an appropriate icon. From top to bottom: _freeze, _quarto.yml, _site, .git, .gitignore, .quarto, .Rhistory, .Rproj.use, about.qmd, index.qmd, posts, profile.jpg, quarto-pb-blog.Rproj, style.css.">
+<div id="fig-rstudio-file-listing-window" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="At the top of the screenshot there are six tabs. From left to the right: 'Files', 'Plots', 'Packages', 'Help', 'Viewer', 'Presentation' with the 'Files' tab active. Under the tabs are several buttons. From left to the right: 'New Folder', 'New Blank File', 'Delete', 'Rename' and a drop down menu 'More'. Under these buttons is the full path to the active directory 'Home>Documents>Meine-Repos>quarto-pb-blog' where each subdirectory is an active link. Under this line starts the file listing with 'Name', 'Size' and 'Modified' columns. Each line of file names starts with an (unchecked) check box, and an appropriate icon. From top to bottom: _freeze, _quarto.yml, _site, .git, .gitignore, .quarto, .Rhistory, .Rproj.use, about.qmd, index.qmd, posts, profile.jpg, quarto-pb-blog.Rproj, style.css." data-group="initialize-blog">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-rstudio-file-listing-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="generated-files-at-start-min.png" class="lightbox" data-gallery="initialize-blog" title="Figure&nbsp;4: RStudio file listing window (Screenshot): Choose ‘New Directory’ to start an new project from scratch."><img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/generated-files-at-start-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="At the top of the screenshot there are six tabs. From left to the right: 'Files', 'Plots', 'Packages', 'Help', 'Viewer', 'Presentation' with the 'Files' tab active. Under the tabs are several buttons. From left to the right: 'New Folder', 'New Blank File', 'Delete', 'Rename' and a drop down menu 'More'. Under these buttons is the full path to the active directory 'Home>Documents>Meine-Repos>quarto-pb-blog' where each subdirectory is an active link. Under this line starts the file listing with 'Name', 'Size' and 'Modified' columns. Each line of file names starts with an (unchecked) check box, and an appropriate icon. From top to bottom: _freeze, _quarto.yml, _site, .git, .gitignore, .quarto, .Rhistory, .Rproj.use, about.qmd, index.qmd, posts, profile.jpg, quarto-pb-blog.Rproj, style.css."></a>
@@ -2883,7 +2937,7 @@ font-style: inherit;">---</span></span></code></pre></div>
 </section>
 <section id="render-blog" class="level2">
 <h2 class="anchored" data-anchor-id="render-blog">Render Blog</h2>
-<div id="fig-source-code-blog-home-page" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="initialize-blog" alt="The screenshot shows a part of the RStudio source code window with two file tabs 'index.qmd' (active) and '_quarto.yml'. Below is a line of partly disabled buttons where the focus is on the 'Render' button that has below a tip tool saying 'Render the current document (SHIFT-CMD-K)'">
+<div id="fig-source-code-blog-home-page" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="The screenshot shows a part of the RStudio source code window with two file tabs 'index.qmd' (active) and '_quarto.yml'. Below is a line of partly disabled buttons where the focus is on the 'Render' button that has below a tip tool saying 'Render the current document (SHIFT-CMD-K)'" data-group="initialize-blog">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-source-code-blog-home-page-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="click-render-button-first-time-min.png" class="lightbox" data-gallery="initialize-blog" title="Figure&nbsp;5: Source code of the blog home page ‘index.qmd’-file within RStudio window (Screenshot)"><img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/click-render-button-first-time-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The screenshot shows a part of the RStudio source code window with two file tabs 'index.qmd' (active) and '_quarto.yml'. Below is a line of partly disabled buttons where the focus is on the 'Render' button that has below a tip tool saying 'Render the current document (SHIFT-CMD-K)'"></a>
@@ -2894,7 +2948,7 @@ Figure&nbsp;5: Source code of the blog home page ‘index.qmd’-file within RSt
 </figure>
 </div>
 <p>You can control via <code>Tools-&gt;Global Options…-&gt;R Markdown-&gt;Show output preview in…</code> whether the rendered result appears in the browser window or in the viewer pane. Generally, I use the “Window” option because it gives me a better view of the real setting.</p>
-<div id="fig-blog-listing-start-page" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="initialize-blog" alt="The webpage lists two dummy blog post with three columns: From left to the right: Date and author; blog post title, category buttons and a short description; a small image. On the right margin is a list of categories displayed with their frequency in parenthesis. The title header of the website consists of two lines: Left top: Name of the Quarto blog so far 'quarto-pb-blog', Right top: 'About' followed by icons for GitHub, Twitter and search engine.">
+<div id="fig-blog-listing-start-page" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="The webpage lists two dummy blog post with three columns: From left to the right: Date and author; blog post title, category buttons and a short description; a small image. On the right margin is a list of categories displayed with their frequency in parenthesis. The title header of the website consists of two lines: Left top: Name of the Quarto blog so far 'quarto-pb-blog', Right top: 'About' followed by icons for GitHub, Twitter and search engine." data-group="initialize-blog">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-blog-listing-start-page-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="rendered-blog-first-time-min.png" class="lightbox" data-gallery="initialize-blog" title="Figure&nbsp;6: Website of the newly created Quarto blog (Screenshot):"><img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/rendered-blog-first-time-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The webpage lists two dummy blog post with three columns: From left to the right: Date and author; blog post title, category buttons and a short description; a small image. On the right margin is a list of categories displayed with their frequency in parenthesis. The title header of the website consists of two lines: Left top: Name of the Quarto blog so far 'quarto-pb-blog', Right top: 'About' followed by icons for GitHub, Twitter and search engine."></a>
