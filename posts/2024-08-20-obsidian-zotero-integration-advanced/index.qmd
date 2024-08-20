@@ -1,0 +1,471 @@
+---
+title: "Annotation Tutorial 3: Zotero - Obsidian Integration Advanced"
+subtitle: "Using the Nunjucks Template Language to Import Zotero Annotations into Obsidian"
+description: "Here, I explain an advanced feature of the Obsidian Zotero Integration Plugin: How can annotation from Zotero documents be scraped and imported programmatically as a note into Obisidan?"
+author: "Peter Baumgartner"
+date: "2024-08-20"
+image: "nunjucks-zotero-obsidian-skitch-logo2-min.png"
+image-alt: "The Zotero application icon is on the left, and the Obsidian icon is on the right of the image. Below both app icons is the Nunjucks icon. There are two arrows, one from Zotero to Nunjunck and the other from Nunkunck to Obsidian."
+categories: [academic, obsidian, workflow, zotero, how-to]
+date-modified: "2024-08-20"
+draft: false
+bibliography: references.bib
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+base::source(file = "../../R/helper.R")
+```
+
+## Objectives
+
+After the creation of Zotero annotations, as explained in [Annotation
+Tutorial 1](../2024-08-20-annotations-with-zotero-version-7) and the
+installation of two plugins (see: [Annotation Tutorial
+2](../2024-08-12-academic-workflow-obsidian-zotero)) you can import your
+annotations into Obsidian. In the second part of the tutorial I
+described the easy way by using the default mechanism of the Zotero
+Integration `r glossary("plugin")`.
+
+In this third part of the tutorial, I am going to explain the more
+complex import procedure by using templates. We have said that the
+configuration setting page for the "Zotero Integration" plugin consists
+of four parts:
+
+-   General Settings ([Tutorial Part
+    2](../2024-08-12-academic-workflow-obsidian-zotero))
+-   Citation Formats (skipped)
+-   Import Formats and (required and explained in this post)
+-   Import Image Settings (additional configuration, also explained
+    here)
+
+I will skip the part on "Citation Formats" here. This section uses the
+integration with Zotero to produce different kinds of citation formats
+inside Obsidian. Except for "Formatted Bibliography," these formats
+produce code within Obsidian usable for further conversion. Export
+procedures. We can skip this part of the settings here for our purposes.
+
+## Zotero - Obsidian Integration with Templates
+
+Although all annotations are imported into Obsidian without templates,
+you will lose many `r glossary("metadata")` of your notes. Without a
+template, you are missing two types of metadata:
+
+-   Metadata about the Zotero bibliography item (author, title, year,
+    publisher, location, abstract, item tags, etc.)
+-   Metadata about the annotation (colors and tags of the annotations)
+
+You also lose control of where to store the files for notes and images
+(default: your attachment folder) and to store images as
+`r glossary("JPG")` (default: `r glossary("PNG")`).
+
+Creating a Zotero Integration template is a complicated process for two
+reasons:
+
+1.  You have to know how to apply the
+    [Nunjucks](https://mozilla.github.io/nunjucks/templating.html)
+    template syntax. Nunjucks is a JavaScript templating language,
+    supported by all modern browsers.
+2.  You must know the names of the variables you want to import. You can
+    inspect the variable names with the "Data Explorer" command of the
+    Obsidian-Zotero Integration plugin.
+
+After choosing the "Data Explorer" command, Obsidian will open a new
+horizontal section with two buttons on the top.
+
+1.  **Prompt for Selection**: It displays a dialog window to choose your
+    library and Zotero item you want to import. Please be patient —
+    Obsidian may take seconds to open the dialog window.
+2.  **Preview Import Format**: This is the default value of this menu
+    (button). It will display all the variable's names and values for
+    the Zotero item. However, you can also select one of your templates
+    defined in the Zotero Integration plugin to see the result. The
+    "Data Explorer" is an important tool for creating and improving
+    Obsidian-Zotero Integration templates.
+
+![Part of the Data Explorer for the Zotero Integration plugin. You can
+open/close hierarchical values by clicking on the small triangle as is
+shown in the middle of the screenshot with
+"creators".](advanced-zotero-integration-data-explorer-min.png){#fig-zotero-integration-data-explorer
+fig-alt="The screenshot shows the top two buttons, 'Prompt for Selection' and Preview Import Format'. What follows is the internal structure of the Zotero annotation. It starts with 'Template Data {} 45 keys' with an opened triangle on the left. The next intended line starts gray with 'abstractNote' followed by the text of the abstract in yellow. Another intended line in gray says 'alltags' followed by yellow 'inequality' in double parenthesis. And so on. There are many different intended lines with closed triangles on the left, except for an open triangle saying 'creators' in gray followed by '[] 3 items' in white. The following three lines display the values for 'creators' with separate lines for 'creatorType author'; 'firstName Amary'; 'lastName Gethin'. There are many more lines with different values but similar structures."
+fig-align="center" width="70%" group="zotero-integration"}
+
+## Template Examples
+
+### Nunjucks Template Language
+
+The best way to learn how to apply the Nunjucks template language is to
+look through the somewhat meager [documentation of the
+plugin](https://github.com/mgmeyers/obsidian-zotero-integration/blob/main/docs/README.md)
+and then experiment with examples developed by other people. I have
+collected several examples for Obsidian-Zotero Integration templates.
+
+::: my-example
+::: my-example-header
+Examples of Nunjucks templates
+:::
+
+::: my-example-container
+<details>
+
+<summary>Commented list of templates examples</summary>
+
+-   [Doing History with Zotero and
+    Obsidian](https://publish.obsidian.md/history-notes/01+Notetaking+for+Historians):
+    A very detailed article which not only contains a template example
+    but also explains the whole integration process similar to this post
+    here [@razglova2023].
+-   [An Updated Academic Workflow: Zotero &
+    Obsidian](https://medium.com/@alexandraphelan/an-updated-academic-workflow-zotero-obsidian-cffef080addd):
+    A detailed explanation of the whole process with a sophisticated
+    Zotero Integration template [@phelan2024a].
+-   There is a collection of several templates in an important [Obsidian
+    Forum
+    post](https://forum.obsidian.md/t/zotero-integration-import-templates/36310).
+    There are many posts about general questions about how to apply the
+    templates, I will list some posts that include template codes for
+    you to experiment:
+    -   [mgmeyers](https://forum.obsidian.md/t/zotero-integration-import-templates/36310/2):
+        An excellent and detailed template from the author of the Zotero
+        Integration plugin. It also has code for strikethrough and
+        underlining, which was impossible in the Zotero PDF reader at
+        the time of the posting. This may originate from an external PDF
+        reader. Another caveat: The color codes need to be corrected.
+    -   [erazlogo](https://forum.obsidian.md/t/zotero-integration-import-templates/36310/3):
+        The author of the Doing History website mentioned above. Very
+        detailed, it has on other pages of the website many other
+        important practical tips for usage of the Zotero-Obsidian
+        integration.
+    -   [apflestrudelig](https://forum.obsidian.md/t/zotero-integration-import-templates/36310/8):
+        Several templates for special tasks, but truncated. To see the
+        full template code, go to the [Gist article on
+        GitHub](https://gist.github.com/lguenth/e8a5c4fa0b4a1ed6f8bd0b9ccfc31013)
+        Click on the right top raw buttons to access the source file.
+    -   [gustafferson](https://forum.obsidian.md/t/zotero-integration-import-templates/36310/11):
+        a comment with a reference to the template code in a \[GitHub
+        gist article\]
+        (https://gist.github.com/Gustafferson/698e92d1ac939d60a63aac35fe4c4c4e).
+    -   [Zocahontas1](https://forum.obsidian.md/t/zotero-integration-import-templates/36310/12):
+        Similar to mgmeyers but using for the color codes, the [Obsidian
+        Highlights
+        plugin](https://github.com/chetachiezikeuzor/Highlightr-Plugin).
+    -   [Zocahontas2](https://forum.obsidian.md/t/zotero-integration-import-templates/36310/16):
+        How do you add page numbers and a revised template?
+    -   [espalia1](https://forum.obsidian.md/t/zotero-integration-import-templates/36310/65):
+        Learned from the previous template approaches with minor tweaks.
+        Added the meaning of the annotation colors to the output, that
+        is mainly sorted by colors and inside the colors, then by
+        chronology.
+    -   [espalia1](https://forum.obsidian.md/t/zotero-integration-import-templates/36310/66):
+        An updated version. Instead, for every quote its own callout, it
+        just has one callout (admonition in Obsidian parlance) for every
+        color. This improves reading tremendously.
+    -   [Cat](https://forum.obsidian.md/t/zotero-integration-import-templates/36310/67):
+        A template with a very sophisticated text color system. The
+        template uses notion color blocks snippets from [GitHub -
+        deathau/obsidian-snippets](https://github.com/deathau/obsidian-snippets)
+        to have different colored texts. (But this didn't work for me
+        after a quick first trial.) Comments are in callouts, and the
+        [Dataview
+        plugin](https://blacksmithgu.github.io/obsidian-dataview/) is
+        also used to generate a table of contents.
+-   I just found out that there is [another forum
+    thread](https://forum.obsidian.md/t/my-zotero-annotation-template-that-works/51662)
+    about Zotero Integration templates. It is shorter and started
+    January 2023, with the last post (so far) May 2024. I will add just
+    one example here:
+    -   [Albialy](https://forum.obsidian.md/t/my-zotero-annotation-template-that-works/51662):
+        A simple template with the interesting feature that the colors
+        of the Zotero, annotations are converted to underlined colors in
+        Obsidian. (Maybe the conversion from background colors to
+        underline-colors is a feature of Obsidian or of one of its
+        plugin I am using.)
+
+I have stopped with forum entry number 67 of 312 comments (February
+2023) of the first Obsidian forum thread and just mentioned one of the
+smaller (37 comments). So, there may be some other exciting templates in
+more recent times.
+
+</details>
+:::
+:::
+
+### My template code
+
+I am still refining my template to catch new possibilities of version 7
+of Zotero. Therefore, the following template code is a work in progress
+(WIP)
+
+To understand how the colored highlights are interpreted, look up my
+color classification in the [first part of the annotation
+tutorial](../2024-08-04-annotations-with-zotero-version-7#tbl-color-classification).
+
+::: my-r-code
+::: my-r-code-header
+My personal example for a Nunjucks template code
+:::
+
+::: my-r-code-container
+<details>
+
+<summary>My Nunjucks Template Code to Copy</summary>
+
+Hover the gray field to see the copy button at the top right.
+
+``` default
+---
+UID: <% tp.file.creation_date("YYYYMMDDHHmm") %>
+created:
+updated:
+note: fleeting
+status: to_process
+language: english
+source: 
+category: 
+subject: 
+alias:
+cssclass: literature-note
+alias: [{% if shortTitle %}"{{shortTitle | safe}}"{% else %}"{{title | safe}}"{% endif %}]
+---
+
+
+{%- macro colorValueToName(color) -%}
+    {%- switch color -%}
+         {%- case "#ffd400" -%}
+            Running Text (Yellow)
+        {%- case "#ff6666" -%}
+            Concepts, Definition, Important (Red)
+        {%- case "#f19837" -%}
+            ToDo (Orange)
+        {%- case "#5fb236" -%}
+            Resources (Articles / Books / Package / URLs)
+        {%- case "#2ea8e5" -%}
+            (R) Code (Blue)
+        {%- case "#e56eee" -%}
+            Chapter (Magenta)
+        {%- case "#a28ae5" -%}
+            Section (Purple)
+        {%- case "#aaaaaa" -%}
+            Figure, Table header, TOC Summaries (Gray)
+        {%- default -%}
+            No Color 
+    {%- endswitch -%}
+{%- endmacro -%}
+
+{%- macro calloutHeader(type) -%}
+    {%- switch type -%}
+        {%- case "highlight" -%}
+            Highlight
+        {%- case "strike" -%}
+            Strikethrough
+        {%- case "underline" -%}
+            Underline
+        {%- case "image" -%}
+            Image
+        {%- default -%}
+            Note
+    {%- endswitch -%}
+{%- endmacro %}
+
+> [!info]
+> - **Cite Key:** [[@{{citekey}}]]
+{%- for attachment in attachments | filterby("path", "endswith", ".pdf") %}
+> - **Link:** [{{attachment.title}}](file://{{attachment.path | replace(" ", "%20")}})
+{%- endfor -%}
+{%- if abstractNote %}
+> - **Abstract:** {{abstractNote}}
+{%- endif -%}
+{%- if bibliography %}
+> - **Bibliography:** {{bibliography}}
+{%- endif %}
+{%- if hashTags %}
+> - **Tags:** {{hashTags}}
+{%- endif %}
+
+
+# Highlights by Sequence
+
+## Imported on {{importDate | format("YYYY-MM-DD HH:mm")}}
+
+{% for annot in annotations -%}
+{%- if annot.annotatedText -%}
+**Highlight**: {{annot.annotatedText | nl2br}}
+{%- endif -%}
+{%- if annot.imageRelativePath %}
+![[{{annot.imageRelativePath}}]]
+{%- endif %}
+{%- if annot.ocrText %}
+{{annot.ocrText}}
+{%- endif %}
+{%if annot.comment %}
+**Comment**: {{annot.comment | nl2br}}
+{%- endif %}
+{% if annot.allTags %}
+**Tag**: {{annot.allTags | nl2br}}
+{% endif  %}
+ [Page {{annot.page}}](zotero://open-pdf/library/items/{{annot.attachment.itemKey}}?page={{annot.page}}) {{annot.date | format("YYYY-MM-DD HH:mm")}}
+***
+{% endfor %}
+
+
+{% persist "annotations" %}
+{% set annots = annotations | filterby("date", "dateafter", lastImportDate) -%}
+{% if annots.length > 0 %}
+
+
+## Imported on {{importDate | format("YYYY-MM-DD HH:mm")}}
+# Sorted by Colors
+{% for color, annots in annots | groupby("color") -%}
+#### {{colorValueToName(color)}}
+
+{% for annot in annots -%}
+> [!quote{% if annot.color %}|{{annot.color}}{% endif %}] {{calloutHeader(annot.type)}}
+{%- if annot.annotatedText %}
+> {{annot.annotatedText | nl2br}}
+{%- endif -%}
+{%- if annot.imageRelativePath %}
+> ![[{{annot.imageRelativePath}}]]
+{%- endif %}
+{%- if annot.ocrText %}
+> {{annot.ocrText}}
+{%- endif %}
+{%- if annot.comment %}
+>
+>> {{annot.comment | nl2br}}
+{%- endif %}
+>
+> [Page {{annot.page}}](zotero://open-pdf/library/items/{{annot.attachment.itemKey}}?page={{annot.page}}) [[{{annot.date | format("YYYY-MM-DD#h:mm a")}}]]
+
+{% endfor -%}
+{% endfor -%}
+{% endif %}
+{% endpersist %}
+```
+
+</details>
+:::
+:::
+
+### My CSS Snippet
+
+For the correct formatting, you need to include a `r glossary("CSS")`
+snippet into Obsidian. Take the code below and paste it into your .css
+file following the procedure description of Obsidian [CSS
+snippets](https://help.obsidian.md/Extending+Obsidian/CSS+snippets).
+
+::: my-r-code
+::: my-r-code-header
+My personal example of a CSS code to format the output of the template
+:::
+
+::: my-r-code-container
+<details>
+
+<summary>My CSS Code to Copy</summary>
+
+Hover the gray field to see the copy button at the top right.
+
+``` default
+/* 
+
+Zotero Integration Plugin
+Styling the template for Zotero Literature Notes
+
+*/
+
+
+/* Yellow */
+.literature-note .callout[data-callout-metadata="#ffd400"] {
+  --callout-color: 255,212,0;
+}
+
+/* Red */
+.literature-note .callout[data-callout-metadata="#ff6666"] {
+  --callout-color: 255,102,102;
+}
+
+/* Orange */
+.literature-note .callout[data-callout-metadata="#f19837"] {
+  --callout-color: 241,152,55;
+}
+
+/* Green */
+.literature-note .callout[data-callout-metadata="#5fb236"] {
+  --callout-color: 95,178,54;
+}
+
+/* Blue */
+.literature-note .callout[data-callout-metadata="#2ea8e5"] {
+  --callout-color: 46,168,229;
+}
+
+/* Magenta */
+.literature-note .callout[data-callout-metadata="#e56eee"] {
+  --callout-color: 229,110,238;
+}
+
+/* Purple */
+.literature-note .callout[data-callout-metadata="#a28ae5"] {
+  --callout-color: 191,127,191;
+}
+
+/* Grey */
+.literature-note .callout[data-callout-metadata="#aaaaaa"] {
+  --callout-color: 170,170,170;
+}
+```
+
+</details>
+:::
+:::
+
+### Result of my template
+
+![Part of my Zotero Integration template for creating literature
+notes.](advanced-zotero-integration-template-example-min.png){#fig-zotero-template-example
+fig-alt="The screenshot shows a part of an Obsidian document in dark mode with a colored header. It starts with two yellow title headers, 'Highlights by Sequence…' and 'Sorted by Colors,' followed by three smaller green headers, 'Running text (Yellow) …', 'Concept, Definition Important (Red) …', and 'ToDo (Orange)'. What follows are quote admonitions (callouts) titled 'Highlight' in orange with a blue text paragraph and a red link to the page of the annotated document. The third of the four 'highlights' has the cursor in it and shows, therefore, the markdown code of this part of the Obsidian file."
+fig-align="center" width="70%" group="zotero-integration"}
+
+My template consists of four main parts:
+
+-   **1. Metadata**: This includes the YAML header, the abstract, and
+    other important information (title, cite key, bibliography, tags).
+-   **2. Highlights by sequence**: All annotations are sorted by their
+    position in the document.
+-   **3. Highlights by color**: Annotations sorted by their meaning.
+    This requires a correspondence between color and purpose/reference
+    type of the annotation.
+-   **4. Updates**: Changes after the first import are added at the end
+    of the Obsidian file. To get a file without updates, change the
+    folder position of the file, rename the original file, or delete it.
+
+I am planning to improve this template in two ways:
+
+1.  Only one admonition (callout) block for every color should exist.
+2.  Integrating the text of my green (H3) headers into the title of the
+    admonition (callout) block.
+
+## Conclusion
+
+With the annotation tutorial, I have demonstrated a modern technology
+supported annotation strategy. Every one of the three parts of the
+tutorial emphasizes one crucial aspect of this strategy:
+
+1.  Creating annotation with Zotero in `r glossary("PDF", "PDFs")`,
+    `r glossary("ePUB")`-eBooks or website snapshots.
+2.  Installing two `r glossary("plugin", "plugins")` to build a bridge
+    between Zotero and Obsidian to import notes created with Zotero from
+    the annotated document.
+3.  Scraping annotations directly from the original document and redact
+    them in a way to optimize further work in the note-taking app
+    Obsidian.
+
+###### Glossary
+
+```{r}
+#| label: glossary
+#| echo: false
+glossary::glossary_table(as_kable = TRUE)
+```

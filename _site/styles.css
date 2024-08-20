@@ -33,6 +33,13 @@ figcaption {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px  rgba(0, 0, 0, 0.19);
 }
 
+/* vertical aligned
+see: https://github.com/quarto-dev/quarto-cli/discussions/1386#discussioncomment-3146433
+*/
+#vcenter {
+  vertical-align: middle;
+}
+
 /* a thicker horizontal line (not used at the moment) */
 hr.mytitle{
     height: 5px;
@@ -147,3 +154,35 @@ hr.mytitle{
   border-bottom-right-radius: 10px;
 }
 
+/* ##############   Procedure   ############# */
+
+.my-procedure {
+  margin: 1em 0;
+  border: 2px solid #8B7B8B;
+  border-left: 10px solid thistle;
+  border-radius: 10px;
+}
+
+.my-procedure-header {
+  margin-left: 0;
+  padding-left:  60px;
+  padding-top:  15px;
+  padding-bottom: 0.1em;
+  color: black;
+  background-color: #FFE1FF;
+  border-top-right-radius: 10px;
+  font-size: 1em;
+  font-weight: bold;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  background-image: url("img/icons8/procedure-32.png");
+}
+
+.my-procedure-container {
+  padding-top: 5px;
+  padding-left: 10px;
+  color: black;
+  background-color: white;
+  border-bottom-right-radius: 10px;
+}

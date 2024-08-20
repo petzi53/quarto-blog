@@ -10,7 +10,932 @@
 <atom:link href="https://l3lab.net/index.xml" rel="self" type="application/rss+xml"/>
 <description>This is Peter Baumgartner&#39;s Personal English Blog.</description>
 <generator>quarto-1.5.54</generator>
-<lastBuildDate>Fri, 26 Jul 2024 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 19 Aug 2024 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>Annotation Tutorial 3: Zotero - Obsidian Integration Advanced</title>
+  <dc:creator>Peter Baumgartner</dc:creator>
+  <link>https://l3lab.net/posts/2024-08-20-obsidian-zotero-integration-advanced/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<p>After the creation of Zotero annotations, as explained in <a href="../2024-08-20-annotations-with-zotero-version-7">Annotation Tutorial 1</a> and the installation of two plugins (see: <a href="../2024-08-12-academic-workflow-obsidian-zotero">Annotation Tutorial 2</a>) you can import your annotations into Obsidian. In the second part of the tutorial I described the easy way by using the default mechanism of the Zotero Integration <a class="glossary" title="A plug-in (or plugin, add-in, addin, add-on, or addon) is a software component that adds a specific feature to an existing computer program. (Wikipedia)">plugin</a>.</p>
+<p>In this third part of the tutorial, I am going to explain the more complex import procedure by using templates. We have said that the configuration setting page for the “Zotero Integration” plugin consists of four parts:</p>
+<ul>
+<li>General Settings (<a href="../2024-08-12-academic-workflow-obsidian-zotero">Tutorial Part 2</a>)</li>
+<li>Citation Formats (skipped)</li>
+<li>Import Formats and (required and explained in this post)</li>
+<li>Import Image Settings (additional configuration, also explained here)</li>
+</ul>
+<p>I will skip the part on “Citation Formats” here. This section uses the integration with Zotero to produce different kinds of citation formats inside Obsidian. Except for “Formatted Bibliography,” these formats produce code within Obsidian usable for further conversion. Export procedures. We can skip this part of the settings here for our purposes.</p>
+</section>
+<section id="zotero---obsidian-integration-with-templates" class="level2">
+<h2 class="anchored" data-anchor-id="zotero---obsidian-integration-with-templates">Zotero - Obsidian Integration with Templates</h2>
+<p>Although all annotations are imported into Obsidian without templates, you will lose many <a class="glossary" title="Metadata (or metainformation) is “data that provides information about other data” (Merriam-Webster), but not the content of the data itself, such as the text of a message or the image itself. (Wikipedia)">metadata</a> of your notes. Without a template, you are missing two types of metadata:</p>
+<ul>
+<li>Metadata about the Zotero bibliography item (author, title, year, publisher, location, abstract, item tags, etc.)</li>
+<li>Metadata about the annotation (colors and tags of the annotations)</li>
+</ul>
+<p>You also lose control of where to store the files for notes and images (default: your attachment folder) and to store images as <a class="glossary" title="JPEG (/ˈdʒeɪpɛɡ/ JAY-peg, short for Joint Photographic Experts Group is a commonly used method of lossy compression for digital images. (Wikipedia)">JPG</a> (default: <a class="glossary" title="Portable Network Graphic (PNG) is a non-patented raster graphics file format that supports lossless data compression. The format was not designed for professional-quality print graphics but for transferring images on the Internet (hence the name ‘portable’). (Wikipedia)">PNG</a>).</p>
+<p>Creating a Zotero Integration template is a complicated process for two reasons:</p>
+<ol type="1">
+<li>You have to know how to apply the <a href="https://mozilla.github.io/nunjucks/templating.html">Nunjucks</a> template syntax. Nunjucks is a JavaScript templating language, supported by all modern browsers.</li>
+<li>You must know the names of the variables you want to import. You can inspect the variable names with the “Data Explorer” command of the Obsidian-Zotero Integration plugin.</li>
+</ol>
+<p>After choosing the “Data Explorer” command, Obsidian will open a new horizontal section with two buttons on the top.</p>
+<ol type="1">
+<li><strong>Prompt for Selection</strong>: It displays a dialog window to choose your library and Zotero item you want to import. Please be patient — Obsidian may take seconds to open the dialog window.</li>
+<li><strong>Preview Import Format</strong>: This is the default value of this menu (button). It will display all the variable’s names and values for the Zotero item. However, you can also select one of your templates defined in the Zotero Integration plugin to see the result. The “Data Explorer” is an important tool for creating and improving Obsidian-Zotero Integration templates.</li>
+</ol>
+<div id="fig-zotero-integration-data-explorer" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The screenshot shows the top two buttons, 'Prompt for Selection' and Preview Import Format'. What follows is the internal structure of the Zotero annotation. It starts with 'Template Data {} 45 keys' with an opened triangle on the left. The next intended line starts gray with 'abstractNote' followed by the text of the abstract in yellow. Another intended line in gray says 'alltags' followed by yellow 'inequality' in double parenthesis. And so on. There are many different intended lines with closed triangles on the left, except for an open triangle saying 'creators' in gray followed by '[] 3 items' in white. The following three lines display the values for 'creators' with separate lines for 'creatorType author'; 'firstName Amary'; 'lastName Gethin'. There are many more lines with different values but similar structures." data-fig-align="center" data-group="zotero-integration">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-zotero-integration-data-explorer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="advanced-zotero-integration-data-explorer-min.png" class="lightbox" data-gallery="zotero-integration" title="Figure&nbsp;1: Part of the Data Explorer for the Zotero Integration plugin. You can open/close hierarchical values by clicking on the small triangle as is shown in the middle of the screenshot with “creators”."><img src="https://l3lab.net/posts/2024-08-20-obsidian-zotero-integration-advanced/advanced-zotero-integration-data-explorer-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="The screenshot shows the top two buttons, 'Prompt for Selection' and Preview Import Format'. What follows is the internal structure of the Zotero annotation. It starts with 'Template Data {} 45 keys' with an opened triangle on the left. The next intended line starts gray with 'abstractNote' followed by the text of the abstract in yellow. Another intended line in gray says 'alltags' followed by yellow 'inequality' in double parenthesis. And so on. There are many different intended lines with closed triangles on the left, except for an open triangle saying 'creators' in gray followed by '[] 3 items' in white. The following three lines display the values for 'creators' with separate lines for 'creatorType author'; 'firstName Amary'; 'lastName Gethin'. There are many more lines with different values but similar structures."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-zotero-integration-data-explorer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Part of the Data Explorer for the Zotero Integration plugin. You can open/close hierarchical values by clicking on the small triangle as is shown in the middle of the screenshot with “creators”.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="template-examples" class="level2">
+<h2 class="anchored" data-anchor-id="template-examples">Template Examples</h2>
+<section id="nunjucks-template-language" class="level3">
+<h3 class="anchored" data-anchor-id="nunjucks-template-language">Nunjucks Template Language</h3>
+<p>The best way to learn how to apply the Nunjucks template language is to look through the somewhat meager <a href="https://github.com/mgmeyers/obsidian-zotero-integration/blob/main/docs/README.md">documentation of the plugin</a> and then experiment with examples developed by other people. I have collected several examples for Obsidian-Zotero Integration templates.</p>
+<div class="my-example">
+<div class="my-example-header">
+<p>Examples of Nunjucks templates</p>
+</div>
+<div class="my-example-container">
+<details>
+<summary>
+Commented list of templates examples
+</summary>
+<ul>
+<li><a href="https://publish.obsidian.md/history-notes/01+Notetaking+for+Historians">Doing History with Zotero and Obsidian</a>: A very detailed article which not only contains a template example but also explains the whole integration process similar to this post here <span class="citation" data-cites="razglova2023">(Razglova 2023)</span>.</li>
+<li><a href="https://medium.com/@alexandraphelan/an-updated-academic-workflow-zotero-obsidian-cffef080addd">An Updated Academic Workflow: Zotero &amp; Obsidian</a>: A detailed explanation of the whole process with a sophisticated Zotero Integration template <span class="citation" data-cites="phelan2024a">(Phelan 2024)</span>.</li>
+<li>There is a collection of several templates in an important <a href="https://forum.obsidian.md/t/zotero-integration-import-templates/36310">Obsidian Forum post</a>. There are many posts about general questions about how to apply the templates, I will list some posts that include template codes for you to experiment:
+<ul>
+<li><a href="https://forum.obsidian.md/t/zotero-integration-import-templates/36310/2">mgmeyers</a>: An excellent and detailed template from the author of the Zotero Integration plugin. It also has code for strikethrough and underlining, which was impossible in the Zotero PDF reader at the time of the posting. This may originate from an external PDF reader. Another caveat: The color codes need to be corrected.</li>
+<li><a href="https://forum.obsidian.md/t/zotero-integration-import-templates/36310/3">erazlogo</a>: The author of the Doing History website mentioned above. Very detailed, it has on other pages of the website many other important practical tips for usage of the Zotero-Obsidian integration.</li>
+<li><a href="https://forum.obsidian.md/t/zotero-integration-import-templates/36310/8">apflestrudelig</a>: Several templates for special tasks, but truncated. To see the full template code, go to the <a href="https://gist.github.com/lguenth/e8a5c4fa0b4a1ed6f8bd0b9ccfc31013">Gist article on GitHub</a> Click on the right top raw buttons to access the source file.</li>
+<li><a href="https://forum.obsidian.md/t/zotero-integration-import-templates/36310/11">gustafferson</a>: a comment with a reference to the template code in a [GitHub gist article] (https://gist.github.com/Gustafferson/698e92d1ac939d60a63aac35fe4c4c4e).</li>
+<li><a href="https://forum.obsidian.md/t/zotero-integration-import-templates/36310/12">Zocahontas1</a>: Similar to mgmeyers but using for the color codes, the <a href="https://github.com/chetachiezikeuzor/Highlightr-Plugin">Obsidian Highlights plugin</a>.</li>
+<li><a href="https://forum.obsidian.md/t/zotero-integration-import-templates/36310/16">Zocahontas2</a>: How do you add page numbers and a revised template?</li>
+<li><a href="https://forum.obsidian.md/t/zotero-integration-import-templates/36310/65">espalia1</a>: Learned from the previous template approaches with minor tweaks. Added the meaning of the annotation colors to the output, that is mainly sorted by colors and inside the colors, then by chronology.</li>
+<li><a href="https://forum.obsidian.md/t/zotero-integration-import-templates/36310/66">espalia1</a>: An updated version. Instead, for every quote its own callout, it just has one callout (admonition in Obsidian parlance) for every color. This improves reading tremendously.</li>
+<li><a href="https://forum.obsidian.md/t/zotero-integration-import-templates/36310/67">Cat</a>: A template with a very sophisticated text color system. The template uses notion color blocks snippets from <a href="https://github.com/deathau/obsidian-snippets">GitHub - deathau/obsidian-snippets</a> to have different colored texts. (But this didn’t work for me after a quick first trial.) Comments are in callouts, and the <a href="https://blacksmithgu.github.io/obsidian-dataview/">Dataview plugin</a> is also used to generate a table of contents.</li>
+</ul></li>
+<li>I just found out that there is <a href="https://forum.obsidian.md/t/my-zotero-annotation-template-that-works/51662">another forum thread</a> about Zotero Integration templates. It is shorter and started January 2023, with the last post (so far) May 2024. I will add just one example here:
+<ul>
+<li><a href="https://forum.obsidian.md/t/my-zotero-annotation-template-that-works/51662">Albialy</a>: A simple template with the interesting feature that the colors of the Zotero, annotations are converted to underlined colors in Obsidian. (Maybe the conversion from background colors to underline-colors is a feature of Obsidian or of one of its plugin I am using.)</li>
+</ul></li>
+</ul>
+<p>I have stopped with forum entry number 67 of 312 comments (February 2023) of the first Obsidian forum thread and just mentioned one of the smaller (37 comments). So, there may be some other exciting templates in more recent times.</p>
+</details>
+</div>
+</div>
+</section>
+<section id="my-template-code" class="level3">
+<h3 class="anchored" data-anchor-id="my-template-code">My template code</h3>
+<p>I am still refining my template to catch new possibilities of version 7 of Zotero. Therefore, the following template code is a work in progress (WIP)</p>
+<p>To understand how the colored highlights are interpreted, look up my color classification in the <a href="../2024-08-04-annotations-with-zotero-version-7#tbl-color-classification">first part of the annotation tutorial</a>.</p>
+<div class="my-r-code">
+<div class="my-r-code-header">
+<p>My personal example for a Nunjucks template code</p>
+</div>
+<div class="my-r-code-container">
+<details>
+<summary>
+My Nunjucks Template Code to Copy
+</summary>
+<p>Hover the gray field to see the copy button at the top right.</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1">---</span>
+<span id="cb1-2">UID: &lt;% tp.file.creation_date("YYYYMMDDHHmm") %&gt;</span>
+<span id="cb1-3">created:</span>
+<span id="cb1-4">updated:</span>
+<span id="cb1-5">note: fleeting</span>
+<span id="cb1-6">status: to_process</span>
+<span id="cb1-7">language: english</span>
+<span id="cb1-8">source: </span>
+<span id="cb1-9">category: </span>
+<span id="cb1-10">subject: </span>
+<span id="cb1-11">alias:</span>
+<span id="cb1-12">cssclass: literature-note</span>
+<span id="cb1-13">alias: [{% if shortTitle %}"{{shortTitle | safe}}"{% else %}"{{title | safe}}"{% endif %}]</span>
+<span id="cb1-14">---</span>
+<span id="cb1-15"></span>
+<span id="cb1-16"></span>
+<span id="cb1-17">{%- macro colorValueToName(color) -%}</span>
+<span id="cb1-18">    {%- switch color -%}</span>
+<span id="cb1-19">         {%- case "#ffd400" -%}</span>
+<span id="cb1-20">            Running Text (Yellow)</span>
+<span id="cb1-21">        {%- case "#ff6666" -%}</span>
+<span id="cb1-22">            Concepts, Definition, Important (Red)</span>
+<span id="cb1-23">        {%- case "#f19837" -%}</span>
+<span id="cb1-24">            ToDo (Orange)</span>
+<span id="cb1-25">        {%- case "#5fb236" -%}</span>
+<span id="cb1-26">            Resources (Articles / Books / Package / URLs)</span>
+<span id="cb1-27">        {%- case "#2ea8e5" -%}</span>
+<span id="cb1-28">            (R) Code (Blue)</span>
+<span id="cb1-29">        {%- case "#e56eee" -%}</span>
+<span id="cb1-30">            Chapter (Magenta)</span>
+<span id="cb1-31">        {%- case "#a28ae5" -%}</span>
+<span id="cb1-32">            Section (Purple)</span>
+<span id="cb1-33">        {%- case "#aaaaaa" -%}</span>
+<span id="cb1-34">            Figure, Table header, TOC Summaries (Gray)</span>
+<span id="cb1-35">        {%- default -%}</span>
+<span id="cb1-36">            No Color </span>
+<span id="cb1-37">    {%- endswitch -%}</span>
+<span id="cb1-38">{%- endmacro -%}</span>
+<span id="cb1-39"></span>
+<span id="cb1-40">{%- macro calloutHeader(type) -%}</span>
+<span id="cb1-41">    {%- switch type -%}</span>
+<span id="cb1-42">        {%- case "highlight" -%}</span>
+<span id="cb1-43">            Highlight</span>
+<span id="cb1-44">        {%- case "strike" -%}</span>
+<span id="cb1-45">            Strikethrough</span>
+<span id="cb1-46">        {%- case "underline" -%}</span>
+<span id="cb1-47">            Underline</span>
+<span id="cb1-48">        {%- case "image" -%}</span>
+<span id="cb1-49">            Image</span>
+<span id="cb1-50">        {%- default -%}</span>
+<span id="cb1-51">            Note</span>
+<span id="cb1-52">    {%- endswitch -%}</span>
+<span id="cb1-53">{%- endmacro %}</span>
+<span id="cb1-54"></span>
+<span id="cb1-55">&gt; [!info]</span>
+<span id="cb1-56">&gt; - **Cite Key:** [[@{{citekey}}]]</span>
+<span id="cb1-57">{%- for attachment in attachments | filterby("path", "endswith", ".pdf") %}</span>
+<span id="cb1-58">&gt; - **Link:** [{{attachment.title}}](file://{{attachment.path | replace(" ", "%20")}})</span>
+<span id="cb1-59">{%- endfor -%}</span>
+<span id="cb1-60">{%- if abstractNote %}</span>
+<span id="cb1-61">&gt; - **Abstract:** {{abstractNote}}</span>
+<span id="cb1-62">{%- endif -%}</span>
+<span id="cb1-63">{%- if bibliography %}</span>
+<span id="cb1-64">&gt; - **Bibliography:** {{bibliography}}</span>
+<span id="cb1-65">{%- endif %}</span>
+<span id="cb1-66">{%- if hashTags %}</span>
+<span id="cb1-67">&gt; - **Tags:** {{hashTags}}</span>
+<span id="cb1-68">{%- endif %}</span>
+<span id="cb1-69"></span>
+<span id="cb1-70"></span>
+<span id="cb1-71"># Highlights by Sequence</span>
+<span id="cb1-72"></span>
+<span id="cb1-73">## Imported on {{importDate | format("YYYY-MM-DD HH:mm")}}</span>
+<span id="cb1-74"></span>
+<span id="cb1-75">{% for annot in annotations -%}</span>
+<span id="cb1-76">{%- if annot.annotatedText -%}</span>
+<span id="cb1-77">**Highlight**: {{annot.annotatedText | nl2br}}</span>
+<span id="cb1-78">{%- endif -%}</span>
+<span id="cb1-79">{%- if annot.imageRelativePath %}</span>
+<span id="cb1-80">![[{{annot.imageRelativePath}}]]</span>
+<span id="cb1-81">{%- endif %}</span>
+<span id="cb1-82">{%- if annot.ocrText %}</span>
+<span id="cb1-83">{{annot.ocrText}}</span>
+<span id="cb1-84">{%- endif %}</span>
+<span id="cb1-85">{%if annot.comment %}</span>
+<span id="cb1-86">**Comment**: {{annot.comment | nl2br}}</span>
+<span id="cb1-87">{%- endif %}</span>
+<span id="cb1-88">{% if annot.allTags %}</span>
+<span id="cb1-89">**Tag**: {{annot.allTags | nl2br}}</span>
+<span id="cb1-90">{% endif  %}</span>
+<span id="cb1-91"> [Page {{annot.page}}](zotero://open-pdf/library/items/{{annot.attachment.itemKey}}?page={{annot.page}}) {{annot.date | format("YYYY-MM-DD HH:mm")}}</span>
+<span id="cb1-92">***</span>
+<span id="cb1-93">{% endfor %}</span>
+<span id="cb1-94"></span>
+<span id="cb1-95"></span>
+<span id="cb1-96">{% persist "annotations" %}</span>
+<span id="cb1-97">{% set annots = annotations | filterby("date", "dateafter", lastImportDate) -%}</span>
+<span id="cb1-98">{% if annots.length &gt; 0 %}</span>
+<span id="cb1-99"></span>
+<span id="cb1-100"></span>
+<span id="cb1-101">## Imported on {{importDate | format("YYYY-MM-DD HH:mm")}}</span>
+<span id="cb1-102"># Sorted by Colors</span>
+<span id="cb1-103">{% for color, annots in annots | groupby("color") -%}</span>
+<span id="cb1-104">#### {{colorValueToName(color)}}</span>
+<span id="cb1-105"></span>
+<span id="cb1-106">{% for annot in annots -%}</span>
+<span id="cb1-107">&gt; [!quote{% if annot.color %}|{{annot.color}}{% endif %}] {{calloutHeader(annot.type)}}</span>
+<span id="cb1-108">{%- if annot.annotatedText %}</span>
+<span id="cb1-109">&gt; {{annot.annotatedText | nl2br}}</span>
+<span id="cb1-110">{%- endif -%}</span>
+<span id="cb1-111">{%- if annot.imageRelativePath %}</span>
+<span id="cb1-112">&gt; ![[{{annot.imageRelativePath}}]]</span>
+<span id="cb1-113">{%- endif %}</span>
+<span id="cb1-114">{%- if annot.ocrText %}</span>
+<span id="cb1-115">&gt; {{annot.ocrText}}</span>
+<span id="cb1-116">{%- endif %}</span>
+<span id="cb1-117">{%- if annot.comment %}</span>
+<span id="cb1-118">&gt;</span>
+<span id="cb1-119">&gt;&gt; {{annot.comment | nl2br}}</span>
+<span id="cb1-120">{%- endif %}</span>
+<span id="cb1-121">&gt;</span>
+<span id="cb1-122">&gt; [Page {{annot.page}}](zotero://open-pdf/library/items/{{annot.attachment.itemKey}}?page={{annot.page}}) [[{{annot.date | format("YYYY-MM-DD#h:mm a")}}]]</span>
+<span id="cb1-123"></span>
+<span id="cb1-124">{% endfor -%}</span>
+<span id="cb1-125">{% endfor -%}</span>
+<span id="cb1-126">{% endif %}</span>
+<span id="cb1-127">{% endpersist %}</span></code></pre></div>
+</details>
+</div>
+</div>
+</section>
+<section id="my-css-snippet" class="level3">
+<h3 class="anchored" data-anchor-id="my-css-snippet">My CSS Snippet</h3>
+<p>For the correct formatting, you need to include a <a class="glossary" title="Cascading Style Sheets (CSS) is a style sheet language used for specifying the presentation and styling of a document written in a markup language such as HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript. CSS is designed to enable the separation of content and presentation, including layout, colors, and fonts. (Wikipedia)">CSS</a> snippet into Obsidian. Take the code below and paste it into your .css file following the procedure description of Obsidian <a href="https://help.obsidian.md/Extending+Obsidian/CSS+snippets">CSS snippets</a>.</p>
+<div class="my-r-code">
+<div class="my-r-code-header">
+<p>My personal example of a CSS code to format the output of the template</p>
+</div>
+<div class="my-r-code-container">
+<details>
+<summary>
+My CSS Code to Copy
+</summary>
+<p>Hover the gray field to see the copy button at the top right.</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1">/* </span>
+<span id="cb2-2"></span>
+<span id="cb2-3">Zotero Integration Plugin</span>
+<span id="cb2-4">Styling the template for Zotero Literature Notes</span>
+<span id="cb2-5"></span>
+<span id="cb2-6">*/</span>
+<span id="cb2-7"></span>
+<span id="cb2-8"></span>
+<span id="cb2-9">/* Yellow */</span>
+<span id="cb2-10">.literature-note .callout[data-callout-metadata="#ffd400"] {</span>
+<span id="cb2-11">  --callout-color: 255,212,0;</span>
+<span id="cb2-12">}</span>
+<span id="cb2-13"></span>
+<span id="cb2-14">/* Red */</span>
+<span id="cb2-15">.literature-note .callout[data-callout-metadata="#ff6666"] {</span>
+<span id="cb2-16">  --callout-color: 255,102,102;</span>
+<span id="cb2-17">}</span>
+<span id="cb2-18"></span>
+<span id="cb2-19">/* Orange */</span>
+<span id="cb2-20">.literature-note .callout[data-callout-metadata="#f19837"] {</span>
+<span id="cb2-21">  --callout-color: 241,152,55;</span>
+<span id="cb2-22">}</span>
+<span id="cb2-23"></span>
+<span id="cb2-24">/* Green */</span>
+<span id="cb2-25">.literature-note .callout[data-callout-metadata="#5fb236"] {</span>
+<span id="cb2-26">  --callout-color: 95,178,54;</span>
+<span id="cb2-27">}</span>
+<span id="cb2-28"></span>
+<span id="cb2-29">/* Blue */</span>
+<span id="cb2-30">.literature-note .callout[data-callout-metadata="#2ea8e5"] {</span>
+<span id="cb2-31">  --callout-color: 46,168,229;</span>
+<span id="cb2-32">}</span>
+<span id="cb2-33"></span>
+<span id="cb2-34">/* Magenta */</span>
+<span id="cb2-35">.literature-note .callout[data-callout-metadata="#e56eee"] {</span>
+<span id="cb2-36">  --callout-color: 229,110,238;</span>
+<span id="cb2-37">}</span>
+<span id="cb2-38"></span>
+<span id="cb2-39">/* Purple */</span>
+<span id="cb2-40">.literature-note .callout[data-callout-metadata="#a28ae5"] {</span>
+<span id="cb2-41">  --callout-color: 191,127,191;</span>
+<span id="cb2-42">}</span>
+<span id="cb2-43"></span>
+<span id="cb2-44">/* Grey */</span>
+<span id="cb2-45">.literature-note .callout[data-callout-metadata="#aaaaaa"] {</span>
+<span id="cb2-46">  --callout-color: 170,170,170;</span>
+<span id="cb2-47">}</span></code></pre></div>
+</details>
+</div>
+</div>
+</section>
+<section id="result-of-my-template" class="level3">
+<h3 class="anchored" data-anchor-id="result-of-my-template">Result of my template</h3>
+<div id="fig-zotero-template-example" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The screenshot shows a part of an Obsidian document in dark mode with a colored header. It starts with two yellow title headers, 'Highlights by Sequence…' and 'Sorted by Colors,' followed by three smaller green headers, 'Running text (Yellow) …', 'Concept, Definition Important (Red)&nbsp;…', and 'ToDo (Orange)'. What follows are quote admonitions (callouts) titled 'Highlight' in orange with a blue text paragraph and a red link to the page of the annotated document. The third of the four 'highlights' has the cursor in it and shows, therefore, the markdown code of this part of the Obsidian file." data-fig-align="center" data-group="zotero-integration">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-zotero-template-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="advanced-zotero-integration-template-example-min.png" class="lightbox" data-gallery="zotero-integration" title="Figure&nbsp;2: Part of my Zotero Integration template for creating literature notes."><img src="https://l3lab.net/posts/2024-08-20-obsidian-zotero-integration-advanced/advanced-zotero-integration-template-example-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="The screenshot shows a part of an Obsidian document in dark mode with a colored header. It starts with two yellow title headers, 'Highlights by Sequence…' and 'Sorted by Colors,' followed by three smaller green headers, 'Running text (Yellow) …', 'Concept, Definition Important (Red)&nbsp;…', and 'ToDo (Orange)'. What follows are quote admonitions (callouts) titled 'Highlight' in orange with a blue text paragraph and a red link to the page of the annotated document. The third of the four 'highlights' has the cursor in it and shows, therefore, the markdown code of this part of the Obsidian file."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-zotero-template-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Part of my Zotero Integration template for creating literature notes.
+</figcaption>
+</figure>
+</div>
+<p>My template consists of four main parts:</p>
+<ul>
+<li><strong>1. Metadata</strong>: This includes the YAML header, the abstract, and other important information (title, cite key, bibliography, tags).</li>
+<li><strong>2. Highlights by sequence</strong>: All annotations are sorted by their position in the document.</li>
+<li><strong>3. Highlights by color</strong>: Annotations sorted by their meaning. This requires a correspondence between color and purpose/reference type of the annotation.</li>
+<li><strong>4. Updates</strong>: Changes after the first import are added at the end of the Obsidian file. To get a file without updates, change the folder position of the file, rename the original file, or delete it.</li>
+</ul>
+<p>I am planning to improve this template in two ways:</p>
+<ol type="1">
+<li>Only one admonition (callout) block for every color should exist.</li>
+<li>Integrating the text of my green (H3) headers into the title of the admonition (callout) block.</li>
+</ol>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>With the annotation tutorial, I have demonstrated a modern technology supported annotation strategy. Every one of the three parts of the tutorial emphasizes one crucial aspect of this strategy:</p>
+<ol type="1">
+<li>Creating annotation with Zotero in <a class="glossary" title="A probability density function (PDF) describes a probability distribution for a random, continuous variable. Use a probability density function to find the chances that the value of a random variable will occur within a range of values that you specify. More specifically, a PDF is a function where its integral for an interval provides the probability of a value occurring in that interval. (Statistics By Jim)">PDFs</a>, <a class="glossary" title="EPUB (auch ePUB, Akronym für electronic publication) ist ein offener Standard für E-Books, documents and other digital resources.">ePUB</a>-eBooks or website snapshots.</li>
+<li>Installing two <a class="glossary" title="A plug-in (or plugin, add-in, addin, add-on, or addon) is a software component that adds a specific feature to an existing computer program. (Wikipedia)">plugins</a> to build a bridge between Zotero and Obsidian to import notes created with Zotero from the annotated document.</li>
+<li>Scraping annotations directly from the original document and redact them in a way to optimize further work in the note-taking app Obsidian.</li>
+</ol>
+<section id="glossary" class="level6">
+<h6 class="anchored" data-anchor-id="glossary">Glossary</h6>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">term</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">CSS</td>
+<td style="text-align: left;">Cascading Style Sheets (CSS) is a style sheet language used for specifying the presentation and styling of a document written in a markup language such as HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript. CSS is designed to enable the separation of content and presentation, including layout, colors, and fonts. (&lt;a href="https://en.wikipedia.org/wiki/CSS"&gt;Wikipedia&lt;/a&gt;)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">EPUB</td>
+<td style="text-align: left;">EPUB (auch ePUB, Akronym für electronic publication) ist ein offener Standard für E-Books, documents and other digital resources.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">JPG</td>
+<td style="text-align: left;">JPEG (/ˈdʒeɪpɛɡ/ JAY-peg, short for Joint Photographic Experts Group is a commonly used method of lossy compression for digital images. [(Wikipedia](https://en.wikipedia.org/wiki/JPEG))</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Metadata</td>
+<td style="text-align: left;">Metadata (or metainformation) is "data that provides information about other data" ([Merriam-Webster](https://www.merriam-webster.com/dictionary/metadata)), but not the content of the data itself, such as the text of a message or the image itself. ([Wikipedia](https://en.wikipedia.org/wiki/Metadata))</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PDF</td>
+<td style="text-align: left;">A probability density function (PDF) describes a probability distribution for a random, continuous variable. Use a probability density function to find the chances that the value of a random variable will occur within a range of values that you specify. More specifically, a PDF is a function where its integral for an interval provides the probability of a value occurring in that interval. (&lt;a href="https://statisticsbyjim.com/probability/probability-density-function/"&gt;Statistics By Jim&lt;/a&gt;)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Plugin</td>
+<td style="text-align: left;">A plug-in (or plugin, add-in, addin, add-on, or addon) is a software component that adds a specific feature to an existing computer program. ([Wikipedia](https://en.wikipedia.org/wiki/Plug-in_%28computing%29))</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PNG</td>
+<td style="text-align: left;">Portable Network Graphic (PNG) is a non-patented raster graphics file format that supports lossless data compression. The format was not designed for professional-quality print graphics but for transferring images on the Internet (hence the name 'portable'). (Wikipedia)</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
+<div id="ref-phelan2024a" class="csl-entry">
+Phelan, Alexandra. 2024. <span>“An Updated Academic Workflow: Zotero &amp; Obsidian.”</span> <a href="https://medium.com/@alexandraphelan/an-updated-academic-workflow-zotero-obsidian-cffef080addd">https://medium.com/@alexandraphelan/an-updated-academic-workflow-zotero-obsidian-cffef080addd</a>.
+</div>
+<div id="ref-razglova2023" class="csl-entry">
+Razglova, Elena. 2023. <span>“01 Notetaking for Historians - Doing History with Zotero and Obsidian - Obsidian Publish.”</span> <a href="https://publish.obsidian.md/history-notes/01+Notetaking+for+Historians">https://publish.obsidian.md/history-notes/01+Notetaking+for+Historians</a>.
+</div>
+</div></section></div> ]]></description>
+  <category>academic</category>
+  <category>obsidian</category>
+  <category>workflow</category>
+  <category>zotero</category>
+  <category>how-to</category>
+  <guid>https://l3lab.net/posts/2024-08-20-obsidian-zotero-integration-advanced/</guid>
+  <pubDate>Mon, 19 Aug 2024 22:00:00 GMT</pubDate>
+  <media:content url="https://l3lab.net/posts/2024-08-20-obsidian-zotero-integration-advanced/nunjucks-zotero-obsidian-skitch-logo2-min.png" medium="image" type="image/png" height="112" width="144"/>
+</item>
+<item>
+  <title>Annotation Tutorial 2: Integrating Zotero with Obsidian</title>
+  <dc:creator>Peter Baumgartner</dc:creator>
+  <link>https://l3lab.net/posts/2024-08-12-academic-workflow-obsidian-zotero/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="zotero-integration-with-obsidian" class="level2">
+<h2 class="anchored" data-anchor-id="zotero-integration-with-obsidian">Zotero Integration with Obsidian</h2>
+<section id="academic-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="academic-workflow">Academic Workflow</h3>
+<p>In the <a href="../2024-08-20-annotations-with-zotero-version-7">first part of this annotation tutorial</a>, I have described the different annotation types in Zotero version 7 and how to use them. In this second part, I will explain a simple method for importing Zotero annotations into Obsidian. These Obsidian notes will link to the source of the annotation (quote) in Zotero.</p>
+<p>These backlinks are essential because one cannot always remember the original context of the citation. Especially if the creation of the annotation happened long ago or if the original purpose of the quote for a specific publication/research issue has changed, you need to check and reassess the context of the quote. Only by looking up the annotation in the source document can you prevent redundant and superfluous information from remembering the context of the quote.</p>
+<p>After reading and annotating, it is crucial to elaborate on the highlighted content. The general strategy is to add, reformulate, and include the citations in the paper that is in progress. Whatever these changes are in the initial annotations, it is vital for an efficient workflow to always have a reference to the original position of the citation.</p>
+<p>There are two strategies for the integration of your “research assistant” (Zotero) with your note-taking app (Obsidian):</p>
+<ol type="1">
+<li>Creating a note inside Zotero and importing it into Obsidian (this post).</li>
+<li>Extracting all annotation directly from the document programmatically (the third part of the annotation tutorial).</li>
+</ol>
+<p>In both cases, you need to install two plugins: <a href="https://retorque.re/zotero-better-bibtex/">Better BibTeX</a> in Zotero and <a href="https://github.com/mgmeyers/obsidian-zotero-integration">Zotero Integration</a> in Obsidian.</p>
+</section>
+</section>
+<section id="notes-in-zotero" class="level2">
+<h2 class="anchored" data-anchor-id="notes-in-zotero">Notes in Zotero</h2>
+<section id="child-and-standalone-notes" class="level3">
+<h3 class="anchored" data-anchor-id="child-and-standalone-notes">Child and Standalone Notes</h3>
+<p>Zotero knows two types of notes. (The type names are my inventions to facilitate the explanation):</p>
+<ul>
+<li><strong>Child Note or Items Note</strong> belongs to the item where it was created. It lives inside the Zotero item.</li>
+<li><strong>Standalone Notes</strong> lives in the appropriate Zotero item collection but does not belong to any specific Zotero item. This note type is helpful for writing notes for multiple items.</li>
+</ul>
+<p>Only the child note is an annotation because it fulfills the requirement of the annotation: It is anchored to specific text – even if it consists itself of (a collection of) annotations.</p>
+<p>Both types of notes can be created either as individual notes or as a note that collects all highlights:</p>
+<ul>
+<li><strong>Individual note</strong>: This is a new, empty note item. You can write your text into the note directly or drag and drop annotations from the left column.</li>
+<li><strong>Highlights note</strong>: This note collects and copies all content created with the annotation types, as mentioned earlier. You are always free to add or change the note content.</li>
+</ul>
+<p>The distinctions between child and standalone notes are not carved in stone, as you can always drag a standalone note into an appropriate Zotero item, and so it converts into a child note. You can also drag the child note as an item itself in the Zotero middle pane, and so it converts into a standalone note.</p>
+<div class="callout callout-style-default callout-important callout-titled" style="color: red;">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can create as many notes as you want. However, only child notes will be imported into Obsidian using the Zotero Integration plugin.</p>
+</div>
+</div>
+</section>
+<section id="how-to-create-a-child-note" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-create-a-child-note">How to create a child note</h3>
+<section id="sec-add-note-from-annotation" class="level4">
+<h4 class="anchored" data-anchor-id="sec-add-note-from-annotation">Add Note from Annotations</h4>
+<ol type="1">
+<li>Select the Zotero item or the document (PDF, ePUB-eBook, website snapshot) inside the Zotero item.</li>
+<li>Open the context menu (right mouse click on my installation)</li>
+<li>Select “Add Note from Annotations”</li>
+</ol>
+</section>
+<section id="add-empty-note" class="level4">
+<h4 class="anchored" data-anchor-id="add-empty-note">Add (empty) Note</h4>
+<ol type="1">
+<li>Select the Zotero item (not the document).</li>
+<li>Open the context menu (right mouse click on my installation)</li>
+<li>Select “Add Note”</li>
+</ol>
+<div id="fig-empty-child-note" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The screenshot shows different types of annotations with Zotero in a PDF. The page is divided horizontally into three parts. From left to right: a small sidebar (about 10% width) with the content of the annotations, the document with the annotations (about 70% width), and the context pane with metadata." data-group="zotero-integration" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-empty-child-note-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="zotero-integration-add-empty-child-note-min.png" class="lightbox" data-gallery="zotero-integration" title="Figure&nbsp;1: How to add an empty child note: (1) Select the Zotero item (2) Open context menu and (3) Select ‘Add Note’"><img src="https://l3lab.net/posts/2024-08-12-academic-workflow-obsidian-zotero/zotero-integration-add-empty-child-note-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="The screenshot shows different types of annotations with Zotero in a PDF. The page is divided horizontally into three parts. From left to right: a small sidebar (about 10% width) with the content of the annotations, the document with the annotations (about 70% width), and the context pane with metadata."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-empty-child-note-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: How to add an empty child note: (1) Select the Zotero item (2) Open context menu and (3) Select ‘Add Note’
+</figcaption>
+</figure>
+</div>
+<p>To repeat: An “child note” is a note that is sorted under a Zotero item, independently of where it was created initially.</p>
+<p>We generate child notes as the easiest way to export notes into Obsidian. This has the disadvantage that changes in the Zotero annotations need another export to Obsidian. We will, therefore, cover in the <a href="../2024-08-20-obsidian-zotero-integration-advanced">third part of the tutorial</a> an alternative, a more complex way where the Obsidian plugin extracts the annotations programmatically from the Zotero document.</p>
+</section>
+</section>
+</section>
+<section id="installing-plugins" class="level2">
+<h2 class="anchored" data-anchor-id="installing-plugins">Installing Plugins</h2>
+<section id="better-bibtex-and-zotero-integration" class="level3">
+<h3 class="anchored" data-anchor-id="better-bibtex-and-zotero-integration">Better BibTeX and Zotero Integration</h3>
+<p>For the import of annotations into Obsidian, we need two <a class="glossary" title="A plug-in (or plugin, add-in, addin, add-on, or addon) is a software component that adds a specific feature to an existing computer program. (Wikipedia)">plugins</a>. At the side of Zotero <a href="https://retorque.re/zotero-better-bibtex/">Better BibTeX</a> and in Obsidian the <a href="https://github.com/mgmeyers/obsidian-zotero-integration">Zotero Integration</a>.</p>
+<ul>
+<li><strong>Better BibTex</strong> makes it easier to manage bibliographic data, especially for people authoring documents using a text-based tool chains (e.g., based on <a href="https://www.latex-project.org/">LaTeX</a> / <a href="https://www.markdownguide.org/">Markdown</a>). This plugin has a rich functionality, but we are using it for the Obsidian-Zotero integration just for one feature: To create a file with citations and consistent <a href="https://pandoc.org/">pandoc</a> cite keys.</li>
+<li><strong>Zotero Integration</strong> does the main work: It inserts and imports citations, bibliographies, notes, and PDF annotations from Zotero into Obsidian. For this functionality, it needs the installation of the Better BibTeX plugin as an enhancement for Zotero.</li>
+</ul>
+</section>
+<section id="install-better-bibtex" class="level3">
+<h3 class="anchored" data-anchor-id="install-better-bibtex">Install “Better BibTeX”</h3>
+<blockquote class="blockquote">
+<p>To install a plugin in Zotero, download its <code>.xpi</code> file to your computer. Then, in Zotero, click “Tools → Add-ons” and drag the <code>.xpi</code> onto the Add-ons window. (<a href="https://www.zotero.org/support/plugins">Plugins for Zotero</a>)</p>
+</blockquote>
+<p>To find the latest version of the Better BibTeX <code>.xpi</code> file <a href="https://github.com/retorquere/zotero-better-bibtex/releases/latest">click at this link here</a>.</p>
+<p>For a more detailed installation procedure <a href="https://retorque.re/zotero-better-bibtex/installation/">see here</a>.</p>
+</section>
+<section id="install-zotero-integration" class="level3">
+<h3 class="anchored" data-anchor-id="install-zotero-integration">Install “Zotero Integration”</h3>
+<blockquote class="blockquote">
+<p>In Obsidian, open Settings; on the left, under Options, open Community Plugins, on Community Plugins, select Browse and search for ‘Zotero Integration’ (<a href="https://github.com/mgmeyers/obsidian-zotero-integration#help-how-do-i-install-the-plugin">Help, How do I install the Plugin?</a>).</p>
+</blockquote>
+<p>For more details, especially troubleshooting the installation, see the <a href="https://github.com/mgmeyers/obsidian-zotero-integration">README file of Better BibTeX</a>.</p>
+</section>
+</section>
+<section id="zotero-integration-settings" class="level2">
+<h2 class="anchored" data-anchor-id="zotero-integration-settings">Zotero Integration Settings</h2>
+<p>The last task is to adapt the settings of the Obsidian Zotero Integration plugin.</p>
+<ol type="1">
+<li>Open Preferences with the menu “Obsidian → Preferences…” or <code>CMD+,</code> (macOS) / <code>CTRL+,</code> (Windows).</li>
+<li>Scroll the left column down to “Zotero Integration” and select this plugin.</li>
+</ol>
+<p>You will get a window with content similar to that in Figure&nbsp;2. The look may differ depending on the Obsidian theme you are using. (I am using <a href="https://github.com/nickmilo/Cybertron">Cybertron</a>)</p>
+<div id="fig-zotero-integration-settings" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The screenshot shows the general settings for importing annotated PDF files. The different fields are explained in the text." data-group="zotero-integration" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-zotero-integration-settings-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="zotero-integration-plugin-settings-min.png" class="lightbox" data-gallery="zotero-integration" title="Figure&nbsp;2: Top part of the “Zotero Integration” plugin settings. For the import method explained here, you need only to complete the “General Settings”."><img src="https://l3lab.net/posts/2024-08-12-academic-workflow-obsidian-zotero/zotero-integration-plugin-settings-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="The screenshot shows the general settings for importing annotated PDF files. The different fields are explained in the text."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-zotero-integration-settings-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Top part of the “Zotero Integration” plugin settings. For the import method explained here, you need only to complete the “General Settings”.
+</figcaption>
+</figure>
+</div>
+<p>The configuration setting page for the “Zotero Integration” plugin is complex. It consists of four parts:</p>
+<ul>
+<li>General Settings</li>
+<li>Citation Formats</li>
+<li>Import Formats and</li>
+<li>Import Image Settings</li>
+</ul>
+<p>Although there are many preferences for the simple import method used in In this post, we will only need to complete the general settings.</p>
+<section id="general-settings" class="level3">
+<h3 class="anchored" data-anchor-id="general-settings">General Settings</h3>
+<p>The first two settings provide the path to the main utility program for extracting data from PDFs. <a href="https://github.com/mgmeyers/pdfannots2json/releases">pdfannots2json.js</a> should work immediately after the installation of the “Zotero Integration” plugin. Otherwise, you must download the tool and provide a path to it.</p>
+<p>In the third field, you specify the program you will use. The plugin supports Zotero and <a href="https://juris-m.github.io/">the Jurism project</a>, specializing in legal research, and is also based on the Zotero reference manager. For advanced usage, you also have the option to specify a custom port number. The default port where Zotero is listening to <code>23119</code>. You don’t need to change it in a standard configuration. Only for a special Zotero configuration, e.g., when using Zotero on a terminal server, you must provide another port number.</p>
+<p>In the following field, you specify the path in Obsidian where the Zotero annotations should be stored. I have used with “zotero” a subdirectory of “annotation” because I have with <a href="https://calibre-ebook.com/">Calibre</a> another app where I am importing annotations into Obsidian.</p>
+<p>The following two fields determine if Obsidian should open the imported file and in the case, you have imported several at once, which of the imported files.</p>
+<p>The last option of the general settings is enabling the concatenation of annotations. Although I have turned it on, I have yet to use this functionality. Instead of concatenating files, I have used to separate new data (updates) via template functions, which I will explain in the <a href="../2024-08-20-obsidian-zotero-integration-advanced">third part of the tutorial</a>.</p>
+</section>
+</section>
+<section id="import-annotation-into-obsidian-without-template" class="level2">
+<h2 class="anchored" data-anchor-id="import-annotation-into-obsidian-without-template">Import Annotation into Obsidian without Template</h2>
+<p>For this procedure, you need to create the annotation file in Zotero manually, as I have already explained in Section&nbsp;2.2.1.</p>
+<div id="fig-obsidian-command-palette" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The screenshots shows a search field with the text 'zotero inte'. Below are the found Obsidian command that contain the search string. From top to bottom: 'Zotero Integration: Bib Format'; 'Zotero Integration: Import notes' with shortcut CMD-CTRL-SHIFT-Z; 'Zotero Integration: Pandoc Format' with shortcut CMD-ALT-CTRL-SHIFT-Z; 'Zotero Integration: Data explorer'; 'Zotero Integration: Formatted Citation'; 'Zotero Integration: Create Literature Note' with shortcut ALT-Z; 'Zotero Integration: Formatted Bibliography'; 'Zotero Integration: Insert notes into current document' with shortcut CMD-CTRL-Z." data-group="zotero-integration" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-obsidian-command-palette-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="zotero-integration-command-palette-min.png" class="lightbox" data-gallery="zotero-integration" title="Figure&nbsp;3: Obsidian Command Palette displaying all available commands of the Zotero Integration plugin. For some of the commands I have assigned hotkeys."><img src="https://l3lab.net/posts/2024-08-12-academic-workflow-obsidian-zotero/zotero-integration-command-palette-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="The screenshots shows a search field with the text 'zotero inte'. Below are the found Obsidian command that contain the search string. From top to bottom: 'Zotero Integration: Bib Format'; 'Zotero Integration: Import notes' with shortcut CMD-CTRL-SHIFT-Z; 'Zotero Integration: Pandoc Format' with shortcut CMD-ALT-CTRL-SHIFT-Z; 'Zotero Integration: Data explorer'; 'Zotero Integration: Formatted Citation'; 'Zotero Integration: Create Literature Note' with shortcut ALT-Z; 'Zotero Integration: Formatted Bibliography'; 'Zotero Integration: Insert notes into current document' with shortcut CMD-CTRL-Z."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-obsidian-command-palette-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Obsidian Command Palette displaying all available commands of the Zotero Integration plugin. For some of the commands I have assigned hotkeys.
+</figcaption>
+</figure>
+</div>
+<ol type="1">
+<li>Now change to Obsidian and choose either “Import notes” or “Insert notes into the current document” from the command palette. If you attach shortcuts to these procedures, you don’t need to call the command using the Obsidian palette.</li>
+<li>You have to wait until a window with the Zotero database appears, where you can select the appropriate Zotero item. All note files inside the Zotero item will be exported. The first command (“Import notes”) creates a new file; the second command inserts the annotations into the cursor position of the current Obsidian document.</li>
+<li>The results are annotations with two links: “Go to annotation” and the citation using the appropriate Zotero citation style. “Go to annotation” opens the PDF and jumps to the annotation’s location in the original document. The citation link selects the appropriate bibliography item in the Zotero middle pane.</li>
+</ol>
+<div id="fig-annotation-example" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Screenshot of an example of an annotation file with a black background. From top to bottom: A yellow header says 'Annotations'; Timestamp '(7/31/2024, 7:23:53 PM)'; Followed by three examples of annotated text. Every entry starts with a red link to the exact position of the quote ('Go to annotation') and ends with a link to the bibliography entry in the Zotero middle pane. Eexample: '(Gethin et al., 2021, p.12)'. Between these two links is the annotated text passage surrounded by quotation marks." data-group="zotero-integration" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-annotation-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="zotero-integration-example-without-template-min.png" class="lightbox" data-gallery="zotero-integration" title="Figure&nbsp;4: An example of an annotation file. Every entry starts with a link to the exact position of the quote and ends with a link to the bibliography entry in the Zotero middle pane. Between these two links is the annotated text passage surrounded by quotation marks."><img src="https://l3lab.net/posts/2024-08-12-academic-workflow-obsidian-zotero/zotero-integration-example-without-template-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Screenshot of an example of an annotation file with a black background. From top to bottom: A yellow header says 'Annotations'; Timestamp '(7/31/2024, 7:23:53 PM)'; Followed by three examples of annotated text. Every entry starts with a red link to the exact position of the quote ('Go to annotation') and ends with a link to the bibliography entry in the Zotero middle pane. Eexample: '(Gethin et al., 2021, p.12)'. Between these two links is the annotated text passage surrounded by quotation marks."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-annotation-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: An example of an annotation file. Every entry starts with a link to the exact position of the quote and ends with a link to the bibliography entry in the Zotero middle pane. Between these two links is the annotated text passage surrounded by quotation marks.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>In this post, I have explained how to integrate your “research assistant.” tool Zotero with the note-taking app Obsidian.</p>
+<div class="my-procedure">
+<div class="my-procedure-header">
+<p>Import Annotations from Zotero into Obsidian (without template)</p>
+</div>
+<div class="my-procedure-container">
+<ol type="1">
+<li>Highlight or use other annotation methods in Zotero as explained in the <a href="../2024-08-20-annotations-with-zotero-version-7">first part of this tutorial</a>.</li>
+<li>Create a note with the annotations in Zotero.</li>
+<li>Install the necessary plugins: <a href="https://retorque.re/zotero-better-bibtex/">Better BibTeX</a> in Zotero and <a href="https://github.com/mgmeyers/obsidian-zotero-integration">Zotero Integration</a> in Obsidian.</li>
+<li>Complete the ’General Settings” part of the “Zotero Integration.” plugin in Obsidian.</li>
+<li>Choose either “Import notes” or “Include notes into current document” into Obsidian.</li>
+<li>Wait for the Zotero dialog window and choose the Zotero item with the annotations.</li>
+<li>Inspect the imported file content and test the links.</li>
+</ol>
+</div>
+</div>
+<p>You can now elaborate on your notes using all the advanced features Obsidian offers!</p>
+<p>In the <a href="../2024-08-20-obsidian-zotero-integration-advanced">third part of the annotation tutorial</a>, I will explain how to use templates to programmatically extract annotations from Zotero documents. This has several advantages, but it is more complex to apply.</p>
+<p>Are you satisfied with our result from this second part of the tutorial? Then, you can skip the last part or read it later when the need for better management of your different types of annotation arises.</p>
+<section id="glossary" class="level6">
+<h6 class="anchored" data-anchor-id="glossary">Glossary</h6>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">term</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Plugin</td>
+<td style="text-align: left;">A plug-in (or plugin, add-in, addin, add-on, or addon) is a software component that adds a specific feature to an existing computer program. ([Wikipedia]</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>academic</category>
+  <category>obsidian</category>
+  <category>workflow</category>
+  <category>zotero</category>
+  <category>how-to</category>
+  <guid>https://l3lab.net/posts/2024-08-12-academic-workflow-obsidian-zotero/</guid>
+  <pubDate>Sun, 11 Aug 2024 22:00:00 GMT</pubDate>
+  <media:content url="https://l3lab.net/posts/2024-08-12-academic-workflow-obsidian-zotero/zotero-integration-obsidian-logo-min.png" medium="image" type="image/png" height="66" width="144"/>
+</item>
+<item>
+  <title>Annotation Tutorial 1: Using Zotero Version 7</title>
+  <dc:creator>Peter Baumgartner</dc:creator>
+  <link>https://l3lab.net/posts/2024-08-04-annotations-with-zotero-version-7/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="two-crucial-academic-workflow-challenges" class="level2">
+<h2 class="anchored" data-anchor-id="two-crucial-academic-workflow-challenges">Two Crucial Academic Workflow Challenges</h2>
+<p>As an academic researcher, scholar, or student, you likely find yourself in a similar academic workflow. You collect, read, and annotate scholarly articles, research papers, and books as part of your daily routine. You then elaborate on this material in personal notes either during the annotation process or immediately afterward.</p>
+<p>The next step in the academic workflow involves:</p>
+<ul>
+<li>Refine and structure the rough text passages.</li>
+<li>Incorporating feedback from peers or supervisors.</li>
+<li>Formatting them according to the publication guidelines.</li>
+</ul>
+<p>These tasks can be undertaken individually or as part of a collaborative effort.</p>
+<p>In this chain of timely delayed tasks, one always had to meet at least two challenges:</p>
+<ol type="1">
+<li>While reading and annotating, how do you know which passages would later be necessary for the final publication?</li>
+<li>Are the annotations and notes sufficient to remember the context even after a long time?</li>
+</ol>
+<p>These insecurities were still more cumbersome when one did not always have immediate access to the original material, such as when you lent a book from a library or the danger that the webpage could always disappear.</p>
+<p>One counter strategy to meet these challenges is to be safe and collect as much material as possible. This includes saving all relevant resources, making detailed annotations, and systematically organizing them. But even then, finding the exact position of the text passage I was looking for took time and effort.</p>
+<p>In response to these challenges, I will introduce a solution that significantly improves the efficiency of your academic workflow, particularly when you always have access to the PDF resource.</p>
+</section>
+<section id="annotations-in-zotero" class="level2">
+<h2 class="anchored" data-anchor-id="annotations-in-zotero">Annotations in Zotero</h2>
+<p>I started using Zotero on December 30, 2007—yes, during the holidays! I always use the holidays to learn new apps and try things out. My Zotero database currently holds 5872 items created during more than 15 years of research. Until last year, I mainly used Zotero to produce correct formatted citations for publication. However, these changed when I learned new note-taking possibilities emerged with <a href="https://www.zotero.org/blog/zotero-6/">Zotero 6</a> (March 2022). It took me over a year to transform my workflow. <a href="https://idioms.thefreedictionary.com/Old+Habits+Die+Hard">Old habits die hard</a>.</p>
+<div id="nte-zotero7" class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note&nbsp;1: Zotero 7 update
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This article focuses on the integration between <a href="https://www.zotero.org/">Zotero</a> and <a href="https://obsidian.md/">Obsidian</a>. However, I will summarize some aspects of <a class="glossary" title="Zotero is free and open-source reference management software to manage bibliographic data and related research materials, such as PDF and ePUB files. Features include web browser integration, online syncing, generation of in-text citations, footnotes, and bibliographies, integrated PDF, ePUB and HTML readers with annotation capabilities, and a note editor, as well as integration with the word processors Microsoft Word, LibreOffice Writer, and Google Docs. (Wikipedia)">Zotero’s</a> annotation process relevant to the export/import process to <a class="glossary" title="Obsidian is a personal knowledge base and note-taking software application that operates on Markdown files. It is designed to help users organize and structure their thoughts and knowledge in a flexible, non-linear way. The software is free for personal use, with commercial licenses available for pay. (Wikipedia)">Obsidian</a>.</p>
+<p>During the planning &amp; writing of this post <a href="https://www.zotero.org/blog/zotero-7/">Zotero 7</a>, the most significant update in Zotero’s 18-year history was released. Almost finished with the article on August 18, I had utterly to revise the article to include the <a href="https://www.zotero.org/support/changelog">new features of version 7</a>. Whenever it is sensible in explanations, I will either add the addition “(V7)” in parenthesis to emphasize the new features of Zotero 7 or write another note like this one for a more extended text passage.</p>
+</div>
+</div>
+<hr>
+<section id="book-recommendation" class="level3">
+<h3 class="anchored" data-anchor-id="book-recommendation">Book recommendation</h3>
+<div class="grid">
+<div class="g-col-6">
+<p>For those of you that are interested to learn more about the philosophy and theory of annotation, I recommend the book-length treatment “Annotation” by Remi Kalir &amp; Antero Garcia <span class="citation" data-cites="kalir2021">(2021)</span>.</p>
+<p>There is also a <a href="https://mitpressonpubpub.mitpress.mit.edu/annotation">website</a> were you not only can you read the book for free, but you can also see how annotations features are used for an <a href="https://plos.org/resource/open-peer-review/">open peer review process</a> of the book <span class="citation" data-cites="kalir2020">(R. Kalir and Garcia 2020)</span>.</p>
+<div id="def-annot" class="callout callout-style-default callout-important callout-titled" style="color: red;">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definition&nbsp;1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Here, I will understand under the term “annotation” every addition anchored to the text and reinforces it. Annotations are a kind of <a href="https://en.wikipedia.org/wiki/Paratext">paratext</a>, produced outside the text but constantly referring and tied to it.</p>
+</div>
+</div>
+</div>
+<div class="g-col-6">
+<div id="fig-cover-annotation" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="The book cover is in black with a big red star on the lower left half. At the top, it says 'Annotation' in red, and underneath, in smaller white letters, 'Remi Kalir And Antero Garcia'. There is a red bar on the bottom of the image and a white text saying 'The MIT Press Essential Knowledge Series.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cover-annotation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="cover-annotation-min.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;1: Book cover of Annotation by Remi Kalir &amp; Antero Garcia"><img src="https://l3lab.net/posts/2024-08-04-annotations-with-zotero-version-7/cover-annotation-min.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="The book cover is in black with a big red star on the lower left half. At the top, it says 'Annotation' in red, and underneath, in smaller white letters, 'Remi Kalir And Antero Garcia'. There is a red bar on the bottom of the image and a white text saying 'The MIT Press Essential Knowledge Series."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cover-annotation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Book cover of Annotation by Remi Kalir &amp; Antero Garcia
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="sec-eight-types-annot" class="level3">
+<h3 class="anchored" data-anchor-id="sec-eight-types-annot">Eight types of annotations in Zotero</h3>
+<p>Zotero 7 has eight different types of annotations: highlighted text, underlined text (V7), “sticky” notes, adding text (V7), screenshots, drawing, resp. Ink annotation (V7), comments and tags.</p>
+<div id="fig-annotation-type-menu" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The annotated screenshot shows six icons horizontally aligned with accompanying text linked by arrows. The symbols and their meanings are (from left to right): The letter 'A' inside a square = highlight text; the letter 'A' underlined = underlined text; a paper with an earmark at the left bottom = 'sticky' note; a big letter 'T' = add text; two squares where the inner one with a solid line and the outer one with a dashed line = select area for screenshot; a small drawing and a pencil = add drawing." data-fig-align="center" data-group="zotero-annotation">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-annotation-type-menu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="six-annotation-types-min.png" class="lightbox" data-gallery="zotero-annotation" title="Figure&nbsp;2: Six of the (eight) Zotero annotation types are selected with the menu in the horizontal bar of the middle pane visible whenever a PDF, EPUB-eBook or snapshot website is open"><img src="https://l3lab.net/posts/2024-08-04-annotations-with-zotero-version-7/six-annotation-types-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%" alt="The annotated screenshot shows six icons horizontally aligned with accompanying text linked by arrows. The symbols and their meanings are (from left to right): The letter 'A' inside a square = highlight text; the letter 'A' underlined = underlined text; a paper with an earmark at the left bottom = 'sticky' note; a big letter 'T' = add text; two squares where the inner one with a solid line and the outer one with a dashed line = select area for screenshot; a small drawing and a pencil = add drawing."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-annotation-type-menu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Six of the (eight) Zotero annotation types are selected with the menu in the horizontal bar of the middle pane visible whenever a PDF, EPUB-eBook or snapshot website is open
+</figcaption>
+</figure>
+</div>
+<div id="nte-zotero7-epub-snapshots" class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note&nbsp;2: Annotations for PDF, EPUBs, and Webpage Snapshots
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>With Zotero version 7, the following explanations are not only valid for PDFs but also for eBooks in <a class="glossary" title="EPUB (auch ePUB, Akronym für electronic publication) ist ein offener Standard für E-Books, documents and other digital resources.">EPUB</a> format and for snapshots of web pages!</p>
+</div>
+</div>
+<section id="highlighting" class="level4">
+<h4 class="anchored" data-anchor-id="highlighting">1. Highlighting</h4>
+<div class="grid">
+<div class="g-col-3">
+<div id="fig-annotation-colors" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The screenshot shows a vertical listing of the eight different colors available in Zotero. Each line starts with a colored box followed by the name of the color." data-fig-align="center" data-group="zotero-annotation">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-annotation-colors-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="zotero-annotation-colors-min.png" class="lightbox" data-gallery="zotero-annotation" title="Figure&nbsp;3: Zotero has eight colors for highlight and underline annotations"><img src="https://l3lab.net/posts/2024-08-04-annotations-with-zotero-version-7/zotero-annotation-colors-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="The screenshot shows a vertical listing of the eight different colors available in Zotero. Each line starts with a colored box followed by the name of the color."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-annotation-colors-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Zotero has eight colors for highlight and underline annotations
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="g-col-9">
+<div id="vcenter" class="column" style="width:50%;">
+<p>To highlight text, click the symbol with the letter ‘A’ surrounded by a box at the top toolbar. You have eight colors for highlights at your disposal: yellow, red, green, blue, purple, magenta, orange, and gray. You can set your preferred color as the default color, which is, in my case, yellow.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="underlining-v7" class="level4">
+<h4 class="anchored" data-anchor-id="underlining-v7">2. Underlining (V7)</h4>
+<div id="nte-zotero-underlining" class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note&nbsp;3: Underlining as a new annotation type
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Version 7 of Zotero supports underlining text with the eight colors mentioned in Figure&nbsp;3.</p>
+<p>Zotero treats highlighting and underlining as being very similar to highlights. Therefore, I refer to both annotation types whenever I talk about highlighting.</p>
+</div>
+</div>
+<p>It is crucial to design a consistent system when to use each color. This will allow you to organize your annotations in Obsidian.</p>
+<p>Some people have developed a system of argumentation types to distinguish the different highlighting colors. Below are two examples to give you a flair for the idea.</p>
+<div id="tbl-color-classification" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-color-classification-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Two examples of color classifications for text highlights
+</figcaption>
+<div aria-describedby="tbl-color-classification-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Color</th>
+<th style="text-align: left;"><a href="https://forum.obsidian.md/t/zotero-integration-import-templates/36310/2">mgmeyers</a></th>
+<th style="text-align: left;">My own system</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Yellow</td>
+<td style="text-align: left;">Relevant / important</td>
+<td style="text-align: left;">Running text</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Red</td>
+<td style="text-align: left;">Disagree</td>
+<td style="text-align: left;">Important: Concept, Definition,</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Orange</td>
+<td style="text-align: left;">Question / confusion</td>
+<td style="text-align: left;">ToDo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Green</td>
+<td style="text-align: left;">Agree</td>
+<td style="text-align: left;">Resources: article/book/package/URL</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Blue</td>
+<td style="text-align: left;">Relevant to current task</td>
+<td style="text-align: left;">(R) Code; Example</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Magenta</td>
+<td style="text-align: left;">TODO / follow up</td>
+<td style="text-align: left;">Section</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Purple</td>
+<td style="text-align: left;">Definitions / concepts</td>
+<td style="text-align: left;">Chapter</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Gray</td>
+<td style="text-align: left;">Interesting but not relevant</td>
+<td style="text-align: left;">Figure / table title</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Both examples stem from times before Zotero 7. Therefore, there is no difference, and both annotation types will translate to the same meaning. I will explain more about the purpose of an appropriate classification system when we talk about Obsidian templates for the import of the Zotero annotations.</p>
+</section>
+<section id="sticky-notes" class="level4">
+<h4 class="anchored" data-anchor-id="sticky-notes">3. “Sticky” notes</h4>
+<p>To add a “sticky” note, click on the piece of paper symbol with the earmark. Then, you can click on a place in the PDF to generate the note. A “sticky” note symbol appears on the page, and on the left bar, a note box open for writing comments. You can move the “sticky” note around inside the page, but you can’t move it to another page (therefore “sticky”).</p>
+<p>The primary purpose of “sticky” notes is to add a text annotation that relates to the text but not to a specific passage of the text. This can be, for instance, a comment on the structure of the text, a comment related to several paragraphs, a recurring argument, etc.</p>
+</section>
+<section id="text-v7" class="level4">
+<h4 class="anchored" data-anchor-id="text-v7">4. Text (V7)</h4>
+<p>With version 7, you can also write text directly into the document as an overlay. Zotero treats this as a comment, e.g., add tags or change the note text. But this annotation type is eye-catching, and you can move it around, but only on the same page.</p>
+</section>
+<section id="snapshots" class="level4">
+<h4 class="anchored" data-anchor-id="snapshots">5. Snapshots</h4>
+<p>By clicking on the black box surrounded by a rectangular selection, you can drag with the cursor to select the area of the screen to capture. You can add comments and tags as in the other annotation types, but you can also copy the picture or save it as a <a class="glossary" title="Portable Network Graphic (PNG) is a non-patented raster graphics file format that supports lossless data compression. The format was not designed for professional-quality print graphics but for transferring images on the Internet (hence the name ‘portable’). (Wikipedia)">PNG</a> file to your disk.</p>
+</section>
+<section id="drawings-v7" class="level4">
+<h4 class="anchored" data-anchor-id="drawings-v7">6. Drawings (V7)</h4>
+<p>Your pointing device (mouse, stylus, touchscreen) will be converted to a drawing device by clicking the ink button (with the drawing symbol). Selected the appropriate color, you can now create drawings overlaying the document.</p>
+</section>
+<section id="comments" class="level4">
+<h4 class="anchored" data-anchor-id="comments">7. Comments</h4>
+<p>You can add additional text to all types of annotations mentioned so far. Zotero will treat this additional text as your comment.</p>
+<div id="wrn-ID" class="callout callout-style-default callout-warning callout-titled" style="color: darkorange;">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning&nbsp;1: Changing highlighted text via the note?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Strange enough, You can also edit the highlighted text stored as annotation. Frankly, I do not know appropriate use cases because, with these changes, you would temper the original quote.</p>
+</div>
+</div>
+</section>
+<section id="tags" class="level4">
+<h4 class="anchored" data-anchor-id="tags">8. Tags</h4>
+<p>Another way to annotate a document is to add tags to highlighted text, “sticky” notes, screenshots, or comments.</p>
+<p>You can select all annotations with the same tag inside the document (e.g., whenever the document is open and visible in the middle pane). Colors work as a tag, too. Hence, you can select all highlighted text in the same color. You can also combine different tags. For instance, two text tags with two colors will select all annotations that have one of these text tags or one of the chosen colors.</p>
+<p>Outside the document, the tag works as a standard document tag in the tag pane at the bottom of the left column. Although the tags are attached to specific annotations outside the PDF (e.g., in the tag pane), they will select only the Zotero item with the document where the tag was used and not the appropriate annotations. But if you use the same tag for annotation in different documents, Zotero will open all items where these tags were applied.</p>
+<p>We will see that after the export to Obsidian, these annotated tags gain power as the work across all Obsidian documents!</p>
+</section>
+</section>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary">Summary</h3>
+<p>The Zotero documentation is not yet up-to-date, so detailed information is still lacking or incorrect. For instance, is <a href="https://www.zotero.org/support/pdf_reader">The Zotero PDF Reader and Note Editor</a> talking only about the PDF reader (version 6). The best page so far is the announcement page <a href="https://www.zotero.org/blog/zotero-7/">Zotero 7: Zotero, redesigned</a>. However, many YouTube tutorials will explain the details of Zotero version 7 in several weeks.</p>
+<p>In the meantime, the following annotated screenshot may be helpful. It recapitulates graphically the above textual description.</p>
+<div id="fig-zotero-annotations" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The screenshots show three horizontally divided panes: Left are the annotations, in the center is the content of the PDF file, and right are ten annotations collected as a separate note item." data-fig-align="center" data-group="zotero-annotation">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-zotero-annotations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="Screenshot-WIR-2022-Zotero-Skitch-min.png" class="lightbox" data-gallery="zotero-annotation" title="Figure&nbsp;4: Screenshot of Zotero Reader and Note Editor with explanations of the graphical user interface (GUI). Click on the image to enlarge it."><img src="https://l3lab.net/posts/2024-08-04-annotations-with-zotero-version-7/Screenshot-WIR-2022-Zotero-Skitch-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="The screenshots show three horizontally divided panes: Left are the annotations, in the center is the content of the PDF file, and right are ten annotations collected as a separate note item."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-zotero-annotations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Screenshot of Zotero Reader and Note Editor with explanations of the graphical user interface (<a class="glossary" title="A graphical user interface (GUI) is an operating system interface that enables user interactions with an electronic device through icons, images, and other graphical elements G2.">GUI</a>). Click on the image to enlarge it.
+</figcaption>
+</figure>
+</div>
+
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
+<div id="ref-kalir2021" class="csl-entry">
+Kalir, Remi H., and Antero Garcia. 2021. <em>Annotation</em>. Annotated Edition. Cambridge, Massachusetts: The MIT Press.
+</div>
+<div id="ref-kalir2020" class="csl-entry">
+Kalir, Remi, and Antero Garcia. 2020. <span>“Annotation [Annoted Website].”</span> <a href="https://mitpressonpubpub.mitpress.mit.edu/annotation">https://mitpressonpubpub.mitpress.mit.edu/annotation</a>.
+</div>
+</div></section></div> ]]></description>
+  <category>how-to</category>
+  <category>tutorial</category>
+  <category>zotero</category>
+  <guid>https://l3lab.net/posts/2024-08-04-annotations-with-zotero-version-7/</guid>
+  <pubDate>Sat, 03 Aug 2024 22:00:00 GMT</pubDate>
+  <media:content url="https://l3lab.net/posts/2024-08-04-annotations-with-zotero-version-7/Screenshot-WIR-2022-Zotero-min.png" medium="image" type="image/png" height="80" width="144"/>
+</item>
 <item>
   <title>How to use the World Inequality Database (WID)?</title>
   <dc:creator>Peter Baumgartner</dc:creator>
@@ -92,7 +1017,7 @@
 <section id="figure-to-replicate" class="level4">
 <h4 class="anchored" data-anchor-id="figure-to-replicate">Figure to replicate</h4>
 <p>As my test bed, I will use Figure 7 of BHE <span class="citation" data-cites="piketty2022">(Piketty 2022, 46)</span>.</p>
-<div id="fig-figure7-piketty" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-fig-align="center">
+<div id="fig-figure7-piketty" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-figure7-piketty-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-Piketty-min.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;1: Figure 7 of BHE, taken from the original source on Piketty’s website."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-Piketty-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="alt-text"></a>
@@ -106,7 +1031,7 @@ Figure&nbsp;1: Figure 7 of <a class="glossary" title="Piketty, T. (2022). A Brie
 <section id="interactive-replication" class="level4">
 <h4 class="anchored" data-anchor-id="interactive-replication">Interactive Replication</h4>
 <p>As a first approach, I will replicate Figure 7 of BHE with the provided interactive tools of the WID. Here is a good <a href="https://wid.world/country/france/">starting point for income inequality</a>.</p>
-<div id="fig-BHE-07-00" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
+<div id="fig-BHE-07-00" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="BHE-Figure-07" alt="alt-text">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-00-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-01-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;2: Choosing France as “Country” and using the default values for income inequality (top 10% share and bottom 50% share)"><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-01-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -120,7 +1045,7 @@ Figure&nbsp;2: Choosing France as “Country” and using the default values for
 <div class="grid">
 <section id="figures-3-6" class="level5 g-col-4">
 <h5 class="anchored" data-anchor-id="figures-3-6">Figures 3-6</h5>
-<div id="fig-BHE-07-01" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
+<div id="fig-BHE-07-01" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="BHE-Figure-07" alt="alt-text">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-01-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;3: Choosing France as “Country” and using the default values for income inequality (top 10% share and bottom 50% share)."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-01-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -131,7 +1056,7 @@ Figure&nbsp;3: Choosing France as “Country” and using the default values for
 </figure>
 </div>
 <hr>
-<div id="fig-BHE-07-02" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
+<div id="fig-BHE-07-02" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="BHE-Figure-07" alt="alt-text">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-02-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-02-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;4: Enlarge the time span of the data from 1947 to 1820 with the bottom slider.  &nbsp;"><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-02-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -142,7 +1067,7 @@ Figure&nbsp;4: Enlarge the time span of the data from 1947 to 1820 with the bott
 </figure>
 </div>
 <hr>
-<div id="fig-BHE-07-03" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
+<div id="fig-BHE-07-03" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="BHE-Figure-07" alt="alt-text">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-03-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-03-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;5: Hiding the extrapolations (dotted lines) by choosing ‘More option’ on the top right corner and turning on the radio button."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-03-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -153,7 +1078,7 @@ Figure&nbsp;5: Hiding the extrapolations (dotted lines) by choosing ‘More opti
 </figure>
 </div>
 <hr>
-<div id="fig-BHE-07-04" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-fig-align="center">
+<div id="fig-BHE-07-04" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-04-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-04-min.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;6: Check if ‘smooth lines’ is active. It should be turned on because it is the default value.  &nbsp;"><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-04-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -166,7 +1091,7 @@ Figure&nbsp;6: Check if ‘smooth lines’ is active. It should be turned on bec
 </section>
 <section id="figures-7-10" class="level5 g-col-4">
 <h5 class="anchored" data-anchor-id="figures-7-10">Figures 7-10</h5>
-<div id="fig-BHE-07-05" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
+<div id="fig-BHE-07-05" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="BHE-Figure-07" alt="alt-text">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-05-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-05-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;7: Change the limits of the Y-axis from 0 to 60%. This is different than in the original. See my comments later in this article."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-05-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -177,7 +1102,7 @@ Figure&nbsp;7: Change the limits of the Y-axis from 0 to 60%. This is different 
 </figure>
 </div>
 <hr>
-<div id="fig-BHE-07-06" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
+<div id="fig-BHE-07-06" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="BHE-Figure-07" alt="alt-text">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-06-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-06-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;8: Compared with the original, we still will need a third time series for the share of the middle 40% of the population."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-06-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -188,7 +1113,7 @@ Figure&nbsp;8: Compared with the original, we still will need a third time serie
 </figure>
 </div>
 <hr>
-<div id="fig-BHE-07-08" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
+<div id="fig-BHE-07-08" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="BHE-Figure-07" alt="alt-text">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-08-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-08-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;9: Click on the bottom of the left green navigation bar to open ‘More Indicators’ to include custom indicators in the graph."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-08-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -199,7 +1124,7 @@ Figure&nbsp;9: Click on the bottom of the left green navigation bar to open ‘M
 </figure>
 </div>
 <hr>
-<div id="fig-BHE-07-09" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
+<div id="fig-BHE-07-09" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="BHE-Figure-07" alt="alt-text">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-09-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-09-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;10: Choose ‘Income Inequality’ to get the option to include a preconfigured percentile into the graph."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-09-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -212,7 +1137,7 @@ Figure&nbsp;10: Choose ‘Income Inequality’ to get the option to include a pr
 </section>
 <section id="figures-11-14" class="level5 g-col-4">
 <h5 class="anchored" data-anchor-id="figures-11-14">Figures 11-14</h5>
-<div id="fig-BHE-07-10" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
+<div id="fig-BHE-07-10" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="BHE-Figure-07" alt="alt-text">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-10-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;11: Scroll down to select the radio box for the ‘Middle 40%’ percentile. &nbsp;"><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-10-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -223,7 +1148,7 @@ Figure&nbsp;11: Scroll down to select the radio box for the ‘Middle 40%’ per
 </figure>
 </div>
 <hr>
-<div id="fig-BHE-07-11" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
+<div id="fig-BHE-07-11" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="BHE-Figure-07" alt="alt-text">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-11-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;12: Confirm the default values. I will explain the different options in a later post.  &nbsp;"><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-11-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -234,7 +1159,7 @@ Figure&nbsp;12: Confirm the default values. I will explain the different options
 </figure>
 </div>
 <hr>
-<div id="fig-BHE-07-12" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
+<div id="fig-BHE-07-12" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="BHE-Figure-07" alt="alt-text">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-12-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;13: Our last action adds the share of the middle 40% to our graph, as was seen in Figure&nbsp;8.  &nbsp;"><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-12-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -245,7 +1170,7 @@ Figure&nbsp;13: Our last action adds the share of the middle 40% to our graph, a
 </figure>
 </div>
 <hr>
-<div id="fig-BHE-07-13" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-Figure-07" data-fig-align="center">
+<div id="fig-BHE-07-13" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="BHE-Figure-07" alt="alt-text">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-13-min.png" class="lightbox" data-gallery="BHE-Figure-07" title="Figure&nbsp;14: Hovering with the mouse over the graphs of the interactive website, we can get tooltips with the values for every year."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-13-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -263,7 +1188,7 @@ Figure&nbsp;14: Hovering with the mouse over the graphs of the interactive websi
 <p>If we compare both figures side by side, we will see a significant difference. Our replication differs from the original in the years before 1900. For instance, in our figure, the people with the top 10% of income share about 60% of the total income, in contrast to the 50% share in the original graph. I need to find out where these differences come from. There may have been a correction of the computed extrapolations in an update after the book publication. In any case, this difference is not essential here. Remember, the primary purpose of the exercise is to understand the patterns of the database structure — and not (at least at the moment) to get correct figures.</p>
 <div class="grid">
 <div class="g-col-6">
-<div id="fig-figure7-piketty-2" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="BHE-figure-compare" data-fig-align="center">
+<div id="fig-figure7-piketty-2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="BHE-figure-compare">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-figure7-piketty-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-Piketty-min.png" class="lightbox" data-gallery="BHE-figure-compare" title="Figure&nbsp;15: Figure 7 of BHE, taken from the original source on Piketty’s website. The shares for the top 10% are lower. It is slightly above 50% of the total income, whereas it is about 60% in the replication. On the other hand, the share of the middle is 40% lower than that of the replication."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-Piketty-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%"></a>
@@ -275,7 +1200,7 @@ Figure&nbsp;15: Figure 7 of <a class="glossary" title="Piketty, T. (2022). A Bri
 </div>
 </div>
 <div class="g-col-6">
-<div id="fig-BHE-07-13-2" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-figure-compare" data-fig-align="center">
+<div id="fig-BHE-07-13-2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="BHE-figure-compare" alt="alt-text">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-07-13-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-13-min.png" class="lightbox" data-gallery="BHE-figure-compare" title="Figure&nbsp;16: The result of my replication is showing higher shares for the top 10% and accordingly lower shares for the middle 40% in contrast to the original figure. However, the level of the share of the bottom 50% of the population is approximately the same in both figures."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-13-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -301,7 +1226,7 @@ Figure&nbsp;16: The result of my replication is showing higher shares for the to
 <p>Until now, I have used manually taken screenshots. But there are also several possibilities to display results offered by the <a class="glossary" title="The ‘World Inequality Database’ (WID) aims to provide open and convenient access to the most extensive available database on the historical evolution of the world distribution of income and wealth, both within countries and between countries. WID.WORLD">WID</a>.</p>
 <section id="download-a-jpg-file" class="level4">
 <h4 class="anchored" data-anchor-id="download-a-jpg-file">Download a JPG-file</h4>
-<div id="fig-wid-jpg-figure07" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-fig-align="center">
+<div id="fig-wid-jpg-figure07" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="alt-text">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-wid-jpg-figure07-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-graph_dl.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-19" title="Figure&nbsp;17: Income inequality, France, 1820-2022 download as JPG from the WID site and integrated into the Quarto text."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-graph_dl.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -393,7 +1318,7 @@ text-align: center;
 </div>
 <div class="columns">
 <div class="column" style="width:100%;">
-<p><button class="btn btn-success downloadthis  " id="dnldts3275"><i class="bi bi-download"></i> Download WID-vignette as PDF </button></p>
+<p><button class="btn btn-success downloadthis  " id="dnldts26304"><i class="bi bi-download"></i> Download WID-vignette as PDF </button></p>
 </div>
 </div>
 <section id="plotting-data-with-r" class="level3">
@@ -956,7 +1881,7 @@ Listing&nbsp;4: Pre-tax national income inequality in France, 1820-2022
 <h2 class="anchored" data-anchor-id="comparison-of-my-result-with-the-original-figure-7">Comparison of my result with the original Figure 7</h2>
 <div class="grid">
 <div class="g-col-6">
-<div id="fig-figure7-piketty-3" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="BHE-figure-compare2" data-fig-align="center">
+<div id="fig-figure7-piketty-3" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="BHE-figure-compare2">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-figure7-piketty-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-Figure-07-Piketty-min.png" class="lightbox" data-gallery="BHE-figure-compare2" title="Figure&nbsp;18: Figure 7 of BHE, taken from the original source on Piketty’s website."><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-Figure-07-Piketty-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a>
@@ -968,7 +1893,7 @@ Figure&nbsp;18: Figure 7 of <a class="glossary" title="Piketty, T. (2022). A Bri
 </div>
 </div>
 <div class="g-col-6">
-<div id="fig-BHE-sptinc992j-fr" class="quarto-float quarto-figure quarto-figure-center anchored" alt="alt-text" data-group="BHE-figure-compare2" data-fig-align="center">
+<div id="fig-BHE-sptinc992j-fr" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="BHE-figure-compare2" alt="alt-text">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BHE-sptinc992j-fr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="BHE-sptinc992j_fr-min.png" class="lightbox" data-gallery="BHE-figure-compare2" title="Figure&nbsp;19: Resulting figure after data download and plotting with R"><img src="https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/BHE-sptinc992j_fr-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="alt-text"></a>
@@ -1762,7 +2687,7 @@ background-color: null;
 font-style: inherit;">---</span></span></code></pre></div>
 </div>
 <p>And here is the look of the blog’s home page after the first rendering:</p>
-<div id="fig-fist-rendering" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="blog-source" data-fig-align="center" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'quarto-pb-blog' in bold. The white main page consists of four columns. It contains form left to right dummy data: Date and author; title of blog post in bold, buttons for categories, short summary; image; a list of categories with number of their appearances in parenthesis.">
+<div id="fig-fist-rendering" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'quarto-pb-blog' in bold. The white main page consists of four columns. It contains form left to right dummy data: Date and author; title of blog post in bold, buttons for categories, short summary; image; a list of categories with number of their appearances in parenthesis." data-group="blog-source" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fist-rendering-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="virgin-blog-homepage-min.png" class="lightbox" data-gallery="blog-source" title="Figure&nbsp;1: First rendering after initializing a Quarto blog (Screenshot)"><img src="https://l3lab.net/posts/2024-07-24-default-blog-source-code/virgin-blog-homepage-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'quarto-pb-blog' in bold. The white main page consists of four columns. It contains form left to right dummy data: Date and author; title of blog post in bold, buttons for categories, short summary; image; a list of categories with number of their appearances in parenthesis."></a>
@@ -1777,7 +2702,7 @@ Figure&nbsp;1: First rendering after initializing a Quarto blog (Screenshot)
 <section id="change-title" class="level2">
 <h2 class="anchored" data-anchor-id="change-title">Change Title</h2>
 <p>The first line of the homepage’s YAML header in <code>index.qmd</code> is the title. If I change the title to “L3Lab,” only one part of the title banner will change.</p>
-<div id="fig-blog-title-changed" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="blog-source" data-fig-align="center" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'L3Lab' in bold. The white main page consists of four columns. It contains form left to right dummy data: Date and author; title of blog post in bold, buttons for categories, short summary; image; a list of categories with number of their appearances in parenthesis.">
+<div id="fig-blog-title-changed" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'L3Lab' in bold. The white main page consists of four columns. It contains form left to right dummy data: Date and author; title of blog post in bold, buttons for categories, short summary; image; a list of categories with number of their appearances in parenthesis." data-group="blog-source" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-blog-title-changed-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="blog-title-changed-min.png" class="lightbox" data-gallery="blog-source" title="Figure&nbsp;2: Screenshot of the blog’s homepage after changing the blog listing title in index.qmd"><img src="https://l3lab.net/posts/2024-07-24-default-blog-source-code/blog-title-changed-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'L3Lab' in bold. The white main page consists of four columns. It contains form left to right dummy data: Date and author; title of blog post in bold, buttons for categories, short summary; image; a list of categories with number of their appearances in parenthesis."></a>
@@ -1937,7 +2862,7 @@ background-color: null;
 font-style: inherit;"> styles.css</span></span></code></pre></div>
 </div>
 <p>The top left name is the website’s title (and not the blog title). A website can have several components, such as a web page and a blog. I will call the website “Life Long Learning Lab,” the blog’s name remains “L3Lab”.</p>
-<div id="fig-website-title-changed" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="blog-source" data-fig-align="center" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'L3Lab' in bold. The white main page consists of four columns. It contains form left to right one row of dummy data: Date and author; title of blog post in bold, buttons for categories, short summary; image; a list of categories with numbers of their appearances in parenthesis.">
+<div id="fig-website-title-changed" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'L3Lab' in bold. The white main page consists of four columns. It contains form left to right one row of dummy data: Date and author; title of blog post in bold, buttons for categories, short summary; image; a list of categories with numbers of their appearances in parenthesis." data-group="blog-source" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-website-title-changed-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="website-title-changed-min.png" class="lightbox" data-gallery="blog-source" title="Figure&nbsp;3: Screenshot of the blog’s homepage after changing the title of the website in _quarto.yml"><img src="https://l3lab.net/posts/2024-07-24-default-blog-source-code/website-title-changed-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'L3Lab' in bold. The white main page consists of four columns. It contains form left to right one row of dummy data: Date and author; title of blog post in bold, buttons for categories, short summary; image; a list of categories with numbers of their appearances in parenthesis."></a>
@@ -1955,7 +2880,7 @@ Figure&nbsp;3: Screenshot of the blog’s homepage after changing the title of t
 <h3 class="anchored" data-anchor-id="contents-directive">Contents Directive</h3>
 <p>Listings enable you to automatically generate the contents of a page from a list of Quarto documents. In our case, the blog’s title is actually the home page’s listing title.</p>
 <p>Instead of <code>listing: default</code> for a list of all documents in the directory and a drop-down menu for sorting direction, order criteria, and a search bar, we have specified with <code>content: posts</code> that only the documents in the folder “posts” should be listed. Have a look into the “posts” folder by selecting the “Files” tab in the bottom right pane of RStudio and click on the “posts” folder to open the directory.</p>
-<div id="fig-content-posts-folder" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="blog-source" data-fig-align="center" alt="On the top there are some window tabs. From left to the right: 'Files' (active), 'Plots', 'Packages', 'Help', 'Viewer', and 'Presentation. Underneath several buttons prepended by icons. From left to the right: 'New Folder', 'New Blank File', 'Delete', 'Rename', 'More' (drop-down-menu). Under these buttons is a URL where each part is a (blue) link: 'Home>Documents>Meine-Repos>quarto-pb-blog>posts'. Underneath is a list of three items in three columns titled 'Name', 'Size', and 'Modified'. The first item says: '_metadata.yml 237B, Jul 17, 2024, 10:08 AM'. The next two lines represent folder names: 'post-with-code' and 'welcome'.">
+<div id="fig-content-posts-folder" class="quarto-float quarto-figure quarto-figure-center anchored" alt="On the top there are some window tabs. From left to the right: 'Files' (active), 'Plots', 'Packages', 'Help', 'Viewer', and 'Presentation. Underneath several buttons prepended by icons. From left to the right: 'New Folder', 'New Blank File', 'Delete', 'Rename', 'More' (drop-down-menu). Under these buttons is a URL where each part is a (blue) link: 'Home>Documents>Meine-Repos>quarto-pb-blog>posts'. Underneath is a list of three items in three columns titled 'Name', 'Size', and 'Modified'. The first item says: '_metadata.yml 237B, Jul 17, 2024, 10:08 AM'. The next two lines represent folder names: 'post-with-code' and 'welcome'." data-group="blog-source" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-content-posts-folder-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="content-of-posts-directory-min.png" class="lightbox" data-gallery="blog-source" title="Figure&nbsp;4: Content of the posts folder immediately after the initialization process"><img src="https://l3lab.net/posts/2024-07-24-default-blog-source-code/content-of-posts-directory-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="On the top there are some window tabs. From left to the right: 'Files' (active), 'Plots', 'Packages', 'Help', 'Viewer', and 'Presentation. Underneath several buttons prepended by icons. From left to the right: 'New Folder', 'New Blank File', 'Delete', 'Rename', 'More' (drop-down-menu). Under these buttons is a URL where each part is a (blue) link: 'Home>Documents>Meine-Repos>quarto-pb-blog>posts'. Underneath is a list of three items in three columns titled 'Name', 'Size', and 'Modified'. The first item says: '_metadata.yml 237B, Jul 17, 2024, 10:08 AM'. The next two lines represent folder names: 'post-with-code' and 'welcome'."></a>
@@ -2005,7 +2930,7 @@ Table&nbsp;1: Quarto blog listing types
 <p>I am going to use for my blog the <code>default</code> blog-style list of items. However, it is instructive to see the other types to get a sense of their different appearances.</p>
 <section id="grid-listings" class="level4">
 <h4 class="anchored" data-anchor-id="grid-listings">Grid Listings</h4>
-<div id="fig-grid-listing" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="blog-source" data-fig-align="center" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'L3Lab' in bold. The white main page consists of two boxes and a list of categories. Each box consists of five (dummy) elements. From top to down: image, post title, category buttons, short description, author and date. On the right side is a list of categories with numbers of their appearances in parenthesis. ">
+<div id="fig-grid-listing" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'L3Lab' in bold. The white main page consists of two boxes and a list of categories. Each box consists of five (dummy) elements. From top to down: image, post title, category buttons, short description, author and date. On the right side is a list of categories with numbers of their appearances in parenthesis. " data-group="blog-source" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-grid-listing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="grid-listing-min.png" class="lightbox" data-gallery="blog-source" title="Figure&nbsp;5: Dummy articles after the blog initialiation in grid listing mode (Screenshot)"><img src="https://l3lab.net/posts/2024-07-24-default-blog-source-code/grid-listing-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'L3Lab' in bold. The white main page consists of two boxes and a list of categories. Each box consists of five (dummy) elements. From top to down: image, post title, category buttons, short description, author and date. On the right side is a list of categories with numbers of their appearances in parenthesis. "></a>
@@ -2018,7 +2943,7 @@ Figure&nbsp;5: Dummy articles after the blog initialiation in grid listing mode 
 </section>
 <section id="table-listings" class="level4">
 <h4 class="anchored" data-anchor-id="table-listings">Table Listings</h4>
-<div id="fig-table-listing" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="blog-source" data-fig-align="center" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'L3Lab' in bold. The white main page consists of a table of three columns and a list of categories. The two rows are titled 'Date', 'Title', and 'Author'. The two rows from, consists each from left to the right with dummy data: 'July 17, 2024', 'Post With Code', 'harlow Malloc' and 'July 14, 2024', 'Welcome to the Blog', and 'Tristan O'Malley'. On the right side is a list of categories with numbers of their appearances in parenthesis. ">
+<div id="fig-table-listing" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'L3Lab' in bold. The white main page consists of a table of three columns and a list of categories. The two rows are titled 'Date', 'Title', and 'Author'. The two rows from, consists each from left to the right with dummy data: 'July 17, 2024', 'Post With Code', 'harlow Malloc' and 'July 14, 2024', 'Welcome to the Blog', and 'Tristan O'Malley'. On the right side is a list of categories with numbers of their appearances in parenthesis. " data-group="blog-source" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-table-listing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="table-listing-min.png" class="lightbox" data-gallery="blog-source" title="Figure&nbsp;6: Dummy articles after the blog initialiation in table listing mode"><img src="https://l3lab.net/posts/2024-07-24-default-blog-source-code/table-listing-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'L3Lab' in bold. The white main page consists of a table of three columns and a list of categories. The two rows are titled 'Date', 'Title', and 'Author'. The two rows from, consists each from left to the right with dummy data: 'July 17, 2024', 'Post With Code', 'harlow Malloc' and 'July 14, 2024', 'Welcome to the Blog', and 'Tristan O'Malley'. On the right side is a list of categories with numbers of their appearances in parenthesis. "></a>
@@ -2031,7 +2956,7 @@ Figure&nbsp;6: Dummy articles after the blog initialiation in table listing mode
 </section>
 <section id="default-listings" class="level4">
 <h4 class="anchored" data-anchor-id="default-listings">Default Listings</h4>
-<div id="fig-default-listing" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="blog-source" data-fig-align="center" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'L3Lab' in bold. The white main page consists of four columns. It contains form left to right two rows of dummy data: Date and author; title of blog post in bold, buttons for categories, short summary; image; a list of categories with numbers of their appearances in parenthesis.">
+<div id="fig-default-listing" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'L3Lab' in bold. The white main page consists of four columns. It contains form left to right two rows of dummy data: Date and author; title of blog post in bold, buttons for categories, short summary; image; a list of categories with numbers of their appearances in parenthesis." data-group="blog-source" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-default-listing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="default-listing-min.png" class="lightbox" data-gallery="blog-source" title="Figure&nbsp;7: Dummy articles after the blog initialiation in default listing mode (Screenshot)"><img src="https://l3lab.net/posts/2024-07-24-default-blog-source-code/default-listing-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Screenshot of the blog’s homepage. The grey title banner consists of two line. On the top left corner: 'quarto-pb-blog'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. On the lower left side: 'L3Lab' in bold. The white main page consists of four columns. It contains form left to right two rows of dummy data: Date and author; title of blog post in bold, buttons for categories, short summary; image; a list of categories with numbers of their appearances in parenthesis."></a>
@@ -2080,7 +3005,7 @@ Figure&nbsp;7: Dummy articles after the blog initialiation in default listing mo
 <h2 class="anchored" data-anchor-id="title-block-banner">Title Block Banner</h2>
 <p>HTML pages rendered with Quarto include a formatted title block at the start of the article. The title block contains the title, subtitle, authors, date, doi, and abstract. There are several options to style the title block. In addition, if you’d like a more prominent title block, you can use&nbsp;<code>title-block-banner</code>&nbsp;to create a banner-style title block.</p>
 <p>For my blog, I don’t want (at the moment) a title block banner. Setting <code>title-block-banner</code> to false saves space on the title page and feels more prosaic and less business-like.</p>
-<div id="fig-no-blog-banner" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="blog-source" data-fig-align="center" alt="Screenshot of the blog’s homepage. The grey title header consists of one line. On the top left corner: 'Life Long Learning Lab'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. The white main page consists of four columns. It contains form left to right two rows of dummy data: Date and author; title of blog post in bold, buttons for categories, short summary; image; a list of categories with numbers of their appearances in parenthesis. The left first column is tited 'L3Lab'">
+<div id="fig-no-blog-banner" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Screenshot of the blog’s homepage. The grey title header consists of one line. On the top left corner: 'Life Long Learning Lab'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. The white main page consists of four columns. It contains form left to right two rows of dummy data: Date and author; title of blog post in bold, buttons for categories, short summary; image; a list of categories with numbers of their appearances in parenthesis. The left first column is tited 'L3Lab'" data-group="blog-source" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-no-blog-banner-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="no-title-block-banner-min.png" class="lightbox" data-gallery="blog-source" title="Figure&nbsp;8: Blog homepage without banner for the title block (Screenshot)"><img src="https://l3lab.net/posts/2024-07-24-default-blog-source-code/no-title-block-banner-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Screenshot of the blog’s homepage. The grey title header consists of one line. On the top left corner: 'Life Long Learning Lab'. On the top right corner: 'About' and the icons for GitHub, X formerly Twitter and a magnifying glass for a search engine. The white main page consists of four columns. It contains form left to right two rows of dummy data: Date and author; title of blog post in bold, buttons for categories, short summary; image; a list of categories with numbers of their appearances in parenthesis. The left first column is tited 'L3Lab'"></a>
@@ -2094,7 +3019,7 @@ Figure&nbsp;8: Blog homepage without banner for the title block (Screenshot)
 <section id="git-and-github" class="level2">
 <h2 class="anchored" data-anchor-id="git-and-github">Git and GitHub</h2>
 <p>Here I will pause and commit these changes to Git and GitHub. It is interesting to note that there are – besides <code>index.qmd</code> and <code>_quatro.yml</code> – several other files that have changed.</p>
-<div id="fig-changed-files" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="blog-source" data-fig-align="center" alt="RStudio top right pane with the following tabs: Environment, History, Connection, Build, Git, and Tutorial. The Git pane is selected and therefore active. Under the tabs is another line of icons and text buttons representing Git actions: From left to right: 'Diff', 'Commit', 'Pull', 'Push', 'History', 'More' (drop-down menu), 'New Branch', 'master'). Underneath it shows changed files. From top to the bottom: '_quarto.yml', 'index.qmd', '_site/about.html' (with blue background = selected, '_site/index.html', '_site/search.json', '_site/posts/post-with-code/index.html', and '_site/posts/welcome/index.html'">
+<div id="fig-changed-files" class="quarto-float quarto-figure quarto-figure-center anchored" alt="RStudio top right pane with the following tabs: Environment, History, Connection, Build, Git, and Tutorial. The Git pane is selected and therefore active. Under the tabs is another line of icons and text buttons representing Git actions: From left to right: 'Diff', 'Commit', 'Pull', 'Push', 'History', 'More' (drop-down menu), 'New Branch', 'master'). Underneath it shows changed files. From top to the bottom: '_quarto.yml', 'index.qmd', '_site/about.html' (with blue background = selected, '_site/index.html', '_site/search.json', '_site/posts/post-with-code/index.html', and '_site/posts/welcome/index.html'" data-group="blog-source" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-changed-files-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="changed-files-min.png" class="lightbox" data-gallery="blog-source" title="Figure&nbsp;9: List of changed files expalined in this blog post (Screenshot)"><img src="https://l3lab.net/posts/2024-07-24-default-blog-source-code/changed-files-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="RStudio top right pane with the following tabs: Environment, History, Connection, Build, Git, and Tutorial. The Git pane is selected and therefore active. Under the tabs is another line of icons and text buttons representing Git actions: From left to right: 'Diff', 'Commit', 'Pull', 'Push', 'History', 'More' (drop-down menu), 'New Branch', 'master'). Underneath it shows changed files. From top to the bottom: '_quarto.yml', 'index.qmd', '_site/about.html' (with blue background = selected, '_site/index.html', '_site/search.json', '_site/posts/post-with-code/index.html', and '_site/posts/welcome/index.html'"></a>
@@ -2105,7 +3030,7 @@ Figure&nbsp;9: List of changed files expalined in this blog post (Screenshot)
 </figure>
 </div>
 <p>I haven’t even touched many of these files. But the title change propagates the new name into all blog post titles of articles already written and also in the corresponding navigation bars. This is shown with the example of the about page in the next screenshot (Figure&nbsp;10).</p>
-<div id="fig-commit-about-changes" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="blog-source" data-fig-align="center" alt="A pop-up window overlaying the RStudio window separated in two parts: The left part contains at the top small buttons. From left to the right: 'Changes', 'History', 'master', 'stage', 'revert', and 'ignore.' The right part contains the buttons 'Pull' and 'Push.' Underneath of the left side are changed files listed. From top to the bottom: '_quarto.yml', 'index.qmd', '_site/about.html' (with blue background = selected, '_site/index.html', '_site/search.json', '_site/posts/post-with-code/index.html', and '_site/posts/welcome/index.html'  On the right side there is an empty writing pane with the header 'Commit message'. Under the writing pane are two unchecked check boxes 'Amend previous commit' and 'Sign commit' with a 'Commit' button. Underneath those two window parts is another line of action buttons covering the whole length of the window: From left to the right: 'Show Staged' text followed by an empty radio button, 'Staged' text followed by an active radio button, 'Context' (text), 5 lines (drop-down menu), 'Ignore Whitespace' (active check box), 'Unstage All'. Underneath is the content of the HTML code of the 'About' file listed over the whole length of the window. Every line is numbered. Line 10 and 81 are duplicated. The first line 10 with a red background reads '<title>About - quarto-blog-title</title>'. The second line underneath is green and reads: '<title>About - Life Long Learning Lab</title>'. The first line 81 with a red background reads '<span class=navbar-title>quarto-pb-blog</span>'. The second line underneath is green and reads: '<span class=navbar-title>Life Long Learning</span>'.">
+<div id="fig-commit-about-changes" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A pop-up window overlaying the RStudio window separated in two parts: The left part contains at the top small buttons. From left to the right: 'Changes', 'History', 'master', 'stage', 'revert', and 'ignore.' The right part contains the buttons 'Pull' and 'Push.' Underneath of the left side are changed files listed. From top to the bottom: '_quarto.yml', 'index.qmd', '_site/about.html' (with blue background = selected, '_site/index.html', '_site/search.json', '_site/posts/post-with-code/index.html', and '_site/posts/welcome/index.html'  On the right side there is an empty writing pane with the header 'Commit message'. Under the writing pane are two unchecked check boxes 'Amend previous commit' and 'Sign commit' with a 'Commit' button. Underneath those two window parts is another line of action buttons covering the whole length of the window: From left to the right: 'Show Staged' text followed by an empty radio button, 'Staged' text followed by an active radio button, 'Context' (text), 5 lines (drop-down menu), 'Ignore Whitespace' (active check box), 'Unstage All'. Underneath is the content of the HTML code of the 'About' file listed over the whole length of the window. Every line is numbered. Line 10 and 81 are duplicated. The first line 10 with a red background reads '<title>About - quarto-blog-title</title>'. The second line underneath is green and reads: '<title>About - Life Long Learning Lab</title>'. The first line 81 with a red background reads '<span class=navbar-title>quarto-pb-blog</span>'. The second line underneath is green and reads: '<span class=navbar-title>Life Long Learning</span>'." data-group="blog-source" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-commit-about-changes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="content-of-changes-in-about-min.png" class="lightbox" data-gallery="blog-source" title="Figure&nbsp;10: Changes in the about.qmd file (Screenshot)"><img src="https://l3lab.net/posts/2024-07-24-default-blog-source-code/content-of-changes-in-about-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="A pop-up window overlaying the RStudio window separated in two parts: The left part contains at the top small buttons. From left to the right: 'Changes', 'History', 'master', 'stage', 'revert', and 'ignore.' The right part contains the buttons 'Pull' and 'Push.' Underneath of the left side are changed files listed. From top to the bottom: '_quarto.yml', 'index.qmd', '_site/about.html' (with blue background = selected, '_site/index.html', '_site/search.json', '_site/posts/post-with-code/index.html', and '_site/posts/welcome/index.html'  On the right side there is an empty writing pane with the header 'Commit message'. Under the writing pane are two unchecked check boxes 'Amend previous commit' and 'Sign commit' with a 'Commit' button. Underneath those two window parts is another line of action buttons covering the whole length of the window: From left to the right: 'Show Staged' text followed by an empty radio button, 'Staged' text followed by an active radio button, 'Context' (text), 5 lines (drop-down menu), 'Ignore Whitespace' (active check box), 'Unstage All'. Underneath is the content of the HTML code of the 'About' file listed over the whole length of the window. Every line is numbered. Line 10 and 81 are duplicated. The first line 10 with a red background reads '<title>About - quarto-blog-title</title>'. The second line underneath is green and reads: '<title>About - Life Long Learning Lab</title>'. The first line 81 with a red background reads '<span class=navbar-title>quarto-pb-blog</span>'. The second line underneath is green and reads: '<span class=navbar-title>Life Long Learning</span>'."></a>
@@ -2116,7 +3041,7 @@ Figure&nbsp;10: Changes in the about.qmd file (Screenshot)
 </figure>
 </div>
 <p>And I have committed all these changes I’ve got with this second commit a new status in my GitHub repo.</p>
-<div id="fig-github-second-commit" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="blog-source" data-fig-align="center" alt="Listing the committed files on the GitHub repo web page in three columns. Name, commit message ('First commit' for all lines) and time ('19 minutes ago' for all lines). At the top left of this list there is a small profile picture of me, followed by the name of my GitHub account 'petzi53' and the text 'first commit'. On the top left of this list there is a small profile picture of me, followed by the name of my GitHub account 'petzi53' and the text 'title of homepage listing and website'. On the top side you can see the unique commit code '1e825ff' followed by the text '15 minutes ago' and in bold '2 Commits'">
+<div id="fig-github-second-commit" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Listing the committed files on the GitHub repo web page in three columns. Name, commit message ('First commit' for all lines) and time ('19 minutes ago' for all lines). At the top left of this list there is a small profile picture of me, followed by the name of my GitHub account 'petzi53' and the text 'first commit'. On the top left of this list there is a small profile picture of me, followed by the name of my GitHub account 'petzi53' and the text 'title of homepage listing and website'. On the top side you can see the unique commit code '1e825ff' followed by the text '15 minutes ago' and in bold '2 Commits'" data-group="blog-source" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-github-second-commit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="github-second-commit-2-min.png" class="lightbox" data-gallery="blog-source" title="Figure&nbsp;11: Updated GitHub repo after second commit (Screenshot)"><img src="https://l3lab.net/posts/2024-07-24-default-blog-source-code/github-second-commit-2-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Listing the committed files on the GitHub repo web page in three columns. Name, commit message ('First commit' for all lines) and time ('19 minutes ago' for all lines). At the top left of this list there is a small profile picture of me, followed by the name of my GitHub account 'petzi53' and the text 'first commit'. On the top left of this list there is a small profile picture of me, followed by the name of my GitHub account 'petzi53' and the text 'title of homepage listing and website'. On the top side you can see the unique commit code '1e825ff' followed by the text '15 minutes ago' and in bold '2 Commits'"></a>
@@ -2444,7 +3369,7 @@ font-style: inherit;"> styles.css</span></span></code></pre></div>
 <ol type="1">
 <li>To see all the changes you have made so far, click on the Git tab at the top right pane of RStudio. You should see a picture similar to the following one.</li>
 </ol>
-<div id="fig-git-files-unselected" class="quarto-float quarto-figure quarto-figure-center anchored" alt="RStudio top right pane with the following tabs: Environment, History, Connection, Build, Git, and Tutorial. The Git pane is selected and therefore active. Under the tabs is another line of icons and text buttons representing Git actions: From left to right: Diff, Commit, Pull (greyed out), Push (greyed out), History, More (drop-down menu), New Branch, (no branch). Underneath it shows added or changed files or folders (ending with a slash) from the initialization process. From top to the bottom: .gitignote, _freeze/, _quarto.yml, _site/, about.qmd, index.qmd, posts/, profile.jpg, quarto-pb-blog.Rproj, style.css." data-fig-align="center" data-group="git-github">
+<div id="fig-git-files-unselected" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="git-github" alt="RStudio top right pane with the following tabs: Environment, History, Connection, Build, Git, and Tutorial. The Git pane is selected and therefore active. Under the tabs is another line of icons and text buttons representing Git actions: From left to right: Diff, Commit, Pull (greyed out), Push (greyed out), History, More (drop-down menu), New Branch, (no branch). Underneath it shows added or changed files or folders (ending with a slash) from the initialization process. From top to the bottom: .gitignote, _freeze/, _quarto.yml, _site/, about.qmd, index.qmd, posts/, profile.jpg, quarto-pb-blog.Rproj, style.css." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-git-files-unselected-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="git-files-and-folders-unselected-min.png" class="lightbox" data-gallery="git-github" title="Figure&nbsp;1: Selected the Git tab of the RStudio right top pane (Screenshot):"><img src="https://l3lab.net/posts/2024-07-23-from-git-to-github-using-rstudio/git-files-and-folders-unselected-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="RStudio top right pane with the following tabs: Environment, History, Connection, Build, Git, and Tutorial. The Git pane is selected and therefore active. Under the tabs is another line of icons and text buttons representing Git actions: From left to right: Diff, Commit, Pull (greyed out), Push (greyed out), History, More (drop-down menu), New Branch, (no branch). Underneath it shows added or changed files or folders (ending with a slash) from the initialization process. From top to the bottom: .gitignote, _freeze/, _quarto.yml, _site/, about.qmd, index.qmd, posts/, profile.jpg, quarto-pb-blog.Rproj, style.css."></a>
@@ -2457,7 +3382,7 @@ Figure&nbsp;1: Selected the Git tab of the RStudio right top pane (Screenshot):
 <ol start="2" type="1">
 <li>After selecting all files and checking them (checking a single file of a group of selected files checks all selected files), the Git window shows all files seen above but also the files inside folders that are now prepared for the next Git commit.</li>
 </ol>
-<div id="fig-git-files-selected" class="quarto-float quarto-figure quarto-figure-center anchored" alt="RStudio top right pane with the following tabs: Environment, History, Connection, Build, Git, and Tutorial. The Git pane is selected and therefore active. Under the tabs is another line of icons and text buttons representing Git actions: From left to right: Diff, Commit, Pull (greyed out), Push (greyed out), History, More (drop-down menu), New Branch, (no branch). There is a tool tip under the Commit button saying: 'Commit pending changes (CTRL-ALT-M)'. Underneath it shows added or changed files from the initialization process. From top to the bottom in a blue background: .gitignote, _freeze/, _quarto.yml, _site/, about.qmd, index.qmd, posts/, profile.jpg, quarto-pb-blog.Rproj, style.css. These files are followed by the files in the directories from top to left: _freeze/post/post-with-code/index/execute-results/html.json, _freeze/site_libs/clipboard/clipboard.min.js, _freeze/site_libs/quarto-listing/list.min.js,  _freeze/site_libs/quarto-listing/quarto-listing.js, _site/about.html, _site/index.html, _site/listing.json, _site/profile.jpg. There are more files not visible because the window ends here." data-fig-align="center" data-group="git-github">
+<div id="fig-git-files-selected" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="git-github" alt="RStudio top right pane with the following tabs: Environment, History, Connection, Build, Git, and Tutorial. The Git pane is selected and therefore active. Under the tabs is another line of icons and text buttons representing Git actions: From left to right: Diff, Commit, Pull (greyed out), Push (greyed out), History, More (drop-down menu), New Branch, (no branch). There is a tool tip under the Commit button saying: 'Commit pending changes (CTRL-ALT-M)'. Underneath it shows added or changed files from the initialization process. From top to the bottom in a blue background: .gitignote, _freeze/, _quarto.yml, _site/, about.qmd, index.qmd, posts/, profile.jpg, quarto-pb-blog.Rproj, style.css. These files are followed by the files in the directories from top to left: _freeze/post/post-with-code/index/execute-results/html.json, _freeze/site_libs/clipboard/clipboard.min.js, _freeze/site_libs/quarto-listing/list.min.js,  _freeze/site_libs/quarto-listing/quarto-listing.js, _site/about.html, _site/index.html, _site/listing.json, _site/profile.jpg. There are more files not visible because the window ends here." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-git-files-selected-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="git-files-and-folders-checked-2-min.png" class="lightbox" data-gallery="git-github" title="Figure&nbsp;2: Selecting all added or changed files in the RStudio Git pane (Screenshot)"><img src="https://l3lab.net/posts/2024-07-23-from-git-to-github-using-rstudio/git-files-and-folders-checked-2-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="RStudio top right pane with the following tabs: Environment, History, Connection, Build, Git, and Tutorial. The Git pane is selected and therefore active. Under the tabs is another line of icons and text buttons representing Git actions: From left to right: Diff, Commit, Pull (greyed out), Push (greyed out), History, More (drop-down menu), New Branch, (no branch). There is a tool tip under the Commit button saying: 'Commit pending changes (CTRL-ALT-M)'. Underneath it shows added or changed files from the initialization process. From top to the bottom in a blue background: .gitignote, _freeze/, _quarto.yml, _site/, about.qmd, index.qmd, posts/, profile.jpg, quarto-pb-blog.Rproj, style.css. These files are followed by the files in the directories from top to left: _freeze/post/post-with-code/index/execute-results/html.json, _freeze/site_libs/clipboard/clipboard.min.js, _freeze/site_libs/quarto-listing/list.min.js,  _freeze/site_libs/quarto-listing/quarto-listing.js, _site/about.html, _site/index.html, _site/listing.json, _site/profile.jpg. There are more files not visible because the window ends here."></a>
@@ -2472,7 +3397,7 @@ Figure&nbsp;2: Selecting all added or changed files in the RStudio Git pane (Scr
 <br>
 It is usual to start the commit messages with “initial commit”. I had erroneously used “first commit” in the screenshot.</li>
 </ol>
-<div id="fig-preparing-initial-commit" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A pop-up window overlaying the RStudio window separated in two parts: The left part contains at the top small buttons. From left to the right: Changes, History, (no branch), icon for update display, stage, revert, and ignore. The right part contains the dysfunctional buttons (grayed out) 'Pull' and 'Push.' The left part shows underneath added or changed file from the initialization process. From top to the bottom in a blue background: .gitignote, _freeze/, _quarto.yml, _site/, about.qmd, index.qmd, posts/, profile.jpg, quarto-pb-blog.Rproj, style.css. These files are followed by the files in the directories from top to left: _freeze/post/post-with-code/index/execute-results/html.json, _freeze/site_libs/clipboard/clipboard.min.js, _freeze/site_libs/quarto-listing/list.min.js. There are more files not visible because the window ends here. On the right side there is a writing pane with the header 'Commit message' and '12 characters'. The text in the writing pane says 'First commit'. Under the writing pane are two unchecked check boxes 'Amend previous commit' and 'Sign commit' with a 'Commit' button. Underneath those two window parts is another line of action buttons covering the whole length of the window: From left to the right: 'Show Staged' text followed by an empty radio button, 'Staged' text followed by an active radio button, 'Context' (text), 5 lines (drop-down menu), 'Ignore Whitespace' (active check box). Underneath is an empty white field over the whole length of the window dedicated to show more detailed information inf only one file would have been selected." data-fig-align="center" data-group="git-github">
+<div id="fig-preparing-initial-commit" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="git-github" alt="A pop-up window overlaying the RStudio window separated in two parts: The left part contains at the top small buttons. From left to the right: Changes, History, (no branch), icon for update display, stage, revert, and ignore. The right part contains the dysfunctional buttons (grayed out) 'Pull' and 'Push.' The left part shows underneath added or changed file from the initialization process. From top to the bottom in a blue background: .gitignote, _freeze/, _quarto.yml, _site/, about.qmd, index.qmd, posts/, profile.jpg, quarto-pb-blog.Rproj, style.css. These files are followed by the files in the directories from top to left: _freeze/post/post-with-code/index/execute-results/html.json, _freeze/site_libs/clipboard/clipboard.min.js, _freeze/site_libs/quarto-listing/list.min.js. There are more files not visible because the window ends here. On the right side there is a writing pane with the header 'Commit message' and '12 characters'. The text in the writing pane says 'First commit'. Under the writing pane are two unchecked check boxes 'Amend previous commit' and 'Sign commit' with a 'Commit' button. Underneath those two window parts is another line of action buttons covering the whole length of the window: From left to the right: 'Show Staged' text followed by an empty radio button, 'Staged' text followed by an active radio button, 'Context' (text), 5 lines (drop-down menu), 'Ignore Whitespace' (active check box). Underneath is an empty white field over the whole length of the window dedicated to show more detailed information inf only one file would have been selected." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-preparing-initial-commit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="preparing-first-commit-min.png" class="lightbox" data-gallery="git-github" title="Figure&nbsp;3: Writing a commit message (Screenshot)"><img src="https://l3lab.net/posts/2024-07-23-from-git-to-github-using-rstudio/preparing-first-commit-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="A pop-up window overlaying the RStudio window separated in two parts: The left part contains at the top small buttons. From left to the right: Changes, History, (no branch), icon for update display, stage, revert, and ignore. The right part contains the dysfunctional buttons (grayed out) 'Pull' and 'Push.' The left part shows underneath added or changed file from the initialization process. From top to the bottom in a blue background: .gitignote, _freeze/, _quarto.yml, _site/, about.qmd, index.qmd, posts/, profile.jpg, quarto-pb-blog.Rproj, style.css. These files are followed by the files in the directories from top to left: _freeze/post/post-with-code/index/execute-results/html.json, _freeze/site_libs/clipboard/clipboard.min.js, _freeze/site_libs/quarto-listing/list.min.js. There are more files not visible because the window ends here. On the right side there is a writing pane with the header 'Commit message' and '12 characters'. The text in the writing pane says 'First commit'. Under the writing pane are two unchecked check boxes 'Amend previous commit' and 'Sign commit' with a 'Commit' button. Underneath those two window parts is another line of action buttons covering the whole length of the window: From left to the right: 'Show Staged' text followed by an empty radio button, 'Staged' text followed by an active radio button, 'Context' (text), 5 lines (drop-down menu), 'Ignore Whitespace' (active check box). Underneath is an empty white field over the whole length of the window dedicated to show more detailed information inf only one file would have been selected."></a>
@@ -2485,7 +3410,7 @@ Figure&nbsp;3: Writing a commit message (Screenshot)
 <ol start="4" type="1">
 <li>After clicking the <code>Commit</code> button, RStudio presents a window with the results of the action:</li>
 </ol>
-<div id="fig-review-changes-window" class="quarto-float quarto-figure quarto-figure-center anchored" alt="RStudio review window listing the result of the last git commit action: From top to the bottom: 'create mode 100644 about.qmd', 'create mode 100644 index.qmd' 'create mode 100644 posts/metadata.yml', 'create mode 100644 posts/post-with-code/image.png', 'create mode 100644 posts/post-with-code/index.qmd', 'posts/post-with-code/posts/welcome/index.qmd', 'create mode 100644 posts/welcome/thumbnail.jpg', 'create mode 100644  profile.jpg', 'create mode 100644 quarto-pb-blog.Rproj', 'create mode 100644 style.css'. There other lines covered at the top covered as the window scroll button shows only the end of the list. On the top right is a 'Close' button." data-fig-align="center" data-group="git-github">
+<div id="fig-review-changes-window" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="git-github" alt="RStudio review window listing the result of the last git commit action: From top to the bottom: 'create mode 100644 about.qmd', 'create mode 100644 index.qmd' 'create mode 100644 posts/metadata.yml', 'create mode 100644 posts/post-with-code/image.png', 'create mode 100644 posts/post-with-code/index.qmd', 'posts/post-with-code/posts/welcome/index.qmd', 'create mode 100644 posts/welcome/thumbnail.jpg', 'create mode 100644  profile.jpg', 'create mode 100644 quarto-pb-blog.Rproj', 'create mode 100644 style.css'. There other lines covered at the top covered as the window scroll button shows only the end of the list. On the top right is a 'Close' button." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-review-changes-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="returned-commit-results-min.png" class="lightbox" data-gallery="git-github" title="Figure&nbsp;4: Resulted actions after the last commit (Screenshot)"><img src="https://l3lab.net/posts/2024-07-23-from-git-to-github-using-rstudio/returned-commit-results-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="RStudio review window listing the result of the last git commit action: From top to the bottom: 'create mode 100644 about.qmd', 'create mode 100644 index.qmd' 'create mode 100644 posts/metadata.yml', 'create mode 100644 posts/post-with-code/image.png', 'create mode 100644 posts/post-with-code/index.qmd', 'posts/post-with-code/posts/welcome/index.qmd', 'create mode 100644 posts/welcome/thumbnail.jpg', 'create mode 100644  profile.jpg', 'create mode 100644 quarto-pb-blog.Rproj', 'create mode 100644 style.css'. There other lines covered at the top covered as the window scroll button shows only the end of the list. On the top right is a 'Close' button."></a>
@@ -2503,7 +3428,7 @@ Figure&nbsp;4: Resulted actions after the last commit (Screenshot)
 <ol type="1">
 <li>Write <code>usethis::use_github()</code> into the console window of the RStudio window (lower left pane). After return your console will display the following lines:</li>
 </ol>
-<div id="fig-initialize-github-console-text" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The screenshot shows the following lines, from top to the bottom: 'R version 4.4.1 (2024-04-14)' written in red, '> usethis::use_github()' written in red. From here the next lines start with a green ok check mark icon,  'Setting active project to' followed by the path, 'Creating GitHub repository' followed by the Github.com path of my repo., 'Setting remote `origin` to' followed by the appropriate path, 'Pushing `master` branch to gitHub and setting `origin/master` as upstream branch.', 'Opening URL' followed by the URL to my Github repo." data-fig-align="center" data-group="git-github">
+<div id="fig-initialize-github-console-text" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="git-github" alt="The screenshot shows the following lines, from top to the bottom: 'R version 4.4.1 (2024-04-14)' written in red, '> usethis::use_github()' written in red. From here the next lines start with a green ok check mark icon,  'Setting active project to' followed by the path, 'Creating GitHub repository' followed by the Github.com path of my repo., 'Setting remote `origin` to' followed by the appropriate path, 'Pushing `master` branch to gitHub and setting `origin/master` as upstream branch.', 'Opening URL' followed by the URL to my Github repo." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-initialize-github-console-text-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="console-using-github-repo-with-usethis-min.png" class="lightbox" data-gallery="git-github" title="Figure&nbsp;5: Text of the RStudio window console window (Screenshot)"><img src="https://l3lab.net/posts/2024-07-23-from-git-to-github-using-rstudio/console-using-github-repo-with-usethis-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The screenshot shows the following lines, from top to the bottom: 'R version 4.4.1 (2024-04-14)' written in red, '> usethis::use_github()' written in red. From here the next lines start with a green ok check mark icon,  'Setting active project to' followed by the path, 'Creating GitHub repository' followed by the Github.com path of my repo., 'Setting remote `origin` to' followed by the appropriate path, 'Pushing `master` branch to gitHub and setting `origin/master` as upstream branch.', 'Opening URL' followed by the URL to my Github repo."></a>
@@ -2514,7 +3439,7 @@ Figure&nbsp;5: Text of the RStudio window console window (Screenshot)
 </figure>
 </div>
 <p>The screenshot above shows the different actions for the <code>usethis::use_github()</code> command. In the last step, the newly generated and updated repository on GitHub was opened.</p>
-<div id="fig-github-quarto-blog-repo" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Listing the committed files on the GitHub repo web page in three columns. Name, different commit messages and time ('15 minutes ago' and '10 hours ago' accordingly). At the top left of this list there is a small profile picture of me, followed by the name of my GitHub account 'petzi53' and the text 'first commit'. On the top side you can see the unique commit code '0ced0df' followed by the text '19 minutes ago' and in bold '1 Commit'" data-fig-align="center" data-group="git-github">
+<div id="fig-github-quarto-blog-repo" class="quarto-float quarto-figure quarto-figure-center anchored" data-group="git-github" alt="Listing the committed files on the GitHub repo web page in three columns. Name, different commit messages and time ('15 minutes ago' and '10 hours ago' accordingly). At the top left of this list there is a small profile picture of me, followed by the name of my GitHub account 'petzi53' and the text 'first commit'. On the top side you can see the unique commit code '0ced0df' followed by the text '19 minutes ago' and in bold '1 Commit'" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-github-quarto-blog-repo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="new-repo-page-opened-automatically-min.png" class="lightbox" data-gallery="git-github" title="Figure&nbsp;6: Web page of the GitHub repository of the Quarto blog after the initial commit"><img src="https://l3lab.net/posts/2024-07-23-from-git-to-github-using-rstudio/new-repo-page-opened-automatically-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Listing the committed files on the GitHub repo web page in three columns. Name, different commit messages and time ('15 minutes ago' and '10 hours ago' accordingly). At the top left of this list there is a small profile picture of me, followed by the name of my GitHub account 'petzi53' and the text 'first commit'. On the top side you can see the unique commit code '0ced0df' followed by the text '19 minutes ago' and in bold '1 Commit'"></a>
@@ -2573,7 +3498,7 @@ Figure&nbsp;6: Web page of the GitHub repository of the Quarto blog after the in
 <section id="new-project" class="level3">
 <h3 class="anchored" data-anchor-id="new-project">New Project…</h3>
 <p>Inside RStudio, use the <code>New Project…</code> command and select <code>New Directory</code> and then <code>Quarto Blog</code>.</p>
-<div id="fig-new-project-wizard" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="RStudio new project wizard window with three options reading from the top: New Directory - Start a project in a brand new working directory; Existing Directory - Associate a project with an existing working directory; Version Control - Checkout a project from a version control repository." data-group="initialize-blog">
+<div id="fig-new-project-wizard" class="quarto-float quarto-figure quarto-figure-center anchored" alt="RStudio new project wizard window with three options reading from the top: New Directory - Start a project in a brand new working directory; Existing Directory - Associate a project with an existing working directory; Version Control - Checkout a project from a version control repository." data-fig-align="center" data-group="initialize-blog">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-new-project-wizard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="creating-quarto-blog-1-min.png" class="lightbox" data-gallery="initialize-blog" title="Figure&nbsp;1: RStudio new project wizard window (Screenshot): Choose ‘New Directory’ to start an new project from scratch."><img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/creating-quarto-blog-1-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="RStudio new project wizard window with three options reading from the top: New Directory - Start a project in a brand new working directory; Existing Directory - Associate a project with an existing working directory; Version Control - Checkout a project from a version control repository."></a>
@@ -2583,7 +3508,7 @@ Figure&nbsp;1: RStudio new project wizard window (Screenshot): Choose ‘New Dir
 </figcaption>
 </figure>
 </div>
-<div id="fig-new-blog-project-window" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="The Project Type dialog window lists the choices for new project. The first seven options are visible: New Project, R Package, Shiny Application, Quarto Project, Quarto Website, Quarto Blog, Quarto Book. (From top to the bottom. Top left is a button 'Back' for returning to the previous dialog window. Bottom right is a 'Cancel' button to stop the initialization process." data-group="initialize-blog">
+<div id="fig-new-blog-project-window" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The Project Type dialog window lists the choices for new project. The first seven options are visible: New Project, R Package, Shiny Application, Quarto Project, Quarto Website, Quarto Blog, Quarto Book. (From top to the bottom. Top left is a button 'Back' for returning to the previous dialog window. Bottom right is a 'Cancel' button to stop the initialization process." data-fig-align="center" data-group="initialize-blog">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-new-blog-project-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="creating-quarto-blog-2-min.png" class="lightbox" data-gallery="initialize-blog" title="Figure&nbsp;2: RStudio project type window (Screenshot): Choose ‘Quarto Blog’ to initialize a blog project"><img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/creating-quarto-blog-2-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Project Type dialog window lists the choices for new project. The first seven options are visible: New Project, R Package, Shiny Application, Quarto Project, Quarto Website, Quarto Blog, Quarto Book. (From top to the bottom. Top left is a button 'Back' for returning to the previous dialog window. Bottom right is a 'Cancel' button to stop the initialization process."></a>
@@ -2593,7 +3518,7 @@ Figure&nbsp;2: RStudio project type window (Screenshot): Choose ‘Quarto Blog�
 </figcaption>
 </figure>
 </div>
-<div id="fig-create-blog-window" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="The 'Create quarto Blog' dialog window requires a file name for the directory of the repository, titled 'Directory name', a directory where the project will be created, titled 'create project as subdirectory of:' with a 'Browse' button to the right, a drop down menu selecting 'Knitr' as the current option, titled 'Engine', three lines of check boxes, titled 'Create a git repository' (checked), 'Use renv with this project' and 'Use visual markdown editor'. The last option is followed by a question sign to get more information about the choice of a visual markdown editor. Top left in the dialog window is a button 'Back' for returning to the previous dialog window. Bottom left is a check box 'Open in a new session', Bottom right are a 'Create Project' button followed by a 'Cancel' button for stopping the initialization process." data-group="initialize-blog">
+<div id="fig-create-blog-window" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The 'Create quarto Blog' dialog window requires a file name for the directory of the repository, titled 'Directory name', a directory where the project will be created, titled 'create project as subdirectory of:' with a 'Browse' button to the right, a drop down menu selecting 'Knitr' as the current option, titled 'Engine', three lines of check boxes, titled 'Create a git repository' (checked), 'Use renv with this project' and 'Use visual markdown editor'. The last option is followed by a question sign to get more information about the choice of a visual markdown editor. Top left in the dialog window is a button 'Back' for returning to the previous dialog window. Bottom left is a check box 'Open in a new session', Bottom right are a 'Create Project' button followed by a 'Cancel' button for stopping the initialization process." data-fig-align="center" data-group="initialize-blog">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-create-blog-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="creating-quarto-blog-3-min.png" class="lightbox" data-gallery="initialize-blog" title="Figure&nbsp;3: RStudio Create Quarto Blog window (Screenshot): Fill the input fields with the appropriate data"><img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/creating-quarto-blog-3-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The 'Create quarto Blog' dialog window requires a file name for the directory of the repository, titled 'Directory name', a directory where the project will be created, titled 'create project as subdirectory of:' with a 'Browse' button to the right, a drop down menu selecting 'Knitr' as the current option, titled 'Engine', three lines of check boxes, titled 'Create a git repository' (checked), 'Use renv with this project' and 'Use visual markdown editor'. The last option is followed by a question sign to get more information about the choice of a visual markdown editor. Top left in the dialog window is a button 'Back' for returning to the previous dialog window. Bottom left is a check box 'Open in a new session', Bottom right are a 'Create Project' button followed by a 'Cancel' button for stopping the initialization process."></a>
@@ -2612,7 +3537,7 @@ Figure&nbsp;3: RStudio Create Quarto Blog window (Screenshot): Fill the input fi
 <section id="key-files" class="level3">
 <h3 class="anchored" data-anchor-id="key-files">Key Files</h3>
 <p>Clicking the “Create Project” button generates different key files and opens the <code>_quarto.yml</code> file in the RStudio editor window.</p>
-<div id="fig-rstudio-file-listing-window" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="At the top of the screenshot there are six tabs. From left to the right: 'Files', 'Plots', 'Packages', 'Help', 'Viewer', 'Presentation' with the 'Files' tab active. Under the tabs are several buttons. From left to the right: 'New Folder', 'New Blank File', 'Delete', 'Rename' and a drop down menu 'More'. Under these buttons is the full path to the active directory 'Home>Documents>Meine-Repos>quarto-pb-blog' where each subdirectory is an active link. Under this line starts the file listing with 'Name', 'Size' and 'Modified' columns. Each line of file names starts with an (unchecked) check box, and an appropriate icon. From top to bottom: _freeze, _quarto.yml, _site, .git, .gitignore, .quarto, .Rhistory, .Rproj.use, about.qmd, index.qmd, posts, profile.jpg, quarto-pb-blog.Rproj, style.css." data-group="initialize-blog">
+<div id="fig-rstudio-file-listing-window" class="quarto-float quarto-figure quarto-figure-center anchored" alt="At the top of the screenshot there are six tabs. From left to the right: 'Files', 'Plots', 'Packages', 'Help', 'Viewer', 'Presentation' with the 'Files' tab active. Under the tabs are several buttons. From left to the right: 'New Folder', 'New Blank File', 'Delete', 'Rename' and a drop down menu 'More'. Under these buttons is the full path to the active directory 'Home>Documents>Meine-Repos>quarto-pb-blog' where each subdirectory is an active link. Under this line starts the file listing with 'Name', 'Size' and 'Modified' columns. Each line of file names starts with an (unchecked) check box, and an appropriate icon. From top to bottom: _freeze, _quarto.yml, _site, .git, .gitignore, .quarto, .Rhistory, .Rproj.use, about.qmd, index.qmd, posts, profile.jpg, quarto-pb-blog.Rproj, style.css." data-fig-align="center" data-group="initialize-blog">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-rstudio-file-listing-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="generated-files-at-start-min.png" class="lightbox" data-gallery="initialize-blog" title="Figure&nbsp;4: RStudio file listing window (Screenshot): Choose ‘New Directory’ to start an new project from scratch."><img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/generated-files-at-start-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="At the top of the screenshot there are six tabs. From left to the right: 'Files', 'Plots', 'Packages', 'Help', 'Viewer', 'Presentation' with the 'Files' tab active. Under the tabs are several buttons. From left to the right: 'New Folder', 'New Blank File', 'Delete', 'Rename' and a drop down menu 'More'. Under these buttons is the full path to the active directory 'Home>Documents>Meine-Repos>quarto-pb-blog' where each subdirectory is an active link. Under this line starts the file listing with 'Name', 'Size' and 'Modified' columns. Each line of file names starts with an (unchecked) check box, and an appropriate icon. From top to bottom: _freeze, _quarto.yml, _site, .git, .gitignore, .quarto, .Rhistory, .Rproj.use, about.qmd, index.qmd, posts, profile.jpg, quarto-pb-blog.Rproj, style.css."></a>
@@ -2937,7 +3862,7 @@ font-style: inherit;">---</span></span></code></pre></div>
 </section>
 <section id="render-blog" class="level2">
 <h2 class="anchored" data-anchor-id="render-blog">Render Blog</h2>
-<div id="fig-source-code-blog-home-page" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="The screenshot shows a part of the RStudio source code window with two file tabs 'index.qmd' (active) and '_quarto.yml'. Below is a line of partly disabled buttons where the focus is on the 'Render' button that has below a tip tool saying 'Render the current document (SHIFT-CMD-K)'" data-group="initialize-blog">
+<div id="fig-source-code-blog-home-page" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The screenshot shows a part of the RStudio source code window with two file tabs 'index.qmd' (active) and '_quarto.yml'. Below is a line of partly disabled buttons where the focus is on the 'Render' button that has below a tip tool saying 'Render the current document (SHIFT-CMD-K)'" data-fig-align="center" data-group="initialize-blog">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-source-code-blog-home-page-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="click-render-button-first-time-min.png" class="lightbox" data-gallery="initialize-blog" title="Figure&nbsp;5: Source code of the blog home page ‘index.qmd’-file within RStudio window (Screenshot)"><img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/click-render-button-first-time-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The screenshot shows a part of the RStudio source code window with two file tabs 'index.qmd' (active) and '_quarto.yml'. Below is a line of partly disabled buttons where the focus is on the 'Render' button that has below a tip tool saying 'Render the current document (SHIFT-CMD-K)'"></a>
@@ -2948,7 +3873,7 @@ Figure&nbsp;5: Source code of the blog home page ‘index.qmd’-file within RSt
 </figure>
 </div>
 <p>You can control via <code>Tools-&gt;Global Options…-&gt;R Markdown-&gt;Show output preview in…</code> whether the rendered result appears in the browser window or in the viewer pane. Generally, I use the “Window” option because it gives me a better view of the real setting.</p>
-<div id="fig-blog-listing-start-page" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="The webpage lists two dummy blog post with three columns: From left to the right: Date and author; blog post title, category buttons and a short description; a small image. On the right margin is a list of categories displayed with their frequency in parenthesis. The title header of the website consists of two lines: Left top: Name of the Quarto blog so far 'quarto-pb-blog', Right top: 'About' followed by icons for GitHub, Twitter and search engine." data-group="initialize-blog">
+<div id="fig-blog-listing-start-page" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The webpage lists two dummy blog post with three columns: From left to the right: Date and author; blog post title, category buttons and a short description; a small image. On the right margin is a list of categories displayed with their frequency in parenthesis. The title header of the website consists of two lines: Left top: Name of the Quarto blog so far 'quarto-pb-blog', Right top: 'About' followed by icons for GitHub, Twitter and search engine." data-fig-align="center" data-group="initialize-blog">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-blog-listing-start-page-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="rendered-blog-first-time-min.png" class="lightbox" data-gallery="initialize-blog" title="Figure&nbsp;6: Website of the newly created Quarto blog (Screenshot):"><img src="https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/rendered-blog-first-time-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The webpage lists two dummy blog post with three columns: From left to the right: Date and author; blog post title, category buttons and a short description; a small image. On the right margin is a list of categories displayed with their frequency in parenthesis. The title header of the website consists of two lines: Left top: Name of the Quarto blog so far 'quarto-pb-blog', Right top: 'About' followed by icons for GitHub, Twitter and search engine."></a>

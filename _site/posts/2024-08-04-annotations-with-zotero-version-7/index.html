@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.54">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Peter Baumgartner">
+<meta name="dcterms.date" content="2024-08-04">
+<meta name="description" content="This post is the first part of a tutorial about academic workflow on annotations. The focus of this serial is the integration between Zotero and Obsidian. Here, I will explain how to use the different annotation possibilities Zotero version 7 offers.">
+
+<title>Annotation Tutorial 1: Using Zotero Version 7 – Life Long Learning Lab</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.ico" rel="icon">
+<script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XYF778844K"></script>
+
+<script type="text/plain" cookie-consent="tracking">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XYF778844K', { 'anonymize_ip': true});
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"implied",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  ,
+"language":"en"
+  });
+});
+</script> 
+  
+<script type="application/json" class="js-hypothesis-config">
+{
+  "theme": "classic",
+  "openSidebar": false,
+  "showHighlights": "whenSidebarOpen",
+  "enableExperimentalNewNoteButton": true,
+  "branding": {
+    "appBackgroundColor": "white",
+    "ctaBackgroundColor": "rgb(81, 118, 153)",
+    "ctaTextColor": "rgb(221, 228, 235)",
+    "selectionFontFamily": "helvetica, arial, sans serif"
+  }
+}
+</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="../../glossary.css">
+<meta name="twitter:title" content="Annotation Tutorial 1: Using Zotero Version 7 – Life Long Learning Lab">
+<meta name="twitter:description" content="This post is the first part of a tutorial about academic workflow on annotations. The focus of this serial is the integration between Zotero and Obsidian. Here, I will explain how to use the different annotation possibilities Zotero version 7 offers.">
+<meta name="twitter:image" content="https://l3lab.net/posts/2024-08-04-annotations-with-zotero-version-7/Screenshot-WIR-2022-Zotero-min.png">
+<meta name="twitter:image-height" content="1119">
+<meta name="twitter:image-width" content="2010">
+<meta name="twitter:image:alt" content="The screenshot shows different types of annotations with Zotero in a PDF. The page is divided horizontally into three parts. From left to right: a small sidebar (about 10% width) with the content of the annotations, the document with the annotations (about 70% width), and the context pane with metadata.">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Life Long Learning Lab</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../contact.html"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/petzi53/quarto-blog"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://x.com/pbaumgartner"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resources" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Resources</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-resources">    
+        <li>
+    <a class="dropdown-item" href="https://peter.baumgartner.name">
+ <span class="dropdown-text">Gedankensplitter (German)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://quarto.org/docs/blog/index.html">
+ <span class="dropdown-text">Quarto Blog</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://rweekly.org/">
+ <span class="dropdown-text">R Weekly</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://www.r-bloggers.com/">
+ <span class="dropdown-text">R Bloggers</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Annotation Tutorial 1: Using Zotero Version 7</h1>
+            <p class="subtitle lead">What different types of annotations does Zotero 7 implement, and how are they applied?</p>
+                  <div>
+        <div class="description">
+          This post is the first part of a tutorial about academic workflow on annotations. The focus of this serial is the integration between Zotero and Obsidian. Here, I will explain how to use the different annotation possibilities Zotero version 7 offers.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">how-to</div>
+                <div class="quarto-category">tutorial</div>
+                <div class="quarto-category">zotero</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Peter Baumgartner </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 4, 2024</p>
+      </div>
+    </div>
+    
+      <div>
+      <div class="quarto-title-meta-heading">Modified</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date-modified">August 20, 2024</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../../../../portrait-peter.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Peter Baumgartner"><img src="../../../../portrait-peter.png" class="img-fluid figure-img" alt="Peter Baumgartner"></a></p>
+<figcaption>Peter Baumgartner</figcaption>
+</figure>
+</div>
+</div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="4">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#two-crucial-academic-workflow-challenges" id="toc-two-crucial-academic-workflow-challenges" class="nav-link active" data-scroll-target="#two-crucial-academic-workflow-challenges">Two Crucial Academic Workflow Challenges</a></li>
+  <li><a href="#annotations-in-zotero" id="toc-annotations-in-zotero" class="nav-link" data-scroll-target="#annotations-in-zotero">Annotations in Zotero</a>
+  <ul>
+  <li><a href="#book-recommendation" id="toc-book-recommendation" class="nav-link" data-scroll-target="#book-recommendation">Book recommendation</a></li>
+  <li><a href="#sec-eight-types-annot" id="toc-sec-eight-types-annot" class="nav-link" data-scroll-target="#sec-eight-types-annot">Eight types of annotations in Zotero</a>
+  <ul>
+  <li><a href="#highlighting" id="toc-highlighting" class="nav-link" data-scroll-target="#highlighting">1. Highlighting</a></li>
+  <li><a href="#underlining-v7" id="toc-underlining-v7" class="nav-link" data-scroll-target="#underlining-v7">2. Underlining (V7)</a></li>
+  <li><a href="#sticky-notes" id="toc-sticky-notes" class="nav-link" data-scroll-target="#sticky-notes">3. “Sticky” notes</a></li>
+  <li><a href="#text-v7" id="toc-text-v7" class="nav-link" data-scroll-target="#text-v7">4. Text (V7)</a></li>
+  <li><a href="#snapshots" id="toc-snapshots" class="nav-link" data-scroll-target="#snapshots">5. Snapshots</a></li>
+  <li><a href="#drawings-v7" id="toc-drawings-v7" class="nav-link" data-scroll-target="#drawings-v7">6. Drawings (V7)</a></li>
+  <li><a href="#comments" id="toc-comments" class="nav-link" data-scroll-target="#comments">7. Comments</a></li>
+  <li><a href="#tags" id="toc-tags" class="nav-link" data-scroll-target="#tags">8. Tags</a></li>
+  </ul></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/petzi53/quarto-blog/edit/main/posts/2024-08-04-annotations-with-zotero-version-7/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/petzi53/quarto-blog/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="two-crucial-academic-workflow-challenges" class="level2">
+<h2 class="anchored" data-anchor-id="two-crucial-academic-workflow-challenges">Two Crucial Academic Workflow Challenges</h2>
+<p>As an academic researcher, scholar, or student, you likely find yourself in a similar academic workflow. You collect, read, and annotate scholarly articles, research papers, and books as part of your daily routine. You then elaborate on this material in personal notes either during the annotation process or immediately afterward.</p>
+<p>The next step in the academic workflow involves:</p>
+<ul>
+<li>Refine and structure the rough text passages.</li>
+<li>Incorporating feedback from peers or supervisors.</li>
+<li>Formatting them according to the publication guidelines.</li>
+</ul>
+<p>These tasks can be undertaken individually or as part of a collaborative effort.</p>
+<p>In this chain of timely delayed tasks, one always had to meet at least two challenges:</p>
+<ol type="1">
+<li>While reading and annotating, how do you know which passages would later be necessary for the final publication?</li>
+<li>Are the annotations and notes sufficient to remember the context even after a long time?</li>
+</ol>
+<p>These insecurities were still more cumbersome when one did not always have immediate access to the original material, such as when you lent a book from a library or the danger that the webpage could always disappear.</p>
+<p>One counter strategy to meet these challenges is to be safe and collect as much material as possible. This includes saving all relevant resources, making detailed annotations, and systematically organizing them. But even then, finding the exact position of the text passage I was looking for took time and effort.</p>
+<p>In response to these challenges, I will introduce a solution that significantly improves the efficiency of your academic workflow, particularly when you always have access to the PDF resource.</p>
+</section>
+<section id="annotations-in-zotero" class="level2">
+<h2 class="anchored" data-anchor-id="annotations-in-zotero">Annotations in Zotero</h2>
+<p>I started using Zotero on December 30, 2007—yes, during the holidays! I always use the holidays to learn new apps and try things out. My Zotero database currently holds 5872 items created during more than 15 years of research. Until last year, I mainly used Zotero to produce correct formatted citations for publication. However, these changed when I learned new note-taking possibilities emerged with <a href="https://www.zotero.org/blog/zotero-6/">Zotero 6</a> (March 2022). It took me over a year to transform my workflow. <a href="https://idioms.thefreedictionary.com/Old+Habits+Die+Hard">Old habits die hard</a>.</p>
+<div id="nte-zotero7" class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note&nbsp;1: Zotero 7 update
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This article focuses on the integration between <a href="https://www.zotero.org/">Zotero</a> and <a href="https://obsidian.md/">Obsidian</a>. However, I will summarize some aspects of <a class="glossary" title="Zotero is free and open-source reference management software to manage bibliographic data and related research materials, such as PDF and ePUB files. Features include web browser integration, online syncing, generation of in-text citations, footnotes, and bibliographies, integrated PDF, ePUB and HTML readers with annotation capabilities, and a note editor, as well as integration with the word processors Microsoft Word, LibreOffice Writer, and Google Docs. (Wikipedia)">Zotero’s</a> annotation process relevant to the export/import process to <a class="glossary" title="Obsidian is a personal knowledge base and note-taking software application that operates on Markdown files. It is designed to help users organize and structure their thoughts and knowledge in a flexible, non-linear way. The software is free for personal use, with commercial licenses available for pay. (Wikipedia)">Obsidian</a>.</p>
+<p>During the planning &amp; writing of this post <a href="https://www.zotero.org/blog/zotero-7/">Zotero 7</a>, the most significant update in Zotero’s 18-year history was released. Almost finished with the article on August 18, I had utterly to revise the article to include the <a href="https://www.zotero.org/support/changelog">new features of version 7</a>. Whenever it is sensible in explanations, I will either add the addition “(V7)” in parenthesis to emphasize the new features of Zotero 7 or write another note like this one for a more extended text passage.</p>
+</div>
+</div>
+<hr>
+<section id="book-recommendation" class="level3">
+<h3 class="anchored" data-anchor-id="book-recommendation">Book recommendation</h3>
+<div class="grid">
+<div class="g-col-6">
+<p>For those of you that are interested to learn more about the philosophy and theory of annotation, I recommend the book-length treatment “Annotation” by Remi Kalir &amp; Antero Garcia <span class="citation" data-cites="kalir2021">(<a href="#ref-kalir2021" role="doc-biblioref">2021</a>)</span>.</p>
+<p>There is also a <a href="https://mitpressonpubpub.mitpress.mit.edu/annotation">website</a> were you not only can you read the book for free, but you can also see how annotations features are used for an <a href="https://plos.org/resource/open-peer-review/">open peer review process</a> of the book <span class="citation" data-cites="kalir2020">(<a href="#ref-kalir2020" role="doc-biblioref">R. Kalir and Garcia 2020</a>)</span>.</p>
+<div id="def-annot" class="callout callout-style-default callout-important callout-titled" style="color: red;">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definition&nbsp;1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Here, I will understand under the term “annotation” every addition anchored to the text and reinforces it. Annotations are a kind of <a href="https://en.wikipedia.org/wiki/Paratext">paratext</a>, produced outside the text but constantly referring and tied to it.</p>
+</div>
+</div>
+</div>
+<div class="g-col-6">
+<div id="fig-cover-annotation" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="The book cover is in black with a big red star on the lower left half. At the top, it says 'Annotation' in red, and underneath, in smaller white letters, 'Remi Kalir And Antero Garcia'. There is a red bar on the bottom of the image and a white text saying 'The MIT Press Essential Knowledge Series.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cover-annotation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="cover-annotation-min.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;1: Book cover of Annotation by Remi Kalir &amp; Antero Garcia"><img src="cover-annotation-min.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="The book cover is in black with a big red star on the lower left half. At the top, it says 'Annotation' in red, and underneath, in smaller white letters, 'Remi Kalir And Antero Garcia'. There is a red bar on the bottom of the image and a white text saying 'The MIT Press Essential Knowledge Series."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cover-annotation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Book cover of Annotation by Remi Kalir &amp; Antero Garcia
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="sec-eight-types-annot" class="level3">
+<h3 class="anchored" data-anchor-id="sec-eight-types-annot">Eight types of annotations in Zotero</h3>
+<p>Zotero 7 has eight different types of annotations: highlighted text, underlined text (V7), “sticky” notes, adding text (V7), screenshots, drawing, resp. Ink annotation (V7), comments and tags.</p>
+<div id="fig-annotation-type-menu" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The annotated screenshot shows six icons horizontally aligned with accompanying text linked by arrows. The symbols and their meanings are (from left to right): The letter 'A' inside a square = highlight text; the letter 'A' underlined = underlined text; a paper with an earmark at the left bottom = 'sticky' note; a big letter 'T' = add text; two squares where the inner one with a solid line and the outer one with a dashed line = select area for screenshot; a small drawing and a pencil = add drawing." data-fig-align="center" data-group="zotero-annotation">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-annotation-type-menu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="six-annotation-types-min.png" class="lightbox" data-gallery="zotero-annotation" title="Figure&nbsp;2: Six of the (eight) Zotero annotation types are selected with the menu in the horizontal bar of the middle pane visible whenever a PDF, EPUB-eBook or snapshot website is open"><img src="six-annotation-types-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%" alt="The annotated screenshot shows six icons horizontally aligned with accompanying text linked by arrows. The symbols and their meanings are (from left to right): The letter 'A' inside a square = highlight text; the letter 'A' underlined = underlined text; a paper with an earmark at the left bottom = 'sticky' note; a big letter 'T' = add text; two squares where the inner one with a solid line and the outer one with a dashed line = select area for screenshot; a small drawing and a pencil = add drawing."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-annotation-type-menu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Six of the (eight) Zotero annotation types are selected with the menu in the horizontal bar of the middle pane visible whenever a PDF, EPUB-eBook or snapshot website is open
+</figcaption>
+</figure>
+</div>
+<div id="nte-zotero7-epub-snapshots" class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note&nbsp;2: Annotations for PDF, EPUBs, and Webpage Snapshots
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>With Zotero version 7, the following explanations are not only valid for PDFs but also for eBooks in <a class="glossary" title="EPUB (auch ePUB, Akronym für electronic publication) ist ein offener Standard für E-Books, documents and other digital resources.">EPUB</a> format and for snapshots of web pages!</p>
+</div>
+</div>
+<section id="highlighting" class="level4">
+<h4 class="anchored" data-anchor-id="highlighting">1. Highlighting</h4>
+<div class="grid">
+<div class="g-col-3">
+<div id="fig-annotation-colors" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The screenshot shows a vertical listing of the eight different colors available in Zotero. Each line starts with a colored box followed by the name of the color." data-fig-align="center" data-group="zotero-annotation">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-annotation-colors-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="zotero-annotation-colors-min.png" class="lightbox" data-gallery="zotero-annotation" title="Figure&nbsp;3: Zotero has eight colors for highlight and underline annotations"><img src="zotero-annotation-colors-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="The screenshot shows a vertical listing of the eight different colors available in Zotero. Each line starts with a colored box followed by the name of the color."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-annotation-colors-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Zotero has eight colors for highlight and underline annotations
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="g-col-9">
+<div id="vcenter" class="column" style="width:50%;">
+<p>To highlight text, click the symbol with the letter ‘A’ surrounded by a box at the top toolbar. You have eight colors for highlights at your disposal: yellow, red, green, blue, purple, magenta, orange, and gray. You can set your preferred color as the default color, which is, in my case, yellow.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="underlining-v7" class="level4">
+<h4 class="anchored" data-anchor-id="underlining-v7">2. Underlining (V7)</h4>
+<div id="nte-zotero-underlining" class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note&nbsp;3: Underlining as a new annotation type
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Version 7 of Zotero supports underlining text with the eight colors mentioned in <a href="#fig-annotation-colors" class="quarto-xref">Figure&nbsp;3</a>.</p>
+<p>Zotero treats highlighting and underlining as being very similar to highlights. Therefore, I refer to both annotation types whenever I talk about highlighting.</p>
+</div>
+</div>
+<p>It is crucial to design a consistent system when to use each color. This will allow you to organize your annotations in Obsidian.</p>
+<p>Some people have developed a system of argumentation types to distinguish the different highlighting colors. Below are two examples to give you a flair for the idea.</p>
+<div id="tbl-color-classification" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-color-classification-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Two examples of color classifications for text highlights
+</figcaption>
+<div aria-describedby="tbl-color-classification-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Color</th>
+<th style="text-align: left;"><a href="https://forum.obsidian.md/t/zotero-integration-import-templates/36310/2">mgmeyers</a></th>
+<th style="text-align: left;">My own system</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Yellow</td>
+<td style="text-align: left;">Relevant / important</td>
+<td style="text-align: left;">Running text</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Red</td>
+<td style="text-align: left;">Disagree</td>
+<td style="text-align: left;">Important: Concept, Definition,</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Orange</td>
+<td style="text-align: left;">Question / confusion</td>
+<td style="text-align: left;">ToDo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Green</td>
+<td style="text-align: left;">Agree</td>
+<td style="text-align: left;">Resources: article/book/package/URL</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Blue</td>
+<td style="text-align: left;">Relevant to current task</td>
+<td style="text-align: left;">(R) Code; Example</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Magenta</td>
+<td style="text-align: left;">TODO / follow up</td>
+<td style="text-align: left;">Section</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Purple</td>
+<td style="text-align: left;">Definitions / concepts</td>
+<td style="text-align: left;">Chapter</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Gray</td>
+<td style="text-align: left;">Interesting but not relevant</td>
+<td style="text-align: left;">Figure / table title</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Both examples stem from times before Zotero 7. Therefore, there is no difference, and both annotation types will translate to the same meaning. I will explain more about the purpose of an appropriate classification system when we talk about Obsidian templates for the import of the Zotero annotations.</p>
+</section>
+<section id="sticky-notes" class="level4">
+<h4 class="anchored" data-anchor-id="sticky-notes">3. “Sticky” notes</h4>
+<p>To add a “sticky” note, click on the piece of paper symbol with the earmark. Then, you can click on a place in the PDF to generate the note. A “sticky” note symbol appears on the page, and on the left bar, a note box open for writing comments. You can move the “sticky” note around inside the page, but you can’t move it to another page (therefore “sticky”).</p>
+<p>The primary purpose of “sticky” notes is to add a text annotation that relates to the text but not to a specific passage of the text. This can be, for instance, a comment on the structure of the text, a comment related to several paragraphs, a recurring argument, etc.</p>
+</section>
+<section id="text-v7" class="level4">
+<h4 class="anchored" data-anchor-id="text-v7">4. Text (V7)</h4>
+<p>With version 7, you can also write text directly into the document as an overlay. Zotero treats this as a comment, e.g., add tags or change the note text. But this annotation type is eye-catching, and you can move it around, but only on the same page.</p>
+</section>
+<section id="snapshots" class="level4">
+<h4 class="anchored" data-anchor-id="snapshots">5. Snapshots</h4>
+<p>By clicking on the black box surrounded by a rectangular selection, you can drag with the cursor to select the area of the screen to capture. You can add comments and tags as in the other annotation types, but you can also copy the picture or save it as a <a class="glossary" title="Portable Network Graphic (PNG) is a non-patented raster graphics file format that supports lossless data compression. The format was not designed for professional-quality print graphics but for transferring images on the Internet (hence the name ‘portable’). (Wikipedia)">PNG</a> file to your disk.</p>
+</section>
+<section id="drawings-v7" class="level4">
+<h4 class="anchored" data-anchor-id="drawings-v7">6. Drawings (V7)</h4>
+<p>Your pointing device (mouse, stylus, touchscreen) will be converted to a drawing device by clicking the ink button (with the drawing symbol). Selected the appropriate color, you can now create drawings overlaying the document.</p>
+</section>
+<section id="comments" class="level4">
+<h4 class="anchored" data-anchor-id="comments">7. Comments</h4>
+<p>You can add additional text to all types of annotations mentioned so far. Zotero will treat this additional text as your comment.</p>
+<div id="wrn-ID" class="callout callout-style-default callout-warning callout-titled" style="color: darkorange;">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning&nbsp;1: Changing highlighted text via the note?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Strange enough, You can also edit the highlighted text stored as annotation. Frankly, I do not know appropriate use cases because, with these changes, you would temper the original quote.</p>
+</div>
+</div>
+</section>
+<section id="tags" class="level4">
+<h4 class="anchored" data-anchor-id="tags">8. Tags</h4>
+<p>Another way to annotate a document is to add tags to highlighted text, “sticky” notes, screenshots, or comments.</p>
+<p>You can select all annotations with the same tag inside the document (e.g., whenever the document is open and visible in the middle pane). Colors work as a tag, too. Hence, you can select all highlighted text in the same color. You can also combine different tags. For instance, two text tags with two colors will select all annotations that have one of these text tags or one of the chosen colors.</p>
+<p>Outside the document, the tag works as a standard document tag in the tag pane at the bottom of the left column. Although the tags are attached to specific annotations outside the PDF (e.g., in the tag pane), they will select only the Zotero item with the document where the tag was used and not the appropriate annotations. But if you use the same tag for annotation in different documents, Zotero will open all items where these tags were applied.</p>
+<p>We will see that after the export to Obsidian, these annotated tags gain power as the work across all Obsidian documents!</p>
+</section>
+</section>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary">Summary</h3>
+<p>The Zotero documentation is not yet up-to-date, so detailed information is still lacking or incorrect. For instance, is <a href="https://www.zotero.org/support/pdf_reader">The Zotero PDF Reader and Note Editor</a> talking only about the PDF reader (version 6). The best page so far is the announcement page <a href="https://www.zotero.org/blog/zotero-7/">Zotero 7: Zotero, redesigned</a>. However, many YouTube tutorials will explain the details of Zotero version 7 in several weeks.</p>
+<p>In the meantime, the following annotated screenshot may be helpful. It recapitulates graphically the above textual description.</p>
+<div id="fig-zotero-annotations" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The screenshots show three horizontally divided panes: Left are the annotations, in the center is the content of the PDF file, and right are ten annotations collected as a separate note item." data-fig-align="center" data-group="zotero-annotation">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-zotero-annotations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="Screenshot-WIR-2022-Zotero-Skitch-min.png" class="lightbox" data-gallery="zotero-annotation" title="Figure&nbsp;4: Screenshot of Zotero Reader and Note Editor with explanations of the graphical user interface (GUI). Click on the image to enlarge it."><img src="Screenshot-WIR-2022-Zotero-Skitch-min.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="The screenshots show three horizontally divided panes: Left are the annotations, in the center is the content of the PDF file, and right are ten annotations collected as a separate note item."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-zotero-annotations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Screenshot of Zotero Reader and Note Editor with explanations of the graphical user interface (<a class="glossary" title="A graphical user interface (GUI) is an operating system interface that enables user interactions with an electronic device through icons, images, and other graphical elements G2.">GUI</a>). Click on the image to enlarge it.
+</figcaption>
+</figure>
+</div>
+
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-kalir2021" class="csl-entry" role="listitem">
+Kalir, Remi H., and Antero Garcia. 2021. <em>Annotation</em>. Annotated Edition. Cambridge, Massachusetts: The MIT Press.
+</div>
+<div id="ref-kalir2020" class="csl-entry" role="listitem">
+Kalir, Remi, and Antero Garcia. 2020. <span>“Annotation [Annoted Website].”</span> <a href="https://mitpressonpubpub.mitpress.mit.edu/annotation">https://mitpressonpubpub.mitpress.mit.edu/annotation</a>.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/l3lab\.net");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://utteranc.es/client.js" repo="petzi53/blog-comments" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ <a href="https://l3lab.net">L3Lab</a> © 2023 by <a href="https://l3lab.net/about">Peter Baumgartner</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1">CC BY 4.0</a>
+  </li>  
+</ul>
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+<p>About</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../privacy.html">
+<p>Privacy</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../disclaimer.html">
+<p>Disclaimer</p>
+</a>
+  </li>  
+</ul>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/petzi53/quarto-blog/edit/main/posts/2024-08-04-annotations-with-zotero-version-7/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/petzi53/quarto-blog/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ Proudly powered by <a href="https://quarto.org/">Quarto</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":true,"descPosition":"bottom","selector":".lightbox","openEffect":"zoom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

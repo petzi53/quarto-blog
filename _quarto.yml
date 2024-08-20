@@ -98,5 +98,6 @@ language:
    crossref-lem-title: "Resource"    # replaces "Lemma"
    crossref-cnj-title: "R Code"      # replaces "Conjecture"
    crossref-exm-title: "Example"     # remains  "Example"
+   crossref-prp-title: "Procedure"   # replaces "Proposition"
 
 lst-cap-location: bottom

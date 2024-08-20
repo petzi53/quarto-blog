@@ -1,0 +1,301 @@
+---
+title: "Annotation Tutorial 1: Using Zotero Version 7"
+subtitle: "What different types of annotations does Zotero 7 implement, and how are they applied?"
+description: "This post is the first part of a tutorial about academic workflow on annotations. The focus of this serial is the integration between Zotero and Obsidian. Here, I will explain how to use the different annotation possibilities Zotero version 7 offers."
+author: "Peter Baumgartner"
+date: "2024-08-04"
+image: "Screenshot-WIR-2022-Zotero-min.png"
+image-alt: "The screenshot shows different types of annotations with Zotero in a PDF. The page is divided horizontally into three parts. From left to right: a small sidebar (about 10% width) with the content of the annotations, the document with the annotations (about 70% width), and the context pane with metadata."
+categories: [how-to, tutorial, zotero]
+date-modified: "2024-08-20"
+draft: false
+bibliography: references.bib
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+base::source(file = "../../R/helper.R")
+```
+
+## Two Crucial Academic Workflow Challenges
+
+As an academic researcher, scholar, or student, you likely find yourself
+in a similar academic workflow. You collect, read, and annotate
+scholarly articles, research papers, and books as part of your daily
+routine. You then elaborate on this material in personal notes either
+during the annotation process or immediately afterward.
+
+The next step in the academic workflow involves:
+
+-   Refine and structure the rough text passages.
+-   Incorporating feedback from peers or supervisors.
+-   Formatting them according to the publication guidelines.
+
+These tasks can be undertaken individually or as part of a collaborative
+effort.
+
+In this chain of timely delayed tasks, one always had to meet at least
+two challenges:
+
+1.  While reading and annotating, how do you know which passages would
+    later be necessary for the final publication?
+2.  Are the annotations and notes sufficient to remember the context
+    even after a long time?
+
+These insecurities were still more cumbersome when one did not always
+have immediate access to the original material, such as when you lent a
+book from a library or the danger that the webpage could always
+disappear.
+
+One counter strategy to meet these challenges is to be safe and collect
+as much material as possible. This includes saving all relevant
+resources, making detailed annotations, and systematically organizing
+them. But even then, finding the exact position of the text passage I
+was looking for took time and effort.
+
+In response to these challenges, I will introduce a solution that
+significantly improves the efficiency of your academic workflow,
+particularly when you always have access to the PDF resource.
+
+## Annotations in Zotero
+
+I started using Zotero on December 30, 2007—yes, during the holidays! I
+always use the holidays to learn new apps and try things out. My Zotero
+database currently holds 5872 items created during more than 15 years of
+research. Until last year, I mainly used Zotero to produce correct
+formatted citations for publication. However, these changed when I
+learned new note-taking possibilities emerged with [Zotero
+6](https://www.zotero.org/blog/zotero-6/) (March 2022). It took me over
+a year to transform my workflow. [Old habits die
+hard](https://idioms.thefreedictionary.com/Old+Habits+Die+Hard).
+
+::: {#nte-zotero7 .callout-note}
+###### Zotero 7 update
+
+This article focuses on the integration between
+[Zotero](https://www.zotero.org/) and [Obsidian](https://obsidian.md/).
+However, I will summarize some aspects of
+`r glossary("Zotero", "Zotero's")` annotation process relevant to the
+export/import process to `r glossary("Obsidian")`.
+
+During the planning & writing of this post [Zotero
+7](https://www.zotero.org/blog/zotero-7/), the most significant update
+in Zotero's 18-year history was released. Almost finished with the
+article on August 18, I had utterly to revise the article to include the
+[new features of version 7](https://www.zotero.org/support/changelog).
+Whenever it is sensible in explanations, I will either add the addition
+"(V7)" in parenthesis to emphasize the new features of Zotero 7 or write
+another note like this one for a more extended text passage.
+:::
+
+------------------------------------------------------------------------
+
+### Book recommendation
+
+::: grid
+::: g-col-6
+For those of you that are interested to learn more about the philosophy
+and theory of annotation, I recommend the book-length treatment
+"Annotation" by Remi Kalir & Antero Garcia [-@kalir2021].
+
+There is also a
+[website](https://mitpressonpubpub.mitpress.mit.edu/annotation) were you
+not only can you read the book for free, but you can also see how
+annotations features are used for an [open peer review
+process](https://plos.org/resource/open-peer-review/) of the book
+[@kalir2020].
+
+::: {#def-annot .callout-important style="color: red;"}
+Here, I will understand under the term "annotation" every addition
+anchored to the text and reinforces it. Annotations are a kind of
+[paratext](https://en.wikipedia.org/wiki/Paratext), produced outside the
+text but constantly referring and tied to it.
+:::
+:::
+
+::: g-col-6
+![Book cover of Annotation by Remi Kalir & Antero
+Garcia](cover-annotation-min.jpg){#fig-cover-annotation
+fig-alt="The book cover is in black with a big red star on the lower left half. At the top, it says 'Annotation' in red, and underneath, in smaller white letters, 'Remi Kalir And Antero Garcia'. There is a red bar on the bottom of the image and a white text saying 'The MIT Press Essential Knowledge Series."
+fig-align="center" width="70%"}
+:::
+:::
+
+------------------------------------------------------------------------
+
+### Eight types of annotations in Zotero {#sec-eight-types-annot}
+
+Zotero 7 has eight different types of annotations: highlighted text,
+underlined text (V7), "sticky" notes, adding text (V7), screenshots,
+drawing, resp. Ink annotation (V7), comments and tags.
+
+![Six of the (eight) Zotero annotation types are selected with the menu
+in the horizontal bar of the middle pane visible whenever a PDF,
+EPUB-eBook or snapshot website is
+open](six-annotation-types-min.png){#fig-annotation-type-menu
+fig-alt="The annotated screenshot shows six icons horizontally aligned with accompanying text linked by arrows. The symbols and their meanings are (from left to right): The letter 'A' inside a square = highlight text; the letter 'A' underlined = underlined text; a paper with an earmark at the left bottom = 'sticky' note; a big letter 'T' = add text; two squares where the inner one with a solid line and the outer one with a dashed line = select area for screenshot; a small drawing and a pencil = add drawing."
+fig-align="center" width="50%" group="zotero-annotation"}
+
+::: {#nte-zotero7-epub-snapshots .callout-note}
+###### Annotations for PDF, EPUBs, and Webpage Snapshots
+
+With Zotero version 7, the following explanations are not only valid for
+PDFs but also for eBooks in `r glossary("EPUB")` format and for
+snapshots of web pages!
+:::
+
+#### 1. Highlighting
+
+::: grid
+::: g-col-3
+![Zotero has eight colors for highlight and underline
+annotations](zotero-annotation-colors-min.png){#fig-annotation-colors
+fig-alt="The screenshot shows a vertical listing of the eight different colors available in Zotero. Each line starts with a colored box followed by the name of the color."
+fig-align="center" width="70%" group="zotero-annotation"}
+:::
+
+::: g-col-9
+::: {#vcenter .column width="50%"}
+To highlight text, click the symbol with the letter 'A' surrounded by a
+box at the top toolbar. You have eight colors for highlights at your
+disposal: yellow, red, green, blue, purple, magenta, orange, and gray.
+You can set your preferred color as the default color, which is, in my
+case, yellow.
+:::
+:::
+:::
+
+#### 2. Underlining (V7)
+
+::: {#nte-zotero-underlining .callout-note}
+###### Underlining as a new annotation type
+
+Version 7 of Zotero supports underlining text with the eight colors
+mentioned in @fig-annotation-colors.
+
+Zotero treats highlighting and underlining as being very similar to
+highlights. Therefore, I refer to both annotation types whenever I talk
+about highlighting.
+:::
+
+It is crucial to design a consistent system when to use each color. This
+will allow you to organize your annotations in Obsidian.
+
+Some people have developed a system of argumentation types to
+distinguish the different highlighting colors. Below are two examples to
+give you a flair for the idea.
+
+| Color   | [mgmeyers](https://forum.obsidian.md/t/zotero-integration-import-templates/36310/2) | My own system                       |
+|:--------|:------------------------------------------------------------------------------------|:------------------------------------|
+| Yellow  | Relevant / important                                                                | Running text                        |
+| Red     | Disagree                                                                            | Important: Concept, Definition,     |
+| Orange  | Question / confusion                                                                | ToDo                                |
+| Green   | Agree                                                                               | Resources: article/book/package/URL |
+| Blue    | Relevant to current task                                                            | \(R\) Code; Example                 |
+| Magenta | TODO / follow up                                                                    | Section                             |
+| Purple  | Definitions / concepts                                                              | Chapter                             |
+| Gray    | Interesting but not relevant                                                        | Figure / table title                |
+
+: Two examples of color classifications for text highlights
+{#tbl-color-classification}
+
+Both examples stem from times before Zotero 7. Therefore, there is no
+difference, and both annotation types will translate to the same
+meaning. I will explain more about the purpose of an appropriate
+classification system when we talk about Obsidian templates for the
+import of the Zotero annotations.
+
+#### 3. "Sticky" notes
+
+To add a "sticky" note, click on the piece of paper symbol with the
+earmark. Then, you can click on a place in the PDF to generate the note.
+A "sticky" note symbol appears on the page, and on the left bar, a note
+box open for writing comments. You can move the "sticky" note around
+inside the page, but you can't move it to another page (therefore
+"sticky").
+
+The primary purpose of "sticky" notes is to add a text annotation that
+relates to the text but not to a specific passage of the text. This can
+be, for instance, a comment on the structure of the text, a comment
+related to several paragraphs, a recurring argument, etc.
+
+#### 4. Text (V7)
+
+With version 7, you can also write text directly into the document as an
+overlay. Zotero treats this as a comment, e.g., add tags or change the
+note text. But this annotation type is eye-catching, and you can move it
+around, but only on the same page.
+
+#### 5. Snapshots
+
+By clicking on the black box surrounded by a rectangular selection, you
+can drag with the cursor to select the area of the screen to capture.
+You can add comments and tags as in the other annotation types, but you
+can also copy the picture or save it as a `r glossary("PNG")` file to
+your disk.
+
+#### 6. Drawings (V7)
+
+Your pointing device (mouse, stylus, touchscreen) will be converted to a
+drawing device by clicking the ink button (with the drawing symbol).
+Selected the appropriate color, you can now create drawings overlaying
+the document.
+
+#### 7. Comments
+
+You can add additional text to all types of annotations mentioned so
+far. Zotero will treat this additional text as your comment.
+
+::: {#wrn-ID .callout-warning style="color: darkorange;"}
+##### Changing highlighted text via the note?
+
+Strange enough, You can also edit the highlighted text stored as
+annotation. Frankly, I do not know appropriate use cases because, with
+these changes, you would temper the original quote.
+:::
+
+#### 8. Tags
+
+Another way to annotate a document is to add tags to highlighted text,
+"sticky" notes, screenshots, or comments.
+
+You can select all annotations with the same tag inside the document
+(e.g., whenever the document is open and visible in the middle pane).
+Colors work as a tag, too. Hence, you can select all highlighted text in
+the same color. You can also combine different tags. For instance, two
+text tags with two colors will select all annotations that have one of
+these text tags or one of the chosen colors.
+
+Outside the document, the tag works as a standard document tag in the
+tag pane at the bottom of the left column. Although the tags are
+attached to specific annotations outside the PDF (e.g., in the tag
+pane), they will select only the Zotero item with the document where the
+tag was used and not the appropriate annotations. But if you use the
+same tag for annotation in different documents, Zotero will open all
+items where these tags were applied.
+
+We will see that after the export to Obsidian, these annotated tags gain
+power as the work across all Obsidian documents!
+
+### Summary
+
+The Zotero documentation is not yet up-to-date, so detailed information
+is still lacking or incorrect. For instance, is [The Zotero PDF Reader
+and Note Editor](https://www.zotero.org/support/pdf_reader) talking only
+about the PDF reader (version 6). The best page so far is the
+announcement page [Zotero 7: Zotero,
+redesigned](https://www.zotero.org/blog/zotero-7/). However, many
+YouTube tutorials will explain the details of Zotero version 7 in
+several weeks.
+
+In the meantime, the following annotated screenshot may be helpful. It
+recapitulates graphically the above textual description.
+
+![Screenshot of Zotero Reader and Note Editor with explanations of the
+graphical user interface (`r glossary("GUI")`). Click on the image to
+enlarge
+it.](Screenshot-WIR-2022-Zotero-Skitch-min.png){#fig-zotero-annotations
+fig-alt="The screenshots show three horizontally divided panes: Left are the annotations, in the center is the content of the PDF file, and right are ten annotations collected as a separate note item."
+fig-align="center" width="100%" group="zotero-annotation"}
