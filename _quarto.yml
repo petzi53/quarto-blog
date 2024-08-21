@@ -31,6 +31,12 @@ website:
         href: https://x.com/pbaumgartner
       - icon: rss
         href: index.xml
+      - text: Tutorials
+        menu:
+          - text: Create a Quarto Blog
+            href: quarto-blog.qmd
+          - text: Zotero-Obsidian Annotations
+            href: zotero-obsidian-annotations.qmd
       - text: Resources
         menu:
           - text: Gedankensplitter (German)

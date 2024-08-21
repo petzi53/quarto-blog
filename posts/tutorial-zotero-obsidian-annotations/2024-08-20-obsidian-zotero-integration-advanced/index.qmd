@@ -16,7 +16,7 @@ bibliography: references.bib
 #| label: setup
 #| include: false
 
-base::source(file = "../../R/helper.R")
+base::source(file = "../../../R/helper.R")
 ```
 
 ## Objectives

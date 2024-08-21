@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2023-05-01">
 
-<title>Privacy Policy – Life Long Learning Lab</title>
+<title>Tutorial: Creating a Quarto Blog from Scratch – Life Long Learning Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,6 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./favicon.ico" rel="icon">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -69,6 +70,35 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-reading-time','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XYF778844K"></script>
 
 <script type="text/plain" cookie-consent="tracking">
@@ -117,11 +147,39 @@ cookieconsent.run({
   });
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="glossary.css">
-<meta name="twitter:title" content="Privacy Policy – Life Long Learning Lab">
-<meta name="twitter:description" content="This is Peter Baumgartner’s Personal English Blog.">
+<meta name="twitter:title" content="Tutorial: Creating a Quarto Blog from Scratch – Life Long Learning Lab">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -215,7 +273,7 @@ cookieconsent.run({
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
@@ -226,42 +284,22 @@ cookieconsent.run({
 </figure>
 </div>
 </div></div>
-        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="4">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#comments" id="toc-comments" class="nav-link active" data-scroll-target="#comments">Comments</a></li>
-  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
-  <li><a href="#google-analytics" id="toc-google-analytics" class="nav-link" data-scroll-target="#google-analytics">Google Analytics</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/petzi53/quarto-blog/edit/main/privacy.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/petzi53/quarto-blog/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+        
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Privacy Policy</h1>
+<h1 class="title">Tutorial: Creating a Quarto Blog from Scratch</h1>
 </div>
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page-left">
 
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">May 1, 2023</p>
-    </div>
-  </div>
   
-    <div>
-    <div class="quarto-title-meta-heading">Modified</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">July 19, 2024</p>
-    </div>
-  </div>
     
   </div>
   
@@ -270,37 +308,109 @@ cookieconsent.run({
 </header>
 
 
-<p>Several places on this website require you to identify yourself:</p>
-<section id="comments" class="level2">
-<h2 class="anchored" data-anchor-id="comments">Comments</h2>
-<p>This Quarto website uses&nbsp;<a href="https://web.hypothes.is/">Hypothesis</a>&nbsp;as a commenting system. To control your data with Hypothesis, read the&nbsp;<a href="https://web.hypothes.is/privacy/">Hypothesis Privacy Policy</a>.</p>
-</section>
-<section id="contact" class="level2">
-<h2 class="anchored" data-anchor-id="contact">Contact</h2>
-<p>The contact form is a service by <a href="https://formspree.io/">formspree</a>. They only store contents of the last 100 form submissions and delete the rest. Formspree is <a href="https://github.com/formspree/formspree">open source so that you can check</a>, what they are doing. The emails themselves are sent using another <a href="https://github.com/sendgrid">open source</a> project: <a href="https://sendgrid.com/">SendGrid’s API</a>, so on that end, their <a href="https://sendgrid.com/policies/privacy/">privacy policies</a> apply.</p>
-<p>By filling out the form, I get your name, email address, and your text. I will do nothing except handling your mailed concern. I will delete all mail sent by formspree at the latest after 12 months.</p>
-</section>
-<section id="google-analytics" class="level2">
-<h2 class="anchored" data-anchor-id="google-analytics">Google Analytics</h2>
-<p>The only personal information collected while you visit this site is non-identifying information, such as browser type and operating system. This information is collected by <a href="https://www.google.com/analytics/terms/us.html">Google Analytics</a> for measuring visitor traffic to this site.</p>
-<p>For each visitor to reach the site, Google Analytics collects the following non-personally identifiable information, including but not limited to browser type, version and language, operating system, pages viewed while browsing the site, page access times and referring website address. This information is presented to me as aggregated reports to gauge visitor traffic and trends.</p>
-<p>This information is collected via cookies. Most web browsers allow you to control the handling of cookies. To the best of my knowledge, you can disable all cookies for this website without in any way reducing the functionality for you. <a href="https://cookiesandyou.com/">Read here</a> to learn what cookies are and how to control or disable them.</p>
-<!-- Currently not in use
-## Social sharing
-
-If you are using the social sharing buttons on my website, then the privacy policy of those websites apply:
-
-+ [Twitter](https://twitter.com/en/privacy)
-+ [Facebook](https://www.facebook.com/privacy/explanation)
-+ [Instagram](https://help.instagram.com/155833707900388)
-+ [Weibo](https://www.whatsonweibo.com/privacy-policy/)
-
--->
 
 
-</section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="blog,quarto,rstudio,tutorial" data-listing-date-sort="1721599200000" data-listing-file-modified-sort="1721923547556" data-listing-date-modified-sort="1721599200000" data-listing-reading-time-sort="8" data-listing-word-count-sort="1535">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/tutorial-quarto-blog/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/index.html" class="no-external">Quarto Blog Tutorial 1: Initializing using RStudio</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/tutorial-quarto-blog/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/index.html" class="no-external">Creating a Quarto blog from scratch using RStudio. – A visual guide.</a>
+</div>
+<div class="listing-description">
+<a href="./posts/tutorial-quarto-blog/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/index.html" class="no-external">Initializing a Quarto blog, explaining the generated key files and the starting content of the Quarto project file <code>_quarto.yml</code> and the blog homepage file <code>index.qmd</code>. </a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/tutorial-quarto-blog/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/index.html" class="no-external">
+<div class="listing-date">
+Jul 22, 2024
+</div>
+<div class="listing-reading-time">
+8 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="git,github,rstudio,tutorial" data-listing-date-sort="1721685600000" data-listing-file-modified-sort="1721922962871" data-listing-date-modified-sort="1721685600000" data-listing-reading-time-sort="8" data-listing-word-count-sort="1484">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/tutorial-quarto-blog/2024-07-23-from-git-to-github-using-rstudio/index.html" class="no-external">Quarto Blog Tutorial 2: From Git to GitHub using RStudio</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/tutorial-quarto-blog/2024-07-23-from-git-to-github-using-rstudio/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./posts/tutorial-quarto-blog/2024-07-23-from-git-to-github-using-rstudio/index.html" class="no-external">This post shows how to create the initial (first) Git commit using RStudio. I will initialize a GitHub repo, and push the content of the initial commit into the new repository.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/tutorial-quarto-blog/2024-07-23-from-git-to-github-using-rstudio/index.html" class="no-external">
+<div class="listing-date">
+Jul 23, 2024
+</div>
+<div class="listing-reading-time">
+8 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="how-to,quarto,tutorial" data-listing-date-sort="1721772000000" data-listing-file-modified-sort="1721922938017" data-listing-date-modified-sort="1721772000000" data-listing-reading-time-sort="14" data-listing-word-count-sort="2634">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/tutorial-quarto-blog/2024-07-24-default-blog-source-code/index.html" class="no-external">Quarto Blog Tutorial 3: Default blog source code</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/tutorial-quarto-blog/2024-07-24-default-blog-source-code/index.html" class="no-external">Explaining generated default source code after initializing a Quarto Blog with RStudio</a>
+</div>
+<div class="listing-description">
+<a href="./posts/tutorial-quarto-blog/2024-07-24-default-blog-source-code/index.html" class="no-external">In this article, I will explain and explore the source code that was automatically generated when I created my blog with RStudio as described in Initializing a Quarto Blog…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/tutorial-quarto-blog/2024-07-24-default-blog-source-code/index.html" class="no-external">
+<div class="listing-date">
+Jul 24, 2024
+</div>
+<div class="listing-reading-time">
+14 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="blog,how-to,quarto,tutorial" data-listing-date-sort="1721858400000" data-listing-file-modified-sort="1721922903926" data-listing-date-modified-sort="1721858400000" data-listing-reading-time-sort="3" data-listing-word-count-sort="529">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/tutorial-quarto-blog/2024-07-25-shared-metadata/index.html" class="no-external">Quarto Blog Tutorial 4: Shared Metadata</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/tutorial-quarto-blog/2024-07-25-shared-metadata/index.html" class="no-external">Share YAML metadata options across multiple documents</a>
+</div>
+<div class="listing-description">
+<a href="./posts/tutorial-quarto-blog/2024-07-25-shared-metadata/index.html" class="no-external">In this post I will explain one of the most important features of blog (or generally Quarto) projects: The ability to share YAML metadata options across multiple documents. Shared metadata can be defined at both the blog (project) and directory level.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/tutorial-quarto-blog/2024-07-25-shared-metadata/index.html" class="no-external">
+<div class="listing-date">
+Jul 25, 2024
+</div>
+<div class="listing-reading-time">
+3 min
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -739,7 +849,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link active" href="./privacy.html" aria-current="page">
+    <a class="nav-link" href="./privacy.html">
 <p>Privacy</p>
 </a>
   </li>  
@@ -749,7 +859,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
 </ul>
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/petzi53/quarto-blog/edit/main/privacy.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/petzi53/quarto-blog/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/petzi53/quarto-blog/edit/main/quarto-blog.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/petzi53/quarto-blog/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">

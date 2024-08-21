@@ -1,0 +1,13 @@
+---
+title: "Tutorial: Creating a Quarto Blog from Scratch"
+listing:
+  contents: posts/tutorial-quarto-blog
+  sort: "date asc"
+  type: default
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  fields: [date, title, reading-time, description]
+page-layout: full
+title-block-banner: false
+---

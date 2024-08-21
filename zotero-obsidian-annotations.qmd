@@ -1,0 +1,13 @@
+---
+title: "Tutorial: Academic Workflow for Annotations with the Zotero-Obsidian Integration"
+listing:
+  contents: posts/tutorial-zotero-obsidian-annotations
+  sort: "date asc"
+  type: default
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  fields: [date, title, reading-time, description]
+page-layout: full
+title-block-banner: false
+---

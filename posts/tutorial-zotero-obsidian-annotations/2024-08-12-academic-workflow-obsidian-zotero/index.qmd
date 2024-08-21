@@ -15,7 +15,7 @@ draft: false
 #| label: setup
 #| include: false
 
-base::source(file = "../../R/helper.R")
+base::source(file = "../../../R/helper.R")
 ```
 
 ## Zotero Integration with Obsidian

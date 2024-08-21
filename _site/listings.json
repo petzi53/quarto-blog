@@ -1,15 +1,32 @@
 [
   {
+    "listing": "/zotero-obsidian-annotations.html",
+    "items": [
+      "/posts/tutorial-zotero-obsidian-annotations/2024-08-04-annotations-with-zotero-version-7/index.html",
+      "/posts/tutorial-zotero-obsidian-annotations/2024-08-12-academic-workflow-obsidian-zotero/index.html",
+      "/posts/tutorial-zotero-obsidian-annotations/2024-08-20-obsidian-zotero-integration-advanced/index.html"
+    ]
+  },
+  {
+    "listing": "/quarto-blog.html",
+    "items": [
+      "/posts/tutorial-quarto-blog/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/index.html",
+      "/posts/tutorial-quarto-blog/2024-07-23-from-git-to-github-using-rstudio/index.html",
+      "/posts/tutorial-quarto-blog/2024-07-24-default-blog-source-code/index.html",
+      "/posts/tutorial-quarto-blog/2024-07-25-shared-metadata/index.html"
+    ]
+  },
+  {
     "listing": "/archive.html",
     "items": [
-      "/posts/2024-08-20-obsidian-zotero-integration-advanced/index.html",
-      "/posts/2024-08-12-academic-workflow-obsidian-zotero/index.html",
-      "/posts/2024-08-04-annotations-with-zotero-version-7/index.html",
+      "/posts/tutorial-zotero-obsidian-annotations/2024-08-20-obsidian-zotero-integration-advanced/index.html",
+      "/posts/tutorial-zotero-obsidian-annotations/2024-08-12-academic-workflow-obsidian-zotero/index.html",
+      "/posts/tutorial-zotero-obsidian-annotations/2024-08-04-annotations-with-zotero-version-7/index.html",
       "/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/index.html",
-      "/posts/2024-07-25-shared-metadata/index.html",
-      "/posts/2024-07-24-default-blog-source-code/index.html",
-      "/posts/2024-07-23-from-git-to-github-using-rstudio/index.html",
-      "/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/index.html",
+      "/posts/tutorial-quarto-blog/2024-07-25-shared-metadata/index.html",
+      "/posts/tutorial-quarto-blog/2024-07-24-default-blog-source-code/index.html",
+      "/posts/tutorial-quarto-blog/2024-07-23-from-git-to-github-using-rstudio/index.html",
+      "/posts/tutorial-quarto-blog/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/index.html",
       "/posts/2024-07-21-writing-blog-posts--new-attempt/index.html",
       "/posts/2023-05-07-creating-a-column-based-layout/index.html",
       "/posts/2023-05-05-how-to-delete-git-branches/index.html",
@@ -19,14 +36,14 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/2024-08-20-obsidian-zotero-integration-advanced/index.html",
-      "/posts/2024-08-12-academic-workflow-obsidian-zotero/index.html",
-      "/posts/2024-08-04-annotations-with-zotero-version-7/index.html",
+      "/posts/tutorial-zotero-obsidian-annotations/2024-08-20-obsidian-zotero-integration-advanced/index.html",
+      "/posts/tutorial-zotero-obsidian-annotations/2024-08-12-academic-workflow-obsidian-zotero/index.html",
+      "/posts/tutorial-zotero-obsidian-annotations/2024-08-04-annotations-with-zotero-version-7/index.html",
       "/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/index.html",
-      "/posts/2024-07-25-shared-metadata/index.html",
-      "/posts/2024-07-24-default-blog-source-code/index.html",
-      "/posts/2024-07-23-from-git-to-github-using-rstudio/index.html",
-      "/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/index.html",
+      "/posts/tutorial-quarto-blog/2024-07-25-shared-metadata/index.html",
+      "/posts/tutorial-quarto-blog/2024-07-24-default-blog-source-code/index.html",
+      "/posts/tutorial-quarto-blog/2024-07-23-from-git-to-github-using-rstudio/index.html",
+      "/posts/tutorial-quarto-blog/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/index.html",
       "/posts/2024-07-21-writing-blog-posts--new-attempt/index.html",
       "/posts/2023-05-07-creating-a-column-based-layout/index.html",
       "/posts/2023-05-05-how-to-delete-git-branches/index.html",

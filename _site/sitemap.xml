@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://l3lab.net/privacy.html</loc>
-    <lastmod>2024-07-20T15:56:25.522Z</lastmod>
+    <loc>https://l3lab.net/zotero-obsidian-annotations.html</loc>
+    <lastmod>2024-08-21T19:48:11.987Z</lastmod>
+  </url>
+  <url>
+    <loc>https://l3lab.net/quarto-blog.html</loc>
+    <lastmod>2024-08-21T19:46:54.229Z</lastmod>
   </url>
   <url>
     <loc>https://l3lab.net/disclaimer.html</loc>
@@ -13,52 +17,52 @@
     <lastmod>2024-08-21T18:30:49.018Z</lastmod>
   </url>
   <url>
-    <loc>https://l3lab.net/posts/2024-08-04-annotations-with-zotero-version-7/index.html</loc>
-    <lastmod>2024-08-20T18:52:44.293Z</lastmod>
+    <loc>https://l3lab.net/posts/tutorial-zotero-obsidian-annotations/2024-08-04-annotations-with-zotero-version-7/index.html</loc>
+    <lastmod>2024-08-21T19:37:03.125Z</lastmod>
   </url>
   <url>
-    <loc>https://l3lab.net/posts/2024-08-20-obsidian-zotero-integration-advanced/index.html</loc>
-    <lastmod>2024-08-20T19:23:24.333Z</lastmod>
+    <loc>https://l3lab.net/posts/tutorial-zotero-obsidian-annotations/2024-08-12-academic-workflow-obsidian-zotero/index.html</loc>
+    <lastmod>2024-08-21T19:36:47.225Z</lastmod>
   </url>
   <url>
-    <loc>https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/index.html</loc>
-    <lastmod>2024-08-05T17:30:28.269Z</lastmod>
+    <loc>https://l3lab.net/posts/2024-07-21-writing-blog-posts--new-attempt/index.html</loc>
+    <lastmod>2024-07-21T19:58:50.691Z</lastmod>
   </url>
   <url>
-    <loc>https://l3lab.net/posts/2023-05-05-how-to-delete-git-branches/index.html</loc>
-    <lastmod>2024-07-21T20:17:53.363Z</lastmod>
+    <loc>https://l3lab.net/posts/tutorial-quarto-blog/2024-07-24-default-blog-source-code/index.html</loc>
+    <lastmod>2024-07-25T15:55:38.017Z</lastmod>
   </url>
   <url>
-    <loc>https://l3lab.net/posts/2024-07-25-shared-metadata/index.html</loc>
-    <lastmod>2024-07-25T15:55:03.926Z</lastmod>
-  </url>
-  <url>
-    <loc>https://l3lab.net/contact.html</loc>
-    <lastmod>2024-07-20T15:56:25.496Z</lastmod>
-  </url>
-  <url>
-    <loc>https://l3lab.net/posts/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/index.html</loc>
+    <loc>https://l3lab.net/posts/tutorial-quarto-blog/2024-07-22-creating-a-quarto-blog-from-scratch-using-rstudio/index.html</loc>
     <lastmod>2024-07-25T16:05:47.556Z</lastmod>
-  </url>
-  <url>
-    <loc>https://l3lab.net/posts/2024-08-12-academic-workflow-obsidian-zotero/index.html</loc>
-    <lastmod>2024-08-20T19:07:37.055Z</lastmod>
   </url>
   <url>
     <loc>https://l3lab.net/posts/2023-04-23-welcome-quarto/index.html</loc>
     <lastmod>2024-07-21T20:32:27.377Z</lastmod>
   </url>
   <url>
-    <loc>https://l3lab.net/posts/2024-07-23-from-git-to-github-using-rstudio/index.html</loc>
+    <loc>https://l3lab.net/posts/2023-05-05-how-to-delete-git-branches/index.html</loc>
+    <lastmod>2024-07-21T20:17:53.363Z</lastmod>
+  </url>
+  <url>
+    <loc>https://l3lab.net/contact.html</loc>
+    <lastmod>2024-07-20T15:56:25.496Z</lastmod>
+  </url>
+  <url>
+    <loc>https://l3lab.net/posts/2024-07-27-how-to-use-the-world-inequality-database-wid/index.html</loc>
+    <lastmod>2024-08-05T17:30:28.269Z</lastmod>
+  </url>
+  <url>
+    <loc>https://l3lab.net/posts/tutorial-quarto-blog/2024-07-25-shared-metadata/index.html</loc>
+    <lastmod>2024-07-25T15:55:03.926Z</lastmod>
+  </url>
+  <url>
+    <loc>https://l3lab.net/posts/tutorial-quarto-blog/2024-07-23-from-git-to-github-using-rstudio/index.html</loc>
     <lastmod>2024-07-25T15:56:02.871Z</lastmod>
   </url>
   <url>
-    <loc>https://l3lab.net/posts/2024-07-24-default-blog-source-code/index.html</loc>
-    <lastmod>2024-07-25T15:55:38.017Z</lastmod>
-  </url>
-  <url>
-    <loc>https://l3lab.net/posts/2024-07-21-writing-blog-posts--new-attempt/index.html</loc>
-    <lastmod>2024-07-21T19:58:50.691Z</lastmod>
+    <loc>https://l3lab.net/posts/tutorial-zotero-obsidian-annotations/2024-08-20-obsidian-zotero-integration-advanced/index.html</loc>
+    <lastmod>2024-08-21T19:36:23.046Z</lastmod>
   </url>
   <url>
     <loc>https://l3lab.net/posts/2023-05-07-creating-a-column-based-layout/index.html</loc>
@@ -71,5 +75,9 @@
   <url>
     <loc>https://l3lab.net/about.html</loc>
     <lastmod>2024-07-30T07:46:49.959Z</lastmod>
+  </url>
+  <url>
+    <loc>https://l3lab.net/privacy.html</loc>
+    <lastmod>2024-07-20T15:56:25.522Z</lastmod>
   </url>
 </urlset>

@@ -60,25 +60,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../favicon.ico" rel="icon">
-<script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
-<link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../favicon.ico" rel="icon">
+<script src="../../../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -154,11 +154,11 @@ cookieconsent.run({
 </script>
 
 
-<link rel="stylesheet" href="../../styles.css">
-<link rel="stylesheet" href="../../glossary.css">
+<link rel="stylesheet" href="../../../styles.css">
+<link rel="stylesheet" href="../../../glossary.css">
 <meta name="twitter:title" content="Quarto Blog Tutorial 4: Shared Metadata – Life Long Learning Lab">
 <meta name="twitter:description" content="In this post I will explain one of the most important features of blog (or generally Quarto) projects: The ability to share YAML metadata options across multiple documents. Shared metadata can be defined at both the blog (project) and directory level.">
-<meta name="twitter:image" content="https://l3lab.net/posts/2024-07-25-shared-metadata/pexels-cottonbro-3944311-min1.jpg">
+<meta name="twitter:image" content="https://l3lab.net/posts/tutorial-quarto-blog/2024-07-25-shared-metadata/pexels-cottonbro-3944311-min1.jpg">
 <meta name="twitter:image:alt" content="Seven different hands grab a slice of a salami pizza cut in eight different pieces.">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -170,7 +170,7 @@ cookieconsent.run({
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Life Long Learning Lab</span>
     </a>
   </div>
@@ -181,11 +181,11 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
+    <a class="nav-link" href="../../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../contact.html"> 
+    <a class="nav-link" href="../../../contact.html"> 
 <span class="menu-text">Contact</span></a>
   </li>  
   <li class="nav-item compact">
@@ -199,10 +199,25 @@ cookieconsent.run({
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../../index.xml"> <i class="bi bi-rss" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tutorials" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Tutorials</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-tutorials">    
+        <li>
+    <a class="dropdown-item" href="../../../quarto-blog.html">
+ <span class="dropdown-text">Create a Quarto Blog</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../zotero-obsidian-annotations.html">
+ <span class="dropdown-text">Zotero-Obsidian Annotations</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resources" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Resources</span>
@@ -227,7 +242,7 @@ cookieconsent.run({
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../archive.html"> 
+    <a class="nav-link" href="../../../archive.html"> 
 <span class="menu-text">Archive</span></a>
   </li>  
 </ul>
@@ -290,7 +305,7 @@ cookieconsent.run({
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../../../../portrait-peter.png" class="img-fluid figure-img"></p>
+<p><img src="../../../../../portrait-peter.png" class="img-fluid figure-img"></p>
 <figcaption>Peter Baumgartner</figcaption>
 </figure>
 </div>
@@ -304,7 +319,7 @@ cookieconsent.run({
   <li><a href="#directory-level" id="toc-directory-level" class="nav-link" data-scroll-target="#directory-level">Directory Level</a></li>
   <li><a href="#git-and-github" id="toc-git-and-github" class="nav-link" data-scroll-target="#git-and-github">Git and GitHub</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/petzi53/quarto-blog/edit/main/posts/2024-07-25-shared-metadata/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/petzi53/quarto-blog/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/petzi53/quarto-blog/edit/main/posts/tutorial-quarto-blog/2024-07-25-shared-metadata/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/petzi53/quarto-blog/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -384,7 +399,7 @@ cookieconsent.run({
 </section>
 <section id="directory-level" class="level2">
 <h2 class="anchored" data-anchor-id="directory-level">Directory Level</h2>
-<p>We have seen in an <a href="../../posts/2024-07-24-default-blog-source-code/#fig-content-posts-folder">previous post</a> that there is a <code>_metadata.yml</code> file in the <code>posts</code> folder.</p>
+<p>We have seen in an <a href="../../../posts/2024-07-24-default-blog-source-code/#fig-content-posts-folder">previous post</a> that there is a <code>_metadata.yml</code> file in the <code>posts</code> folder.</p>
 <div class="grid">
 <section id="before-my-change-1" class="level5 g-col-6">
 <h5 class="anchored" data-anchor-id="before-my-change-1">Before My Change</h5>
@@ -433,7 +448,7 @@ cookieconsent.run({
 <li><code>title-block-banner</code>: I have already removed the title block banner from the home page listings and will disable it for blog posts as well. (I will revise this decision after I have written several posts. Maybe the title block banner is very useful for displaying a short description of the article.)</li>
 <li><code>author</code>: All articles in my blog will be written by me.</li>
 <li><code>toc</code> and <code>toc-depth</code>: I want a table of contents on the right side of the blog post, with a maximum of four levels. (I will revise this decision after I have written some longer articles. Maybe the TOC levels go too deep.)</li>
-<li><code>page-layout</code>: I have <a href="../../posts/2024-07-24-default-blog-source-code/#page-layout">already explained</a> the <code>page-layout: full</code> directive from the title home page <code>index.qmd</code>. Now we want an <code>article</code> layout, because it creates a content area with a page-based grid layout that provides margins, areas for sidebars, and a reading width-optimized body region.</li>
+<li><code>page-layout</code>: I have <a href="../../../posts/2024-07-24-default-blog-source-code/#page-layout">already explained</a> the <code>page-layout: full</code> directive from the title home page <code>index.qmd</code>. Now we want an <code>article</code> layout, because it creates a content area with a page-based grid layout that provides margins, areas for sidebars, and a reading width-optimized body region.</li>
 </ul>
 </section>
 <section id="git-and-github" class="level2">
@@ -879,22 +894,22 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="../../about.html">
+    <a class="nav-link" href="../../../about.html">
 <p>About</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../../privacy.html">
+    <a class="nav-link" href="../../../privacy.html">
 <p>Privacy</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../../disclaimer.html">
+    <a class="nav-link" href="../../../disclaimer.html">
 <p>Disclaimer</p>
 </a>
   </li>  
 </ul>
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/petzi53/quarto-blog/edit/main/posts/2024-07-25-shared-metadata/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/petzi53/quarto-blog/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/petzi53/quarto-blog/edit/main/posts/tutorial-quarto-blog/2024-07-25-shared-metadata/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/petzi53/quarto-blog/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
