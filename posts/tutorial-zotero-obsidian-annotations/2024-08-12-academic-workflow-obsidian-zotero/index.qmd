@@ -176,6 +176,8 @@ BibTeX](https://github.com/mgmeyers/obsidian-zotero-integration).
 
 ## Zotero Integration Settings
 
+### Introduction
+
 The last task is to adapt the settings of the Obsidian Zotero
 Integration plugin.
 
@@ -200,7 +202,8 @@ complex. It consists of four parts:
 
 -   General Settings
 -   Citation Formats
--   Import Formats and
+-   Import Formats (see [third part of the annotation
+    tutorial](../2024-08-20-obsidian-zotero-integration-advanced)) and
 -   Import Image Settings
 
 Although there are many preferences for the simple import method used in
