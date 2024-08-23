@@ -7,7 +7,7 @@ date: "2024-08-12"
 image: "zotero-integration-obsidian-logo-min.png"
 image-alt: "The Zotero application icon is on the left, and the Obsidian icon is on the right of the image. Both icons have two arrows, one pointing from Zotero to Obsidian and the other from Obsidian to Zotero."
 categories: [academic, obsidian, workflow, zotero, how-to]
-date-modified: "2024-08-20"
+date-modified: "2024-08-23"
 draft: false
 ---
 
@@ -235,11 +235,8 @@ file and in the case, you have imported several at once, which of the
 imported files.
 
 The last option of the general settings is enabling the concatenation of
-annotations. Although I have turned it on, I have yet to use this
-functionality. Instead of concatenating files, I have used to separate
-new data (updates) via template functions, which I will explain in the
-[third part of the
-tutorial](../2024-08-20-obsidian-zotero-integration-advanced).
+annotations. This feature could be nice if your highlight is spread over
+two PDF pages. I tried it out, but it didn't work for me.
 
 ## Import Annotation into Obsidian without Template
 
