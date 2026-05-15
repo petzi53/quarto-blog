@@ -64,11 +64,11 @@ Obsidian.
 Zotero knows two types of notes. (The type names are my inventions to
 facilitate the explanation):
 
--   **Child Note or Items Note** belongs to the item where it was
-    created. It lives inside the Zotero item.
--   **Standalone Notes** lives in the appropriate Zotero item collection
-    but does not belong to any specific Zotero item. This note type is
-    helpful for writing notes for multiple items.
+- **Child Note or Items Note** belongs to the item where it was created.
+  It lives inside the Zotero item.
+- **Standalone Notes** lives in the appropriate Zotero item collection
+  but does not belong to any specific Zotero item. This note type is
+  helpful for writing notes for multiple items.
 
 Only the child note is an annotation because it fulfills the requirement
 of the annotation: It is anchored to specific text -- even if it
@@ -77,12 +77,12 @@ consists itself of (a collection of) annotations.
 Both types of notes can be created either as individual notes or as a
 note that collects all highlights:
 
--   **Individual note**: This is a new, empty note item. You can write
-    your text into the note directly or drag and drop annotations from
-    the left column.
--   **Highlights note**: This note collects and copies all content
-    created with the annotation types, as mentioned earlier. You are
-    always free to add or change the note content.
+- **Individual note**: This is a new, empty note item. You can write
+  your text into the note directly or drag and drop annotations from the
+  left column.
+- **Highlights note**: This note collects and copies all content created
+  with the annotation types, as mentioned earlier. You are always free
+  to add or change the note content.
 
 The distinctions between child and standalone notes are not carved in
 stone, as you can always drag a standalone note into an appropriate
@@ -137,17 +137,17 @@ BibTeX](https://retorque.re/zotero-better-bibtex/) and in Obsidian the
 [Zotero
 Integration](https://github.com/mgmeyers/obsidian-zotero-integration).
 
--   **Better BibTex** makes it easier to manage bibliographic data,
-    especially for people authoring documents using a text-based tool
-    chains (e.g., based on [LaTeX](https://www.latex-project.org/) /
-    [Markdown](https://www.markdownguide.org/)). This plugin has a rich
-    functionality, but we are using it for the Obsidian-Zotero
-    integration just for one feature: To create a file with citations
-    and consistent [pandoc](https://pandoc.org/) cite keys.
--   **Zotero Integration** does the main work: It inserts and imports
-    citations, bibliographies, notes, and PDF annotations from Zotero
-    into Obsidian. For this functionality, it needs the installation of
-    the Better BibTeX plugin as an enhancement for Zotero.
+- **Better BibTex** makes it easier to manage bibliographic data,
+  especially for people authoring documents using a text-based tool
+  chains (e.g., based on [LaTeX](https://www.latex-project.org/) /
+  [Markdown](https://www.markdownguide.org/)). This plugin has a rich
+  functionality, but we are using it for the Obsidian-Zotero integration
+  just for one feature: To create a file with citations and consistent
+  [pandoc](https://pandoc.org/) cite keys.
+- **Zotero Integration** does the main work: It inserts and imports
+  citations, bibliographies, notes, and PDF annotations from Zotero into
+  Obsidian. For this functionality, it needs the installation of the
+  Better BibTeX plugin as an enhancement for Zotero.
 
 ### Install "Better BibTeX"
 
@@ -200,11 +200,11 @@ fig-align="center" width="70%" group="zotero-integration"}
 The configuration setting page for the "Zotero Integration" plugin is
 complex. It consists of four parts:
 
--   General Settings
--   Citation Formats
--   Import Formats (see [third part of the annotation
-    tutorial](../2024-08-20-obsidian-zotero-integration-advanced)) and
--   Import Image Settings
+- General Settings
+- Citation Formats
+- Import Formats (see [third part of the annotation
+  tutorial](../2024-08-20-obsidian-zotero-integration-advanced)) and
+- Import Image Settings
 
 Although there are many preferences for the simple import method used in
 In this post, we will only need to complete the general settings.
@@ -281,7 +281,7 @@ fig-align="center" width="70%" group="zotero-integration"}
 In this post, I have explained how to integrate your "research
 assistant." tool Zotero with the note-taking app Obsidian.
 
-::: my-procedure
+::::: my-procedure
 ::: my-procedure-header
 Import Annotations from Zotero into Obsidian (without template)
 :::
@@ -304,7 +304,7 @@ Import Annotations from Zotero into Obsidian (without template)
     the annotations.
 7.  Inspect the imported file content and test the links.
 :::
-:::
+:::::
 
 You can now elaborate on your notes using all the advanced features
 Obsidian offers!

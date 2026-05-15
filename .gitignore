@@ -4,6 +4,7 @@
 .Ruserdata
 
 /.quarto/
+/_site/
 .Rdata
 .httr-oauth
 .DS_Store
