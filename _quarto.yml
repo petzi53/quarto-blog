@@ -97,6 +97,9 @@ format:
     toc-depth: 5
     toc-expand: 4
 
+execute:
+      freeze: auto
+
 editor: source
 
 margin-header: |

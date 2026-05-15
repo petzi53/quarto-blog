@@ -8,3 +8,6 @@
 .httr-oauth
 .DS_Store
 /_archive/
+
+**/*.quarto_ipynb
+.positai

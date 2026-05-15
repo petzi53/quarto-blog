@@ -102,7 +102,7 @@ plugin](https://github.com/mgmeyers/obsidian-zotero-integration/blob/main/docs/R
 and then experiment with examples developed by other people. I have
 collected several examples for Obsidian-Zotero Integration templates.
 
-::: my-example
+::::: my-example
 ::: my-example-header
 Examples of Nunjucks templates
 :::
@@ -158,7 +158,7 @@ Examples of Nunjucks templates
         Added the meaning of the annotation colors to the output, that
         is mainly sorted by colors and inside the colors, then by
         chronology.
-    -   [espalia1](https://forum.obsidian.md/t/zotero-integration-import-templates/36310/66):
+    -   [espalia2](https://forum.obsidian.md/t/zotero-integration-import-templates/36310/66):
         An updated version. Instead, for every quote its own callout, it
         just has one callout (admonition in Obsidian parlance) for every
         color. This improves reading tremendously.
@@ -190,7 +190,7 @@ more recent times.
 
 </details>
 :::
-:::
+:::::
 
 ### My template code
 
@@ -202,7 +202,7 @@ To understand how the colored highlights are interpreted, look up my
 color classification in the [first part of the annotation
 tutorial](../2024-08-04-annotations-with-zotero-version-7#tbl-color-classification).
 
-::: my-r-code
+::::: my-r-code
 ::: my-r-code-header
 My personal example for a Nunjucks template code
 :::
@@ -346,7 +346,7 @@ alias: [{% if shortTitle %}"{{shortTitle | safe}}"{% else %}"{{title | safe}}"{%
 
 </details>
 :::
-:::
+:::::
 
 ### My CSS Snippet
 
@@ -355,7 +355,7 @@ snippet into Obsidian. Take the code below and paste it into your .css
 file following the procedure description of Obsidian [CSS
 snippets](https://help.obsidian.md/Extending+Obsidian/CSS+snippets).
 
-::: my-r-code
+::::: my-r-code
 ::: my-r-code-header
 My personal example of a CSS code to format the output of the template
 :::
@@ -419,7 +419,7 @@ Styling the template for Zotero Literature Notes
 
 </details>
 :::
-:::
+:::::
 
 ### Result of my template
 
